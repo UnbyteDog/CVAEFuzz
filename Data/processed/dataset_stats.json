@@ -1,0 +1,34 @@
+{
+  "total_samples": 2189,
+  "attack_distribution": {
+    "SQLi": 759,
+    "XSS": 817,
+    "CMDi": 439,
+    "Overflow": 51,
+    "XXE": 105,
+    "SSI": 18
+  },
+  "vocabulary_coverage": 99.99891408365627,
+  "tensor_shape": [
+    2189,
+    150
+  ],
+  "max_length": 150,
+  "quality_stats": {
+    "empty_payloads": 0,
+    "duplicate_payloads": 6,
+    "avg_payload_length": 336.54865235267243,
+    "max_payload_length": 166400,
+    "min_payload_length": 1,
+    "total_chars": 736713
+  },
+  "char_analysis": {
+    "total_chars": 736713,
+    "uncovered_chars": 3,
+    "uncovered_list": [
+      "“",
+      "‘",
+      "′"
+    ]
+  }
+}

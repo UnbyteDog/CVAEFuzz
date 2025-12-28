@@ -1,0 +1,440 @@
+PS C:\Users\NNuuNN\Documents\CVDBFuzz> python .\fuzzmain.py --fuzz --engine base --mode common --url "http://108.187.15.14/pikachu/vul/sqli/sqli_header/sqli_header.php" --method GET --headers user-agent
+
+================================================================
+                    CVDBFuzz v4.0
+         基于CVAE生成与DBSCAN优化的智能Web模糊测试框架
+                      （全阶段完整版）
+
+  核心功能：
+  - 阶段一：数据预处理 - 字符级分词、序列标准化、词表构建       
+  - 阶段二：CVAE训练    - 学习攻击载荷的隐式分布
+  - 阶段三：生成与聚类 - CVAE生成载荷 + DBSCAN优化
+  - 阶段四：黑盒测试    - 递归爬虫 + 智能注入
+
+  技术特性：
+  - Gumbel-Softmax重参数化 - 解决离散文本生成问题
+  - KL退火策略 - 防止Posterior Collapse
+  - 密度聚类优化 - 去除冗余，保留高价值种子
+  - 多维度评估 - Reconstruction Loss, KL Divergence, Silhouette 
+  - 递归爬虫 - BFS广度优先、站点隔离、持久化缓存
+
+  作者：老王 (暴躁技术流)
+  文档：Doc/prompt指导.md, Doc/Web模糊测试框架构想探讨.md
+================================================================
+
+
+======================================================================
+BaseFuzz引擎 - 智能模糊测试
+======================================================================
+
+[INFO] 导入BaseFuzz模块...
+
+[步骤1] 准备测试目标
+----------------------------------------------------------------------
+[INFO] 目标URL: http://108.187.15.14/pikachu/vul/sqli/sqli_header/sqli_header.php
+[INFO] 未找到缓存文件，将直接从URL创建目标
+[INFO] 直接从URL创建测试目标...
+[INFO] 指定HTTP头注入: ['user-agent']
+2025-12-28 19:04:35,196 - INFO - Requester初始化完成: timeout=10s, max_retries=3
+[INFO]   - 添加HTTP头注入点: user-agent=
+[SUCCESS] 已创建测试目标: http://108.187.15.14/pikachu/vul/sqli/sqli_header/sqli_header.php
+[INFO] 请求方法: GET
+[INFO] GET参数数量: 0
+[INFO] HTTP头注入: user-agent
+
+[INFO] 目标统计:
+  - 总目标数: 1
+  - GET任务: 1
+  - POST任务: 0
+
+[步骤2] 初始化BaseFuzz引擎
+----------------------------------------------------------------------
+[INFO] 引擎配置:
+  - 检测引擎: sqli, xss
+  - 载荷模式: common
+  - 并发线程: 10
+  - 超时时间: 10秒
+2025-12-28 19:04:35,200 - INFO - Requester初始化完成: timeout=10s, max_retries=3
+2025-12-28 19:04:35,201 - INFO - [PAYLOAD] PayloadManager初始化完成，base_path=C:\Users\NNuuNN\Documents\CVDBFuzz
+2025-12-28 19:04:35,205 - INFO - [ENGINE] 引擎加载成功: sqli -> Fuzz.BaseFuzz.engines.sqli_engine.SQLiEngine
+2025-12-28 19:04:35,205 - INFO - [ENGINE] 引擎加载成功: xss -> Fuzz.BaseFuzz.engines.xss_engine.XSSEngine
+2025-12-28 19:04:35,205 - INFO - [ENGINE] 调度器初始化完成: engines=['sqli', 'xss'], mode=common
+[SUCCESS] BaseFuzz引擎初始化完成
+
+[步骤3] 执行模糊测试
+----------------------------------------------------------------------
+[INFO] 开始扫描...
+[提示] 按Ctrl+C可随时中断扫描
+2025-12-28 19:04:35,207 - INFO - [ENGINE] 开始扫描: 1个目标, 2个引擎
+
+============================================================
+CVDBFuzz 开始扫描
+============================================================
+目标数量: 1
+检测引擎: sqli, xss
+载荷模式: common
+输出目录: Results\scan_20251228_190435
+============================================================
+
+2025-12-28 19:04:35,209 - INFO - [PAYLOAD] 开始加载载荷: mode=common, vtype=None
+2025-12-28 19:04:35,209 - INFO - [PAYLOAD] 加载专家字典: C:\Users\NNuuNN\Documents\CVDBFuzz\payload\dict
+2025-12-28 19:04:35,210 - INFO - [PAYLOAD] 载荷加载完成: 4个类型, 72条载荷
+2025-12-28 19:04:35,210 - INFO - [PAYLOAD]   - LFI: 9 条
+2025-12-28 19:04:35,210 - INFO - [PAYLOAD]   - CMDi: 15 条
+2025-12-28 19:04:35,210 - INFO - [PAYLOAD]   - SQLi: 35 条
+2025-12-28 19:04:35,210 - INFO - [PAYLOAD]   - XSS: 13 条
+2025-12-28 19:04:35,211 - INFO - [ENGINE] 载荷加载完成: 72个
+[扫描进度]:   0%|                                                                                                              | 0/1 [00:00<?, ?target/s]2025-12-28 19:04:35,212 - INFO - [ENGINE] 正在测试目标 1/1: http://108.187.15.14/pikachu/vul/sqli/sqli_header/sqli_header.php
+2025-12-28 19:04:35,212 - INFO - [BASELINE] 正在建立基线: http://108.187.15.14/pikachu/vul/sqli/sqli_header/sqli_header.php (5次采样)
+2025-12-28 19:04:35,212 - INFO - [BASELINE] BaselineManager初始化完成
+2025-12-28 19:04:35,213 - INFO - [BASELINE] 开始构建基准画像: http://108.187.15.14/pikachu/vul/sqli/sqli_header/sqli_header.php
+2025-12-28 19:04:35,213 - INFO - [BASELINE] 采样次数: 5
+2025-12-28 19:04:38,713 - INFO - [BASELINE] 采样完成: 成功5/5, 重试0次
+2025-12-28 19:04:38,793 - INFO - [BASELINE] 基准画像构建完成: BaselineProfile(url=http://108.187.15.14/pikachu/vul/sqli/sqli_header/sqli_header.php, status=200, avg_len=34428, avg_time=0.127s, stable=True)
+2025-12-28 19:04:38,793 - INFO - [BASELINE] 基线建立完成: status=200, avg_len=34428, avg_time=0.127s
+2025-12-28 19:04:38,794 - INFO - [ENGINE] SQLiEngine 初始化完成
+2025-12-28 19:04:38,796 - INFO - [SQLi] SQLi引擎初始化完成: 6种数据库 + XPATH报错注入检测
+2025-12-28 19:04:38,797 - INFO - [ENGINE] XSSEngine 初始化完成
+2025-12-28 19:04:38,797 - INFO - [XSS] XSS引擎初始化完成: probe=CVDBXSS_4QZ5N6T2_PROBE
+2025-12-28 19:04:38,797 - INFO - [ENGINE] 检测到HTTP头注入点: ['user-agent']
+2025-12-28 19:04:38,797 - INFO - [ENGINE] 目标参数数: 1, 并发数: 10
+                                                                                                                                                         2025-12-28 19:04:38,798 - INFO - [SQLi] 开始检测: http://108.187.15.14/pikachu/vul/sqli/sqli_header/sqli_header.php?user-agent   | 0/1 [00:00<?, ?param/s] 
+2025-12-28 19:04:38,799 - INFO - [SQLi] 载荷数量: 35
+2025-12-28 19:04:38,799 - INFO - [SQLi] [探测] 正在探测目标类型...
+2025-12-28 19:04:38,799 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:39,301 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:39,701 - INFO - [SQLi] [探测] True长度=34428, False长度=34428, 差异=0.00%
+2025-12-28 19:04:39,705 - INFO - [SQLi] [探测] True独有词: 0, False独有词: 0
+2025-12-28 19:04:39,707 - INFO - [SQLi] [探测] True关键词: False, False关键词: False
+2025-12-28 19:04:39,783 - INFO - [SQLi] [探测] 文本相似度: 1.0000
+2025-12-28 19:04:39,783 - INFO - [SQLi] [探测] 无法判定，默认为普通SQL注入
+2025-12-28 19:04:39,783 - INFO - [SQLi] 目标类型探测: normal
+2025-12-28 19:04:39,783 - INFO - [SQLi] [1/5] 执行报错注入检测...
+2025-12-28 19:04:40,632 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:41,170 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:41,691 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:42,109 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:42,520 - INFO - [SQLi] [报错] 开始测试完整载荷字典: 35个payload
+2025-12-28 19:04:42,958 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:43,785 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:44,202 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:44,718 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:45,254 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:45,770 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:46,188 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:46,698 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:47,214 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:47,733 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:48,858 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:49,783 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:50,494 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:51,108 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:51,655 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:52,400 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:53,018 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:53,645 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:54,277 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:54,879 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:55,538 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:56,562 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:57,404 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:58,458 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:59,070 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:04:59,629 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:00,241 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:00,881 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:01,397 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:01,811 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:02,227 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:02,763 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:03,183 - INFO - [SQLi] [2/5] 执行高级报错注入检测（XPATH/几何函数）...
+2025-12-28 19:05:03,183 - INFO - [SQLi] [报错-高级] 开始检测XPATH/几何函数报错注入...
+2025-12-28 19:05:03,700 - INFO - [SQLi] [报错-高级] 从外部载荷筛选到5个XPATH相关载荷
+2025-12-28 19:05:03,700 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:04,209 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:05,145 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:05,864 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:06,369 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:06,973 - INFO - [SQLi] [3/5] 执行逻辑注入检测...
+2025-12-28 19:05:06,974 - INFO - [SQLi] [逻辑] 从外部载荷识别True/False payload对...
+2025-12-28 19:05:07,598 - INFO - [SQLi] 识别到16个True载荷, 10个False载荷
+2025-12-28 19:05:07,599 - WARNING - [SQLi] 字典不完整！6个True载荷缺少对应的False载荷
+2025-12-28 19:05:07,599 - INFO - [SQLi] 启用智能取反，自动生成缺失的False payload...
+2025-12-28 19:05:07,599 - INFO - [SQLi] 智能取反: " OR "1"="1... → " OR "2"="1...
+2025-12-28 19:05:07,599 - INFO - [SQLi] 智能取反: " or "1"="1... → " or "2"="1...
+2025-12-28 19:05:07,599 - INFO - [SQLi] 智能取反: ' or '1'='1... → ' or '1'='2...
+2025-12-28 19:05:07,600 - INFO - [SQLi] 智能取反:  ' or 1=1 -- '... →  ' or 1=2 -- '...
+2025-12-28 19:05:07,600 - INFO - [SQLi] 智能取反: %' and 1=1 -- '... → %' and 1=2 -- '...
+2025-12-28 19:05:07,600 - INFO - [SQLi] 智能取反: %' and 1=1 -- '... → %' and 1=2 -- '...
+2025-12-28 19:05:07,600 - INFO - [SQLi] 最终配对16对逻辑载荷
+2025-12-28 19:05:07,600 - INFO - [SQLi] [逻辑] 从外部载荷识别到16对逻辑载荷
+2025-12-28 19:05:07,600 - INFO - [SQLi] [逻辑] 测试对: True=1=1, False=1=2
+2025-12-28 19:05:07,600 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:08,199 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=1%3D1
+2025-12-28 19:05:08,199 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:08,717 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=1%3D2
+2025-12-28 19:05:08,717 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:08,718 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:09,627 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:09,627 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:09,627 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:09,627 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:09,627 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:09,627 - INFO - [SQLi] [逻辑] 测试对: True=' OR '1'='1, False=' OR '1'='2
+2025-12-28 19:05:09,627 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:10,743 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=%27%20OR%20%271%27%3D%271
+2025-12-28 19:05:10,744 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:11,456 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=%27%20OR%20%271%27%3D%272
+2025-12-28 19:05:11,456 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:11,456 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:12,057 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:12,057 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:12,057 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:12,057 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:12,058 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:12,058 - INFO - [SQLi] [逻辑] 测试对: True=' OR 1=1--, False=' OR 1=2--
+2025-12-28 19:05:12,058 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:12,620 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=%27%20OR%201%3D1--
+2025-12-28 19:05:12,620 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:13,140 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=%27%20OR%201%3D2--
+2025-12-28 19:05:13,141 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:13,141 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:13,963 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:13,963 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:13,964 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:13,964 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:13,964 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:13,964 - INFO - [SQLi] [逻辑] 测试对: True=" OR 1=1--, False=" OR 1=2--
+2025-12-28 19:05:13,964 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:14,467 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=%22%20OR%201%3D1--
+2025-12-28 19:05:14,467 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:15,065 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=%22%20OR%201%3D2--
+2025-12-28 19:05:15,066 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:15,066 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:15,670 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:15,670 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:15,670 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:15,671 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:15,671 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:15,671 - INFO - [SQLi] [逻辑] 测试对: True=') or ('1'='1, False=') or ('1'='2
+2025-12-28 19:05:15,671 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:16,274 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=%27%29%20or%20%28%271%27%3D%27
+2025-12-28 19:05:16,274 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:17,306 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=%27%29%20or%20%28%271%27%3D%27
+2025-12-28 19:05:17,306 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:17,307 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:18,508 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:18,508 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:18,508 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:18,508 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:18,508 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:18,508 - INFO - [SQLi] [逻辑] 测试对: True= or 1=1 -- ', False= or 1=2 -- '
+2025-12-28 19:05:18,509 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:19,631 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=%20or%201%3D1%20--%20%27
+2025-12-28 19:05:19,631 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:20,358 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=%20or%201%3D2%20--%20%27
+2025-12-28 19:05:20,361 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:20,361 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:21,163 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:21,163 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:21,164 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:21,164 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:21,164 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:21,164 - INFO - [SQLi] [逻辑] 测试对: True= and 1=1 -- ', False= and 1=2 -- '
+2025-12-28 19:05:21,164 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:22,282 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=%20and%201%3D1%20--%20%27
+2025-12-28 19:05:22,283 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:22,926 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=%20and%201%3D2%20--%20%27
+2025-12-28 19:05:22,926 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:22,926 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:23,530 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:23,531 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:23,531 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:23,531 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:23,531 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:23,531 - INFO - [SQLi] [逻辑] 测试对: True= ' or 1=1 -- +, False= ' or 1=2 -- +
+2025-12-28 19:05:23,531 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:24,370 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=%20%27%20or%201%3D1%20--%20%2B
+2025-12-28 19:05:24,370 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:25,066 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=%20%27%20or%201%3D2%20--%20%2B
+2025-12-28 19:05:25,067 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:25,067 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:25,574 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:25,574 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:25,574 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:25,575 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:25,575 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:25,575 - INFO - [SQLi] [逻辑] 测试对: True=' and 1=1 -- ', False=' and 1=2 -- '
+2025-12-28 19:05:25,575 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:26,189 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=%27%20and%201%3D1%20--%20%27
+2025-12-28 19:05:26,190 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:26,692 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=%27%20and%201%3D2%20--%20%27
+2025-12-28 19:05:26,693 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:26,693 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:27,198 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:27,198 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:27,198 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:27,198 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:27,198 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:27,198 - INFO - [SQLi] [逻辑] 测试对: True= and 1=1 -- +, False= and 1=2 -- +
+2025-12-28 19:05:27,198 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:27,624 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=%20and%201%3D1%20--%20%2B
+2025-12-28 19:05:27,625 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:28,546 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=%20and%201%3D2%20--%20%2B
+2025-12-28 19:05:28,546 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:28,546 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:29,079 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:29,079 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:29,079 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:29,080 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:29,080 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:29,080 - INFO - [SQLi] [逻辑] 测试对: True=" OR "1"="1, False=" OR "2"="1
+2025-12-28 19:05:29,080 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:29,583 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=%22%20OR%20%221%22%3D%221
+2025-12-28 19:05:29,584 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:30,240 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=%22%20OR%20%222%22%3D%221
+2025-12-28 19:05:30,241 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:30,241 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:30,844 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:30,844 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:30,844 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:30,844 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:30,844 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:30,844 - INFO - [SQLi] [逻辑] 测试对: True=" or "1"="1, False=" or "2"="1
+2025-12-28 19:05:30,845 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:31,354 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=%22%20or%20%221%22%3D%221
+2025-12-28 19:05:31,355 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:31,965 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=%22%20or%20%222%22%3D%221
+2025-12-28 19:05:31,965 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:31,965 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:32,467 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:32,468 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:32,468 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:32,468 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:32,468 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:32,468 - INFO - [SQLi] [逻辑] 测试对: True=' or '1'='1, False=' or '1'='2
+2025-12-28 19:05:32,468 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:33,295 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=%27%20or%20%271%27%3D%271
+2025-12-28 19:05:33,296 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:34,501 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=%27%20or%20%271%27%3D%272
+2025-12-28 19:05:34,502 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:34,502 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:35,329 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:35,329 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:35,330 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:35,330 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:35,330 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:35,330 - INFO - [SQLi] [逻辑] 测试对: True= ' or 1=1 -- ', False= ' or 1=2 -- '
+2025-12-28 19:05:35,330 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:36,034 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=%20%27%20or%201%3D1%20--%20%27
+2025-12-28 19:05:36,034 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:36,765 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=%20%27%20or%201%3D2%20--%20%27
+2025-12-28 19:05:36,765 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:36,765 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:37,598 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:37,598 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:37,599 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:37,599 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:37,599 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:37,599 - INFO - [SQLi] [逻辑] 测试对: True=%' and 1=1 -- ', False=%' and 1=2 -- '
+2025-12-28 19:05:37,599 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:38,520 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=%25%27%20and%201%3D1%20--%20%2
+2025-12-28 19:05:38,520 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:39,425 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=%25%27%20and%201%3D2%20--%20%2
+2025-12-28 19:05:39,425 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:39,425 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:40,130 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:40,130 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:40,131 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:40,131 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:40,131 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:40,131 - INFO - [SQLi] [逻辑] 测试对: True=%' and 1=1 -- ', False=%' and 1=2 -- '
+2025-12-28 19:05:40,131 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:40,634 - INFO - [SQLi] [逻辑] True响应: status=200, length=34428, injected=%25%27%20and%201%3D1%20--%20%2
+2025-12-28 19:05:40,634 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:41,134 - INFO - [SQLi] [逻辑] False响应: status=200, length=34428, injected=%25%27%20and%201%3D2%20--%20%2
+2025-12-28 19:05:41,134 - INFO - [SQLi] [逻辑] 执行累积增长检测...
+2025-12-28 19:05:41,134 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:41,660 - INFO - [SQLi] [逻辑] 第二次True响应: length=34428
+2025-12-28 19:05:41,661 - INFO - [SQLi] [逻辑] 增长量: T→F=0字节, F→T=0字节
+2025-12-28 19:05:41,661 - INFO - [SQLi] [逻辑] 长度对比: True=34428, False=34428, 差异=0字节
+2025-12-28 19:05:41,661 - INFO - [SQLi] [逻辑] 计算差异: diff=0, ratio=0.00%
+2025-12-28 19:05:41,661 - WARNING - [SQLi] [逻辑] ❌ 差异太小: 0.00% < 0.2% 且 0字节 < 5字节，跳过
+2025-12-28 19:05:41,661 - INFO - [SQLi] [4/5] 执行布尔盲注检测...
+2025-12-28 19:05:41,661 - INFO - [SQLi] [布尔] 开始智能布尔差分检测...
+2025-12-28 19:05:41,661 - INFO - [SQLi] [布尔] 收到payloads数量: 35
+2025-12-28 19:05:41,662 - INFO - [SQLi] 识别到16个True载荷, 10个False载荷
+2025-12-28 19:05:41,662 - WARNING - [SQLi] 字典不完整！6个True载荷缺少对应的False载荷
+2025-12-28 19:05:41,662 - INFO - [SQLi] 启用智能取反，自动生成缺失的False payload...
+2025-12-28 19:05:41,662 - INFO - [SQLi] 智能取反: " OR "1"="1... → " OR "2"="1...
+2025-12-28 19:05:41,663 - INFO - [SQLi] 智能取反: " or "1"="1... → " or "2"="1...
+2025-12-28 19:05:41,663 - INFO - [SQLi] 智能取反: ' or '1'='1... → ' or '1'='2...
+2025-12-28 19:05:41,663 - INFO - [SQLi] 智能取反:  ' or 1=1 -- '... →  ' or 1=2 -- '...
+2025-12-28 19:05:41,663 - INFO - [SQLi] 智能取反: %' and 1=1 -- '... → %' and 1=2 -- '...
+2025-12-28 19:05:41,663 - INFO - [SQLi] 智能取反: %' and 1=1 -- '... → %' and 1=2 -- '...
+2025-12-28 19:05:41,663 - INFO - [SQLi] 最终配对16对逻辑载荷
+2025-12-28 19:05:41,663 - INFO - [SQLi] [布尔] 从外部载荷识别到16对逻辑载荷
+2025-12-28 19:05:41,663 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:42,290 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:42,996 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:43,626 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:44,309 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:44,936 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:45,510 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:46,044 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:46,660 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:47,358 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:48,667 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:49,691 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:50,378 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:51,196 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:52,315 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:52,945 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:53,530 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:54,227 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:54,818 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:55,238 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:55,729 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:56,158 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:56,679 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:57,329 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:58,326 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:59,054 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:05:59,922 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:06:00,640 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:06:01,575 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:06:02,274 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:06:02,880 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:06:03,636 - WARNING - [INJECT-HEADER] 检测到非法字符，进行URL编码: user-agent
+2025-12-28 19:06:04,416 - INFO - [SQLi] [5/5] 执行时间盲注检测...
+2025-12-28 19:06:04,416 - INFO - [SQLi] [时间] 从外部载荷识别到0个时间载荷
+2025-12-28 19:06:04,416 - INFO - [SQLi] 检测完成: 发现0个漏洞
+2025-12-28 19:06:04,417 - INFO - [XSS] 开始检测: http://108.187.15.14/pikachu/vul/sqli/sqli_header/sqli_header.php?user-agent
+2025-12-28 19:06:04,417 - INFO - [XSS] 载荷数量: 13
+2025-12-28 19:06:04,417 - INFO - [XSS] [1/5] 执行无害探针检测...
+2025-12-28 19:06:05,076 - INFO - [XSS] 参数未反射，跳过XSS测试: user-agent
+[扫描进度]: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [01:29<00:00, 89.87s/target] 
+2025-12-28 19:06:05,078 - INFO - [ENGINE] 汇总信息已保存: Results\scan_20251228_190435\summary.json
+2025-12-28 19:06:05,079 - INFO - [ENGINE] 扫描完成: 发现0个漏洞
+
+============================================================
+扫描完成！
+总漏洞数: 0
+结果文件: Results\scan_20251228_190435\vulnerabilities.json
+============================================================
+
+
+[SUCCESS] 扫描完成！
+[INFO] 扫描耗时: 89.87秒
+[INFO] 发现漏洞: 0 个
+
+[INFO] 未发现漏洞
+
+======================================================================
+[SUCCESS] BaseFuzz扫描完成！
+======================================================================
+
+============================================================
+[SUCCESS] 所有任务执行完成！
+[TIME] 总耗时: 90.11秒
+===========================================================

@@ -1,0 +1,9 @@
+../../../etc/passwd
+..\\..\\..\\..\\windows\\win.ini
+....//....//....//etc/passwd
+/etc/passwd
+c:\\windows\\win.ini
+/proc/self/environ
+../boot.ini
+../../../../../../../../etc/passwd
+..\\..\\..\\..\\..\\..\\..\\..\\boot.ini

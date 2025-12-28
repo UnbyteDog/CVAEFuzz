@@ -1,0 +1,9 @@
+{
+  "SQLi": 0,
+  "XSS": 1,
+  "CMDi": 2,
+  "Overflow": 3,
+  "XXE": 4,
+  "SSI": 5,
+  "XML": 4
+}

