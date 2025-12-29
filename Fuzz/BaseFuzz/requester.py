@@ -23,9 +23,6 @@ HTTP Requester - BaseFuzz 引擎的通信中枢
     >>> print(response.status_code)
     200
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-25
 """
 
 import requests
@@ -44,7 +41,7 @@ class Requester:
     """
     HTTP请求封装类 - BaseFuzz引擎的通信中枢
 
-    这个SB类负责所有HTTP通信，别tm到处用requests！保持统一！
+    这个类负责所有HTTP通信
 
     核心职责：
     1. 维护持久化Session（连接复用、Cookie管理）
@@ -158,7 +155,6 @@ class Requester:
         """
         发送HTTP请求（核心方法）
 
-        艹，这个方法是整个类的核心！所有HTTP通信都走这里！
 
         Args:
             method: HTTP方法（'GET' 或 'POST'）
@@ -251,7 +247,6 @@ class Requester:
         """
         带重试的请求发送（内部方法）
 
-        老王注释：这个憨批方法实现了重试逻辑！
 
         Args:
             method: HTTP方法
@@ -310,7 +305,6 @@ class Requester:
         """
         URL净化（标准化处理）
 
-        艹，这个SB方法把URL里的垃圾清理掉！
 
         功能：
         1. 去除fragment（#后面的内容，默认）
@@ -363,7 +357,6 @@ class Requester:
         """
         URL参数注入（辅助方法）
 
-        老王注释：这个SB方法帮你把payload注入到URL的参数里！
 
         Args:
             url: 原始URL
@@ -505,7 +498,6 @@ class Requester:
         """
         关闭Session，释放资源
 
-        艹，用完记得关闭！别tm资源泄漏！
 
         Example:
             >>> requester = Requester()

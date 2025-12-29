@@ -8,12 +8,9 @@ BaseFuzz Engines - 漏洞检测引擎包
 
 可用引擎：
 - base_engine: 检测引擎抽象基类
-- sqli_engine: SQL注入检测引擎（待实现）
+- sqli_engine: SQL注入检测引擎
 - xss_engine: 跨站脚本检测引擎（待实现）
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-25
 """
 
 from Fuzz.BaseFuzz.engines.base_engine import BaseEngine, VulnerabilityEntry

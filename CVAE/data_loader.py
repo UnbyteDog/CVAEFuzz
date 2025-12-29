@@ -7,9 +7,6 @@ CVAE 数据加载器
 实现数据加载、过采样和批处理功能
 支持从 processed_data.pt 和 vocab.json 加载数据
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-18
 """
 
 import torch

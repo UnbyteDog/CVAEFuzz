@@ -20,9 +20,6 @@ XSS Engine - 跨站脚本检测引擎
 4. Payload测试：根据上下文选择合适的载荷
 5. 置信度评分：基于转义、反射完整性计算
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-25
 """
 
 import re
@@ -44,7 +41,6 @@ class XSSEngine(BaseEngine):
     """
     XSS检测引擎
 
-    老王注释：这个SB引擎专门检测XSS漏洞！
 
     核心职责：
     1. 无害探针检测反射点
@@ -132,7 +128,6 @@ class XSSEngine(BaseEngine):
         """
         执行XSS检测（核心方法）
 
-        艹，这个方法是整个引擎的核心！只检测指定的单个参数！
 
         Args:
             target: 测试目标
@@ -195,7 +190,6 @@ class XSSEngine(BaseEngine):
         """
         无害探针检测（Probe Stage）
 
-        老王注释：这个SB方法注入无害字符串检测反射点！
 
         策略：
         1. 注入随机且唯一的探针字符串
@@ -240,8 +234,6 @@ class XSSEngine(BaseEngine):
                         response) -> List[VulnerabilityEntry]:
         """
         静态分析DOM XSS特征
-
-        老王注释：这个SB方法检测DOM XSS危险模式！
 
         策略：
         1. 检查响应中是否包含DOM关键词
@@ -306,7 +298,6 @@ class XSSEngine(BaseEngine):
         """
         执行XSS载荷测试
 
-        老王注释：这个SB方法根据上下文选择合适的载荷！
 
         策略：
         1. 根据探针上下文选择载荷
@@ -402,7 +393,6 @@ class XSSEngine(BaseEngine):
         """
         根据上下文选择合适的载荷
 
-        老王注释：这个SB方法根据反射点环境选择载荷！
 
         Args:
             payloads: 原始载荷列表
@@ -445,9 +435,6 @@ class XSSEngine(BaseEngine):
         """
         检查载荷是否被转义
 
-        老王注释：这个SB方法检测HTML实体编码！
-
-        艹，老王优化了检测逻辑：
         1. 检查payload中所有特殊字符是否被HTML实体编码
         2. 检查payload在响应中是否被完全编码（而不是部分编码）
         3. 如果关键字符（<>'"等）被编码，则认为payload被转义
@@ -468,7 +455,7 @@ class XSSEngine(BaseEngine):
             '=': '&#x3D;',
         }
 
-        # 艹，统计payload中需要检查的特殊字符
+        # 统计payload中需要检查的特殊字符
         special_chars_in_payload = set()
         for char in escaped_chars.keys():
             if char in payload:
@@ -500,7 +487,7 @@ class XSSEngine(BaseEngine):
                 logger.debug(f"[XSS] Payload被完全转义: {payload} -> {escaped_payload}")
                 return True
 
-        # 艹，重点检查关键字符是否被转义
+        # 重点检查关键字符是否被转义
         # 策略：如果payload中超过50%的特殊字符被转义，则认为payload被转义
         escaped_count = 0
         total_special = len(special_chars_in_payload)
@@ -529,7 +516,7 @@ class XSSEngine(BaseEngine):
                                 escaped_count += 1
                                 break
 
-        # 艹，如果超过50%的特殊字符被转义，则认为payload被转义
+        # 如果超过50%的特殊字符被转义，则认为payload被转义
         escape_ratio = escaped_count / total_special if total_special > 0 else 0
         is_escaped = escape_ratio > 0.5
 
@@ -545,7 +532,6 @@ class XSSEngine(BaseEngine):
         """
         计算XSS漏洞严重性和置信度
 
-        老王注释：这个SB方法根据上下文和载荷计算置信度！
 
         Args:
             context: 上下文类型
@@ -595,7 +581,6 @@ class XSSEngine(BaseEngine):
         """
         检查参数是否出现在危险上下文中
 
-        老王注释：这个SB方法检测参数是否被用于DOM操作！
 
         Args:
             response_text: 响应内容
@@ -627,7 +612,6 @@ class XSSEngine(BaseEngine):
         """
         统计WAF拦截次数
 
-        老王注释：这个SB方法检测WAF拦截情况！
 
         Args:
             target: 测试目标
@@ -663,7 +647,7 @@ class XSSEngine(BaseEngine):
         """
         生成随机探针字符串
 
-        老王注释：这个SB方法生成唯一且无害的探针！
+        生成唯一且无害的探针！
 
         Returns:
             探针字符串

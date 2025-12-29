@@ -25,10 +25,6 @@ CVDBFuzz - 基于CVAE生成与DBSCAN优化的智能Web模糊测试框架（全�
     python fuzzmain.py --train --epochs 50
     python fuzzmain.py --generate --cluster --num-samples 10000
     python fuzzmain.py --analyze
-
-作者：老王 (暴躁技术流)
-版本：4.0 - 全阶段完整版
-日期：2025-12-23
 """
 
 import sys
@@ -108,10 +104,6 @@ def parse_arguments():
             --engine:       选择引擎类型 (仅base可用，其他待实现)
             --mode:         载荷模式 (common=专家字典, cvae=AI生成, 默认: cvae)
             --threads:      并发线程数 (默认: 10)
-
-文档说明：
-    技术白皮书：Doc/prompt指导.md
-    深度研究：Doc/Web模糊测试框架构想探讨.md
         """
     )
 
@@ -442,7 +434,7 @@ def validate_arguments(args):
     if active_operations == 0:
         errors.append("必须指定至少一个操作：--preprocess, --train, --generate, --cluster, --analyze, --crawl, --scan, --fuzz")
 
-    # ========== 老王新增：analyze功能待实现 ==========
+    # ========== 新增：analyze功能待实现 ==========
     if args.analyze:
         print("[WARNING] --analyze 功能尚未实现，将在未来版本中推出")
         print("[INFO] 计划包含：重构准确率、有效样本率、聚类质量评估等")
@@ -452,7 +444,7 @@ def validate_arguments(args):
     if args.cluster and not args.generate:
         print("[WARNING] --cluster 通常需要与 --generate 一起使用")
 
-    # ========== 老王新增：第四阶段参数验证 ==========
+    # ========== 新增：第四阶段参数验证 ==========
     if args.crawl or args.scan:
         if not args.url:
             errors.append("--crawl 和 --scan 模式必须指定 --url 参数")
@@ -465,7 +457,7 @@ def validate_arguments(args):
         if args.crawl and args.scan:
             print("[WARNING] --crawl 和 --scan 同时指定，将只执行 --scan 模式")
 
-    # ========== 老王新增：BaseFuzz参数验证 ==========
+    # ========== 新增：BaseFuzz参数验证 ==========
     if args.fuzz:
         # BaseFuzz必须指定 --url 或 --file 之一
         if not args.url and not args.file:
@@ -498,25 +490,7 @@ def print_banner():
     """打印程序启动横幅"""
     banner = """
 ================================================================
-                    CVDBFuzz v4.0
-         基于CVAE生成与DBSCAN优化的智能Web模糊测试框架
-                      （全阶段完整版）
-
-  核心功能：
-  - 阶段一：数据预处理 - 字符级分词、序列标准化、词表构建
-  - 阶段二：CVAE训练    - 学习攻击载荷的隐式分布
-  - 阶段三：生成与聚类 - CVAE生成载荷 + DBSCAN优化
-  - 阶段四：黑盒测试    - 递归爬虫 + 智能注入
-
-  技术特性：
-  - Gumbel-Softmax重参数化 - 解决离散文本生成问题
-  - KL退火策略 - 防止Posterior Collapse
-  - 密度聚类优化 - 去除冗余，保留高价值种子
-  - 多维度评估 - Reconstruction Loss, KL Divergence, Silhouette
-  - 递归爬虫 - BFS广度优先、站点隔离、持久化缓存
-
-  作者：老王 (暴躁技术流)
-  文档：Doc/prompt指导.md, Doc/Web模糊测试框架构想探讨.md
+启动！！！！！
 ================================================================
 """
     print(banner)
@@ -529,14 +503,14 @@ def execute_preprocess(args):
     print("=" * 60)
 
     try:
-        # ========== 🔥 老王优化1：检查Data_processing目录 ==========
+        # ========== 🔥 优化1：检查Data_processing目录 ==========
         data_processing_dir = os.path.join(project_root, "Data_processing")
         if not os.path.exists(data_processing_dir):
             print(f"\n[ERROR] Data_processing目录不存在: {data_processing_dir}")
             print("[INFO] 请确保项目结构完整")
             return False
 
-        # ========== 🔥 老王优化2：检查数据目录中的jsonl文件 ==========
+        # ========== 🔥 优化2：检查数据目录中的jsonl文件 ==========
         data_dir = Path(args.data_dir)
         if not data_dir.exists():
             print(f"\n[ERROR] 数据目录不存在: {data_dir}")
@@ -562,7 +536,7 @@ def execute_preprocess(args):
                 print("\n[INFO] 用户取消操作")
                 return False
 
-        # ========== 🔥 老王优化3：显示找到的数据文件 ==========
+        # ========== 优化3：显示找到的数据文件 ==========
         if jsonl_files:
             print(f"[INFO] 找到 {len(jsonl_files)} 个数据文件:")
             for jsonl_file in sorted(jsonl_files):
@@ -570,7 +544,7 @@ def execute_preprocess(args):
                 print(f"  - {jsonl_file.name}: {file_size:,} 字节")
 
         # 构建preprocessor参数
-        # 🔥 老王修复：必须显式添加'--preprocess'参数，触发实际处理逻辑
+        # 修复：必须显式添加'--preprocess'参数，触发实际处理逻辑
         preprocess_args = [
             '--preprocess',  # 必需参数，告诉preprocessor.py执行预处理
             '--data-dir', args.data_dir,
@@ -579,7 +553,7 @@ def execute_preprocess(args):
             '--vocab-size', str(args.vocab_size)
         ]
 
-        # 🔥 老王修复：移除--verbose参数传递，preprocessor.py不支持此参数
+        # 修复：移除--verbose参数传递，preprocessor.py不支持此参数
         # 不再传递 --verbose 给 preprocessor.py
 
         print(f"\n[INFO] 数据目录: {args.data_dir}")
@@ -614,7 +588,7 @@ def execute_train(args):
     print("=" * 60)
 
     try:
-        # ========== 🔥 老王优化1：检查Stage 1输出文件 ==========
+        # ========== 优化1：检查Stage 1输出文件 ==========
         processed_data_path = os.path.join(args.output_dir, "processed_data.pt")
         vocab_path = os.path.join(args.output_dir, "vocab.json")
 
@@ -631,7 +605,7 @@ def execute_train(args):
         print(f"[INFO] 预处理数据文件: {processed_data_path}")
         print(f"[INFO] 词表文件: {vocab_path}")
 
-        # ========== 🔥 老王优化2：检查trainer模块是否存在 ==========
+        # ========== 优化2：检查trainer模块是否存在 ==========
         trainer_module_path = os.path.join(project_root, "Data_processing", "trainer.py")
         if not os.path.exists(trainer_module_path):
             print(f"\n[ERROR] trainer.py模块不存在: {trainer_module_path}")
@@ -647,7 +621,7 @@ def execute_train(args):
             print(f"          latent_dim={args.latent_dim}, num_layers={args.num_layers}")
             return False
 
-        # ========== 🔥 老王优化3：导入trainer模块 ==========
+        # ========== 优化3：导入trainer模块 ==========
         try:
             from Data_processing.trainer import CVAETrainer
         except ImportError as e:
@@ -655,7 +629,7 @@ def execute_train(args):
             print(f"[INFO] trainer.py路径: {trainer_module_path}")
             return False
 
-        # ========== 🔥 老王优化4：构建训练配置字典 ==========
+        # ========== 优化4：构建训练配置字典 ==========
         config = {
             # 数据路径
             'data_path': processed_data_path,
@@ -714,7 +688,7 @@ def execute_train(args):
         # 调用训练方法
         history = trainer.train()
 
-        # ========== 🔥 老王优化6：验证输出模型文件 ==========
+        # ========== 优化6：验证输出模型文件 ==========
         model_path = os.path.join(args.output_dir, "cvae.pth")
         if not os.path.exists(model_path):
             print(f"\n[WARNING] 训练完成但未找到模型文件: {model_path}")
@@ -749,7 +723,7 @@ def execute_generate(args):
     print("=" * 60)
 
     try:
-        # ========== 🔥 老王优化1：检查必要文件是否存在 ==========
+        # ========== 优化1：检查必要文件是否存在 ==========
         model_path = os.path.join(args.output_dir, "cvae.pth")
         vocab_path = os.path.join(args.output_dir, "vocab.json")
 
@@ -766,7 +740,7 @@ def execute_generate(args):
         print(f"[INFO] CVAE模型文件: {model_path}")
         print(f"[INFO] 词表文件: {vocab_path}")
 
-        # ========== 🔥 老王优化2：初始化CVAE生成器 ==========
+        # ========== 优化2：初始化CVAE生成器 ==========
         print("\n[INFO] 初始化CVAE生成器...")
         generator = CVAEGenerator(
             model_path=model_path,
@@ -774,7 +748,7 @@ def execute_generate(args):
             device='auto'
         )
 
-        # ========== 🔥 老王优化3：处理攻击类型参数 ==========
+        # ========== 优化3：处理攻击类型参数 ==========
         if ',' in args.attack_type:
             attack_types = [t.strip() for t in args.attack_type.split(',')]
         else:
@@ -786,7 +760,7 @@ def execute_generate(args):
         print(f"  - 温度参数: {args.temperature}")
         print(f"  - 批处理大小: {args.generation_batch_size}")
 
-        # ========== 🔥 老王优化4：生成载荷 ==========
+        # ========== 优化4：生成载荷 ==========
         print("\n[INFO] 开始生成攻击载荷...")
         payloads, metadata = generator.generate_payloads(
             attack_types=attack_types,
@@ -798,21 +772,21 @@ def execute_generate(args):
 
         print(f"\n[SUCCESS] 载荷生成完成！总计: {len(payloads)} 个")
 
-        # ========== 🔥 老王优化5：清洗载荷 ==========
+        # ==========优化5：清洗载荷 ==========
         print("\n[INFO] 清洗无效载荷...")
         cleaned_payloads, cleaned_metadata = generator.clean_payloads(payloads, metadata)
 
         valid_ratio = len(cleaned_payloads) / len(payloads) * 100
         print(f"[INFO] 清洗完成！有效载荷: {len(cleaned_payloads)}/{len(payloads)} ({valid_ratio:.1f}%)")
 
-        # ========== 🔥 老王优化6：提取隐空间特征 ==========
+        # ========== 优化6：提取隐空间特征 ==========
         print("\n[INFO] 提取隐空间特征...")
         embeddings, valid_mask = generator.get_embeddings(cleaned_payloads, cleaned_metadata)
 
         print(f"[INFO] 隐空间特征: {embeddings.shape}")
         print(f"[INFO] 有效特征数: {np.sum(valid_mask)}")
 
-        # ========== 🔥 老王优化7：保存生成数据 ==========
+        # ========== 优化7：保存生成数据 ==========
         generated_dir = os.path.join(args.output_dir, "generated")
         print(f"\n[INFO] 保存生成数据到: {generated_dir}")
         generator.save_generated_data(cleaned_payloads, cleaned_metadata, generated_dir)
@@ -827,7 +801,7 @@ def execute_generate(args):
         print(f"[SUCCESS] 隐空间特征已保存: {embeddings_file}")
         print(f"[SUCCESS] 有效性掩码已保存: {valid_mask_file}")
 
-        # ========== 🔥 老王优化8：显示生成统计 ==========
+        # ========== 优化8：显示生成统计 ==========
         print("\n[INFO] 生成统计:")
         type_counts = {}
         for meta in cleaned_metadata:
@@ -856,7 +830,7 @@ def execute_cluster(args):
     print("=" * 60)
 
     try:
-        # ========== 🔥 老王优化1：检查必要文件是否存在 ==========
+        # ========== 优化1：检查必要文件是否存在 ==========
         generated_dir = os.path.join(args.output_dir, "generated")
 
         embeddings_file = os.path.join(generated_dir, "latent_embeddings.npy")
@@ -882,7 +856,7 @@ def execute_cluster(args):
         print(f"[INFO] 载荷文件: {payloads_file}")
         print(f"[INFO] 元数据文件: {metadata_file}")
 
-        # ========== 🔥 老王优化2：加载数据 ==========
+        # ========== 优化2：加载数据 ==========
         print("\n[INFO] 加载数据文件...")
         embeddings = np.load(embeddings_file)
         print(f"[INFO] 隐空间特征: {embeddings.shape}")
@@ -902,7 +876,7 @@ def execute_cluster(args):
             print(f"[INFO] 有效性掩码: {valid_mask.shape}")
             print(f"[INFO] 有效样本: {np.sum(valid_mask)} ({np.sum(valid_mask)/len(valid_mask)*100:.1f}%)")
 
-        # ========== 🔥 老王优化3：初始化聚类器 ==========
+        # ========== 优化3：初始化聚类器 ==========
         print("\n[INFO] 初始化CVAE聚类器...")
         clusterer = CVAEClusterer(
             embeddings=embeddings,
@@ -912,7 +886,7 @@ def execute_cluster(args):
             label_weight=15.0  # 使用强标签权重进行类型隔离
         )
 
-        # ========== 🔥 老王优化4：执行DBSCAN聚类 ==========
+        # ========== 优化4：执行DBSCAN聚类 ==========
         print("\n[INFO] 开始DBSCAN聚类分析...")
         print(f"[INFO] 聚类参数:")
         print(f"  - eps: {args.eps if args.eps else '自动寻找'}")
@@ -932,12 +906,12 @@ def execute_cluster(args):
         if clustering_results.get('silhouette_score'):
             print(f"  - 轮廓系数: {clustering_results['silhouette_score']:.3f}")
 
-        # ========== 🔥 老王优化5：降维处理（用于可视化） ==========
+        # ========== 优化5：降维处理（用于可视化） ==========
         if args.visualize:
             print(f"\n[INFO] 执行降维处理 ({args.reduction_method})...")
             clusterer.reduce_dimensions(method=args.reduction_method)
 
-        # ========== 🔥 老王优化6：筛选精锐载荷 ==========
+        # ========== 优化6：筛选精锐载荷 ==========
         print("\n[INFO] 筛选精锐载荷...")
         print(f"[INFO] 筛选参数:")
         print(f"  - 每簇样本数: {args.samples_per_cluster}")
@@ -956,12 +930,12 @@ def execute_cluster(args):
         print(f"  - 精锐样本: {len(refined_payloads)}")
         print(f"  - 压缩比例: {reduction_ratio:.1f}%")
 
-        # ========== 🔥 老王优化7：保存聚类结果 ==========
+        # ========== 优化7：保存聚类结果 ==========
         clustered_dir = os.path.join(args.output_dir, "clustered")
         print(f"\n[INFO] 保存聚类结果到: {clustered_dir}")
         clusterer.save_clustering_results(clustered_dir)
 
-        # ========== 🔥 老王优化8：保存精锐载荷 ==========
+        # ========== 优化8：保存精锐载荷 ==========
         fuzzing_dir = os.path.join(args.output_dir, "fuzzing")
         os.makedirs(fuzzing_dir, exist_ok=True)
 
@@ -969,7 +943,7 @@ def execute_cluster(args):
         clusterer.save_refined_payloads(refined_payloads_file)
         print(f"[SUCCESS] 精锐载荷已保存: {refined_payloads_file}")
 
-        # ========== 🔥 老王优化9：生成可视化图像（可选） ==========
+        # ========== 优化9：生成可视化图像（可选） ==========
         if args.visualize:
             print("\n[INFO] 生成聚类可视化图像...")
             viz_path = os.path.join(clustered_dir, "clustering_visualization.png")
@@ -979,7 +953,7 @@ def execute_cluster(args):
             )
             print(f"[SUCCESS] 可视化图像已保存: {viz_path}")
 
-        # ========== 🔥 老王优化10：显示簇统计信息 ==========
+        # ========== 优化10：显示簇统计信息 ==========
         print("\n[INFO] 簇统计信息:")
         for cluster_id, cluster_info in clustering_results['cluster_info'].items():
             print(f"  - 簇 {cluster_id}: {cluster_info['size']} 个样本, "
@@ -1020,7 +994,7 @@ def execute_scan_init(args):
     print("=" * 60)
 
     try:
-        # ========== 🔥 老王优化1：导入爬虫模块 ==========
+        # ========== 优化1：导入爬虫模块 ==========
         try:
             sys.path.insert(0, os.path.join(project_root, "Fuzz"))
             from spider import CVDBSpider, extract_site_name
@@ -1029,7 +1003,7 @@ def execute_scan_init(args):
             print(f"[INFO] 请确保 Fuzz/spider.py 文件存在")
             return False
 
-        # ========== 🔥 老王优化2：站点环境初始化 ==========
+        # ========== 优化2：站点环境初始化 ==========
         site_name = extract_site_name(args.url)
         print(f"\n[INFO] 目标站点: {site_name}")
         print(f"[INFO] 基础URL: {args.url}")
@@ -1039,7 +1013,7 @@ def execute_scan_init(args):
         results_dir.mkdir(parents=True, exist_ok=True)
         print(f"[INFO] 结果目录: {results_dir}")
 
-        # ========== 🔥 老王优化3：智能模式判断 ==========
+        # ========== 优化3：智能模式判断 ==========
         # 艹！提前定义参数过滤列表（包含HTTP头），用于Engine初始化
         param_filter_for_engine = []
 
@@ -1060,9 +1034,8 @@ def execute_scan_init(args):
             params = {}
             data = {}
 
-            # ========== 老王新增：支持--params手动指定参数 ==========
 
-            # ========== 老王新增：支持--params手动指定参数 ==========
+            # ========== 新增：支持--params手动指定参数 ==========
             if args.params:
                 # 用户手动指定了测试参数
                 # 支持两种格式：
@@ -1174,11 +1147,11 @@ def execute_scan_init(args):
             cache_dir.mkdir(parents=True, exist_ok=True)
             print(f"[INFO] 缓存目录: {cache_dir}")
 
-            # ========== 🔥 老王优化4：缓存加载逻辑 ==========
+            # ========== 优化4：缓存加载逻辑 ==========
             cache_file = cache_dir / "spider_cache.json"
 
             if args.use_cache and cache_file.exists():
-                # 艹，用户想复用缓存
+                # 复用缓存
                 print(f"\n[INFO] 检测到已有缓存，正在加载...")
                 print(f"[INFO] 缓存文件: {cache_file}")
 
@@ -1192,7 +1165,7 @@ def execute_scan_init(args):
                     print(f"[INFO] 将重新执行爬取...")
                     args.use_cache = False
 
-            # ========== 🔥 老王优化5：执行爬虫（如果需要） ==========
+            # ========== 优化5：执行爬虫（如果需要） ==========
             if not args.use_cache or not cache_file.exists():
                 # 初始化爬虫
                 print(f"\n[INFO] 初始化CVDBSpider爬虫...")
@@ -1214,7 +1187,7 @@ def execute_scan_init(args):
             else:
                 targets = spider.targets
 
-        # ========== 🔥 老王优化6：任务统计表格 ==========
+        # ========== 优化6：任务统计表格 ==========
         # 注意：targets在两种模式下都已经定义好了
 
         print(f"\n{'='*60}")
@@ -1250,7 +1223,7 @@ def execute_scan_init(args):
                 params_info = f"参数: {len(target.params)}个" if target.params else f"字段: {len(target.data)}个"
                 print(f"  {i}. [{target.method}] {target.url[:60]}... ({params_info})")
 
-        # ========== 🔥 老王优化6：保存任务列表到文件 ==========
+        # ========== 优化6：保存任务列表到文件 ==========
         targets_file = results_dir / "fuzz_targets.json"
         print(f"\n[INFO] 保存任务列表到: {targets_file}")
 
@@ -1270,7 +1243,7 @@ def execute_scan_init(args):
 
         print(f"[SUCCESS] 任务列表已保存")
 
-        # ========== 🔥 老王优化7：模式判断 ==========
+        # ========== 优化7：模式判断 ==========
         # 只有--crawl（没有--scan）：纯爬虫模式，直接退出
         if args.crawl and not args.scan:
             print(f"\n{'='*60}")
@@ -1310,7 +1283,7 @@ def execute_basefuzz(args):
     """
     BaseFuzz引擎执行函数
 
-    老王注释：这个SB函数负责完整的BaseFuzz流程：
+    负责完整的BaseFuzz流程：
     1. 加载目标列表（从spider缓存或--url爬取）
     2. 初始化BaseFuzz Engine
     3. 执行模糊测试
@@ -1327,7 +1300,7 @@ def execute_basefuzz(args):
     print("=" * 70)
 
     try:
-        # ========== 老王步骤1：导入BaseFuzz模块 ==========
+        # ========== 步骤1：导入BaseFuzz模块 ==========
         print("\n[INFO] 导入BaseFuzz模块...")
 
         try:
@@ -1339,7 +1312,7 @@ def execute_basefuzz(args):
             print(f"[INFO] 请确保 Fuzz/BaseFuzz/engine.py 存在")
             return False
 
-        # ========== 老王步骤2：获取目标列表 ==========
+        # ========== 步骤2：获取目标列表 ==========
         print("\n[步骤1] 准备测试目标")
         print("-" * 70)
 
@@ -1367,7 +1340,7 @@ def execute_basefuzz(args):
                 return False
 
         elif args.url:
-            # 艹！如果你指定了--url，老王我先尝试加载缓存
+            # 先尝试加载缓存
             print(f"[INFO] 目标URL: {args.url}")
 
             # 检查是否有现有缓存
@@ -1407,12 +1380,12 @@ def execute_basefuzz(args):
                     parsed = urlparse(args.url)
                     query_params = parse_qs(parsed.query)
 
-                    # 艹！parse_qs返回的值是列表，需要提取第一个值
+                    # parse_qs返回的值是列表，需要提取第一个值
                     # 例如：{'id': ['1'], 'Submit': ['提交']}
                     # 需要转换为：{'id': '1', 'Submit': '提交'}
                     params = {k: v[0] if v else '' for k, v in query_params.items()}
 
-                    # 艹！新增：支持--params手动指定参数！
+                    # 新增：支持--params手动指定参数！
                     # 支持语法：
                     # - name=value → 测试name参数，初始值为value
                     # - name=@value → 固定name参数为value，不测试（@前缀表示固定值）
@@ -1431,7 +1404,7 @@ def execute_basefuzz(args):
                                 param_name = param_name.strip()
                                 param_value = param_value.strip()
 
-                                # 艹！检查@前缀（固定值，不测试）
+                                # 检查@前缀（固定值，不测试）
                                 if param_value.startswith('@'):
                                     # 去掉@前缀，保持原值
                                     param_value = param_value[1:]
@@ -1450,7 +1423,7 @@ def execute_basefuzz(args):
                             else:  # POST
                                 manual_data[param_name] = param_value
 
-                        # 艹！手动参数优先，覆盖URL中的参数
+                        # 手动参数优先，覆盖URL中的参数
                         if args.method == 'GET':
                             params = manual_params_dict
                         else:
@@ -1460,10 +1433,10 @@ def execute_basefuzz(args):
                         # 没有手动指定，使用URL中的参数
                         data = {}
 
-                    # 判断请求方法（艹！使用用户指定的method！）
+                    # 判断请求方法
                     method = args.method.upper()
 
-                    # 艹！新增：解析HTTP头注入列表
+                    # 新增：解析HTTP头注入列表
                     injectable_headers = {}
                     if args.headers and args.headers.strip():
                         header_list = [h.strip() for h in args.headers.split(',')]
@@ -1480,7 +1453,7 @@ def execute_basefuzz(args):
                     else:
                         print(f"[INFO] 未指定HTTP头注入")
 
-                    # 构建FuzzTarget（艹！FuzzTarget是dataclass，不需要headers参数！）
+                    # 构建FuzzTarget
                     if method == 'GET':
                         target = FuzzTarget(
                             url=args.url,
@@ -1504,7 +1477,7 @@ def execute_basefuzz(args):
                     print(f"[SUCCESS] 已创建测试目标: {args.url}")
                     print(f"[INFO] 请求方法: {method}")
 
-                    # 艹！显示参数信息（GET和POST分开处理）
+                    #显示参数信息（GET和POST分开处理）
                     if method == 'GET':
                         print(f"[INFO] GET参数数量: {len(params)}")
                         if params:
@@ -1514,7 +1487,7 @@ def execute_basefuzz(args):
                         if data:
                             print(f"[INFO] POST参数列表: {', '.join(data.keys())}")
 
-                    # 艹！显示HTTP头注入信息
+                    #显示HTTP头注入信息
                     if injectable_headers:
                         print(f"[INFO] HTTP头注入: {', '.join(injectable_headers.keys())}")
 
@@ -1542,17 +1515,17 @@ def execute_basefuzz(args):
         print(f"  - GET任务: {get_count}")
         print(f"  - POST任务: {post_count}")
 
-        # ========== 老王步骤3：初始化BaseFuzz Engine ==========
+        # ========== 步骤3：初始化BaseFuzz Engine ==========
         print("\n[步骤2] 初始化BaseFuzz引擎")
         print("-" * 70)
 
         # 确定使用的引擎
         engine_names = ['sqli', 'xss']  # 目前支持SQLi和XSS
 
-        # 艹！解析参数过滤列表
+        # 解析参数过滤列表
         param_filter = None
         if args.params:
-            # 艹！修复：提取参数名（忽略值部分）
+            # 修复：提取参数名（忽略值部分）
             # 支持语法：
             # - id=1 → 测试id
             # - id=@1 → 不测试id（@前缀表示固定值）
@@ -1566,7 +1539,7 @@ def execute_basefuzz(args):
                     param_name = param_name.strip()
                     param_value = param_value.strip()
 
-                    # 艹！检查@前缀（固定值，不测试）
+                    # 检查@前缀（固定值，不测试）
                     if param_value.startswith('@'):
                         # 跳过固定值参数
                         continue
@@ -1603,7 +1576,7 @@ def execute_basefuzz(args):
                 cookie=args.cookie,
                 max_workers=args.threads,
                 concurrent_params=10,  # 参数级并发数
-                param_filter=param_filter  # 艹！已包含HTTP头的参数过滤列表
+                param_filter=param_filter  # 已包含HTTP头的参数过滤列表
             )
 
             print("[SUCCESS] BaseFuzz引擎初始化完成")
@@ -1615,7 +1588,7 @@ def execute_basefuzz(args):
                 traceback.print_exc()
             return False
 
-        # ========== 老王步骤4：执行模糊测试 ==========
+        # ========== 步骤4：执行模糊测试 ==========
         print("\n[步骤3] 执行模糊测试")
         print("-" * 70)
         print("[INFO] 开始扫描...")
@@ -1650,7 +1623,7 @@ def execute_basefuzz(args):
                 traceback.print_exc()
             return False
 
-        # ========== 老王步骤5：生成分析报告 ==========
+        # ========== 步骤5：生成分析报告 ==========
         if results:
             print("\n[步骤4] 生成分析报告")
             print("-" * 70)
@@ -1698,7 +1671,7 @@ def execute_basefuzz(args):
                 # 生成汇总报告（基于过滤后的结果）
                 reporter.generate_summary(analyzed_results, stats, scan_info)
 
-                # 艹！修改Reporter：生成详细报告时使用所有漏洞
+                #修改Reporter：生成详细报告时使用所有漏洞
                 reporter.detail_file = engine.output_dir / "vulnerabilities_detail.json"
                 reporter._generate_json_report(all_vulns, stats, scan_info)
 
@@ -1771,11 +1744,11 @@ def main():
     if args.cluster:
         success = execute_cluster(args) and success
 
-    # ========== 老王新增：第四阶段调度 ==========
+    # ========== 新增：第四阶段调度 ==========
     if args.crawl or args.scan:
         success = execute_scan_init(args) and success
 
-    # ========== 老王新增：BaseFuzz调度 ==========
+    # ========== 新增：BaseFuzz调度 ==========
     if args.fuzz:
         success = execute_basefuzz(args) and success
 

@@ -34,9 +34,7 @@ Baseline Manager - 基准测试组件
     >>> print(f"基准时间: {profile.avg_time:.3f}s")
     >>> print(f"反射参数: {profile.reflected_params}")
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-25
+
 """
 
 import time
@@ -62,7 +60,7 @@ class BaselineProfile:
     """
     基准画像数据结构
 
-    老王注释：这个SB数据类存储目标URL的正常响应画像！
+    存储目标URL的正常响应画像
 
     Attributes:
         target_url: 目标URL
@@ -250,7 +248,7 @@ class BaselineManager:
     """
     基准管理器 - 建立正常状态响应画像
 
-    老王注释：这个SB类负责在攻击前建立基准，别tm乱搞！
+    负责在攻击前建立基准
 
     核心职责：
     1. 多次采样建立统计画像
@@ -302,7 +300,7 @@ class BaselineManager:
         """
         构建基准画像（核心方法）
 
-        艹，这个方法是整个类的核心！所有基准建立都走这里！
+        所有基准建立
 
         流程：
         1. 发送samples次原始请求
@@ -583,7 +581,7 @@ class BaselineManager:
         """
         定位动态内容区域（Diff算法）
 
-        艹，这个SB方法找出响应中的动态区域！
+        找出响应中的动态区域
 
         Args:
             responses: 响应列表（至少2个）

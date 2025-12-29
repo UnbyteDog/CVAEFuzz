@@ -23,9 +23,6 @@ Reporter - 扫描报告生成器
     ...     output_dir='Results/scan_20251225'
     ... )
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-25
 """
 
 import json
@@ -57,7 +54,6 @@ class Reporter:
     """
     扫描报告生成器
 
-    老王注释：这个SB类负责生成漂亮的扫描报告！
 
     核心职责：
     1. 汇总统计信息
@@ -117,7 +113,7 @@ class Reporter:
         """
         生成汇总报告（核心方法）
 
-        艹，这个SB方法生成所有格式的报告！
+        生成所有格式的报告！
 
         Args:
             results: 漏洞结果列表
@@ -157,7 +153,7 @@ class Reporter:
         """
         生成JSON详细报告
 
-        老王注释：这个SB方法生成完整的JSON报告！
+        生成完整的JSON报告！
         """
         # 构建完整报告
         report = {
@@ -180,7 +176,7 @@ class Reporter:
         """
         创建汇总信息
 
-        老王注释：这个SB方法汇总所有统计信息！
+        汇总所有统计信息！
         """
         summary = {
             'scan_info': scan_info or {},
@@ -197,7 +193,6 @@ class Reporter:
         """
         打印终端彩色汇总（核心方法）
 
-        艹，这个SB方法输出漂亮的ASCII表格！
 
         Args:
             stats: 统计信息字典
@@ -326,8 +321,6 @@ class Reporter:
         """
         打印漏洞表格（核心方法）
 
-        艹，这个SB方法输出漂亮的漏洞表格！
-
         Args:
             results: 漏洞结果列表
             top_n: 显示数量（默认20）
@@ -382,7 +375,7 @@ class Reporter:
         """
         保存终端报告到文件
 
-        老王注释：这个SB方法保存彩色报告为纯文本！
+        保存彩色报告为纯文本！
 
         Args:
             text: 终端输出文本

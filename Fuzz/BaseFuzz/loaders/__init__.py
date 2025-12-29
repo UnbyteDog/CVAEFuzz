@@ -10,9 +10,6 @@ BaseFuzz Loaders - 载荷管理包
 - payload_manager: 载荷管理中心
 - transformer: 深度变异引擎
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-25
 """
 
 from Fuzz.BaseFuzz.loaders.payload_manager import PayloadManager

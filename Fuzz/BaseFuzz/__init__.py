@@ -22,9 +22,6 @@ CVDBFuzz Phase 4 的核心实现，提供：
     ... )
     >>> results = engine.run(targets)
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-25
 """
 
 from Fuzz.BaseFuzz.requester import Requester, create_requester

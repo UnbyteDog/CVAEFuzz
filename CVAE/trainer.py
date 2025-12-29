@@ -7,9 +7,6 @@ CVAE 训练器
 实现完整的训练循环、模型保存和指标监控
 支持通过 python main.py --train 触发
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-18
 """
 
 import torch
@@ -45,7 +42,7 @@ class CVAETrainer:
         self.config = config
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-        # 🔥 初始化老王牌训练日志记录器
+        # 🔥 初始化训练日志记录器
         log_dir = os.path.join(self.config.get('output_dir', 'CVAE/checkpoints'), 'logs')
         self.training_logger = create_logger(log_dir=log_dir, simple=False)
 
@@ -177,7 +174,7 @@ class CVAETrainer:
         epoch_recon_acc = 0.0
         epoch_validity = 0.0
 
-        # 进度条 - 老王我加上平滑显示和mininterval
+        # 进度条 - 加上平滑显示和mininterval
         pbar = tqdm(self.train_loader, desc=f"Epoch {self.current_epoch + 1}",
                    mininterval=0.1, smoothing=0.1)
 
@@ -274,7 +271,7 @@ class CVAETrainer:
                 self.current_step += 1
 
         except Exception as e:
-            # 🔥 记录训练错误到老王日志
+            # 🔥 记录训练错误到日志
             error_msg = f"Epoch {self.current_epoch + 1} 训练出错: {str(e)}"
             self.training_logger.log_error(error_msg, e)
             self.logger.error(error_msg)
@@ -436,7 +433,7 @@ class CVAETrainer:
         self.logger.info("🚀 开始训练 CVAE 模型")
         self.logger.info(f"📊 训练配置：{self.config}")
 
-        # 🔥 记录训练开始到老王日志
+        # 🔥 记录训练开始到日志
         self.training_logger.log_info("开始CVAE模型训练")
 
         # 记录训练开始时间
@@ -463,7 +460,7 @@ class CVAETrainer:
             if is_best:
                 self.best_val_loss = val_loss
 
-            # 🔥 记录epoch指标到老王日志
+            # 🔥 记录epoch指标到日志
             combined_metrics = {
                 **train_metrics,
                 **val_metrics,
@@ -482,11 +479,11 @@ class CVAETrainer:
             }
             self.training_history.append(epoch_record)
 
-            # 🔥 如果是最佳模型，记录到老王日志
+            # 🔥 如果是最佳模型，记录到日志
             if is_best:
                 self.training_logger.log_best_model(epoch, val_metrics)
 
-            # 🔥 生成调试样本并记录到老王日志
+            # 🔥 生成调试样本并记录到日志
             generation_samples = self.get_debug_samples_dict(num_samples=5, max_length=50, temperature=1.5)
             self.training_logger.log_generation_samples(epoch, generation_samples)
 
@@ -521,7 +518,7 @@ class CVAETrainer:
         self.logger.info(f"🎉 训练完成！总时间：{total_time:.2f} 秒")
         self.logger.info(f"🏆 最佳验证损失：{self.best_val_loss:.4f}")
 
-        # 🔥 记录训练完成到老王日志
+        # 🔥 记录训练完成到日志
         self.training_logger.log_training_complete(self.config['epochs'])
 
         # 保存最终模型

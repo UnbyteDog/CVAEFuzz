@@ -25,9 +25,6 @@ CVAE聚类器基准测试工具 (Benchmark Clustering)
   # 快速性能测试
   python benchmark_clustering.py --quiet --no-viz
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-20
 """
 
 import numpy as np

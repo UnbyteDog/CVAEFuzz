@@ -29,9 +29,6 @@ Payload Transformer - 深度变异引擎
     >>> print(obfuscated)
     >>> SELECT/**/*FROM*/users
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-25
 """
 
 import random
@@ -49,7 +46,7 @@ class PayloadTransformer:
     """
     载荷转换器 - 深度变异引擎
 
-    老王注释：这个SB类负责对载荷进行各种变异，绕过WAF！
+    对载荷进行各种变异，绕过WAF！
 
     核心职责：
     1. 编码转换（URL、Double URL、Unicode）
@@ -181,7 +178,7 @@ class PayloadTransformer:
         """
         SQL注释注入（空格替换为注释）
 
-        艹，这个SB方法把空格替换成注释，绕过WAF的正则匹配！
+        把空格替换成注释，绕过WAF的正则匹配！
 
         Args:
             payload: 原始SQL载荷
@@ -269,7 +266,7 @@ class PayloadTransformer:
         """
         位翻转变异（Radamsa风格）
 
-        艹，这个SB方法模仿Radamsa，随机替换/插入/删除字符！
+        方法模仿Radamsa，随机替换/插入/删除字符！
 
         以固定概率对载荷进行随机变异：
         - 字符替换（10%概率）
@@ -381,7 +378,6 @@ class PayloadTransformer:
         """
         深度变异（组合多种变异技术）
 
-        艹，这个方法是深度变异的核心！组合多种技术绕过WAF！
 
         Args:
             payload: 原始载荷

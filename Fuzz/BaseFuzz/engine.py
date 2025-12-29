@@ -33,9 +33,6 @@ Engine - BaseFuzz 核心调度器
     >>> # 开始扫描
     >>> results = engine.run(targets)
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-25
 """
 
 import os
@@ -69,7 +66,6 @@ class Engine:
     """
     BaseFuzz核心调度器
 
-    老王注释：这个SB类是整个框架的大脑，负责协调一切！
 
     核心职责：
     1. 动态加载检测引擎（sqli_engine, xss_engine等）
@@ -122,7 +118,7 @@ class Engine:
         """
         初始化Engine调度器
 
-        艹，这个方法是初始化整个框架的入口！
+        框架的入口
 
         Args:
             engine_names: 要加载的引擎名称列表（如 ['sqli', 'xss']）
@@ -136,7 +132,7 @@ class Engine:
             output_dir: 结果输出目录（默认：Results/scan_YYYYMMDD_HHMMSS）
             max_workers: 全局并发线程数（默认5）
             concurrent_params: 单目标并发测试参数数（默认10）
-            param_filter: 参数过滤列表（艹！新增！只测试指定的参数，例如：['id', 'name']）
+            param_filter: 参数过滤列表（新增！只测试指定的参数，例如：['id', 'name']）
 
         Example:
             >>> engine = Engine(
@@ -152,7 +148,7 @@ class Engine:
         self.cookie = cookie
         self.max_workers = max_workers
         self.concurrent_params = concurrent_params
-        self.param_filter = param_filter  # 艹！新增！参数过滤列表
+        self.param_filter = param_filter  # 新增！参数过滤列表
 
         # 初始化Requester（HTTP通信层）
         self.requester = Requester(
@@ -197,7 +193,7 @@ class Engine:
         """
         动态加载检测引擎（插件化设计）
 
-        老王注释：这个SB方法实现了插件加载机制！
+        插件加载机制
 
         Args:
             engine_names: 引擎名称列表（如 ['sqli', 'xss']）
@@ -246,7 +242,6 @@ class Engine:
         """
         执行完整的模糊测试工作流（核心方法）
 
-        艹，这个方法是整个框架的核心入口！所有扫描都走这里！
 
         工作流程：
         1. 加载载荷字典（从PayloadManager）
@@ -345,7 +340,7 @@ class Engine:
         """
         为单个目标建立BaselineProfile（基线画像）
 
-        老王注释：这个SB方法负责建立目标的"正常响应"指纹！
+        建立目标的"正常响应"指纹
 
         Args:
             target: 测试目标
@@ -378,7 +373,7 @@ class Engine:
         """
         单目标多参数并发测试（内部方法）
 
-        艹，这个SB方法实现了单目标的多参数并发！
+        单目标的多参数并发
 
         工作流程：
         1. 提取目标的所有可测试参数
@@ -402,14 +397,14 @@ class Engine:
         else:  # POST
             all_params = list(target.data.keys())
 
-        # 艹！新增：添加HTTP头注入点
+        # 新增：添加HTTP头注入点
         if hasattr(target, 'injectable_headers') and target.injectable_headers:
             all_headers = list(target.injectable_headers.keys())
             logger.info(f"[ENGINE] 检测到HTTP头注入点: {all_headers}")
             # 将HTTP头添加到参数列表
             all_params.extend(all_headers)
 
-        # 艹！应用参数过滤！
+        # 应用参数过滤！
         if self.param_filter:
             # 只测试指定的参数
             params_to_test = [p for p in all_params if p in self.param_filter]
@@ -471,7 +466,7 @@ class Engine:
         """
         单参数串行触发所有引擎（内部方法）
 
-        老王注释：这个憨批方法按顺序触发所有引擎（SQLi → XSS）！
+        按顺序触发所有引擎（SQLi → XSS）
 
         Args:
             target: 测试目标
@@ -494,7 +489,6 @@ class Engine:
             engine = engines[engine_name]
 
             # 获取该引擎的载荷
-            # 艹！老王我发现了！payloads_dict的键不是简单的upper()/title()！
             # SQLi引擎的键是'SQLi'（首字母大写，i小写）
             # XSS引擎的键是'XSS'（全大写）
             # 所以要用PayloadManager的VTYPE_MAPPING来做转换！
@@ -522,14 +516,14 @@ class Engine:
                 # 实时保存发现的漏洞（艹，立即写入文件！）
                 if vuln_entries:
                     for vuln in vuln_entries:
-                        # 艹！显示完整payload URL，方便用户直接复制测试！
+                        # 显示完整payload URL，方便用户直接复制测试！
                         logger.warning(f"[VULN] {engine_name} 发现漏洞: {vuln.payload_url}")
                         logger.warning(f"[VULN]   类型: {vuln.vuln_type} | 严重性: {vuln.severity} | 置信度: {vuln.confidence:.2f}")
                         logger.warning(f"[VULN]   载荷: {vuln.payload}")
 
             except Exception as e:
                 logger.error(f"[ENGINE] 引擎 {engine_name} 执行失败: {target.url}?{param_name} - {e}")
-                # 艹，引擎崩溃不影响其他引擎！
+                # 引擎崩溃不影响其他引擎！
 
         return param_vulns
 
@@ -537,17 +531,17 @@ class Engine:
         """
         实时保存漏洞结果到JSON文件
 
-        艹！修改：保存两份文件！
+        修改：保存两份文件！
         - vulnerabilities.json：只保存真正能触发异常的漏洞（过滤Error-Based）
         - vulnerabilities_all.json：保存所有漏洞（包括Error-Based）
 
-        老王注释：这个SB方法区分两种保存方式！
+        区分两种保存方式
 
         Args:
             vulns: 漏洞结果列表（字典格式）
         """
         try:
-            # 艹！过滤掉Error-Based（报语法错误）
+            # 过滤掉Error-Based（报语法错误）
             filtered_vulns = []
             for vuln in vulns:
                 method = vuln.get('method', '')
@@ -562,7 +556,7 @@ class Engine:
             with open(self.results_file, 'w', encoding='utf-8') as f:
                 json.dump(filtered_vulns, f, ensure_ascii=False, indent=2)
 
-            # 艹！保存所有结果（vulnerabilities_all.json）
+            # 保存所有结果（vulnerabilities_all.json）
             all_results_file = self.output_dir / "vulnerabilities_all.json"
             with open(all_results_file, 'w', encoding='utf-8') as f:
                 json.dump(vulns, f, ensure_ascii=False, indent=2)
@@ -577,7 +571,7 @@ class Engine:
         """
         保存扫描汇总信息
 
-        老王注释：这个SB方法保存扫描的统计信息！
+        保存扫描的统计信息
         """
         try:
             with open(self.summary_file, 'w', encoding='utf-8') as f:
@@ -592,7 +586,6 @@ class Engine:
         """
         关闭调度器，释放资源
 
-        艹，用完记得关闭！别tm资源泄漏！
 
         Example:
             >>> engine = Engine(...)

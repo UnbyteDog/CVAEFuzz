@@ -11,9 +11,6 @@ CVDBFuzz - Web爬虫模块（黑盒模糊测试基础设施）
 4. 持久化缓存：JSON序列化，支持断点续爬
 5. 可视化反馈：实时输出，tqdm进度条
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-23
 """
 
 import re
@@ -30,7 +27,6 @@ from collections import deque
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
-# 这个SB colorama用来Windows平台彩色输出
 try:
     from colorama import init, Fore, Style
     init(autoreset=True)
@@ -44,7 +40,7 @@ class FuzzTarget:
     """
     模糊测试目标数据结构
 
-    老王注释：这个憨批数据类存储一个可注入的HTTP目标
+    数据类存储一个可注入的HTTP目标
     现在支持Cookie注入和HTTP头注入了！
     """
     url: str              # 完整URL（包含参数）
@@ -86,7 +82,7 @@ def extract_site_name(url: str) -> str:
     """
     从URL提取干净的站点名字符串，用于创建独立目录
 
-    老王注释：这个SB函数把URL转换成安全的文件名
+    把URL转换成安全的文件名
     例如：http://108.187.15.14/pikachu/ -> 108_187_15_14_pikachu
 
     Args:
@@ -121,7 +117,7 @@ def extract_site_name(url: str) -> str:
         # 移除首尾下划线
         site_name = site_name.strip('_')
 
-        # 艹，防止空字符串
+        # 防止空字符串
         if not site_name:
             site_name = "unknown_site"
 
@@ -136,7 +132,6 @@ class CVDBSpider:
     """
     CVDBFuzz Web爬虫核心类
 
-    老王注释：这个爬虫必须健壮，别tm爬着爬着就崩溃了
     核心特性：
     - BFS广度优先遍历
     - 自动提取GET链接和POST表单
@@ -166,7 +161,7 @@ class CVDBSpider:
         self.timeout = timeout
         self.cookie = cookie
 
-        # 标准化base_url（艹，确保URL格式正确）
+        # 标准化base_url（确保URL格式正确）
         if not self.base_url.startswith(('http://', 'https://')):
             self.base_url = 'http://' + self.base_url
 
@@ -179,12 +174,12 @@ class CVDBSpider:
         self.url_queue: deque = deque()            # BFS队列 [(url, depth)]
         self.target_hashes: Set[str] = set()      # 注入点哈希集合（用于去重）
 
-        # ========== 老王新增：URL模式统计（防止路径爆炸） ==========
+        # ========== URL模式统计（防止路径爆炸） ==========
         # URL模式 → 访问次数（例如：sqli_del.php?id=* → 10次）
         self.url_pattern_counts: Dict[str, int] = {}
         # 每个URL模式最多访问的次数（防止动态ID爆炸）
         self.MAX_VISITS_PER_PATTERN = 10
-        # ========== 老王新增结束 ==========
+        # ========== 结束 ==========
 
         # 请求头（模拟浏览器，别tm被服务器拒绝了）
         self.headers = {
@@ -325,7 +320,7 @@ class CVDBSpider:
                 headers=self.headers,
                 timeout=self.timeout,
                 allow_redirects=True,
-                verify=False  # 艹，忽略SSL证书错误
+                verify=False  # 忽略SSL证书错误
             )
             response.raise_for_status()
 
@@ -371,7 +366,7 @@ class CVDBSpider:
         for tag in soup.find_all('a', href=True):
             href = tag['href'].strip()
 
-            # 艹，过滤空链接和锚点
+            # 过滤空链接和锚点
             if not href or href.startswith(('#', 'javascript:', 'mailto:', 'tel:')):
                 continue
 
@@ -387,7 +382,7 @@ class CVDBSpider:
                 # 将parse_qs返回的list转换为单个值
                 params_dict = {k: v[0] if v else '' for k, v in params.items()}
 
-                # ========== 老王新增：注入点去重 ==========
+                # ========== 注入点去重 ==========
                 target_hash = self._generate_target_hash(
                     absolute_url,
                     'GET',
@@ -396,7 +391,7 @@ class CVDBSpider:
                 )
 
                 if target_hash in self.target_hashes:
-                    # 艹，这个接口已经扫描过了，跳过
+                    # 这个接口已经扫描过了，跳过
                     continue
 
                 # 标记为已扫描
@@ -442,7 +437,7 @@ class CVDBSpider:
             # 获取form action
             action = form.get('action', '')
             if not action:
-                # 艹，没有action就使用当前URL
+                # 没有action就使用当前URL
                 action = base_url
 
             # 构建绝对URL
@@ -456,7 +451,7 @@ class CVDBSpider:
                 name = input_tag.get('name')
                 input_type = input_tag.get('type', 'text')
 
-                # 艹，跳过没有name的input和submit/button
+                # 跳过没有name的input和submit/button
                 if not name or input_type in ['submit', 'button', 'reset']:
                     continue
 
@@ -464,7 +459,7 @@ class CVDBSpider:
                 value = input_tag.get('value', '')
                 data_dict[name] = value
 
-            # 2. 提取所有<select>字段（老王新增）
+            # 2. 提取所有<select>字段（）
             for select_tag in form.find_all('select'):
                 name = select_tag.get('name')
                 if not name:
@@ -480,7 +475,7 @@ class CVDBSpider:
 
                 data_dict[name] = value
 
-            # 3. 提取所有<textarea>字段（老王新增）
+            # 3. 提取所有<textarea>字段（）
             for textarea_tag in form.find_all('textarea'):
                 name = textarea_tag.get('name')
                 if not name:
@@ -492,7 +487,7 @@ class CVDBSpider:
 
             # 如果有表单字段，创建FuzzTarget
             if data_dict:
-                # ========== 老王新增：注入点去重 ==========
+                # ========== 注入点去重 ==========
                 target_hash = self._generate_target_hash(
                     action_url,
                     'POST',
@@ -501,7 +496,7 @@ class CVDBSpider:
                 )
 
                 if target_hash in self.target_hashes:
-                    # 艹，这个接口已经扫描过了，跳过
+                    # 这个接口已经扫描过了，跳过
                     continue
 
                 # 标记为已扫描
@@ -541,14 +536,14 @@ class CVDBSpider:
         for tag in soup.find_all('a', href=True):
             href = tag['href'].strip()
 
-            # 艹，过滤无效链接
+            # 过滤无效链接
             if not href or href.startswith(('#', 'javascript:', 'mailto:', 'tel:')):
                 continue
 
             # 构建绝对URL
             absolute_url = urljoin(base_url, href)
 
-            # 只爬取同域名下的链接（艹，别爬到别的网站去了）
+            # 只爬取同域名下的链接（别爬到别的网站去了）
             if urlparse(absolute_url).netloc == urlparse(self.base_url).netloc:
                 links.add(absolute_url)
 
@@ -568,13 +563,13 @@ class CVDBSpider:
             'CYAN'
         )
 
-        # 艹，使用tqdm显示进度条
+        # 使用tqdm显示进度条
         with tqdm(desc="爬取进度", unit="URL", colour='green') as pbar:
             while self.url_queue:
                 # 从队列取出URL和深度
                 current_url, current_depth = self.url_queue.popleft()
 
-                # 去重检查（艹，别重复爬取）
+                # 去重检查（别重复爬取）
                 if current_url in self.visited_urls:
                     continue
 
@@ -582,12 +577,12 @@ class CVDBSpider:
                 if current_depth > self.max_depth:
                     continue
 
-                # ========== 老王新增：URL模式检查（防止路径爆炸） ==========
+                # ========== URL模式检查（防止路径爆炸） ==========
                 url_pattern = self._normalize_url_pattern(current_url)
                 visit_count = self.url_pattern_counts.get(url_pattern, 0)
 
                 if visit_count >= self.MAX_VISITS_PER_PATTERN:
-                    # 艹，这个模式访问次数超过限制了，跳过
+                    # 这个模式访问次数超过限制了，跳过
                     self._print_colored(
                         f"[SPIDER] [!] 路径爆炸保护：跳过模式（已访问{visit_count}次）: {url_pattern}",
                         'YELLOW'
@@ -597,7 +592,7 @@ class CVDBSpider:
 
                 # 更新模式访问计数
                 self.url_pattern_counts[url_pattern] = visit_count + 1
-                # ========== 老王新增结束 ==========
+                # ========== 结束 ==========
 
                 # 标记为已访问
                 self.visited_urls.add(current_url)
@@ -611,7 +606,7 @@ class CVDBSpider:
                     pbar.update(1)
                     continue
 
-                # 检查Content-Type（艹，别爬二进制文件）
+                # 检查Content-Type（别爬二进制文件）
                 content_type = response.headers.get('Content-Type', '')
                 if 'text/html' not in content_type:
                     pbar.update(1)
@@ -625,7 +620,7 @@ class CVDBSpider:
                     pbar.update(1)
                     continue
 
-                # ========== 老王新增：提取当前URL本身的参数 ==========
+                # ========== 提取当前URL本身的参数 ==========
                 parsed_current_url = urlparse(current_url)
                 current_params = parse_qs(parsed_current_url.query)
                 if current_params:
@@ -774,7 +769,7 @@ class CVDBSpider:
         return spider
 
 
-# 艹，测试代码
+# 测试代码
 if __name__ == "__main__":
     # 示例用法
     spider = CVDBSpider(

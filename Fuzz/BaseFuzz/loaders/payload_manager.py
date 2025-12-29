@@ -28,9 +28,7 @@ Payload Manager - 字典调度中心
     ...     response = requester.send('GET', url, params={'id': payload})
     ...     # 发送请求
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-25
+
 """
 
 import os
@@ -48,7 +46,7 @@ class PayloadManager:
     """
     载荷管理器 - 字典调度中心
 
-    老王注释：这个SB类负责管理所有的攻击载荷字典！
+    负责管理所有的攻击载荷字典！
 
     核心职责：
     1. 加载载荷字典（单文件/文件夹/CVAE）
@@ -117,7 +115,6 @@ class PayloadManager:
         """
         加载载荷字典
 
-        艹，这个方法是整个类的核心！所有载荷加载都走这里！
 
         Args:
             mode: 加载模式
@@ -389,7 +386,6 @@ class PayloadManager:
         """
         从文件加载载荷
 
-        艹！修复：只去掉换行符，保留payload的首尾空格！
 
         Args:
             file_path: 文件路径
@@ -402,7 +398,7 @@ class PayloadManager:
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 for line in f:
-                    # 艹！只去掉右边的换行符，保留左边的语法空格！
+                    # 只去掉右边的换行符，保留左边的语法空格！
                     payload = line.rstrip('\n\r')
 
                     # 跳过空行和注释
@@ -461,7 +457,7 @@ class PayloadManager:
         """
         载荷迭代器（生成器）
 
-        艹，这个SB方法用生成器按需吐出载荷，避免撑爆内存！
+        用生成器按需吐出载荷，避免撑爆内存
 
         Args:
             payloads: 载荷字典（load()的返回值）
@@ -531,7 +527,7 @@ class PayloadManager:
         """
         载荷分发器（带类型标签的迭代器）
 
-        艹，这个SB方法在吐出载荷的同时带上类型标签！
+        在吐出载荷的同时带上类型标签！
 
         Args:
             payloads: 载荷字典

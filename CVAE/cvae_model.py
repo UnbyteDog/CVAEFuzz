@@ -5,11 +5,8 @@ CVAE 模型定义
 ============
 
 基于 GRU 的 Seq2Seq 条件变分自编码器实现
-严格遵循 Doc/prompt指导.md 中的技术规范
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-18
+
 """
 
 import torch
@@ -99,7 +96,7 @@ class CVAREncoder(nn.Module):
         self.fc_mu = nn.Linear(hidden_dim * 2, latent_dim)  # 双向 GRU 输出为 hidden_dim * 2
         self.fc_logvar = nn.Linear(hidden_dim * 2, latent_dim)
 
-        # 🔥 LayerNorm层 - 在__init__中正确初始化
+        #  LayerNorm层 - 在__init__中正确初始化
         self.layer_norm = nn.LayerNorm(hidden_dim * 2)
 
     def forward(self, x: torch.Tensor, c: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
@@ -127,16 +124,16 @@ class CVAREncoder(nn.Module):
         # 双向 GRU 编码
         outputs, hidden = self.gru(combined)
 
-        # 🔥 层级特征聚合：多维度信息融合确保隐变量承载结构化信息
+        #  层级特征聚合：多维度信息融合确保隐变量承载结构化信息
         # outputs形状: [batch_size, seq_len, hidden_dim * 2]
 
-        # 🔥 策略1：多层级特征提取
+        #  策略1：多层级特征提取
         global_avg = torch.mean(outputs, dim=1)  # [batch_size, hidden_dim * 2] 全局平均
         global_max = torch.max(outputs, dim=1)[0]  # [batch_size, hidden_dim * 2] 全局最大
         last_output = outputs[:, -1, :]  # [batch_size, hidden_dim * 2] 最后时间步
         first_output = outputs[:, 0, :]  # [batch_size, hidden_dim * 2] 第一个时间步
 
-        # 🔥 策略2：自注意力机制加权
+        #  策略2：自注意力机制加权
         # 计算特征重要性分数
         feature_scores = torch.mean(outputs, dim=-1)  # [batch_size, seq_len] 每个时间步的重要性
         attention_weights = torch.softmax(feature_scores, dim=1).unsqueeze(-1)  # [batch_size, seq_len, 1]
@@ -144,13 +141,13 @@ class CVAREncoder(nn.Module):
         # 注意力加权输出
         attention_output = torch.sum(outputs * attention_weights, dim=1)  # [batch_size, hidden_dim * 2]
 
-        # 🔥 策略3：层级聚合 - 四种不同视角的融合
+        #  策略3：层级聚合 - 四种不同视角的融合
         hierarchical_features = 0.3 * global_avg + 0.2 * global_max + 0.3 * last_output + 0.2 * first_output
 
-        # 🔥 策略4：标准差特征 - 捕捉序列变化信息
+        #  策略4：标准差特征 - 捕捉序列变化信息
         std_features = torch.std(outputs, dim=1)  # [batch_size, hidden_dim * 2] 标准差特征
 
-        # 🔥 最终特征组合：多层级 + 注意力 + 统计特征
+        #  最终特征组合：多层级 + 注意力 + 统计特征
         # 使用可学习的权重融合不同特征
         final_features = (
             0.4 * hierarchical_features +  # 主要的层级特征
@@ -159,7 +156,7 @@ class CVAREncoder(nn.Module):
             0.1 * torch.tanh(global_avg)    # 非线性变换的全局特征
         )
 
-        # 🔥 添加特征标准化，确保隐空间训练稳定
+        #  添加特征标准化，确保隐空间训练稳定
         final_features = self.layer_norm(final_features)
 
         # 映射到隐空间参数
@@ -187,7 +184,7 @@ class CVARDecoder(nn.Module):
         self.condition_dim = condition_dim
         self.num_layers = num_layers
 
-        # 🔥 动态获取特殊token索引，避免硬编码
+        #  动态获取特殊token索引，避免硬编码
         if vocab_info is not None and 'special_tokens' in vocab_info:
             self.sos_idx = vocab_info['special_tokens'].get('<SOS>', 0)
             self.eos_idx = vocab_info['special_tokens'].get('<EOS>', 1)
@@ -223,7 +220,7 @@ class CVARDecoder(nn.Module):
         # Gumbel-Softmax 采样器
         self.gumbel_softmax = GumbelSoftmax(hard=False)  # 训练时使用 soft 采样
 
-        # Word Dropout 参数 - 🔥 强制断奶！彻底打破Teacher Forcing依赖
+        # Word Dropout 参数 -  强制断奶！彻底打破Teacher Forcing依赖
         self.word_dropout_prob = 0.6  # 提高到60%概率，强制模型必须依赖隐变量！
 
     def forward(self, z: torch.Tensor, c: torch.Tensor,
@@ -258,11 +255,11 @@ class CVARDecoder(nn.Module):
         outputs = []
 
         if target_seq is not None:
-            # 🔥 训练模式：增强的 Teacher Forcing + Word Dropout
+            #  训练模式：增强的 Teacher Forcing + Word Dropout
             seq_len = target_seq.size(1)
             input_step = input_token
 
-            # 🔥 强制断奶策略：大幅降低Teacher Forcing依赖
+            #  强制断奶策略：大幅降低Teacher Forcing依赖
             teacher_forcing_ratio = 0.5  # 从70%降到50%，一半时间靠隐变量！
             use_teacher_forcing = torch.rand(batch_size, device=device) < teacher_forcing_ratio
 
@@ -270,7 +267,7 @@ class CVARDecoder(nn.Module):
                 # 嵌入当前输入
                 input_embed = self.embedding(input_step)  # [batch_size, 1, embed_dim]
 
-                # 🔥 增强干扰：在嵌入中添加噪声，迫使模型依赖隐变量z
+                #  增强干扰：在嵌入中添加噪声，迫使模型依赖隐变量z
                 if self.training and torch.rand(1, device=device) < 0.3:  # 30%概率添加噪声
                     noise = torch.randn_like(input_embed) * 0.1  # 添加高斯噪声
                     input_embed = input_embed + noise
@@ -282,9 +279,9 @@ class CVARDecoder(nn.Module):
                 logits = self.fc_out(output.squeeze(1))  # [batch_size, vocab_size]
                 outputs.append(logits)
 
-                # 下一个输入 - 🔥 激进的强制自预测策略
+                # 下一个输入 -  激进的强制自预测策略
                 if t < seq_len - 1:
-                    # 🔥 策略1：基于teacher_forcing向量选择输入
+                    #  策略1：基于teacher_forcing向量选择输入
                     true_next = target_seq[:, t:t+1]  # [batch_size, 1] 真实标签
                     pred_next = torch.argmax(logits, dim=-1, keepdim=True)  # [batch_size, 1] 模型预测
 
@@ -292,31 +289,31 @@ class CVARDecoder(nn.Module):
                     tf_mask = use_teacher_forcing.unsqueeze(1)  # [batch_size, 1]
                     input_step = torch.where(tf_mask, true_next, pred_next)
 
-                    # 🔥 额外的强制自预测：20%概率强制所有样本使用自预测
+                    #  额外的强制自预测：20%概率强制所有样本使用自预测
                     if torch.rand(1, device=device) < 0.2:
                         input_step = pred_next
 
-                    # 🔥 策略2：超强的 Word Dropout (60%概率)
+                    #  策略2：超强的 Word Dropout (60%概率)
                     if self.training:
                         # 基础Word Dropout
                         mask = torch.rand_like(input_step.float()) < self.word_dropout_prob
-                        # 🔥 使用动态特殊token索引
+                        #  使用动态特殊token索引
                         special_tokens = (input_step == self.sos_idx) | (input_step == self.eos_idx) | (input_step == self.pad_idx)
                         mask = mask & (~special_tokens)
                         input_step = torch.where(mask, torch.tensor(self.unk_idx, device=device), input_step)
 
-                        # 🔥 策略3：额外的随机替换 - 15%概率替换为随机token
+                        #  策略3：额外的随机替换 - 15%概率替换为随机token
                         random_mask = torch.rand_like(input_step.float()) < 0.15
-                        # 🔥 从特殊token索引+1开始，避免替换为特殊token
+                        #  从特殊token索引+1开始，避免替换为特殊token
                         min_valid_idx = max(self.unk_idx, self.pad_idx, self.sos_idx, self.eos_idx) + 1
                         random_tokens = torch.randint(min_valid_idx, self.vocab_size, input_step.shape, device=device)
                         random_mask = random_mask & (~special_tokens)
                         input_step = torch.where(random_mask, random_tokens, input_step)
 
         else:
-            # 🔥 生成模式：自回归生成，直接收集采样token_ids！
+            #  生成模式：自回归生成，直接收集采样token_ids！
             input_step = input_token
-            sampled_ids = []  # 🔥 直接在循环中收集token_ids，避免后续argmax！
+            sampled_ids = []  #  直接在循环中收集token_ids，避免后续argmax！
 
             for t in range(max_length):
                 # 嵌入当前输入
@@ -329,13 +326,13 @@ class CVARDecoder(nn.Module):
                 logits = self.fc_out(output.squeeze(1))  # [batch_size, vocab_size]
                 outputs.append(logits)
 
-                # 🔥 Top-k采样与UNK强抑制策略！
+                #  Top-k采样与UNK强抑制策略！
                 if self.training:
                     # 训练时使用Gumbel-Softmax
                     probs = self.gumbel_softmax(logits, temperature=temperature)
                     next_token = torch.argmax(probs, dim=-1, keepdim=True)
                 else:
-                    # 🔥 生成时：禁止使用简单的argmax，强制使用智能采样
+                    #  生成时：禁止使用简单的argmax，强制使用智能采样
                     # Step 1: Temperature缩放
                     scaled_logits = logits / temperature
 
@@ -359,7 +356,7 @@ class CVARDecoder(nn.Module):
                             unk_idx = self.unk_idx
 
                             # 降低UNK权重90%
-                            current_logits[unk_idx] = current_logits[unk_idx] - 10.0  # 🔥 超强惩罚：log(0.000045) ≈ -10.0
+                            current_logits[unk_idx] = current_logits[unk_idx] - 10.0  #  超强惩罚：log(0.000045) ≈ -10.0
 
                             # 从剩余的top-10中选择（排除UNK）
                             topk_vals, topk_idxs = torch.topk(current_logits, k=k)
@@ -383,7 +380,7 @@ class CVARDecoder(nn.Module):
                             if is_unk_in_topk[i]:
                                 unk_mask = topk_idxs_i == self.unk_idx
                                 topk_vals_i = topk_vals_i.clone()
-                                topk_vals_i[unk_mask] = topk_vals_i[unk_mask] - 5.0  # 🔥 强化UNK惩罚
+                                topk_vals_i[unk_mask] = topk_vals_i[unk_mask] - 5.0  #  强化UNK惩罚
 
                             # 从top-k中采样
                             probs = F.softmax(topk_vals_i, dim=0)
@@ -394,13 +391,13 @@ class CVARDecoder(nn.Module):
 
                     next_token = torch.cat(final_tokens, dim=0).unsqueeze(1)  # [batch_size, 1]
 
-                # 🔥 确保next_token维度正确：应该是[batch_size, 1]
+                #  确保next_token维度正确：应该是[batch_size, 1]
                 if next_token.dim() == 1:
                     next_token = next_token.unsqueeze(1)  # [batch_size] -> [batch_size, 1]
                 elif next_token.dim() == 3:
                     next_token = next_token.squeeze(-1)  # [batch_size, 1, 1] -> [batch_size, 1]
 
-                # 🔥 关键修复：直接将当前采样token添加到sampled_ids列表！
+                #  关键修复：直接将当前采样token添加到sampled_ids列表！
                 sampled_ids.append(next_token.squeeze(1))  # [batch_size, 1] -> [batch_size]
 
                 input_step = next_token
@@ -414,7 +411,7 @@ class CVARDecoder(nn.Module):
             outputs = torch.stack(outputs, dim=1)  # [batch_size, seq_len, vocab_size]
             return outputs
         else:
-            # 🔥 生成模式：直接返回在循环中收集的sampled_ids，确保逻辑一致性！
+            #  生成模式：直接返回在循环中收集的sampled_ids，确保逻辑一致性！
             # sampled_ids已包含每个时间步的采样token: [batch_size] for each step
             sampled_token_ids = torch.stack(sampled_ids, dim=1)  # [batch_size, seq_len]
             return sampled_token_ids
@@ -437,7 +434,7 @@ class CVAE(nn.Module):
         self.latent_dim = latent_dim
         self.condition_dim = condition_dim
         self.num_layers = num_layers
-        self.vocab_info = vocab_info  # 🔥 保存词表信息
+        self.vocab_info = vocab_info  #  保存词表信息
 
         # 编码器和解码器
         self.encoder = CVAREncoder(
@@ -456,7 +453,7 @@ class CVAE(nn.Module):
             latent_dim=latent_dim,
             condition_dim=condition_dim,
             num_layers=num_layers,
-            vocab_info=vocab_info  # 🔥 传递词表信息
+            vocab_info=vocab_info  #  传递词表信息
         )
 
     def reparameterize(self, mu: torch.Tensor, logvar: torch.Tensor) -> torch.Tensor:
@@ -527,14 +524,14 @@ class CVAE(nn.Module):
             batch_size = c.size(0)
             device = c.device
 
-            # 🔥 从先验分布采样隐变量，增加采样次数找更好的z
+            #  从先验分布采样隐变量，增加采样次数找更好的z
             best_samples = []
             for _ in range(3):  # 每个条件生成3次，选最好的
                 z = torch.randn(batch_size * num_samples, self.latent_dim, device=device)
                 c_expanded = c.unsqueeze(1).repeat(1, num_samples).flatten()
 
-                # 🔥 生成序列，使用更高的温度
-                # 🔥 现在decoder直接返回token_ids，不需要从概率分布中采样！
+                #  生成序列，使用更高的温度
+                #  现在decoder直接返回token_ids，不需要从概率分布中采样！
                 sampled_token_ids = self.decoder(
                     z=z,
                     c=c_expanded,
@@ -543,15 +540,15 @@ class CVAE(nn.Module):
                     temperature=temperature * 1.2  # 进一步提高温度
                 )
 
-                # 🔥 直接使用返回的token_ids，重塑为正确维度
+                #  直接使用返回的token_ids，重塑为正确维度
                 # sampled_token_ids: [batch_size * num_samples, seq_len] -> [batch_size, num_samples, seq_len]
                 generated_tokens = sampled_token_ids.view(batch_size, num_samples, -1)
 
                 best_samples.append(generated_tokens)
 
-            # 🔥 从多次采样中选择UNK最少的样本 - 使用动态UNK索引
+            #  从多次采样中选择UNK最少的样本 - 使用动态UNK索引
             final_samples = []
-            unk_idx = self.decoder.unk_idx  # 🔥 直接使用decoder的动态UNK索引
+            unk_idx = self.decoder.unk_idx  #  直接使用decoder的动态UNK索引
 
             for i in range(batch_size):
                 best_idx = 0

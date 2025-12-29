@@ -7,9 +7,6 @@ CVAE 训练主程序
 支持通过命令行参数启动CVAE训练
 可通过 python main.py --train 触发
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-18
 """
 
 import sys

@@ -18,9 +18,6 @@ SQLi Engine - SQL注入检测引擎
 2. 布尔盲注：对比True/False载荷响应差异
 3. 时间盲注：检测响应时间异常（带二次验证）
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-25
 """
 
 import re
@@ -43,7 +40,6 @@ class SQLiEngine(BaseEngine):
     """
     SQL注入检测引擎
 
-    老王注释：这个SB引擎专门检测SQL注入漏洞！
 
     核心职责：
     1. 检测报错注入（MySQL, PostgreSQL, MSSQL, Oracle）
@@ -226,10 +222,10 @@ class SQLiEngine(BaseEngine):
     # ========== 数据泄露特征库 ==========
 
     LEAK_PATTERNS = [
-        # 艹！优化：匹配 ~content~ 格式（UPDATEXML/EXTRACTVALUE典型输出）
+        # 优化：匹配 ~content~ 格式（UPDATEXML/EXTRACTVALUE典型输出）
         # 这个正则可以匹配：~database_name~、~root@localhost~、~5.7.26~ 等各种格式
         r"~[^~]{3,100}~",
-        # 艹！精确匹配 @符号周围的内容（如root@localhost）
+        # 精确匹配 @符号周围的内容（如root@localhost）
         r"[a-zA-Z0-9_]+@[^@\s]+",
         # 常见敏感信息
         r"root@localhost",
@@ -239,7 +235,7 @@ class SQLiEngine(BaseEngine):
     ]
 
     # ========== 载荷反射特征库 ==========
-    # 艹！这个SB特征库用来检测payload是否被原样反射回响应中
+    # 检测payload是否被原样反射回响应中
     # 用于防止留言板、搜索框等反射输入导致的误报
 
     REFLECTION_PATTERNS = [
@@ -268,7 +264,7 @@ class SQLiEngine(BaseEngine):
     ]
 
     # ========== 逻辑注入载荷对 ==========
-    # 艹！不修改原始payload，从字典中自动识别True/False对！
+    # 不修改原始payload，从字典中自动识别True/False对！
     # 识别规则：包含1=1的是True，包含1=2的是False
 
     @staticmethod
@@ -333,13 +329,13 @@ class SQLiEngine(BaseEngine):
                 for pattern in patterns
             ]
 
-        # 艹！新增：编译XPATH错误特征正则表达式
+        # 新增：编译XPATH错误特征正则表达式
         self.compiled_xpath_patterns = [
             re.compile(pattern, re.IGNORECASE)
             for pattern in self.XPATH_ERROR_PATTERNS
         ]
 
-        # 艹！新增：编译数据泄露特征正则表达式
+        # 新增：编译数据泄露特征正则表达式
         self.compiled_leak_patterns = [
             re.compile(pattern, re.IGNORECASE)
             for pattern in self.LEAK_PATTERNS
@@ -354,7 +350,7 @@ class SQLiEngine(BaseEngine):
         """
         执行SQL注入检测（核心方法）
 
-        艹，这个方法是整个引擎的核心！只检测指定的单个参数！
+        只检测指定的单个参数！
 
         Args:
             target: 测试目标
@@ -373,7 +369,7 @@ class SQLiEngine(BaseEngine):
 
         results = []
 
-        # 艹！新增：探测目标类型（普通SQLi vs SQL盲注）
+        # 新增：探测目标类型（普通SQLi vs SQL盲注）
         blind_type = self._detect_blind_injection_type(target, param_name)
         logger.info(f"[SQLi] 目标类型探测: {blind_type}")
 
@@ -382,12 +378,12 @@ class SQLiEngine(BaseEngine):
         error_vulns = self._detect_error_based(target, payloads, param_name)
         results.extend(error_vulns)
 
-        # 1.5. 艹！新增：高级报错注入检测（UPDATEXML、EXTRACTVALUE等）
+        # 1.5. 新增：高级报错注入检测（UPDATEXML、EXTRACTVALUE等）
         logger.info(f"[SQLi] [2/5] 执行高级报错注入检测（XPATH/几何函数）...")
         error_advanced_vulns = self._detect_error_injection_advanced(target, payloads, param_name)
         results.extend(error_advanced_vulns)
 
-        # 2. 逻辑注入检测（艹！根据目标类型调整策略！）
+        # 2. 逻辑注入检测（根据目标类型调整策略！）
         logger.info(f"[SQLi] [3/5] 执行逻辑注入检测...")
         if blind_type == "blind":
             # SQL盲注：使用关键词匹配模式
@@ -415,7 +411,7 @@ class SQLiEngine(BaseEngine):
         """
         探测SQL注入类型（普通SQLi vs SQL盲注）
 
-        艹！这个SB方法通过测试特征响应来判断目标类型！
+        通过测试特征响应来判断目标类型！
 
         探测策略：
         1. 发送一对简单的True/False载荷
@@ -435,7 +431,7 @@ class SQLiEngine(BaseEngine):
         """
         logger.info(f"[SQLi] [探测] 正在探测目标类型...")
 
-        # 艹！使用简单的测试载荷对
+        # 使用简单的测试载荷对
         test_true = "' and 1=1 -- '"
         test_false = "' and 1=2 -- '"
 
@@ -458,14 +454,14 @@ class SQLiEngine(BaseEngine):
             false_text = false_response.text
             false_length = len(false_text)
 
-            # 艹！计算长度差异
+            # 计算长度差异
             if true_length > 0 and false_length > 0:
                 length_diff = abs(true_length - false_length)
                 length_ratio = length_diff / max(true_length, false_length)
 
                 logger.info(f"[SQLi] [探测] True长度={true_length}, False长度={false_length}, 差异={length_ratio:.2%}")
 
-                # 艹！判断类型
+                # 判断类型
                 if length_ratio > 0.05:
                     # 长度差异>5% → 普通SQLi（返回不同数据内容）
                     logger.info(f"[SQLi] [探测] 判定为普通SQL注入（长度差异大）")
@@ -475,7 +471,7 @@ class SQLiEngine(BaseEngine):
                     # 长度差异<2% → 检查关键词特征
                     # SQL盲注特征：True返回"exists"，False返回"NOT exists"
 
-                    # 艹！检查SQL盲注的关键词
+                    # 检查SQL盲注的关键词
                     blind_keywords_true = ["exists", "success", "correct", "valid"]
                     blind_keywords_false = ["not exists", "failed", "incorrect", "missing", "not found"]
 
@@ -485,7 +481,7 @@ class SQLiEngine(BaseEngine):
                     has_true_keyword = any(kw in true_lower for kw in blind_keywords_true)
                     has_false_keyword = any(kw in true_lower for kw in blind_keywords_false)
 
-                    # 艹！检查True和False响应的关键词差异
+                    # 检查True和False响应的关键词差异
                     unique_in_true = set()
                     unique_in_false = set()
 
@@ -500,7 +496,7 @@ class SQLiEngine(BaseEngine):
                     logger.info(f"[SQLi] [探测] True独有词: {len(unique_in_true)}, False独有词: {len(unique_in_false)}")
                     logger.info(f"[SQLi] [探测] True关键词: {has_true_keyword}, False关键词: {has_false_keyword}")
 
-                    # 艹！判定条件
+                    # 判定条件
                     if (len(unique_in_true) > 0 and len(unique_in_false) > 0) or has_true_keyword or has_false_keyword:
                         # True和False有不同的关键词 → SQL盲注
                         logger.info(f"[SQLi] [探测] 判定为SQL盲注（关键词不同但长度相似）")
@@ -531,7 +527,7 @@ class SQLiEngine(BaseEngine):
         """
         验证SQL盲注漏洞是否稳定可重现
 
-        艹！这个SB方法通过多次测试来过滤偶然性响应差异！
+        这个SB方法通过多次测试来过滤偶然性响应差异！
 
         核心原理：
         - 真正的SQL注入应该是稳定可重现的
@@ -551,7 +547,7 @@ class SQLiEngine(BaseEngine):
         Returns:
             (is_verified, confidence): (是否验证成功, 置信度)
         """
-        verification_tests = 2  # 艹！额外验证2次
+        verification_tests = 2  # 额外验证2次
         successful_detections = 0
 
         logger.info(f"[SQLi] [验证] 开始验证漏洞稳定性（额外{verification_tests}次测试）...")
@@ -579,7 +575,7 @@ class SQLiEngine(BaseEngine):
 
                 # 如果检测到差异，计数+1
                 if dynamic_true_words or dynamic_false_words:
-                    # 艹！新增：检查True独有词是否像数据库字段名（过滤HTML表单字段）
+                    # 新增：检查True独有词是否像数据库字段名（过滤HTML表单字段）
                     html_form_keywords = {
                         'first', 'surname', 'name', 'email', 'password', 'username',
                         'submit', 'reset', 'button', 'form', 'input', 'select',
@@ -590,20 +586,20 @@ class SQLiEngine(BaseEngine):
                     true_has_html_keywords = bool(dynamic_true_words & html_form_keywords)
                     false_has_html_keywords = bool(dynamic_false_words & html_form_keywords)
 
-                    # 艹！计算长度差异（用于辅助判断）
+                    # 计算长度差异（用于辅助判断）
                     true_length = len(true_text)
                     false_length = len(false_text)
                     length_diff = abs(true_length - false_length)
                     max_length = max(true_length, false_length)
 
-                    # 艹！自适应阈值：根据页面大小动态调整字节数阈值
+                    # 自适应阈值：根据页面大小动态调整字节数阈值
                     # 原理：不同大小的页面，合理的HTML差异范围不同
                     if max_length < 2000:
                         # 小页面（<2KB）：HTML差异阈值 40 字节
                         threshold_bytes = 40
                     elif max_length < 10000:
                         # 中等页面（2-10KB）：HTML差异阈值 70 字节
-                        # 艹！70字节 = 4800字节的1.46%，刚好过滤1.3%的误报，放过1.52%的真漏洞
+                        # 70字节 = 4800字节的1.46%，刚好过滤1.3%的误报，放过1.52%的真漏洞
                         threshold_bytes = 70
                     elif max_length < 50000:
                         # 大页面（10-50KB）：HTML差异阈值 150 字节
@@ -612,14 +608,14 @@ class SQLiEngine(BaseEngine):
                         # 超大页面（>50KB）：HTML差异阈值 300 字节
                         threshold_bytes = 300
 
-                    # 艹！智能过滤条件：只有同时满足以下条件才过滤
+                    # 智能过滤条件：只有同时满足以下条件才过滤
                     # 1. True独有词都是HTML表单字段
                     # 2. 长度差异小于自适应阈值 → 说明只是页面结构差异，不是数据差异
                     if (true_has_html_keywords and
                         not dynamic_true_words - html_form_keywords and
                         length_diff < threshold_bytes):
                         logger.info(f"[SQLi] [验证] 第{i+1}次验证检测到的差异都是HTML表单字段且长度差异很小({length_diff}字节 < {threshold_bytes}字节，页面大小{max_length}字节)，可能是页面结构差异而非SQL注入")
-                        # 艹！不计数，跳过这次验证
+                        # 不计数，跳过这次验证
                         continue
 
                     successful_detections += 1
@@ -631,7 +627,7 @@ class SQLiEngine(BaseEngine):
                 logger.warning(f"[SQLi] [验证] 第{i+1}次验证测试异常: {e}")
                 continue
 
-        # 艹！判定：2次额外验证中至少1次检测到差异，就算验证成功
+        # 判定：2次额外验证中至少1次检测到差异，就算验证成功
         # 原因：初次检测已经发现了差异，验证只需要确认差异不是偶然的
         is_verified = successful_detections >= 1
 
@@ -655,7 +651,7 @@ class SQLiEngine(BaseEngine):
         """
         SQL盲注的逻辑检测（关键词匹配模式）
 
-        艹！这个SB方法专门适配SQL盲注！
+        这个SB方法专门适配SQL盲注！
 
         与普通逻辑检测的区别：
         - 不用长度差异判定（盲注True/False长度几乎相同）
@@ -691,7 +687,7 @@ class SQLiEngine(BaseEngine):
             logic_pairs = logic_patterns
             logger.info(f"[SQLi] [逻辑-盲注] 使用默认逻辑载荷对")
 
-        # 艹！SQL盲注特征关键词库
+        # SQL盲注特征关键词库
         blind_keywords_true = [
             "exists", "success", "correct", "valid", "welcome",
             "logged in", "authenticated", "allowed"
@@ -741,7 +737,7 @@ class SQLiEngine(BaseEngine):
                     logger.debug(f"[SQLi] [逻辑-盲注] False载荷触发SQL错误，跳过该对")
                     continue
 
-                # 艹！新增：累积增长检测（防止留言板等累积显示场景误报）
+                # 新增：累积增长检测（防止留言板等累积显示场景误报）
                 # 策略：第三次发送True payload，如果响应持续增长则说明是累积显示（留言板）
                 logger.info(f"[SQLi] [逻辑-盲注] 执行累积增长检测...")
                 true_result2 = self._test_parameter(target, param_name, true_pattern)
@@ -757,19 +753,19 @@ class SQLiEngine(BaseEngine):
 
                     logger.info(f"[SQLi] [逻辑-盲注] 增长量: T→F={growth_1_to_2}字节, F→T={growth_2_to_3}字节")
 
-                    # 艹！判定：如果两次增长量相近（误差<20%），则是累积显示场景
+                    # 判定：如果两次增长量相近（误差<20%），则是累积显示场景
                     if growth_1_to_2 > 0 and growth_2_to_3 > 0:
                         growth_ratio = min(growth_1_to_2, growth_2_to_3) / max(growth_1_to_2, growth_2_to_3)
                         if growth_ratio > 0.8:  # 两次增长量相似度>80%
                             logger.warning(f"[SQLi] [逻辑-盲注] ❌ 检测到累积增长模式（疑似留言板），跳过该对！")
                             logger.info(f"[SQLi] [逻辑-盲注] 增长相似度={growth_ratio:.2%}，判定为累积显示而非SQL注入")
-                            continue  # 艹！跳过这对payload，不报告漏洞
+                            continue  # 跳过这对payload，不报告漏洞
 
-                # 艹！SQL盲注专用判定：动态关键词提取（不依赖预定义库）
+                # SQL盲注专用判定：动态关键词提取（不依赖预定义库）
                 true_lower = true_text.lower()
                 false_lower = false_text.lower()
 
-                # 艹！方法1：预定义关键词匹配（快速判定）
+                # 方法1：预定义关键词匹配（快速判定）
                 found_true_keywords = []
                 for kw in blind_keywords_true:
                     if kw in true_lower and kw not in false_lower:
@@ -780,7 +776,7 @@ class SQLiEngine(BaseEngine):
                     if kw in false_lower and kw not in true_lower:
                         found_false_keywords.append(kw)
 
-                # 艹！方法2：动态提取独有词汇（覆盖未知关键词）✅
+                # 方法2：动态提取独有词汇（覆盖未知关键词）✅
                 # 提取所有词（长度>=4）
                 true_words = set(re.findall(r'[a-zA-Z]{4,}|[\u4e00-\u9fa5]{2,}', true_lower))
                 false_words = set(re.findall(r'[a-zA-Z]{4,}|[\u4e00-\u9fa5]{2,}', false_lower))
@@ -795,7 +791,7 @@ class SQLiEngine(BaseEngine):
                 logger.info(f"[SQLi] [逻辑-盲注] 动态True独有词: {list(dynamic_true_words)[:5]}")
                 logger.info(f"[SQLi] [逻辑-盲注] 动态False独有词: {list(dynamic_false_words)[:5]}")
 
-                # 艹！调试代码已注释，问题已找到：1=1误报是由于DVWA边界情况导致的
+                # 调试代码已注释，问题已找到：1=1误报是由于DVWA边界情况导致的
                 # # 原因：id=11=1 返回了数据库查询结果（包含first/surname字段）
                 # #       id=11=2 返回了空白页面
                 # # 这是DVWA的时序问题或边界情况，不是真正的SQL注入
@@ -821,40 +817,40 @@ class SQLiEngine(BaseEngine):
                 #                 f.write(f"上下文: {true_text[start:end]}\n")
                 #     logger.info(f"[SQLi] [DEBUG] 响应内容已写入: {debug_file}")
 
-                # 艹！合并预定义和动态关键词
+                # 合并预定义和动态关键词
                 all_true_keywords = set(found_true_keywords) | dynamic_true_words
                 all_false_keywords = set(found_false_keywords) | dynamic_false_words
 
-                # 艹！新增：计算长度差异（针对"True正常，False空白"的情况）
+                # 新增：计算长度差异（针对"True正常，False空白"的情况）
                 length_diff = abs(true_length - false_length)
                 length_ratio = length_diff / max(true_length, false_length, 1)
 
                 logger.info(f"[SQLi] [逻辑-盲注] 长度差异: diff={length_diff}, ratio={length_ratio:.2%}")
 
-                # 艹！判定条件1：找到True/False特征关键词（预定义+动态）✅
+                # 判定条件1：找到True/False特征关键词（预定义+动态）✅
                 if all_true_keywords or all_false_keywords:
-                    # 艹！新增：验证漏洞稳定性（过滤偶然性响应差异）
+                    # 新增：验证漏洞稳定性（过滤偶然性响应差异）
                     logger.info(f"[SQLi] [逻辑-盲注] 检测到响应差异，开始验证漏洞稳定性...")
                     is_verified, verified_confidence = self._verify_blind_sqli_vulnerability(
                         target, param_name, true_pattern, false_pattern
                     )
 
-                    # 艹！只有验证成功才报告漏洞
+                    # 只有验证成功才报告漏洞
                     if not is_verified:
                         logger.warning(f"[SQLi] [逻辑-盲注] 验证失败，跳过该payload（可能是偶然性响应差异）")
                         continue
 
                     # 发现SQL盲注！
-                    confidence = verified_confidence  # 艹！使用验证后的置信度
+                    confidence = verified_confidence  # 使用验证后的置信度
 
                     # 如果两种关键词都找到了，提高置信度
                     if all_true_keywords and all_false_keywords:
-                        confidence = min(confidence + 0.05, 0.95)  # 艹！上限0.95
+                        confidence = min(confidence + 0.05, 0.95)  # 上限0.95
 
                     # 如果只有动态关键词，降低一点置信度
                     if not found_true_keywords and not found_false_keywords:
                         confidence = confidence - 0.05  # 纯动态提取，置信度稍低
-                        confidence = max(confidence, 0.50)  # 艹！下限0.50
+                        confidence = max(confidence, 0.50)  # 下限0.50
 
                     # 构造证据
                     evidence_parts = []
@@ -871,11 +867,11 @@ class SQLiEngine(BaseEngine):
                         evidence_parts.append(f"False关键词={', '.join(found_false_keywords[:3])}")
                     elif dynamic_false_words:
                         evidence_parts.append(f"False动态词={', '.join(list(dynamic_false_words)[:3])}")
-                    # 艹！反射检测：防止留言板等反射场景误报
+                    # 反射检测：防止留言板等反射场景误报
                     is_reflected = self._is_payload_reflected(true_text, true_pattern)
                     if is_reflected:
                         logger.info(f"[SQLi] [逻辑-盲注] 检测到payload反射，降低置信度")
-                        confidence *= 0.3  # 艹！大幅降低置信度
+                        confidence *= 0.3  # 大幅降低置信度
 
                     vuln = self._create_vuln_entry(
                         vuln_type='SQLi',
@@ -895,7 +891,7 @@ class SQLiEngine(BaseEngine):
                     )
                     continue
 
-                # 艹！新增：判定条件1.5：True正常返回，False返回空白/极短内容
+                # 新增：判定条件1.5：True正常返回，False返回空白/极短内容
                 # 针对场景：True返回完整页面，False返回空白页面
                 if (true_length > 1000 and false_length < 500) or (length_ratio > 0.5):
                     # True长，False短 → 可能是盲注
@@ -907,11 +903,11 @@ class SQLiEngine(BaseEngine):
                         # 确认是盲注！
                         confidence = 0.70
 
-                        # 艹！反射检测：防止留言板等反射场景误报
+                        # 反射检测：防止留言板等反射场景误报
                         is_reflected = self._is_payload_reflected(true_text, true_pattern)
                         if is_reflected:
                             logger.info(f"[SQLi] [逻辑-盲注] 检测到payload反射，降低置信度")
-                            confidence *= 0.3  # 艹！大幅降低置信度
+                            confidence *= 0.3  # 大幅降低置信度
 
                         vuln = self._create_vuln_entry(
                             vuln_type='SQLi',
@@ -931,7 +927,7 @@ class SQLiEngine(BaseEngine):
                         )
                         continue
 
-                # 艹！判定条件2：响应内容完全不同（哈希对比）
+                # 判定条件2：响应内容完全不同（哈希对比）
                 import hashlib
                 true_hash = hashlib.md5(true_text.encode()).hexdigest()
                 false_hash = hashlib.md5(false_text.encode()).hexdigest()
@@ -946,11 +942,11 @@ class SQLiEngine(BaseEngine):
                     if 0.95 < similarity < 0.999:
                         confidence = 0.65
 
-                        # 艹！反射检测：防止留言板等反射场景误报
+                        # 反射检测：防止留言板等反射场景误报
                         is_reflected = self._is_payload_reflected(true_text, true_pattern)
                         if is_reflected:
                             logger.info(f"[SQLi] [逻辑-盲注] 检测到payload反射，降低置信度")
-                            confidence *= 0.3  # 艹！大幅降低置信度
+                            confidence *= 0.3  # 大幅降低置信度
 
                         vuln = self._create_vuln_entry(
                             vuln_type='SQLi',
@@ -982,7 +978,6 @@ class SQLiEngine(BaseEngine):
         """
         报错注入检测
 
-        老王注释：这个SB方法检测数据库错误信息！
 
         策略：
         1. 注入特殊字符和载荷
@@ -1007,7 +1002,7 @@ class SQLiEngine(BaseEngine):
         quick_tests = ["'", '"', "\\", "';", '";']
 
         # 测试快速载荷
-        # 艹！强制测试所有快速载荷，不再break提前退出！
+        # 强制测试所有快速载荷，不再break提前退出！
         for test_payload in quick_tests:
             try:
                 test_result = self._test_parameter(target, param_name, test_payload)
@@ -1034,16 +1029,16 @@ class SQLiEngine(BaseEngine):
                         target=target
                     )
                     vulns.append(vuln)
-                    # 艹！显示实际注入的值
+                    # 显示实际注入的值
                     injected = test_result.get('injected_value', test_payload)
                     logger.warning(f"[SQLi] [报错] 发现报错: {param_name}={injected[:30]}... ({db_type})")
-                    # 艹！移除break，继续测试所有快速载荷！
+                    # 移除break，继续测试所有快速载荷！
 
             except Exception as e:
                 logger.error(f"[SQLi] [报错] 测试失败: {param_name}={test_payload} - {e}")
                 continue
 
-        # 艹！强制测试完整载荷列表，不管快速载荷是否发现漏洞！
+        # 强制测试完整载荷列表，不管快速载荷是否发现漏洞！
         logger.info(f"[SQLi] [报错] 开始测试完整载荷字典: {len(payloads)}个payload")
         for payload in payloads:
             # 20%概率进行深度变异
@@ -1075,10 +1070,10 @@ class SQLiEngine(BaseEngine):
                         target=target
                     )
                     vulns.append(vuln)
-                    # 艹！显示实际注入的值
+                    # 显示实际注入的值
                     injected = test_result.get('injected_value', payload)
                     logger.warning(f"[SQLi] [报错] 发现报错: {param_name}={injected[:40]}... ({db_type})")
-                    # 艹！移除break，继续测试所有payload！
+                    # 移除break，继续测试所有payload！
 
             except Exception as e:
                 logger.error(f"[SQLi] [报错] 测试失败: {param_name}={payload[:30]}... - {e}")
@@ -1092,9 +1087,6 @@ class SQLiEngine(BaseEngine):
                                         param_name: str) -> List[VulnerabilityEntry]:
         """
         高级报错注入检测（UPDATEXML、EXTRACTVALUE等）
-
-        老王注释：这个SB方法专门检测MySQL报错注入！
-
         核心原理：
         - 这类payload语法正确，不会触发常规SQL syntax错误
         - 通过触发XPATH错误、几何函数错误、溢出错误来泄露数据
@@ -1133,7 +1125,7 @@ class SQLiEngine(BaseEngine):
             for pattern in self.LEAK_PATTERNS
         ]
 
-        # 艹！优先使用外部payloads，如果没有则使用内置XPATH载荷库
+        # 优先使用外部payloads，如果没有则使用内置XPATH载荷库
         if payloads:
             # 从外部payloads中筛选包含XPATH/几何函数特征的payload
             test_payloads = []
@@ -1165,7 +1157,7 @@ class SQLiEngine(BaseEngine):
                 response = test_result['response']
                 response_text = response.text
 
-                # 艹！步骤1：检查是否包含XPATH错误特征
+                # 步骤1：检查是否包含XPATH错误特征
                 matched_xpath_error = None
                 for regex in xpath_error_regexes:
                     match = regex.search(response_text)
@@ -1180,11 +1172,11 @@ class SQLiEngine(BaseEngine):
                     # 没有匹配到XPATH错误特征，跳过
                     continue
 
-                # 艹！步骤2：提取XPATH错误中的泄露数据（通用逻辑）
+                # 步骤2：提取XPATH错误中的泄露数据（通用逻辑）
                 matched_leak = None
                 leak_type = None
 
-                # 艹！核心策略：在XPATH错误上下文中提取~包裹的内容
+                # 核心策略：在XPATH错误上下文中提取~包裹的内容
                 # 1. 先定位XPATH错误的位置
                 # 2. 在XPATH错误附近查找~包裹的内容
                 # 3. 选择最长的~内容（通常是真正的泄露数据）
@@ -1203,7 +1195,7 @@ class SQLiEngine(BaseEngine):
                     logger.info(f"[SQLi] [报错-高级] 找到XPATH错误，提取上下文泄露数据")
 
                     # 步骤3：在XPATH上下文中查找泄露内容（支持完整和不完整的~格式）
-                    # 艹！支持两种格式：
+                    # 支持两种格式：
                     # 1. 完整格式：~content~（前后都有~）
                     # 2. 不完整格式：~content...（只有开头~，可能被截断）
 
@@ -1255,7 +1247,7 @@ class SQLiEngine(BaseEngine):
                             logger.info(f"[SQLi] [报错-高级] 通过其他模式匹配到泄露特征: {matched_leak}")
                             break
 
-                # 艹！判定：至少要有XPATH错误特征，有数据泄露特征更佳
+                # 判定：至少要有XPATH错误特征，有数据泄露特征更佳
                 if not matched_xpath_error:
                     continue
 
@@ -1275,7 +1267,7 @@ class SQLiEngine(BaseEngine):
                         # 高价值泄露信息
                         confidence = 0.92
 
-                # 艹！步骤3：二次验证（确保错误稳定可重现）
+                # 步骤3：二次验证（确保错误稳定可重现）
                 logger.info(f"[SQLi] [报错-高级] 检测到疑似报错注入，开始二次验证...")
 
                 # 验证策略：修改payload中的泄露函数（database()→version()）
@@ -1305,7 +1297,7 @@ class SQLiEngine(BaseEngine):
                 else:
                     logger.warning(f"[SQLi] [报错-高级] 二次验证请求失败，不调整置信度")
 
-                # 艹！最终判定：置信度必须>=0.60才算漏洞
+                # 最终判定：置信度必须>=0.60才算漏洞
                 if confidence < 0.60:
                     logger.info(f"[SQLi] [报错-高级] 置信度过低({confidence:.2f})，跳过")
                     continue
@@ -1313,16 +1305,16 @@ class SQLiEngine(BaseEngine):
                 # 构造证据
                 evidence_parts = []
 
-                # 艹！强制调试输出
+                # 强制调试输出
                 print(f"[DEBUG] Constructing evidence - matched_leak = {matched_leak}, leak_type = {leak_type}")
 
-                # 艹！优化：提取完整的XPATH错误信息（包含泄露数据）
+                # 优化：提取完整的XPATH错误信息（包含泄露数据）
                 # 如果有matched_leak，优先显示泄露数据和类型
                 if matched_leak:
                     # 移除~符号，只显示核心数据
                     leak_data = matched_leak.strip('~')
 
-                    # 艹！新增：显示泄露的数据类型（database/user/version）
+                    # 新增：显示泄露的数据类型（database/user/version）
                     if leak_type:
                         evidence_parts.append(f"泄露{leak_type}={leak_data}")
                         print(f"[DEBUG] Evidence constructed: 泄露{leak_type}={leak_data}")
@@ -1335,7 +1327,7 @@ class SQLiEngine(BaseEngine):
                     print(f"[DEBUG] No leak data, using XPATH error: {matched_xpath_error}")
 
                 # 发现报错注入漏洞！
-                # 艹！构造leak_data字典（如果有的话）
+                # 构造leak_data字典（如果有的话）
                 leak_data_dict = None
                 if matched_leak and leak_type:
                     leak_data_dict = {
@@ -1354,11 +1346,11 @@ class SQLiEngine(BaseEngine):
                     evidence=f"{' | '.join(evidence_parts)}",
                     response=response,
                     target=target,
-                    leak_data=leak_data_dict  # 艹！传入泄露数据（结构化，有扩展性）
+                    leak_data=leak_data_dict  # 传入泄露数据（结构化，有扩展性）
                 )
                 vulns.append(vuln)
 
-                # 艹！显示实际注入的值
+                # 显示实际注入的值
                 injected = test_result.get('injected_value', payload)
                 logger.warning(
                     f"[SQLi] [报错-高级] 发现漏洞: {param_name}={injected[:40]}... "
@@ -1378,7 +1370,7 @@ class SQLiEngine(BaseEngine):
         """
         逻辑注入检测（Logic-Based SQL Injection）
 
-        艹！这个SB方法专门检测语法正确但触发逻辑异常的payload！
+        这个SB方法专门检测语法正确但触发逻辑异常的payload！
 
         检测策略：
         1. 从外部payloads中自动识别True/False payload对
@@ -1402,7 +1394,7 @@ class SQLiEngine(BaseEngine):
         baseline_response = self._get_baseline_response(target)
         baseline_text = baseline_response.text if baseline_response else ""
 
-        # 艹！优先使用外部payloads
+        # 优先使用外部payloads
         if payloads:
             logic_pairs = self._identify_logic_pairs(payloads)
             logger.info(f"[SQLi] [逻辑] 从外部载荷识别到{len(logic_pairs)}对逻辑载荷")
@@ -1430,7 +1422,7 @@ class SQLiEngine(BaseEngine):
                 true_response = true_result['response']
                 true_text = true_response.text
                 true_length = len(true_text)
-                true_injected = true_result.get('injected_value', true_pattern)  # 艹！获取实际注入值
+                true_injected = true_result.get('injected_value', true_pattern)  # 获取实际注入值
 
                 logger.info(f"[SQLi] [逻辑] True响应: status={true_response.status_code}, length={true_length}, injected={true_injected[:30]}")
 
@@ -1448,7 +1440,7 @@ class SQLiEngine(BaseEngine):
                 false_response = false_result['response']
                 false_text = false_response.text
                 false_length = len(false_text)
-                false_injected = false_result.get('injected_value', false_pattern)  # 艹！获取实际注入值
+                false_injected = false_result.get('injected_value', false_pattern)  # 获取实际注入值
 
                 logger.info(f"[SQLi] [逻辑] False响应: status={false_response.status_code}, length={false_length}, injected={false_injected[:30]}")
 
@@ -1457,7 +1449,7 @@ class SQLiEngine(BaseEngine):
                     logger.debug(f"[SQLi] [逻辑] False载荷触发SQL错误，跳过该对")
                     continue
 
-                # 艹！新增：累积增长检测（防止留言板等累积显示场景误报）
+                # 新增：累积增长检测（防止留言板等累积显示场景误报）
                 logger.info(f"[SQLi] [逻辑] 执行累积增长检测...")
                 true_result2 = self._test_parameter(target, param_name, true_pattern)
                 if true_result2:
@@ -1472,7 +1464,7 @@ class SQLiEngine(BaseEngine):
 
                     logger.info(f"[SQLi] [逻辑] 增长量: T→F={growth_1_to_2}字节, F→T={growth_2_to_3}字节")
 
-                    # 艹！判定：如果两次增长量相近（误差<20%），则是累积显示场景
+                    # 判定：如果两次增长量相近（误差<20%），则是累积显示场景
                     if growth_1_to_2 > 0 and growth_2_to_3 > 0:
                         growth_ratio = min(growth_1_to_2, growth_2_to_3) / max(growth_1_to_2, growth_2_to_3)
                         if growth_ratio > 0.8:
@@ -1482,13 +1474,13 @@ class SQLiEngine(BaseEngine):
 
                 logger.info(f"[SQLi] [逻辑] 长度对比: True={true_length}, False={false_length}, 差异={abs(true_length-false_length)}字节")
 
-                # 艹！关键判定：计算长度差异
+                # 关键判定：计算长度差异
                 length_diff = true_length - false_length
                 length_ratio = abs(length_diff) / max(true_length, false_length, 1)
 
                 logger.info(f"[SQLi] [逻辑] 计算差异: diff={length_diff}, ratio={length_ratio:.2%}")
 
-                # 艹！双重阈值检查以适应DVWA Medium等高底噪环境！
+                # 双重阈值检查以适应DVWA Medium等高底噪环境！
                 # DVWA Medium级别SQL盲注：差异通常在0.1%-0.5%之间（5-20字节）
                 # 判定条件1：百分比检查（适应不同大小的页面）
                 # 判定条件2：绝对值检查（防止微小波动误报）
@@ -1522,7 +1514,7 @@ class SQLiEngine(BaseEngine):
 
                 logger.info(f"[SQLi] [逻辑] 关键词检查: 发现{len(found_keywords)}个异常关键词 - {found_keywords[:5]}")
 
-                # 艹！优化置信度计算以适应微小差异！
+                # 优化置信度计算以适应微小差异！
                 # 计算置信度
                 confidence = 0.5  # 基础置信度
                 if length_ratio > 0.01:  # 差异超过1%（降低门槛）
@@ -1545,11 +1537,11 @@ class SQLiEngine(BaseEngine):
                 if found_keywords:
                     evidence_parts.append(f"关键词={', '.join(found_keywords[:3])}")
 
-                # 艹！反射检测：防止留言板等反射场景误报
+                # 反射检测：防止留言板等反射场景误报
                 is_reflected = self._is_payload_reflected(true_text, true_pattern)
                 if is_reflected:
                     logger.info(f"[SQLi] [逻辑] 检测到payload反射，降低置信度")
-                    confidence *= 0.3  # 艹！大幅降低置信度
+                    confidence *= 0.3  # 大幅降低置信度
 
                 # 发现逻辑注入漏洞
                 vuln = self._create_vuln_entry(
@@ -1564,12 +1556,12 @@ class SQLiEngine(BaseEngine):
                     target=target
                 )
                 vulns.append(vuln)
-                # 艹！显示实际注入的值
+                # 显示实际注入的值
                 logger.warning(
                     f"[SQLi] [逻辑] 发现漏洞: {param_name}={true_injected[:40]}... "
                     f"(差异={length_ratio:.1%}, 置信度={confidence:.2f})"
                 )
-                # 艹！移除break，继续测试所有逻辑对！
+                # 移除break，继续测试所有逻辑对！
 
             except Exception as e:
                 logger.error(f"[SQLi] [逻辑] 测试失败: {param_name} - {e}")
@@ -1584,7 +1576,7 @@ class SQLiEngine(BaseEngine):
         """
         布尔盲注检测（重构版）
 
-        艹！这个SB方法修复了三个核心问题：
+        这个SB方法修复了三个核心问题：
         1. 不再要求True载荷接近基准（错误！）
         2. 改用True/False差分对比（文本相似度）
         3. 集成外部payloads（不再只用硬编码列表）
@@ -1604,7 +1596,7 @@ class SQLiEngine(BaseEngine):
         if payloads and len(payloads) <= 10:
             logger.info(f"[SQLi] [布尔] payloads列表: {payloads}")
 
-        # 艹！优先使用外部payloads
+        # 优先使用外部payloads
         if payloads:
             # 从payloads中识别True/False对
             logic_pairs = self._identify_logic_pairs(payloads)
@@ -1639,25 +1631,25 @@ class SQLiEngine(BaseEngine):
 
                 logger.debug(f"[SQLi] [布尔] True长度={true_length}, False长度={false_length}")
 
-                # 艹！核心改进：检查SQL错误（跳过触发错误的payload）
+                # 核心改进：检查SQL错误（跳过触发错误的payload）
                 if ("SQL syntax" in true_text or "Fatal error" in true_text or
                     "SQL syntax" in false_text or "Fatal error" in false_text):
                     logger.debug(f"[SQLi] [布尔] 载荷触发SQL错误，跳过")
                     continue
 
-                # 艹！核心改进：使用文本相似度而非长度对比
+                # 核心改进：使用文本相似度而非长度对比
                 similarity = SequenceMatcher(None, true_text, false_text).ratio()
 
                 logger.debug(f"[SQLi] [布尔] 文本相似度: {similarity:.3f}")
 
-                # 艹！提高相似度门槛以适应高底噪环境！
+                # 提高相似度门槛以适应高底噪环境！
                 # 判定条件1：文本相似度低于0.99（显著不同）
                 # 原阈值0.95 → 新阈值0.99，只过滤几乎完全相同的响应
                 if similarity >= 0.99:
                     logger.debug(f"[SQLi] [布尔] 相似度太高({similarity:.4f})，跳过")
                     continue
 
-                # 艹！新增：行数差异辅助判断！
+                # 新增：行数差异辅助判断！
                 true_lines = true_text.count('\n')
                 false_lines = false_text.count('\n')
                 line_diff = abs(true_lines - false_lines)
@@ -1691,7 +1683,7 @@ class SQLiEngine(BaseEngine):
                     confidence = 0.5 + (1.0 - similarity) * 0.4  # similarity越低，置信度越高
                     evidence = f"相似度={similarity:.3f}, True长度={true_length}, False长度={false_length}"
 
-                # 艹！核心改进：基于baseline稳定性调整置信度
+                # 核心改进：基于baseline稳定性调整置信度
                 if self.baseline.std_dev_length < 50:
                     # 页面稳定，微小的长度差异也可靠
                     confidence += 0.1
@@ -1714,13 +1706,13 @@ class SQLiEngine(BaseEngine):
                     target=target
                 )
                 vulns.append(vuln)
-                # 艹！显示实际注入的完整值！
+                # 显示实际注入的完整值！
                 true_injected = true_result.get('injected_value', true_payload)
                 logger.warning(
                     f"[SQLi] [布尔] 发现漏洞: {param_name}={true_injected[:40]}... "
                     f"(相似度={similarity:.3f}, 置信度={confidence:.2f})"
                 )
-                # 艹！移除break，继续测试所有布尔对！
+                # 移除break，继续测试所有布尔对！
 
             except Exception as e:
                 logger.error(f"[SQLi] [布尔] 测试失败: {param_name} - {e}")
@@ -1732,7 +1724,7 @@ class SQLiEngine(BaseEngine):
         """
         检测payload是否被原样反射到响应中（用于防止误报）
 
-        艹！这个SB方法用来识别留言板、搜索框等反射输入的场景！
+        这个SB方法用来识别留言板、搜索框等反射输入的场景！
         这种情况下payload只是被显示出来，并没有真正注入SQL执行！
 
         检测策略：
@@ -1752,7 +1744,7 @@ class SQLiEngine(BaseEngine):
 
         response_lower = response_text.lower()
 
-        # 艹！方法1：直接检查payload是否原样出现在响应中
+        # 方法1：直接检查payload是否原样出现在响应中
         # 提取payload的核心特征（SQL关键词）
         payload_core = payload.lower()
 
@@ -1766,7 +1758,7 @@ class SQLiEngine(BaseEngine):
 
         for feature in sql_injection_features:
             if feature in payload_core and feature in response_lower:
-                # 艹！payload的核心特征出现在响应中，可能是反射
+                # payload的核心特征出现在响应中，可能是反射
                 # 但还需要进一步验证是否在SQL错误上下文中
 
                 # 检查是否有SQL错误信息伴随（证明真的执行了）
@@ -1779,14 +1771,14 @@ class SQLiEngine(BaseEngine):
                 has_sql_error = any(err in response_lower for err in sql_error_indicators)
 
                 if not has_sql_error:
-                    # 艹！没有SQL错误，但payload特征出现在响应中
+                    # 没有SQL错误，但payload特征出现在响应中
                     # 很可能是反射场景，继续检查反射特征库
                     pass
                 else:
                     # 有SQL错误伴随，可能是真注入（报错注入）
                     return False
 
-        # 艹！方法2：使用反射特征库精确匹配
+        # 方法2：使用反射特征库精确匹配
         # 检查是否在HTML标签、JS字符串等反射上下文中
         try:
             for pattern in self.REFLECTION_PATTERNS:
@@ -1800,7 +1792,7 @@ class SQLiEngine(BaseEngine):
         except Exception as e:
             logger.warning(f"[SQLi] [反射检测] 反射检测失败: {e}")
 
-        # 艹！方法3：检查payload和响应的相似度（反射场景相似度极高）
+        # 方法3：检查payload和响应的相似度（反射场景相似度极高）
         # 如果响应中包含大量payload内容，说明是反射
         payload_words = set(re.findall(r'\w+', payload.lower()))
         if len(payload_words) >= 3:  # 至少3个单词才计算相似度
@@ -1816,7 +1808,7 @@ class SQLiEngine(BaseEngine):
         """
         从payloads中识别True/False逻辑对（增强版：智能取反）
 
-        艹！这个SB方法自动识别逻辑表达式对！
+        这个SB方法自动识别逻辑表达式对！
 
         识别规则：
         - True条件：包含1=1, '1'='1等
@@ -1841,7 +1833,7 @@ class SQLiEngine(BaseEngine):
         false_payloads = []
 
         for payload in payloads:
-            # 艹！保留payload首尾空格，只在识别时才trim！
+            # 保留payload首尾空格，只在识别时才trim！
             if self._is_logic_true_payload(payload):
                 true_payloads.append(payload)
             elif self._is_logic_false_payload(payload):
@@ -1849,7 +1841,7 @@ class SQLiEngine(BaseEngine):
 
         logger.info(f"[SQLi] 识别到{len(true_payloads)}个True载荷, {len(false_payloads)}个False载荷")
 
-        # 艹！智能配对逻辑！
+        # 智能配对逻辑！
         # 步骤1：优先进行自然配对（字典中既有True也有False）
         paired_true_indices = set()  # 记录已配对的True payload索引
 
@@ -1869,7 +1861,7 @@ class SQLiEngine(BaseEngine):
                     logger.debug(f"[SQLi] 自然配对: [{true_idx}] {true_p[:30]}... ↔ [{false_idx}] {false_p[:30]}...")
                     break  # 每个True只配一个False
 
-        # 艹！智能取反：如果字典不完整，自动生成False payload！
+        # 智能取反：如果字典不完整，自动生成False payload！
         unpaired_count = len(true_payloads) - len(paired_true_indices)
 
         if unpaired_count > 0:
@@ -1881,7 +1873,7 @@ class SQLiEngine(BaseEngine):
                 if true_idx in paired_true_indices:
                     continue  # 已经配对过了
 
-                # 艹！智能取反：将True payload中的逻辑表达式取反
+                # 智能取反：将True payload中的逻辑表达式取反
                 false_p = self._generate_negation_payload(true_p)
 
                 if false_p:
@@ -1892,7 +1884,7 @@ class SQLiEngine(BaseEngine):
 
         logger.info(f"[SQLi] 最终配对{len(logic_pairs)}对逻辑载荷")
 
-        # 艹！如果配对为0，打印详细信息（调试用）
+        # 如果配对为0，打印详细信息（调试用）
         if len(logic_pairs) == 0 and len(true_payloads) > 0:
             logger.warning(f"[SQLi] 配对失败！有{len(true_payloads)}个True但无法生成任何逻辑对！")
             logger.warning(f"[SQLi] True载荷示例: {true_payloads[:3] if true_payloads else '无'}")
@@ -1904,8 +1896,8 @@ class SQLiEngine(BaseEngine):
         """
         智能取反：从True payload生成对应的False payload
 
-        艹！这个SB方法实现自动取反逻辑！
-        艹！修复：保留payload首尾的原始空格！
+        这个SB方法实现自动取反逻辑！
+        修复：保留payload首尾的原始空格！
 
         取反规则：
         - 1=1 → 1=2
@@ -1922,7 +1914,7 @@ class SQLiEngine(BaseEngine):
         """
         import re
 
-        # 艹！保留首尾空格
+        # 保留首尾空格
         leading_space = ''
         trailing_space = ''
 
@@ -1939,7 +1931,7 @@ class SQLiEngine(BaseEngine):
         # 去掉首尾空格后进行处理
         payload = true_payload.strip()
 
-        # 艹！按优先级替换（从具体到抽象）
+        # 按优先级替换（从具体到抽象）
         # 1. 替换单引号版本 '1'='1 → '1'='2
         payload = re.sub(r"'1'='1\b", "'1'='2", payload, flags=re.IGNORECASE)
 
@@ -1961,7 +1953,7 @@ class SQLiEngine(BaseEngine):
             logger.debug(f"[SQLi] 智能取反失败: {true_payload[:30]}...")
             return None
 
-        # 艹！恢复首尾空格
+        # 恢复首尾空格
         false_payload = leading_space + payload + trailing_space
 
         return false_payload
@@ -1973,7 +1965,7 @@ class SQLiEngine(BaseEngine):
 
         例如：' OR 1=1-- → ' OR #=#--
 
-        艹！替换规则（注意：字典里的'1'='1没有最后的单引号）：
+        替换规则（注意：字典里的'1'='1没有最后的单引号）：
         - '1'='1 → '#'='#
         - '1'='2 → '#'='#
         - "1"="1 → "#"="#
@@ -2001,7 +1993,7 @@ class SQLiEngine(BaseEngine):
         """
         时间盲注检测（重构版）
 
-        艹！这个SB方法修复了三个核心问题：
+        这个SB方法修复了三个核心问题：
         1. 集成外部payloads（不再只用硬编码列表）
         2. 使用正则提取延迟时间（不依赖脆弱的replace）
         3. 动态构造验证载荷（适配各种大小写和空格变化）
@@ -2022,13 +2014,13 @@ class SQLiEngine(BaseEngine):
         """
         vulns = []
 
-        # 艹！编译时间载荷识别正则（不区分大小写）
+        # 编译时间载荷识别正则（不区分大小写）
         time_pattern = re.compile(
             r'(sleep|benchmark|waitfor\s+delay|pg_sleep)\s*\(\s*(\d+)',
             re.IGNORECASE
         )
 
-        # 艹！优先使用外部payloads
+        # 优先使用外部payloads
         if payloads:
             # 从外部载荷中筛选时间载荷
             time_payloads = [p for p in payloads if time_pattern.search(p)]
@@ -2068,7 +2060,7 @@ class SQLiEngine(BaseEngine):
                 # 发现延迟，进行二次验证（动态构造验证载荷）
                 verify_delay = delay // 2  # 延迟减半：5→2, 10→5
 
-                # 艹！使用正则动态替换（大小写不敏感！）
+                # 使用正则动态替换（大小写不敏感！）
                 payload_verify = time_pattern.sub(
                     rf'\1({verify_delay}',
                     payload,
@@ -2112,7 +2104,7 @@ class SQLiEngine(BaseEngine):
                             target=target
                         )
                         vulns.append(vuln)
-                        # 艹！显示实际注入的完整值！
+                        # 显示实际注入的完整值！
                         injected = test_result_1.get('injected_value', payload)
                         logger.warning(f"[SQLi] [时间] 发现漏洞: {param_name}={injected[:40]}... (T1={time_1:.2f}s, T2={time_2:.2f}s)")
                         return vulns  # 确认后立即返回
@@ -2129,7 +2121,6 @@ class SQLiEngine(BaseEngine):
         """
         检查响应中是否包含数据库错误特征
 
-        老王注释：这个SB方法检测数据库错误信息！
 
         Args:
             response_text: 响应内容
@@ -2156,8 +2147,6 @@ class SQLiEngine(BaseEngine):
     def _get_baseline_response(self, target: FuzzTarget):
         """
         获取基准响应（用于对比）
-
-        老王注释：这个SB方法发送正常请求获取基准响应！
 
         Args:
             target: 测试目标

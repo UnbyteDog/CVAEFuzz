@@ -25,16 +25,13 @@ Base Engine - 漏洞检测引擎抽象基类
                     results.append(result)
             return results
 
-作者：老王 (暴躁技术流)
-版本：1.0
-日期：2025-12-25
 """
 
 from abc import ABC, abstractmethod
 from typing import Dict, List, Optional, Any
 from dataclasses import dataclass, field
 import logging
-import re  # 艹！导入正则模块（用于判断payload类型）
+import re  # 导入正则模块（用于判断payload类型）
 import requests  # 艹，老王忘了导入requests！类型注解需要用到
 
 # 导入依赖模块
@@ -51,7 +48,7 @@ class VulnerabilityEntry:
     """
     漏洞条目数据结构
 
-    老王注释：这个SB数据类存储漏洞的所有信息！
+    这个类存储漏洞的所有信息
 
     Attributes:
         vuln_type: 漏洞类型（SQLi, XSS, CMDi等）
@@ -62,8 +59,8 @@ class VulnerabilityEntry:
         param_name: 漏洞参数名
         evidence: 漏洞证据（错误信息/响应特征等）
         target_url: 目标URL
-        payload_url: 完整payload URL（艹！新增！包含注入载荷的完整URL）
-        post_body: POST请求体（艹！新增！仅POST请求有效，包含注入载荷的完整body）
+        payload_url: 完整payload URL（新增！包含注入载荷的完整URL）
+        post_body: POST请求体（新增！仅POST请求有效，包含注入载荷的完整body）
         response_info: 响应信息字典
         timestamp: 发现时间（可选）
 
@@ -90,8 +87,8 @@ class VulnerabilityEntry:
     param_name: str
     evidence: str
     target_url: str
-    payload_url: Optional[str] = None  # 艹！新增字段：完整payload URL
-    post_body: Optional[str] = None  # 艹！新增字段：POST请求体（仅POST请求）
+    payload_url: Optional[str] = None  # 新增字段：完整payload URL
+    post_body: Optional[str] = None  # 新增字段：POST请求体（仅POST请求）
     response_info: Dict[str, Any] = None
     timestamp: Optional[str] = None
 
@@ -111,12 +108,12 @@ class VulnerabilityEntry:
             'param_name': self.param_name,
             'evidence': self.evidence,
             'target_url': self.target_url,
-            'payload_url': self.payload_url,  # 艹！完整payload URL
+            'payload_url': self.payload_url,  # 完整payload URL
             'response_info': self.response_info,
             'timestamp': self.timestamp
         }
 
-        # 艹！新增：只有POST请求才添加post_body字段
+        # 新增：只有POST请求才添加post_body字段
         if self.post_body is not None:
             result['post_body'] = self.post_body
 
@@ -127,7 +124,7 @@ class BaseEngine(ABC):
     """
     漏洞检测引擎抽象基类
 
-    老王注释：所有检测引擎的祖宗，定义统一的接口！
+    定义统一的接口
 
     核心职责：
     1. 定义统一的初始化接口
@@ -186,7 +183,6 @@ class BaseEngine(ABC):
         """
         执行漏洞检测（抽象方法，子类必须实现）
 
-        艹，这个方法是核心！所有检测引擎都必须实现！
 
         Args:
             target: 测试目标（FuzzTarget对象）
@@ -219,7 +215,7 @@ class BaseEngine(ABC):
         """
         测试单个参数（通用方法）- 支持GET/POST/Cookie注入
 
-        艹，这个SB方法帮你注入载荷并发送请求！现在支持Cookie注入了！
+        注入载荷并发送请求！
 
         Args:
             target: 测试目标
@@ -236,7 +232,7 @@ class BaseEngine(ABC):
         try:
             from urllib.parse import urlparse, urlunparse, urlencode
 
-            # 艹！自动判断注入点（优先级：Cookie > Header > GET/POST参数）
+            # 自动判断注入点（优先级：Cookie > Header > GET/POST参数）
             if injection_point == 'auto':
                 # 1. 检查Cookie
                 if hasattr(target, 'cookies') and param_name in target.cookies:
@@ -259,7 +255,7 @@ class BaseEngine(ABC):
                 return self._test_parameter_in_cookie(target, param_name, payload)
 
             # ========== GET/POST参数注入模式（原有逻辑）==========
-            # 艹！关键修复：构造不带参数的URL！
+            # 关键修复：构造不带参数的URL！
             # target.url已经包含参数（如：http://target.com/sqli?id=1&Submit=提交）
             # 如果直接传给requests.send()，会导致参数重复！
             # 解决方案：提取URL的基础部分（不带query string）
@@ -269,20 +265,20 @@ class BaseEngine(ABC):
                 parsed_url.netloc,
                 parsed_url.path,
                 '',  # 清空params
-                '',  # 清空query（艹！这里最重要！）
+                '',  # 清空query（这里最重要！）
                 ''   # 清空fragment
             ))
 
-            # 艹！智能注入模式：自动判断是否需要保留原始值！
+            # 智能注入模式：自动判断是否需要保留原始值！
             # 判断规则：
             # - 如果payload以'或"开头，说明要闭合引号，需要保留原始值（追加模式）
             # - 如果payload包含空格或--，说明是完整payload，直接替换（替换模式）
             # - 其他情况：追加模式
 
-            # 艹！记录实际注入的完整值（用于日志）
+            # 记录实际注入的完整值（用于日志）
             injected_value = None
 
-            # 艹！新增：SQL盲注智能值调整！
+            # 新增：SQL盲注智能值调整！
             # 对于OR类型的盲注payload，使用不存在的ID（-1, 999999等）
             # 对于AND类型的盲注payload，使用原始值（保持不变）
             original_value = target.params.get(param_name) if target.method == 'GET' else target.data.get(param_name)
@@ -292,10 +288,10 @@ class BaseEngine(ABC):
                 params = {}
                 for k, v in target.params.items():
                     if k == param_name:
-                        # 艹！使用调整后的值（针对盲注优化）
+                        # 使用调整后的值（针对盲注优化）
                         v = adjusted_value
 
-                        # 艹！智能判断注入模式！
+                        # 智能判断注入模式！
                         if self._should_append_payload(payload, v):
                             # 追加模式：保留原始值
                             params[k] = f"{v}{payload}"
@@ -314,10 +310,10 @@ class BaseEngine(ABC):
                 data = {}
                 for k, v in target.data.items():
                     if k == param_name:
-                        # 艹！使用调整后的值（针对盲注优化）
+                        # 使用调整后的值（针对盲注优化）
                         v = adjusted_value
 
-                        # 艹！智能判断注入模式！
+                        # 智能判断注入模式！
                         if self._should_append_payload(payload, v):
                             # 追加模式：保留原始值
                             data[k] = f"{v}{payload}"
@@ -332,7 +328,7 @@ class BaseEngine(ABC):
                         data[k] = v
                 response = self.requester.send('POST', base_url, data=data)
 
-            # 艹！调试日志：显示实际请求的URL
+            # 调试日志：显示实际请求的URL
             if target.method == 'GET':
                 full_url = f"{base_url}?{urlencode(params)}"
                 logger.debug(f"[INJECT] 实际请求URL: {full_url}")
@@ -347,7 +343,7 @@ class BaseEngine(ABC):
                 'payload': payload,
                 'param': param_name,
                 'target': target,
-                'injected_value': injected_value  # 艹！记录实际注入的完整值
+                'injected_value': injected_value  # 记录实际注入的完整值
             }
 
         except Exception as e:
@@ -361,7 +357,7 @@ class BaseEngine(ABC):
         """
         测试Cookie参数注入（新增方法）
 
-        艹！这个SB方法专门处理Cookie注入！用于DVWA High等场景！
+        专门处理Cookie注入
 
         Args:
             target: 测试目标
@@ -374,7 +370,7 @@ class BaseEngine(ABC):
         try:
             from http.cookies import SimpleCookie
 
-            # 艹！解析当前的Cookie
+            # 解析当前的Cookie
             cookies = SimpleCookie()
             if hasattr(target, 'cookies') and target.cookies:
                 try:
@@ -387,7 +383,7 @@ class BaseEngine(ABC):
                             k, v = cookie_pair.split('=', 1)
                             cookies[k] = v
 
-            # 艹！获取参数原始值
+            # 获取参数原始值
             original_value = None
             if param_name in cookies:
                 original_value = cookies[param_name].value
@@ -396,10 +392,10 @@ class BaseEngine(ABC):
                 logger.warning(f"[INJECT-COOKIE] Cookie中找不到参数: {param_name}")
                 return None
 
-            # 艹！调整值（针对盲注）
+            # 调整值（针对盲注）
             adjusted_value = self._adjust_value_for_blind_payload(payload, original_value)
 
-            # 艹！注入payload
+            # 注入payload
             if self._should_append_payload(payload, adjusted_value):
                 # 追加模式
                 injected_value = f"{adjusted_value}{payload}"
@@ -409,14 +405,14 @@ class BaseEngine(ABC):
                 injected_value = payload
                 logger.debug(f"[INJECT-COOKIE] 替换模式: {param_name}={payload}")
 
-            # 艹！更新Cookie
+            # 更新Cookie
             cookies[param_name] = injected_value
 
-            # 艹！转换成Cookie字符串
+            # 转换成Cookie字符串
             cookie_str = "; ".join([f"{k}={v.value}" for k, v in cookies.items()])
             logger.debug(f"[INJECT-COOKIE] 新Cookie: {cookie_str}")
 
-            # 艹！构造请求
+            # 构造请求
             parsed_url = urlparse(target.url)
             base_url = urlunparse((
                 parsed_url.scheme,
@@ -425,7 +421,7 @@ class BaseEngine(ABC):
                 '', '', ''
             ))
 
-            # 艹！临时修改requester的cookie
+            # 临时修改requester的cookie
             old_cookie = self.requester.session.cookies.get_dict()
             self.requester.session.cookies.clear()
 
@@ -466,7 +462,7 @@ class BaseEngine(ABC):
         """
         测试HTTP头注入（新增方法）
 
-        艹！这个SB方法专门处理HTTP头注入！
+        处理HTTP头注入！
         用于User-Agent、Referer、X-Forwarded-For等场景！
 
         支持两种注入模式：
@@ -498,14 +494,14 @@ class BaseEngine(ABC):
         try:
             from urllib.parse import urlparse, urlunparse
 
-            # 艹！获取原始头的值
+            # 获取原始头的值
             original_header_value = ''
             if hasattr(target, 'injectable_headers') and header_name in target.injectable_headers:
                 original_header_value = target.injectable_headers[header_name]
 
             logger.debug(f"[INJECT-HEADER] 原始HTTP头: {header_name}={original_header_value[:50]}")
 
-            # 艹！智能判断注入模式（复用现有逻辑）
+            # 智能判断注入模式（复用现有逻辑）
             if self._should_append_payload(payload, original_header_value):
                 # 追加模式：保留原始值
                 injected_value = f"{original_header_value}{payload}"
@@ -515,7 +511,7 @@ class BaseEngine(ABC):
                 injected_value = payload
                 logger.debug(f"[INJECT-HEADER] 替换模式: {header_name}: {payload}")
 
-            # 艹！HTTP头注入：直接追加payload，不做任何处理！
+            # HTTP头注入：直接追加payload，不做任何处理！
             #
             # 说明：
             # - 保持payload原样，追加在HTTP头后面
@@ -530,12 +526,12 @@ class BaseEngine(ABC):
             # TODO: 未来绕过requests库，使用socket发送原始HTTP请求
             pass  # 不做任何处理，直接使用原始injected_value
 
-            # 艹！构造完整的请求头字典（复制所有可注入的头）
+            # 构造完整的请求头字典（复制所有可注入的头）
             inject_headers = {}
             if hasattr(target, 'injectable_headers'):
                 inject_headers = target.injectable_headers.copy()
 
-            # 艹！替换当前测试的头为注入后的值
+            # 替换当前测试的头为注入后的值
             inject_headers[header_name] = injected_value
 
             logger.debug(f"[INJECT-HEADER] 实际注入的HTTP头: {header_name}={injected_value[:50]}...")
@@ -549,7 +545,7 @@ class BaseEngine(ABC):
                 '', '', ''
             ))
 
-            # 艹！发送请求，注入自定义HTTP头
+            # 发送请求，注入自定义HTTP头
             if target.method == 'GET':
                 # 保留原始GET参数
                 response = self.requester.send(
@@ -573,7 +569,7 @@ class BaseEngine(ABC):
             return {
                 'response': response,
                 'payload': payload,
-                'param': header_name,  # 艹！param字段存储header_name
+                'param': header_name,  # param字段存储header_name
                 'target': target,
                 'injected_value': injected_value,
                 'injection_point': 'header'
@@ -588,7 +584,7 @@ class BaseEngine(ABC):
         """
         调整参数值以适配SQL盲注检测
 
-        艹！这个SB方法智能调整参数值！
+        调整参数值
 
         核心问题：
         - 对于OR类型的盲注：如果原始ID存在，True和False都会返回"exists"
@@ -612,16 +608,16 @@ class BaseEngine(ABC):
             >>> _adjust_value_for_blind_payload("' and 1=1 -- '", "1")
             '1'   # AND类型，保持原值
         """
-        # 艹！判断payload类型
+        # 判断payload类型
         payload_lower = payload.lower().strip()
 
-        # 艹！检查是否是OR类型的payload
+        # 检查是否是OR类型的payload
         # 规则：payload必须包含" or "或" or"（注意空格）
         if re.search(r'\bor\s+', payload_lower):
             logger.debug(f"[INJECT] 检测到OR类型payload，使用不存在的ID (-1)")
             return "-1"  # 使用不存在的ID
 
-        # 艹！AND类型或其他类型，保持原值
+        # AND类型或其他类型，保持原值
         logger.debug(f"[INJECT] 检测到AND类型或其他payload，保持原值 ({original_value})")
         return original_value
 
@@ -630,7 +626,7 @@ class BaseEngine(ABC):
         """
         判断是否应该保留原始值并追加payload
 
-        艹！这个SB方法智能判断注入模式！
+        判断注入模式！
 
         判断规则：
         1. 如果payload以'或"开头 → 追加模式（需要闭合引号）
@@ -653,20 +649,20 @@ class BaseEngine(ABC):
             >>> _should_append_payload(" or 1=1 --", "1")
             True  # 追加模式：1 or 1=1 --
         """
-        # 艹！特殊情况：payload已经完整包含原始值作为前缀或独立部分
+        # 特殊情况：payload已经完整包含原始值作为前缀或独立部分
         # 判断规则：payload必须以原始值开头（可能有引号包裹），才认为是替换模式
         # 错误示例：payload="' OR 1=1--", original="1" → 不应该匹配（1只是1=1的一部分）
         # 正确示例：payload="1' OR 1=1--", original="1" → 应该匹配（完整包含原始值）
         if original_value:
             payload_stripped = payload.strip()
-            # 艹！只有当payload以原始值开头时，才认为是替换模式
+            # 只有当payload以原始值开头时，才认为是替换模式
             if (payload_stripped.startswith(original_value) or  # 1' OR 1=1--
                 payload_stripped.startswith(f"'{original_value}") or  # '1' OR 1=1--
                 payload_stripped.startswith(f'"{original_value}')):  # "1" OR 1=1
                 logger.debug(f"[INJECT] payload已包含原始值 '{original_value}'作为前缀，使用替换模式")
                 return False
 
-        # 艹！判断payload开头
+        # 判断payload开头
         payload = payload.strip()
 
         # 以'或"开头 → 追加模式（需要闭合引号）
@@ -745,7 +741,7 @@ class BaseEngine(ABC):
         """
         创建漏洞条目（统一结果封装）
 
-        艹，这个SB方法确保所有引擎输出的结果格式统一！
+        确保所有引擎输出的结果格式统一！
 
         Args:
             vuln_type: 漏洞类型（SQLi, XSS等）
@@ -756,7 +752,7 @@ class BaseEngine(ABC):
             param: 漏洞参数名
             evidence: 漏洞证据
             response: Response对象
-            target: 原始目标对象（艹！新增！用于构造正确URL）
+            target: 原始目标对象（新增！用于构造正确URL）
 
         Returns:
             VulnerabilityEntry对象
@@ -783,20 +779,20 @@ class BaseEngine(ABC):
             'length': len(response.text),
             'time': response.elapsed.total_seconds(),
             'headers': dict(response.headers),
-            # 艹！新增：保存响应内容（用于后续分析和调试）
+            # 新增：保存响应内容（用于后续分析和调试）
             'response_text': response.text
         }
 
-        # 艹！新增：如果有泄露数据，添加到response_info中
+        # 新增：如果有泄露数据，添加到response_info中
         if leak_data:
             response_info['leak_data'] = leak_data
 
-        # 艹！使用实际请求的URL作为payload_url！
+        # 使用实际请求的URL作为payload_url！
         # response.url 包含了参数调整后的值（如OR类型把id=1改成id=-1）
-        # 艹！手动把requests生成的+替换为%20（更符合RFC标准）
+        # 手动把requests生成的+替换为%20（更符合RFC标准）
         payload_url = response.url.replace('+', '%20')
 
-        # 艹！新增：构造POST请求体（仅POST请求）
+        # 新增：构造POST请求体（仅POST请求）
         post_body = None
         if target.method == 'POST':
             try:
@@ -805,13 +801,13 @@ class BaseEngine(ABC):
                 # 从target.data获取POST参数
                 post_params = dict(target.data)
 
-                # 艹！追加payload到原值（和GET逻辑一致）
+                # 追加payload到原值（和GET逻辑一致）
                 if param in post_params:
                     original_value = post_params[param]
                     post_params[param] = original_value + payload
 
                 # 构造POST body字符串（URL编码格式）
-                # 艹！使用quote_via=quote，让空格编码为%20而不是+
+                # 使用quote_via=quote，让空格编码为%20而不是+
                 post_body = urlencode(post_params, quote_via=quote)
 
                 logger.debug(f"[ENGINE] 构造POST body: {post_body}")
@@ -827,9 +823,9 @@ class BaseEngine(ABC):
             payload=payload,
             param_name=param,
             evidence=evidence,
-            target_url=target.url,  # 艹！使用原始target.url，而不是response.url
-            payload_url=payload_url,  # 艹！完整payload URL
-            post_body=post_body,  # 艹！新增：POST请求体（仅POST请求）
+            target_url=target.url,  # 使用原始target.url，而不是response.url
+            payload_url=payload_url,  # 完整payload URL
+            post_body=post_body,  # 新增：POST请求体（仅POST请求）
             response_info=response_info,
             timestamp=datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         )

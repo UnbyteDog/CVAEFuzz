@@ -3,8 +3,6 @@
 """
 CVDBFuzz字典分类转换器
 将FuzzLists中的字典文件按攻击类型分类并转换为JSONL格式
-
-老王出品，必属精品！
 """
 
 import json
@@ -200,7 +198,7 @@ class FuzzCategorizer:
 
         report = f"""
 # CVDBFuzz字典分类汇总报告
-# 老王自动生成 - {total_payloads} 个总载荷
+# 自动生成 - {total_payloads} 个总载荷
 
 ## 分类统计
 """
@@ -243,7 +241,6 @@ class FuzzCategorizer:
         self.generate_summary_report(results)
 
         print(f"[SUCCESS] 分类完成！共生成 {len(results)} 个分类文件")
-        print("[老王] 工作完毕，装逼结束！")
 
 def main():
     """主函数"""
